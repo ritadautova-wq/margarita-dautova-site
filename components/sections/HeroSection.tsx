@@ -34,6 +34,7 @@ export default function HeroSection() {
           <h1 className="font-serif text-display md:text-display-lg lg:text-display-xl text-stone-900 text-balance mb-6">
             Land Your Next Career Move Without Burning Out or Starting Over
           </h1>
+          {/* Deployment marker: 2026-01-04 */}
           
           {/* Subheadline */}
           <p className="text-body-lg md:text-xl text-stone-600 max-w-3xl leading-relaxed mb-10">
