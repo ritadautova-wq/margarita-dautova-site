@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
       <p style="font-size: 18px; font-weight: 600; color: #2c332d; margin: 0 0 15px;">
         📖 Download Your Playbook
       </p>
-      <a href="https://margaritadautova.com/downloads/career-pivot-playbook.html" 
+      <a href="https://margarita-dautova-coaching.vercel.app/downloads/career-pivot-playbook.html" 
          style="display: inline-block; background: #5f7260; color: white; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 16px;">
         View Your Playbook
       </a>
@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
         <strong>Ready for personalized guidance?</strong><br>
         Book a free 30-minute strategy call and let's discuss your specific situation.
       </p>
-      <a href="https://margaritadautova.com/book" 
+      <a href="https://margarita-dautova-coaching.vercel.app/book" 
          style="display: inline-block; margin-top: 15px; color: #5f7260; font-weight: 600; text-decoration: underline;">
         Book your free call →
       </a>
@@ -115,7 +115,7 @@ export async function POST(request: NextRequest) {
   <div style="border-top: 1px solid #e5e5e5; padding-top: 20px; text-align: center;">
     <p style="font-size: 13px; color: #888; margin: 0;">
       Margarita Dautova Coaching | Munich, Germany<br>
-      <a href="https://margaritadautova.com" style="color: #5f7260;">margaritadautova.com</a>
+      <a href="https://margarita-dautova-coaching.vercel.app" style="color: #5f7260;">margarita-dautova-coaching.vercel.app</a>
     </p>
     <p style="font-size: 12px; color: #aaa; margin: 10px 0 0;">
       You received this email because you signed up for the Career Pivot Playbook.<br>
