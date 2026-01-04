@@ -4,14 +4,13 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-// Navigation with anchor links for homepage sections
+// Navigation
 const navigation = [
-  { name: 'Approach', href: '/#approach' },
-  { name: 'Areas', href: '/#areas' },
-  { name: 'Clients', href: '/#clients' },
-  { name: 'Formats', href: '/#formats' },
-  { name: 'About', href: '/#about' },
-  { name: 'Contact', href: '/#contact' },
+  { name: 'Services', href: '/coaching' },
+  { name: 'About', href: '/about' },
+  { name: 'Testimonials', href: '/testimonials' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
@@ -88,13 +87,19 @@ export default function Header() {
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:block">
+          <div className="hidden lg:flex items-center gap-3">
+            <Link
+              href="/free"
+              className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
+            >
+              Free Guide
+            </Link>
             <Link
               href="/book"
               className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium 
-                bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300"
+                bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 rounded-sm"
             >
-              Book a Call
+              Book Strategy Call
             </Link>
           </div>
 
@@ -138,13 +143,20 @@ export default function Header() {
                 </Link>
               ))}
             </div>
-            <div className="mt-10 pt-8 border-t border-stone-200">
+            <div className="mt-10 pt-8 border-t border-stone-200 space-y-3">
               <Link
                 href="/book"
                 className="block w-full text-center px-6 py-3.5 font-medium 
-                  bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300"
+                  bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 rounded-sm"
               >
-                Book a Call
+                Book Strategy Call
+              </Link>
+              <Link
+                href="/free"
+                className="block w-full text-center px-6 py-3.5 font-medium 
+                  border border-stone-300 text-stone-700 hover:bg-stone-100 transition-all duration-300 rounded-sm"
+              >
+                Get Free Guide
               </Link>
             </div>
           </div>

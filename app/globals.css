@@ -17,12 +17,29 @@
     @apply bg-stone-50 text-stone-800 antialiased;
   }
 
+  /* Ensure sufficient padding on mobile for sticky CTA */
+  @media (max-width: 1023px) {
+    main {
+      padding-bottom: 80px;
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif text-stone-900;
   }
 
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary-500;
+    outline-color: rgb(95 114 96);
+  }
+
+  /* Ensure all interactive elements have visible focus states */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply ring-2 ring-primary-500 ring-offset-2;
   }
 
   ::selection {
@@ -88,6 +105,30 @@
 
   .prose-custom strong {
     @apply text-stone-800 font-medium;
+  }
+
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
 }
 

@@ -14,4 +14,18 @@ export { default as CTABanner } from './CTABanner'
 export { default as ContactForm } from './ContactForm'
 export { default as NewsletterForm } from './NewsletterForm'
 export { default as CalendarEmbed } from './CalendarEmbed'
+export { default as OptInForm } from './OptInForm'
+export { default as StickyMobileCTA } from './StickyMobileCTA'
+
+// Export section components
+export { default as HeroSection } from './sections/HeroSection'
+export { default as ProblemSection } from './sections/ProblemSection'
+export { default as TransformationSection } from './sections/TransformationSection'
+export { default as ProcessSection } from './sections/ProcessSection'
+export { default as TestimonialsSection } from './sections/TestimonialsSection'
+export { default as OffersSection } from './sections/OffersSection'
+export { default as LeadMagnetSection } from './sections/LeadMagnetSection'
+export { default as AboutSection } from './sections/AboutSection'
+export { default as FAQSection } from './sections/FAQSection'
+export { default as FinalCTASection } from './sections/FinalCTASection'
 

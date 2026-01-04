@@ -2,10 +2,9 @@ import Link from 'next/link'
 
 const navigation = {
   main: [
-    { name: 'Approach', href: '/#approach' },
-    { name: 'Areas', href: '/#areas' },
-    { name: 'Formats', href: '/#formats' },
+    { name: 'Services', href: '/coaching' },
     { name: 'About', href: '/about' },
+    { name: 'Testimonials', href: '/testimonials' },
     { name: 'Resources', href: '/resources' },
     { name: 'Contact', href: '/contact' },
   ],
@@ -102,13 +101,22 @@ export default function Footer() {
                 <p className="text-stone-500 text-sm">
                   Munich, Germany
                 </p>
-                <Link
-                  href="/book"
-                  className="inline-block mt-2 text-primary-400 hover:text-primary-300 
-                    font-medium transition-colors"
-                >
-                  Book a discovery call →
-                </Link>
+                <div className="mt-4 space-y-2">
+                  <Link
+                    href="/book"
+                    className="inline-block w-full text-center px-4 py-2 bg-primary-600 text-white 
+                      hover:bg-primary-700 transition-colors rounded-sm text-sm font-medium"
+                  >
+                    Book Strategy Call
+                  </Link>
+                  <Link
+                    href="/free"
+                    className="inline-block w-full text-center px-4 py-2 border border-stone-700 text-stone-300 
+                      hover:bg-stone-800 transition-colors rounded-sm text-sm font-medium"
+                  >
+                    Get Free Playbook
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
