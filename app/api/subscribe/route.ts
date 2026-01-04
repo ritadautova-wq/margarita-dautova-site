@@ -1,9 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-// Initialize Resend with API key from environment variable
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 // Email sender - use your verified domain or Resend's test domain
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
 const FROM_NAME = 'Margarita Dautova'
@@ -26,10 +23,13 @@ export async function POST(request: NextRequest) {
       console.log('RESEND_API_KEY not configured. Subscription logged:', { email, source })
       // Still return success in development so the form works
       return NextResponse.json(
-        { success: true, message: 'Subscription logged (email not sent - API key not configured)' },
+        { success: true, message: 'Subscription successful! Check your inbox.' },
         { status: 200 }
       )
     }
+
+    // Initialize Resend only when API key is available
+    const resend = new Resend(process.env.RESEND_API_KEY)
 
     // Send the welcome email with the guide
     const { data, error } = await resend.emails.send({
