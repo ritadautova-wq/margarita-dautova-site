@@ -1,7 +1,9 @@
 import { MetadataRoute } from 'next'
 
-/* TODO: Replace with actual domain */
-const baseUrl = 'https://margaritadautova.com'
+// Dynamically determine base URL based on environment
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+  process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 
+  'https://margaritadautova.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
