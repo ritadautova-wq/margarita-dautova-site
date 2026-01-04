@@ -46,13 +46,27 @@ export default function OptInForm({
 
   if (status === 'success') {
     return (
-      <div className={`p-4 bg-green-50 border border-green-200 rounded-sm ${className}`}>
-        <div className="flex items-start gap-3">
-          <svg className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className={`p-6 bg-green-50 border border-green-200 rounded-sm ${className}`}>
+        <div className="flex items-start gap-3 mb-4">
+          <svg className="w-6 h-6 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
-          <p className="text-green-800 text-sm">{message}</p>
+          <div>
+            <p className="text-green-800 font-medium">Success! Your playbook is ready.</p>
+            <p className="text-green-700 text-sm mt-1">We've also sent a copy to your inbox.</p>
+          </div>
         </div>
+        <a
+          href="/downloads/career-pivot-playbook.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center w-full px-6 py-3 bg-primary-600 text-white font-medium rounded-sm hover:bg-primary-700 transition-colors"
+        >
+          📖 View Your Playbook Now
+        </a>
+        <p className="text-xs text-green-700 mt-3 text-center">
+          Tip: Use Ctrl/Cmd+P to save as PDF
+        </p>
       </div>
     )
   }

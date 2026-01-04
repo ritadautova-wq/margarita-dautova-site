@@ -45,9 +45,9 @@ export default function BookLeadMagnet() {
       <Section background="white">
         <Container size="narrow">
           <div className="bg-green-50 border border-green-200 rounded-sm p-6 text-center">
-            <div className="flex items-center justify-center gap-3 mb-2">
+            <div className="flex items-center justify-center gap-3 mb-4">
               <svg
-                className="w-5 h-5 text-green-600"
+                className="w-6 h-6 text-green-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -59,8 +59,16 @@ export default function BookLeadMagnet() {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <p className="text-green-800 font-medium">{message}</p>
+              <p className="text-green-800 font-medium">Success! Your playbook is ready.</p>
             </div>
+            <a
+              href="/downloads/career-pivot-playbook.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-medium rounded-sm hover:bg-primary-700 transition-colors mb-4"
+            >
+              📖 View Your Playbook Now
+            </a>
             <p className="text-sm text-green-700">
               Still want to book a call?{' '}
               <a
