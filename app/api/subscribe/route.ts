@@ -70,13 +70,12 @@ export async function POST(request: NextRequest) {
       <p style="font-size: 18px; font-weight: 600; color: #2c332d; margin: 0 0 15px;">
         📖 Download Your Playbook
       </p>
-      <a href="https://margaritadautova.com/downloads/career-pivot-playbook.pdf" 
+      <a href="https://margaritadautova.com/downloads/career-pivot-playbook.html" 
          style="display: inline-block; background: #5f7260; color: white; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 16px;">
-        Get the PDF
+        View Your Playbook
       </a>
       <p style="font-size: 13px; color: #888; margin: 15px 0 0;">
-        <!-- TODO: Replace with actual download link -->
-        Link expires in 7 days
+        Tip: Use your browser's Print function (Ctrl/Cmd+P) to save as PDF
       </p>
     </div>
 
