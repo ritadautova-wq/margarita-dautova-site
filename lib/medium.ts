@@ -170,7 +170,7 @@ export async function fetchMediumArticles(username: string = 'rita.dautova'): Pr
       const itemXml = match[1]
       
       // Extract title - handle CDATA and regular
-      const titleMatch = itemXml.match(/<title>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?<\/title>/is)
+      const titleMatch = itemXml.match(/<title>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/title>/i)
       const title = titleMatch ? titleMatch[1].trim().replace(/<!\[CDATA\[|\]\]>/g, '') : ''
       
       // Extract link
