@@ -95,6 +95,7 @@ export default async function ResourcesPage() {
                 readingTime={post.readingTime}
                 date={post.date}
                 imageUrl={post.imageUrl}
+                link={post.link}
               />
             ))}
           </div>
