@@ -5,6 +5,7 @@ import SectionHeader from '@/components/SectionHeader'
 import BlogCard from '@/components/BlogCard'
 import NewsletterForm from '@/components/NewsletterForm'
 import Button from '@/components/Button'
+import { fetchMediumArticles } from '@/lib/medium'
 
 export const metadata: Metadata = {
   title: 'Resources & Insights',
@@ -12,46 +13,14 @@ export const metadata: Metadata = {
     'Articles, guides, and insights on leadership, career development, and professional growth from executive coach Margarita Dautova.',
 }
 
-/* TODO: These would normally be fetched from a CMS or filesystem */
-const blogPosts = [
-  {
-    slug: 'signs-ready-for-career-change',
-    title: "7 Signs You're Ready for a Career Change (Even If It Scares You)",
-    excerpt:
-      "Feeling restless in your role? Wondering if there's something more? Here are seven signs that it might be time for a change — and why that's actually a good thing.",
-    category: 'Career Transitions',
-    readingTime: '6 min read',
-    date: '2024-01-15',
-  },
-  {
-    slug: 'first-90-days-leadership-role',
-    title: 'The First 90 Days in a Leadership Role: A Strategic Playbook',
-    excerpt:
-      "The first three months in a new leadership position are critical. Here's a practical framework for making the right impression and building lasting success.",
-    category: 'Leadership',
-    readingTime: '8 min read',
-    date: '2024-01-08',
-  },
-  {
-    slug: 'overcoming-imposter-syndrome-executives',
-    title: 'Overcoming Imposter Syndrome: A Guide for High-Achievers',
-    excerpt:
-      "That voice telling you you're not good enough? It affects even the most successful leaders. Here's how to recognize it, understand it, and move past it.",
-    category: 'Mindset',
-    readingTime: '7 min read',
-    date: '2024-01-02',
-  },
-]
 
-const categories = [
-  'All',
-  'Leadership',
-  'Career Transitions',
-  'Mindset',
-  'Professional Growth',
-]
-
-export default function ResourcesPage() {
+export default async function ResourcesPage() {
+  // Fetch articles from Medium
+  const blogPosts = await fetchMediumArticles('rita.dautova')
+  
+  // Extract unique categories from articles
+  const allCategories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))]
+  
   return (
     <>
       {/* Hero */}
@@ -97,9 +66,9 @@ export default function ResourcesPage() {
       {/* Blog Posts */}
       <Section background="white">
         <Container size="wide">
-          {/* Category Filter (static for now) */}
+          {/* Category Filter */}
           <div className="flex flex-wrap gap-2 mb-12 justify-center">
-            {categories.map((category) => (
+            {allCategories.map((category) => (
               <button
                 key={category}
                 className={`px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200
@@ -125,17 +94,18 @@ export default function ResourcesPage() {
                 category={post.category}
                 readingTime={post.readingTime}
                 date={post.date}
+                imageUrl={post.imageUrl}
               />
             ))}
           </div>
 
-          {/* Load More (placeholder) */}
-          <div className="mt-12 text-center">
-            <p className="text-neutral-500 text-sm mb-4">
-              More articles coming soon...
-            </p>
-            {/* TODO: Implement pagination when more posts exist */}
-          </div>
+          {blogPosts.length === 0 && (
+            <div className="mt-12 text-center">
+              <p className="text-neutral-500 text-sm mb-4">
+                No articles available at the moment. Check back soon!
+              </p>
+            </div>
+          )}
         </Container>
       </Section>
 

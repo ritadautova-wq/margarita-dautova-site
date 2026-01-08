@@ -1,11 +1,12 @@
 import { MetadataRoute } from 'next'
+import { fetchMediumArticles } from '@/lib/medium'
 
 // Dynamically determine base URL based on environment
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
   process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 
   'https://margaritadautova.com'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     '',
     '/about',
@@ -26,15 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: route === '' ? 1 : 0.8,
   }))
 
-  /* TODO: Add dynamic blog posts to sitemap */
-  const blogPosts = [
-    '/resources/signs-ready-for-career-change',
-    '/resources/first-90-days-leadership-role',
-    '/resources/overcoming-imposter-syndrome-executives',
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'yearly' as const,
+  // Fetch articles from Medium
+  const articles = await fetchMediumArticles('rita.dautova')
+  const blogPosts = articles.map((article) => ({
+    url: `${baseUrl}/resources/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
 
