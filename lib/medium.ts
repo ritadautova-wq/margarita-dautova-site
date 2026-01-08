@@ -88,7 +88,7 @@ function extractImages(html: string): string[] {
     }
   }
   
-  return [...new Set(images)] // Remove duplicates
+  return Array.from(new Set(images)) // Remove duplicates
 }
 
 // Parse HTML content and convert to markdown-like format with image placeholders
