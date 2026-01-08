@@ -68,7 +68,7 @@ export default function ProblemSection() {
               Here's how we turn this moment into momentum:
             </p>
             <Button href="/book" variant="primary" size="lg">
-              Book Your Strategy Call
+              Book Your Discovery Call
             </Button>
           </div>
         </div>

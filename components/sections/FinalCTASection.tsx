@@ -23,7 +23,7 @@ export default function FinalCTASection() {
                 transition-all duration-300 rounded-sm
                 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
             >
-              Book Your Strategy Call
+              Book Your Discovery Call
             </Link>
             <Link
               href="/free"

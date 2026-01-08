@@ -99,7 +99,7 @@ export default function FreeResourcePage() {
 
               <div className="bg-stone-50 border border-stone-200 rounded-sm p-6">
                 <h3 className="font-medium text-stone-900 mb-2">
-                  Plus: Invitation to a Free Strategy Call
+                  Plus: Invitation to a Free Discovery Call
                 </h3>
                 <p className="text-stone-600 text-sm">
                   After you download the playbook, you'll get an invitation to book a free 30-minute strategy call 
@@ -151,7 +151,7 @@ export default function FreeResourcePage() {
               where we can explore your specific situation and whether coaching could help.
             </p>
             <Button href="/book" variant="primary" size="lg">
-              Book Your Strategy Call
+              Book Your Discovery Call
             </Button>
           </div>
         </Container>

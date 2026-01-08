@@ -36,7 +36,7 @@ export default function BookStickyMobileCTA() {
             href="#book-calendar"
             onClick={handleBookClick}
             className="flex-1 px-4 py-3 bg-primary-600 text-white text-center font-medium rounded-sm hover:bg-primary-700 transition-colors text-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
-            aria-label="Book Your Strategy Call"
+            aria-label="Book Your Discovery Call"
           >
             Book Free Call
           </Link>

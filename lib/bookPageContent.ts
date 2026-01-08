@@ -22,7 +22,7 @@ export const heroVariants: Record<HeroVariant, HeroContent> = {
     headline: 'Stop Spinning. Start Moving Forward.',
     subheadline:
       'A 30-minute call for professionals who are tired of overthinking their next career move.',
-    ctaLabel: 'Book My Strategy Call',
+    ctaLabel: 'Book My Discovery Call',
   },
   C: {
     headline: 'From Overwhelmed to a Clear Path Forward',
@@ -229,7 +229,7 @@ export const finalCTA = {
   headline: 'Ready to get clear on your next career move?',
   subheadline:
     'The first step is simple: a free 30-minute strategy call where we talk about where you are and where you want to go. No pressure, no commitment—just an honest conversation that could change everything.',
-  primaryCTA: 'Book Your Strategy Call',
+  primaryCTA: 'Book Your Discovery Call',
   secondaryCTA: 'Get the Free Playbook',
   microcopy: 'Free. 30 minutes. Leave with your next step.',
   privacyNote: 'Everything we discuss is completely confidential.',

@@ -87,7 +87,7 @@ export default function ThankYouPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-stone-900 mb-2">
-                    Book a Free Strategy Call (Optional)
+                    Book a Free Discovery Call (Optional)
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
                     If you want to go deeper, book a free 30-minute call where we can explore your specific situation 
@@ -107,7 +107,7 @@ export default function ThankYouPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button href="/book" variant="primary" size="lg">
-                  Book Your Strategy Call
+                  Book Your Discovery Call
                 </Button>
                 <Button href="/" variant="secondary" size="lg">
                   Back to Homepage

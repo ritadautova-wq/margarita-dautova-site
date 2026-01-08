@@ -89,7 +89,7 @@ export default function ProcessSection() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/book" variant="primary" size="lg">
-              Book Your Strategy Call
+              Book Your Discovery Call
             </Button>
             <Button href="/free" variant="secondary" size="lg">
               Get the Free Playbook

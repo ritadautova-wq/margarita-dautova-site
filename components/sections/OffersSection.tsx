@@ -183,7 +183,7 @@ export default function OffersSection() {
             Book a free discovery call and we'll figure it out together. No pressure, just an honest conversation.
           </p>
           <Button href="/book" variant="primary" size="lg">
-            Book Your Strategy Call
+            Book Your Discovery Call
           </Button>
         </div>
       </Container>

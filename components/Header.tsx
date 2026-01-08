@@ -99,7 +99,7 @@ export default function Header() {
               className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium 
                 bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 rounded-sm"
             >
-              Book Strategy Call
+              Discovery Call
             </Link>
           </div>
 
@@ -149,7 +149,7 @@ export default function Header() {
                 className="block w-full text-center px-6 py-3.5 font-medium 
                   bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 rounded-sm"
               >
-                Book Strategy Call
+                Discovery Call
               </Link>
               <Link
                 href="/free"
