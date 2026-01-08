@@ -4,7 +4,8 @@ const navigation = {
   main: [
     { name: 'Services', href: '/coaching' },
     { name: 'About', href: '/about' },
-    { name: 'Testimonials', href: '/testimonials' },
+    // TODO: Uncomment when testimonials are ready
+    // { name: 'Testimonials', href: '/testimonials' },
     { name: 'Resources', href: '/resources' },
     { name: 'Contact', href: '/contact' },
   ],

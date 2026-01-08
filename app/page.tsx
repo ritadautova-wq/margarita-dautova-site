@@ -3,7 +3,8 @@ import HeroSection from '@/components/sections/HeroSection'
 import ProblemSection from '@/components/sections/ProblemSection'
 import TransformationSection from '@/components/sections/TransformationSection'
 import ProcessSection from '@/components/sections/ProcessSection'
-import TestimonialsSection from '@/components/sections/TestimonialsSection'
+// TODO: Uncomment when testimonials are ready
+// import TestimonialsSection from '@/components/sections/TestimonialsSection'
 import OffersSection from '@/components/sections/OffersSection'
 import LeadMagnetSection from '@/components/sections/LeadMagnetSection'
 import AboutSection from '@/components/sections/AboutSection'
@@ -79,7 +80,8 @@ export default function HomePage() {
       <ProblemSection />
       <TransformationSection />
       <ProcessSection />
-      <TestimonialsSection />
+      {/* TODO: Uncomment when testimonials are ready */}
+      {/* <TestimonialsSection /> */}
       <OffersSection />
       <LeadMagnetSection />
       <AboutSection />

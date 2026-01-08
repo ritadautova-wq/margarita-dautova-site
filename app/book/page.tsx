@@ -3,7 +3,8 @@ import BookHero from '@/components/book/BookHero'
 import FitSection from '@/components/book/FitSection'
 import OutcomesGrid from '@/components/book/OutcomesGrid'
 import ProcessSteps from '@/components/book/ProcessSteps'
-import BookTestimonials from '@/components/book/BookTestimonials'
+// TODO: Uncomment when testimonials are ready
+// import BookTestimonials from '@/components/book/BookTestimonials'
 import LazyCalendarEmbed from '@/components/book/LazyCalendarEmbed'
 import BookFAQ from '@/components/book/BookFAQ'
 import BookFinalCTA from '@/components/book/BookFinalCTA'
@@ -42,7 +43,8 @@ export default function BookPage() {
       <FitSection />
       <OutcomesGrid />
       <ProcessSteps />
-      <BookTestimonials />
+      {/* TODO: Uncomment when testimonials are ready */}
+      {/* <BookTestimonials /> */}
       <LazyCalendarEmbed calLink="margarita-dautova" eventType="discovery-call" />
       <BookFAQ />
       <BookFinalCTA />

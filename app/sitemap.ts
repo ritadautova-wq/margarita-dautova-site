@@ -10,7 +10,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/coaching',
-    '/testimonials',
+    // TODO: Uncomment when testimonials are ready
+    // '/testimonials',
     '/resources',
     '/contact',
     '/book',
