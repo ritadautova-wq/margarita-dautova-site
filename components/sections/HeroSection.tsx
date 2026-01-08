@@ -34,7 +34,7 @@ export default function HeroSection() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-display md:text-display-lg lg:text-display-xl text-stone-900 text-balance mb-6">
+            <h1 className="font-serif text-[44px] leading-[1.15] tracking-[-0.02em] text-stone-900 text-balance mb-6">
               Land Your Next Career Move Without Burning Out or Starting Over
             </h1>
             {/* Deployment marker: 2026-01-04 */}

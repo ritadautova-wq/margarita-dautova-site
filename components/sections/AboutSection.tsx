@@ -1,5 +1,6 @@
 import Container from '@/components/Container'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function AboutSection() {
   return (
@@ -8,14 +9,15 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
           {/* Image placeholder */}
           <div className="lg:col-span-2">
-            <div className="aspect-[3/4] bg-gradient-to-br from-primary-100 to-stone-100 flex items-center justify-center rounded-sm">
-              {/* TODO: Add Margarita's professional portrait */}
-              <div className="text-center text-stone-400">
-                <svg className="w-20 h-20 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                </svg>
-                <p className="mt-2 text-sm">Portrait</p>
-              </div>
+            <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-gradient-to-br from-primary-100 to-stone-100">
+              <Image
+                src="/images/portrait-margarita.JPG"
+                alt="Portrait of Margarita Dautova"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                priority
+              />
             </div>
           </div>
 
