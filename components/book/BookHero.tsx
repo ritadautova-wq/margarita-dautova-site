@@ -1,16 +1,14 @@
 'use client'
 
-import { defaultHeroVariant, heroVariants, trustStrip, heroMicrocopy } from '@/lib/bookPageContent'
+import { hero, trustStrip, heroMicrocopy } from '@/lib/bookPageContent'
 import Container from '@/components/Container'
 import Link from 'next/link'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
 
 export default function BookHero() {
-  const hero = heroVariants[defaultHeroVariant]
-
   const handleCTAClick = () => {
     trackEvent(AnalyticsEvents.HERO_PRIMARY_CTA_CLICK, {
-      variant: defaultHeroVariant,
+      variant: 'A',
     })
     // Scroll to calendar section
     const calendarSection = document.getElementById('book-calendar')

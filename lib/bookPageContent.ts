@@ -3,33 +3,17 @@
  * All copy for the /book page in one editable file
  */
 
-export type HeroVariant = 'A' | 'B' | 'C'
-
 export interface HeroContent {
   headline: string
   subheadline: string
   ctaLabel: string
 }
 
-export const heroVariants: Record<HeroVariant, HeroContent> = {
-  A: {
-    headline: 'Get Clear Next Steps in 30 Minutes',
-    subheadline:
-      'For professionals stuck between staying and leaving. Walk away with clarity—no pitch, no pressure.',
-    ctaLabel: 'Book The Discovery Call',
-  },
-  B: {
-    headline: 'Stop Spinning. Start Moving Forward.',
-    subheadline:
-      'A 30-minute call for professionals who are tired of overthinking their next career move.',
-    ctaLabel: 'Book The Discovery Call',
-  },
-  C: {
-    headline: 'From Overwhelmed to a Clear Path Forward',
-    subheadline:
-      "In 30 minutes, we'll identify what's keeping you stuck and map out your next move—together.",
-    ctaLabel: 'Book The Discovery Call',
-  },
+export const hero: HeroContent = {
+  headline: 'Get Clear Next Steps in 30 Minutes',
+  subheadline:
+    'For professionals stuck between staying and leaving. Walk away with clarity—no pitch, no pressure.',
+  ctaLabel: 'Book The Discovery Call',
 }
 
 export const trustStrip = [
@@ -235,6 +219,4 @@ export const finalCTA = {
   privacyNote: 'Everything we discuss is completely confidential.',
 }
 
-// Default hero variant to use
-export const defaultHeroVariant: HeroVariant = 'A'
 
