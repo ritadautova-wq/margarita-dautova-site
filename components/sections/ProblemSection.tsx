@@ -4,7 +4,6 @@ import Button from '@/components/Button'
 export default function ProblemSection() {
   const painPoints = [
     "You're successful on paper but feel stuck or unfulfilled",
-    "You're burned out but can't afford to step back",
     "You know you need a change but don't know what's next",
     "You're considering a career pivot but fear starting over",
     "You've lost confidence in your abilities or direction",
