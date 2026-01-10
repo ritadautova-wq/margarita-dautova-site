@@ -20,7 +20,7 @@ import {
 export const metadata: Metadata = {
   title: 'Career & Transition Coaching | Margarita Dautova',
   description:
-    'Land your next career move without burning out or starting over. Career coaching for senior professionals ready for clarity, confidence, and sustainable change.',
+    'Land your next career move without burning out or starting over. Career coaching for professionals ready for clarity, confidence, and sustainable change.',
   // Force deployment update
 }
 

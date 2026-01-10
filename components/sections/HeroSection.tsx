@@ -41,7 +41,7 @@ export default function HeroSection() {
             
             {/* Subheadline */}
             <p className="text-body-lg md:text-xl text-stone-600 leading-relaxed mb-10">
-              Career coaching for senior professionals who want clarity on their next chapter—without sacrificing what they've built. 
+              Career coaching for professionals who want clarity on their next chapter—without sacrificing what they've built. 
               The 90-Day Clarity Sprint helps you navigate transitions with confidence.
             </p>
 

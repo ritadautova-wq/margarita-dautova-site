@@ -16,7 +16,7 @@ import { generateFAQSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Book Your Free Discovery Call',
   description:
-    'Get clear next steps in 30 minutes. A free discovery call for senior professionals stuck between staying and leaving. No pitch, no pressure—just clarity.',
+    'Get clear next steps in 30 minutes. A free discovery call for professionals stuck between staying and leaving. No pitch, no pressure—just clarity.',
 }
 
 export default function BookPage() {
