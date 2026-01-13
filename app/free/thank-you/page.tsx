@@ -107,7 +107,7 @@ export default function ThankYouPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button href="/book" variant="primary" size="lg">
-                  Book Your Discovery Call
+                  Book Free Discovery Call
                 </Button>
                 <Button href="/" variant="secondary" size="lg">
                   Back to Homepage

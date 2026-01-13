@@ -108,7 +108,7 @@ export default function Footer() {
                     className="inline-block w-full text-center px-4 py-2 bg-primary-600 text-white 
                       hover:bg-primary-700 transition-colors rounded-sm text-sm font-medium"
                   >
-                    Discovery Call
+                    Book Free Discovery Call
                   </Link>
                   <Link
                     href="/free"

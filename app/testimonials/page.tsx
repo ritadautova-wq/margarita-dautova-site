@@ -203,7 +203,7 @@ export default function TestimonialsPage() {
               className="inline-flex items-center justify-center px-8 py-4 font-medium 
                 bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300"
             >
-              Book a discovery call
+              Book Free Discovery Call
             </Link>
           </div>
         </div>

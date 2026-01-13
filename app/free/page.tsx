@@ -151,7 +151,7 @@ export default function FreeResourcePage() {
               where we can explore your specific situation and whether coaching could help.
             </p>
             <Button href="/book" variant="primary" size="lg">
-              Book Your Discovery Call
+              Book Free Discovery Call
             </Button>
           </div>
         </Container>

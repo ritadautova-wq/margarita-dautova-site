@@ -218,7 +218,7 @@ export const offersSection = {
   ],
   notSureText: "Not sure which format is right for you?",
   notSureDescription: "Book a free discovery call and we'll figure it out together. No pressure, just an honest conversation.",
-  notSureCTALabel: "Book Discovery Call",
+  notSureCTALabel: "Book Free Discovery Call",
 }
 
 // Lead Magnet Section
@@ -240,7 +240,7 @@ export const leadMagnetSection = {
 export const finalCTASection = {
   headline: "Ready to land your next career move?",
   description: "The first step is simple: a free 30-minute strategy call where we talk about where you are and where you want to go. No pressure, no commitment—just an honest conversation that could change everything.",
-  primaryCTALabel: "Book Your Discovery Call",
+  primaryCTALabel: "Book Free Discovery Call",
   secondaryCTALabel: "Get the Free Playbook",
   microcopy: "Free. 30 minutes. Leave with your next step.",
   privacyNote: "Everything we discuss is completely confidential.",
