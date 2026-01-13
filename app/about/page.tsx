@@ -5,84 +5,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Learn about Margarita Dautova — PCC ICF certified career and transition coach with a corporate background in talent and leadership development.',
+    'Learn about Margarita Dautova — a coach who works with people in transition, helping them find clarity through honest, one-on-one conversations.',
 }
-
-// TODO: Replace with Margarita's actual credentials and background
-const timeline = [
-  {
-    period: 'Corporate Career',
-    title: 'Talent & Leadership Development',
-    description:
-      'Spent years working in HR and Talent Development at companies like Mytheresa and Amadeus, designing programs to help people grow in their careers.',
-  },
-  {
-    period: 'The Shift',
-    title: 'From Developing Others to Deep Conversations',
-    description:
-      "Realized that the most impactful moments in my work weren't the programs I designed, but the one-on-one conversations where real change happened.",
-  },
-  {
-    period: 'Training & Certification',
-    title: 'Becoming a Professional Coach',
-    description:
-      'Pursued rigorous coaching training and earned my PCC (Professional Certified Coach) credential from the International Coaching Federation.',
-  },
-  {
-    period: 'Now',
-    title: 'Independent Coaching Practice',
-    description:
-      'Working with professionals worldwide who are navigating career transitions, recovering from burnout, or seeking more meaning in their work.',
-  },
-]
-
-const credentials = [
-  {
-    category: 'Coaching Credentials',
-    items: [
-      'PCC (Professional Certified Coach) – ICF',
-      // TODO: Add any additional certifications
-    ],
-  },
-  {
-    category: 'Education',
-    items: [
-      'Global Management – [University]', // TODO: Add actual university
-      'Accounting, Analysis & Audit – [University]', // TODO: Add actual details
-    ],
-  },
-  {
-    category: 'Corporate Experience',
-    items: [
-      'Mytheresa – Talent & Leadership Development',
-      'Amadeus – [Role]', // TODO: Add actual role
-      // TODO: Add other relevant experience
-    ],
-  },
-]
-
-const values = [
-  {
-    title: 'Clarity Over Complexity',
-    description:
-      "Life and work are complicated enough. I believe in cutting through the noise to find what's actually important.",
-  },
-  {
-    title: 'Honesty with Kindness',
-    description:
-      "Real growth requires honest reflection. I'll tell you what I see — always with care and respect.",
-  },
-  {
-    title: 'Sustainable Change',
-    description:
-      "Quick fixes rarely last. I'm interested in change that actually sticks, even after our work together ends.",
-  },
-  {
-    title: 'Whole-Person Perspective',
-    description:
-      "Your career doesn't exist in isolation. We consider all of you — your values, relationships, health, and life beyond work.",
-  },
-]
 
 export default function AboutPage() {
   return (
@@ -93,9 +17,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
             {/* Image */}
             <div className="lg:col-span-2">
-              <div
-                className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-primary-100 to-stone-100"
-              >
+              <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-primary-100 to-stone-100">
                 <Image
                   src="/images/IMG_5681.JPG"
                   alt="Portrait of Margarita Dautova"
@@ -113,27 +35,20 @@ export default function AboutPage() {
                 About Me
               </p>
               <h1 className="font-serif text-display md:text-display-lg text-stone-900">
-                Hi, I'm Margarita
+                Hi, I'm Margarita.
               </h1>
               
               <div className="mt-6 space-y-4 text-stone-600 leading-relaxed">
                 <p>
-                  I'm a career and transition coach working with professionals who find 
-                  themselves at a crossroads — people who've built successful careers but 
-                  now feel stuck, exhausted, or uncertain about what comes next.
+                  I work with people who are in transition — not because something is "wrong," 
+                  but because something is changing.
                 </p>
                 <p>
-                  Before becoming a coach, I spent years in corporate environments working 
-                  in Talent and Leadership Development. I've designed programs, facilitated 
-                  workshops, and sat across from hundreds of people trying to figure out 
-                  their careers. That experience taught me something important: the real 
-                  breakthroughs don't happen in workshops. They happen in honest, 
-                  one-on-one conversations.
+                  Most of the people I work with have built solid careers. From the outside, things look good.
+                  But inside, there's often uncertainty, fatigue, or a quiet question that won't go away:
                 </p>
-                <p>
-                  That's why I became a coach. I wanted to create space for those conversations 
-                  — the kind where you can actually say what you're thinking, explore what 
-                  you're feeling, and figure out what you actually want.
+                <p className="text-stone-800 italic text-lg">
+                  Is this still right for me?
                 </p>
               </div>
 
@@ -145,152 +60,202 @@ export default function AboutPage() {
                 >
                   Book a discovery call
                 </Link>
-                <Link
-                  href="/#approach"
-                  className="inline-flex items-center justify-center px-6 py-3 font-medium 
-                    border border-stone-300 text-stone-700 hover:border-stone-400 
-                    hover:bg-stone-100 transition-all duration-300"
-                >
-                  See how I work
-                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Journey / Timeline */}
+      {/* Why I Do This Work */}
       <section className="section-padding bg-white">
         <div className="container-narrow">
-          <div className="text-center mb-14">
-            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
-              My Journey
-            </p>
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              How I got here
-            </h2>
-          </div>
-
-          <div className="space-y-12">
-            {timeline.map((item, index) => (
-              <div key={index} className="grid md:grid-cols-4 gap-4 md:gap-8">
-                <div className="md:text-right">
-                  <span className="text-sm font-medium text-primary-600">
-                    {item.period}
-                  </span>
-                </div>
-                <div className="md:col-span-3 pb-12 border-b border-stone-200 last:border-0 last:pb-0">
-                  <h3 className="font-serif text-heading-sm text-stone-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-stone-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Values */}
-      <section className="section-padding bg-stone-100/50">
-        <div className="container-default">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
-              What I Believe
-            </p>
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              Values that guide my work
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {values.map((value, index) => (
-              <div key={index} className="bg-white p-8 border border-stone-200">
-                <h3 className="font-serif text-heading-sm text-stone-900 mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-stone-600 leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Credentials */}
-      <section className="section-padding bg-white">
-        <div className="container-default">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="mb-10">
             <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
               Background
             </p>
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              Training & experience
+              Why I Do This Work
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {credentials.map((category, index) => (
-              <div key={index}>
-                <h3 className="font-medium text-stone-900 mb-4 pb-2 border-b border-stone-200">
-                  {category.category}
-                </h3>
-                <ul className="space-y-3">
-                  {category.items.map((item, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <svg
-                        className="w-4 h-4 text-primary-500 flex-shrink-0 mt-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      <span className="text-stone-600 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+          <div className="space-y-6 text-stone-600 leading-relaxed">
+            <p>
+              Before becoming a coach, I spent years working in corporate environments 
+              in <strong className="text-stone-800">Talent and Leadership Development</strong>.
+            </p>
+            <div className="space-y-2 pl-4 border-l-2 border-primary-200">
+              <p>I designed programs.</p>
+              <p>Facilitated workshops.</p>
+              <p>Worked with leaders and professionals across different stages of their careers.</p>
+            </div>
+            <p>
+              And over time, I noticed something important:
+            </p>
+            <p className="text-stone-800 text-lg">
+              The real breakthroughs rarely happened in group settings or structured frameworks.
+              They happened in honest, one-on-one conversations — when people felt safe enough 
+              to slow down and think out loud.
+            </p>
+            <p className="text-primary-700 font-medium">
+              That's where clarity actually began.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* My Approach */}
+      <section className="section-padding bg-stone-100/50">
+        <div className="container-narrow">
+          <div className="mb-10">
+            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+              How I Work
+            </p>
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              My Approach
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-stone-600 leading-relaxed">
+            <p>
+              That insight is what led me to coaching.
+            </p>
+            <p>
+              I wanted to create space for conversations where you don't have to perform, 
+              impress, or already know the answer.
+            </p>
+            <p className="font-medium text-stone-800">
+              In our work together:
+            </p>
+            <ul className="space-y-3">
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>We slow things down</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>We make space for complexity</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <svg className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                </svg>
+                <span>We think carefully, not reactively</span>
+              </li>
+            </ul>
+            <div className="bg-white p-6 border-l-4 border-primary-600">
+              <p className="text-stone-700">
+                I don't tell you what to do. I don't push you toward decisions before you're ready.
+              </p>
+              <p className="mt-3 text-stone-800 font-medium">
+                I work as a <span className="text-primary-700">thinking partner</span> — someone who helps you 
+                hear yourself more clearly, especially when things feel unclear.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who I Work With */}
+      <section className="section-padding bg-white">
+        <div className="container-narrow">
+          <div className="mb-10">
+            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+              Is This For You?
+            </p>
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              Who I Work With Best
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-stone-600 leading-relaxed">
+            <p>
+              I mostly work with people between <strong className="text-stone-800">25 and 40</strong> who 
+              are navigating personal or professional transitions.
+            </p>
+            <p className="font-medium text-stone-800">
+              Often, they are:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-stone-50 p-5 border border-stone-200">
+                <p className="text-stone-700">Rethinking their career direction</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Personal note */}
-      <section className="section-padding-sm bg-primary-50/30">
-        <div className="container-narrow text-center">
-          <h2 className="font-serif text-heading text-stone-900 mb-6">
-            Beyond the professional bio
-          </h2>
-          <div className="text-stone-600 leading-relaxed space-y-4 max-w-2xl mx-auto">
-            {/* TODO: Add Margarita's personal details */}
-            <p>
-              When I'm not coaching, you'll find me [hobbies/interests]. I'm based in Munich, 
-              Germany, though I work with clients from all over the world via video call.
-            </p>
-            <p>
-              I believe that good work happens when there's genuine connection. If you're 
-              curious about working together, I'd love to hear from you.
+              <div className="bg-stone-50 p-5 border border-stone-200">
+                <p className="text-stone-700">Questioning old definitions of success</p>
+              </div>
+              <div className="bg-stone-50 p-5 border border-stone-200">
+                <p className="text-stone-700">Feeling exhausted by roles that once fit</p>
+              </div>
+              <div className="bg-stone-50 p-5 border border-stone-200">
+                <p className="text-stone-700">Sensing that they are becoming someone new</p>
+              </div>
+            </div>
+            <p className="text-stone-800 italic">
+              They are thoughtful, reflective, and capable — but tired of second-guessing themselves.
             </p>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* What Matters to Me */}
+      <section className="section-padding bg-stone-100/50">
+        <div className="container-narrow">
+          <div className="mb-10">
+            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+              My Values
+            </p>
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              What Matters to Me in This Work
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-stone-600 leading-relaxed">
+            <p>
+              Trust, depth, and honesty are central to how I work.
+            </p>
+            <p className="font-medium text-stone-800">
+              I care about:
+            </p>
+            <ul className="space-y-4">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-600 font-serif text-xl">•</span>
+                <span>Clarity that feels grounded, not forced</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-600 font-serif text-xl">•</span>
+                <span>Decisions that come from understanding, not pressure</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-600 font-serif text-xl">•</span>
+                <span>Work and lives that are sustainable, not just impressive</span>
+              </li>
+            </ul>
+            <p className="text-stone-800 text-lg border-l-4 border-primary-300 pl-4 py-2">
+              I believe that when people are given the right space, they usually already know what they need.
+              They just need help accessing it.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA / Invitation */}
       <section className="section-padding bg-primary-700 text-white">
         <div className="container-narrow text-center">
+          <p className="text-sm font-medium text-primary-200 uppercase tracking-wider mb-3">
+            An Invitation
+          </p>
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
-            Let's see if we're a good fit
+            If you're at a crossroads
           </h2>
-          <p className="mt-4 text-primary-100 text-lg max-w-xl mx-auto">
-            Book a free discovery call. We'll talk about what's going on for you 
-            and whether coaching could help.
+          <p className="mt-6 text-primary-100 text-lg max-w-2xl mx-auto leading-relaxed">
+            If you want a place to think clearly — without rushing yourself into answers — 
+            this might be a good place to start.
+          </p>
+          <p className="mt-4 text-white text-xl font-medium">
+            We can begin with a conversation.
           </p>
           
           <div className="mt-10">
