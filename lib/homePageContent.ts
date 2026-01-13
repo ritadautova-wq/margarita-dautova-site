@@ -187,7 +187,7 @@ export const offersSection = {
       ],
       idealFor: 'Specific decisions, exploring fit, getting unstuck',
       price: '€90',
-      priceNote: 'Follow-up session available at reduced rate',
+      priceNote: '',
       cta: 'Book a Session',
       href: '/contact?type=single',
       featured: false,

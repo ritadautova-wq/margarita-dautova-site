@@ -73,7 +73,7 @@ This is also a great way to experience coaching if you're curious about what it'
       'Preparing for important conversations',
     ],
     investment: '€90',
-    investmentNote: 'Follow-up session available at reduced rate',
+    investmentNote: '',
   },
   {
     id: 'corporate',
