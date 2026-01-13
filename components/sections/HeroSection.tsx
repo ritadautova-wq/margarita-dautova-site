@@ -85,10 +85,10 @@ export default function HeroSection() {
 
           {/* Image Column */}
           <div className="relative lg:order-last">
-            <div className="relative aspect-[4/5] lg:aspect-square rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative aspect-[3/4] rounded-lg overflow-hidden shadow-2xl">
               <Image
-                src="/images/hero-visual.png"
-                alt="Career coaching and professional development"
+                src="/images/IMG_5842.JPG"
+                alt="Margarita Dautova - Career Coach"
                 fill
                 className="object-cover"
                 priority

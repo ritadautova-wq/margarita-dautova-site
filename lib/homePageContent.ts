@@ -10,14 +10,14 @@ export const hero = {
     { label: '80+ professionals coached', icon: 'people' },
     { label: 'Worldwide via video', icon: 'globe' },
   ],
-  headline: "Land Your Next Career Move Without Burning Out or Starting Over",
-  subheadline: "Career coaching for professionals who want clarity on their next chapter—without sacrificing what they've built. The 90-Day Clarity Sprint helps you navigate transitions with confidence.",
+  headline: "When life stops making sense, that’s usually where the real work begins.",
+  subheadline: "I’m Margarita — a coach and thinking partner for people in transition. I work with those who want clarity about who they are and where they are going — personally and professionally.",
   primaryCTA: {
-    label: 'Discovery Call',
+    label: 'Book Free Discovery Call',
     href: '/book',
   },
   secondaryCTA: {
-    label: 'Free Career Guide',
+    label: 'Get Free Career Guide',
     href: '/free',
   },
   microcopy: 'Free. 30 minutes. Leave with your next step.',
@@ -41,7 +41,7 @@ export const problemSection = {
     description: "The confusion, the exhaustion, the \"what's next?\" feeling? That's your system telling you something needs to shift. Not because you're failing, but because you're ready for what's next.",
   },
   ctaText: "Here's how we turn this moment into momentum:",
-  ctaLabel: "Book Your Discovery Call",
+  ctaLabel: "Book Free Discovery Call",
 }
 
 // Transformation Section (What You'll Get)
@@ -57,26 +57,26 @@ export const transformationSection = {
   outcomes: [
     {
       title: "Clear Direction",
-      description: "Know exactly what your next career move should be—and why it fits",
+      description: "Know exactly what your next professional move should be—and why it fits",
     },
     {
-      title: "Confidence in Your Path",
-      description: "Move forward with conviction instead of second-guessing every decision",
+      title: "Confidence in Your Thinking",
+      description: "Move forward without constantly questioning yourself or looking for external validation",
     },
     {
       title: "Sustainable Boundaries",
-      description: "Build work that energizes instead of drains—without sacrificing your success",
+      description: "Create work that supports your energy and focus, not work that slowly drains you",
     },
     {
       title: "Authentic Leadership",
-      description: "Lead like yourself, not your predecessor—with your own voice and style",
+      description: "Lead in a way that feels natural to you — without copying someone else’s style",
     },
     {
-      title: "Transferable Skills Clarity",
-      description: "See how your existing expertise translates to new roles or industries",
+      title: "Clarity Around Your Strengths",
+      description: "See how what you already know and do well can evolve into your next chapter",
     },
     {
-      title: "Action Plan",
+      title: "Grounded Next Steps",
       description: "Leave with concrete next steps—not just insights, but a roadmap",
     },
   ],
@@ -93,8 +93,8 @@ export interface ProcessStep {
 
 export const processSection = {
   eyebrow: "The Method",
-  headline: "The 90-Day Clarity Sprint",
-  description: "A structured, practical approach to career transitions that actually works. No fluff, no vague advice—just clear steps forward.",
+  headline: "The 90-Day Clarity & Direction Program",
+  description: "A structured, practical approach to professional transitions that actually works.",
   steps: [
     {
       number: '01',
@@ -118,9 +118,9 @@ export const processSection = {
       duration: 'Weeks 7-12',
     },
   ],
-  ctaText: "Ready to start your clarity sprint?",
-  primaryCTALabel: "Book Your Discovery Call",
-  secondaryCTALabel: "Get the Free Playbook",
+  ctaText: "Ready to start your clarity program?",
+  primaryCTALabel: "Book Free Discovery Call",
+  secondaryCTALabel: "Get Free Career Guide",
 }
 
 // Offers Section
@@ -144,38 +144,40 @@ export const offersSection = {
   description: "Different situations call for different approaches. Here's how I typically work with clients.",
   offers: [
     {
-      title: '90-Day Clarity Sprint',
-      subtitle: '3-month intensive program',
-      description: 'Deep, sustained work for meaningful transformation. Perfect for career transitions, burnout recovery, or major leadership shifts.',
+      title: '90-Day Clarity & Direction Program',
+      subtitle: '3 months',
+      description: 'Deep, sustained work for meaningful transformation. Perfect for professional transitions, burnout recovery, or major leadership shifts.',
       includes: [
-        'Bi-weekly coaching sessions (60-75 min)',
+        '6 coaching sessions (60 min)',
+        'Session summary & notes',
         'Personalized development plan',
         'Email support between sessions',
-        'The Clarity Sprint framework',
         'Mid-point and final reviews',
       ],
       outcomes: [
+        'Knowing your values and strengths',
         'Clear direction on your next move',
         'Confidence to take action',
-        'Sustainable boundaries and practices',
+        'Sustainable boundaries',
         'A concrete action plan',
       ],
-      idealFor: 'Career transitions, burnout recovery, leadership development',
-      price: 'Starting from €XXX/month',
+      idealFor: 'Professional transitions, burnout recovery, leadership development',
+      price: '€499',
       priceNote: 'Payment plans available',
-      cta: 'Apply for the Sprint',
+      cta: 'Apply for the Program',
       href: '/contact?type=ongoing',
       featured: true,
     },
     {
-      title: 'Single Strategy Session',
-      subtitle: '90-minute deep dive',
+      title: 'Single Session',
+      subtitle: '60-minute deep dive',
       description: 'A focused session for when you need clarity on something specific. Come with a question, leave with perspective and next steps.',
       includes: [
         'Pre-session questionnaire',
-        '90-minute intensive session',
+        '60-minute session',
         'Session summary & notes',
-        'Optional 30-min follow-up call',
+        '7 days email support after session',
+        'Optional follow-up session',
       ],
       outcomes: [
         'Clarity on your specific challenge',
@@ -184,7 +186,7 @@ export const offersSection = {
         'Experience of the coaching process',
       ],
       idealFor: 'Specific decisions, exploring fit, getting unstuck',
-      price: 'From €XXX',
+      price: '€90',
       priceNote: 'Follow-up session available at reduced rate',
       cta: 'Book a Session',
       href: '/contact?type=single',
@@ -202,7 +204,6 @@ export const offersSection = {
         'Program evaluation and recommendations',
       ],
       outcomes: [
-        'Stronger leadership bench',
         'Improved retention and engagement',
         'Better team dynamics',
         'Culture of development and growth',
@@ -217,14 +218,14 @@ export const offersSection = {
   ],
   notSureText: "Not sure which format is right for you?",
   notSureDescription: "Book a free discovery call and we'll figure it out together. No pressure, just an honest conversation.",
-  notSureCTALabel: "Book Your Discovery Call",
+  notSureCTALabel: "Book Discovery Call",
 }
 
 // Lead Magnet Section
 export const leadMagnetSection = {
   eyebrow: "Free Resource",
   headline: "Get the Career Pivot Playbook",
-  description: "An 8-page guide to help you navigate your next career move with clarity and confidence.",
+  description: "An 8-page guide to help you navigate your next professional move with clarity and confidence.",
   features: [
     "The 5 signs you're ready for a change",
     "The 3 pivot paths: Shift, Switch, or Start Fresh",
@@ -253,8 +254,8 @@ export interface FAQ {
 
 export const faqs: FAQ[] = [
   {
-    question: "How long does the 90-Day Clarity Sprint actually take?",
-    answer: "The program is designed to run over 12 weeks (approximately 3 months), with bi-weekly sessions. However, the timeline can be adjusted based on your specific needs and pace. Some clients complete it faster, others prefer a more extended timeline.",
+    question: "How long does the 90-Day Clarity & Direction Program actually take?",
+    answer: "The program is designed to run over 12 weeks (approximately 3 months), with 6 sessions scheduled at your convenience. The timeline can be adjusted based on your specific needs and pace. Some clients complete it faster, others prefer a more extended timeline.",
   },
   {
     question: "What if I'm not sure coaching is right for me?",
@@ -262,7 +263,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "How much does coaching cost?",
-    answer: "Investment varies based on the format you choose. The 90-Day Clarity Sprint starts from €XXX/month, single sessions start from €XXX, and corporate programs are customized. During our discovery call, we'll discuss pricing options that fit your budget.",
+    answer: "Investment varies based on the format you choose. The 90-Day Clarity & Direction Program is €499, single sessions are €90 for 60 minutes, and corporate programs are customized. During our discovery call, we'll discuss pricing options that fit your budget.",
   },
   {
     question: "Will this actually work for me?",
@@ -273,7 +274,7 @@ export const faqs: FAQ[] = [
     answer: "Absolutely. Everything we discuss—in sessions, emails, or calls—is completely confidential. The only exception is if you're part of a corporate program, where I may provide general progress updates to sponsors (never specific content) and only with your explicit agreement.",
   },
   {
-    question: "What happens on the discovery call?",
+    question: "What happens on the free discovery call?",
     answer: "We spend 30 minutes talking. You share what's on your mind—your situation, challenges, and what you're hoping to change. I listen, ask questions, and we explore whether coaching could help. By the end, you'll have clarity on your next steps, whether or not we work together.",
   },
   {
