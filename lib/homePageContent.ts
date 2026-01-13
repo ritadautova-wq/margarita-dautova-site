@@ -11,7 +11,7 @@ export const hero = {
     { label: 'Worldwide via video', icon: 'globe' },
   ],
   headline: "When life stops making sense, that’s usually where the real work begins.",
-  subheadline: "I’m Margarita — a coach and thinking partner for people in transition. I work with those who want clarity about who they are and where they are going — personally and professionally.",
+  subheadline: "I’m Margarita — a career coach and thinking partner for people in transition. I work with those who want clarity about who they are and where they are going — personally and professionally.",
   primaryCTA: {
     label: 'Book Free Discovery Call',
     href: '/book',

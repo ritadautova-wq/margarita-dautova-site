@@ -130,10 +130,7 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-stone-600 leading-relaxed">
             <p>
-              That insight is what led me to coaching.
-            </p>
-            <p>
-              I wanted to create space for conversations where you don't have to perform, 
+              I create space for conversations where you don't have to perform, 
               impress, or already know the answer.
             </p>
             <p className="font-medium text-stone-800">

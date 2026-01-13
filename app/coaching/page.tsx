@@ -10,71 +10,71 @@ export const metadata: Metadata = {
 const coachingFormats = [
   {
     id: 'ongoing',
-    title: 'Ongoing Coaching Program',
-    duration: '3–6 months',
+    title: '90-Day Clarity & Direction Program',
+    duration: '3 months',
     description:
-      'This is where real transformation happens. Over several months, we work together regularly to create meaningful, lasting change in your career and life.',
+      'Deep, sustained work for meaningful transformation. Perfect for professional transitions, burnout recovery, or major leadership shifts.',
     longDescription: `
-      Ongoing coaching is for people who want more than a quick fix. It's for those ready to 
+      This program is for people who want more than a quick fix. It's for those ready to 
       invest in themselves — not just to solve an immediate problem, but to fundamentally 
       shift how they approach their career.
 
-      We meet every two weeks for focused, confidential conversations. Between sessions, 
-      you'll have space to reflect, experiment, and integrate what you're learning. I'm 
-      available by email for support when you need it.
+      Over 12 weeks, we work through a structured approach: first clarifying where you are, 
+      then defining where you want to go, and finally moving forward with confidence. 
+      Between sessions, you'll have space to reflect, experiment, and integrate what 
+      you're learning. I'm available by email for support when you need it.
 
-      The work is tailored entirely to you. We start by understanding where you are and 
-      where you want to go, then create a development plan that guides our conversations. 
-      But the plan is flexible — we follow where the work needs to go.
+      The work is tailored entirely to you. We start by understanding your values, 
+      strengths, and the real reasons you're feeling stuck. Then we map out potential 
+      paths and identify which direction aligns with who you are now.
     `,
     includes: [
-      'Bi-weekly coaching sessions (60-75 minutes)',
+      '6 coaching sessions (60 minutes each)',
+      'Session summary & notes after each session',
       'Personalized development plan',
       'Email support between sessions',
-      'Optional assessments and tools',
-      'Mid-point and end-of-program reviews',
+      'Mid-point and final reviews',
     ],
     outcomes: [
-      'Clarity about your career direction',
-      'Increased confidence and self-trust',
-      'Better decision-making skills',
-      'Sustainable habits and practices',
-      'Tools to continue growing on your own',
+      'Knowing your values and strengths',
+      'Clear direction on your next move',
+      'Confidence to take action',
+      'Sustainable boundaries',
+      'A concrete action plan',
     ],
     idealFor: [
-      'Career transitions and pivots',
-      'Recovering from burnout',
-      'Stepping into leadership roles',
+      'Professional transitions and career pivots',
+      'Burnout recovery',
+      'Leadership development',
       'Finding meaning and purpose at work',
-      'Building confidence and presence',
     ],
-    // TODO: Replace with actual pricing
-    investment: 'Starting from €XXX per month',
+    investment: '€499',
     investmentNote: 'Payment plans available',
   },
   {
     id: 'single',
-    title: 'Single Deep-Dive Session',
-    duration: '90 minutes',
+    title: 'Single Session',
+    duration: '60 minutes',
     description:
       'A focused session for when you need clarity on something specific. Come with a question, leave with perspective and next steps.',
     longDescription: `
-      Not everyone needs ongoing coaching. Sometimes you just need a dedicated space to 
+      Not everyone needs a full program. Sometimes you just need a dedicated space to 
       think through a specific challenge — a decision you're facing, a situation that's 
       weighing on you, or a problem you can't seem to solve on your own.
 
       A single session gives you that space. Before we meet, you'll complete a brief 
-      questionnaire so I understand your situation. During our 90 minutes together, we 
+      questionnaire so I understand your situation. During our 60 minutes together, we 
       dive deep into what's really going on and work toward clarity.
 
       This is also a great way to experience coaching if you're curious about what it's 
       like before committing to a longer engagement.
     `,
     includes: [
-      'Pre-session preparation questionnaire',
-      '90-minute focused coaching session',
-      'Session notes and key takeaways',
-      'Optional 30-minute follow-up call',
+      'Pre-session questionnaire',
+      '60-minute coaching session',
+      'Session summary & notes',
+      '7 days email support after session',
+      'Optional follow-up session',
     ],
     outcomes: [
       'Clarity on your specific challenge',
@@ -84,18 +84,17 @@ const coachingFormats = [
     ],
     idealFor: [
       'Specific decisions or crossroads',
-      'Preparing for important conversations',
-      'Getting unstuck on a particular issue',
       'Exploring if coaching is right for you',
+      'Getting unstuck on a particular issue',
+      'Preparing for important conversations',
     ],
-    // TODO: Replace with actual pricing
-    investment: 'From €XXX',
+    investment: '€90',
     investmentNote: 'Follow-up session available at reduced rate',
   },
   {
     id: 'corporate',
     title: 'Team & Corporate Programs',
-    duration: 'Customized',
+    duration: 'Custom',
     description:
       'Coaching and workshop solutions for organizations investing in their people. Tailored programs for teams, leaders, and companies.',
     longDescription: `
@@ -114,11 +113,10 @@ const coachingFormats = [
       'Discovery conversation with stakeholders',
       'Customized program design',
       '1:1 coaching, group coaching, or workshops',
-      'Progress reporting (with confidentiality maintained)',
+      'Progress reporting (confidentiality maintained)',
       'Program evaluation and recommendations',
     ],
     outcomes: [
-      'Stronger leadership bench',
       'Improved retention and engagement',
       'Better team dynamics',
       'Culture of development and growth',
@@ -141,6 +139,11 @@ const faqs = [
       "That's completely normal. Book a free discovery call and we'll talk it through. I'll help you figure out what makes sense based on your situation, goals, and budget. There's no pressure to decide on the call.",
   },
   {
+    question: "How much does coaching cost?",
+    answer:
+      "The 90-Day Clarity & Direction Program is €499 (payment plans available). Single sessions are €90 for 60 minutes. Corporate programs are customized based on your organization's needs.",
+  },
+  {
     question: "How do online sessions work?",
     answer:
       "We meet via video call (usually Zoom). All you need is a quiet space and a stable internet connection. Online coaching is just as effective as in-person — many clients actually prefer the convenience.",
@@ -148,12 +151,12 @@ const faqs = [
   {
     question: "Can I switch from one format to another?",
     answer:
-      "Yes. Many people start with a single session to test the waters, then move into ongoing coaching. Or they do an ongoing program and occasionally book single sessions afterward. We can always adjust.",
+      "Yes. Many people start with a single session to test the waters, then move into the 90-Day program. Or they complete the program and occasionally book single sessions afterward. We can always adjust.",
   },
   {
     question: "What's your cancellation policy?",
     answer:
-      "Life happens. You can reschedule sessions with 48 hours' notice at no charge. For ongoing programs, we can discuss pausing if circumstances change significantly.",
+      "Life happens. You can reschedule sessions with 48 hours' notice at no charge. For the 90-Day program, we can discuss pausing if circumstances change significantly.",
   },
   {
     question: "Is everything I share confidential?",
