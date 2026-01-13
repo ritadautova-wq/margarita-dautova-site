@@ -74,7 +74,7 @@ export default function AboutPage() {
       </section>
 
       {/* My Approach */}
-      <section className="section-padding bg-stone-100/50">
+      <section className="py-12 md:py-16 lg:py-20 bg-stone-100/50">
         <div className="container-narrow">
           <div className="mb-10">
             <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
@@ -130,7 +130,7 @@ export default function AboutPage() {
       </section>
 
       {/* Who I Work With */}
-      <section className="section-padding bg-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
         <div className="container-narrow">
           <div className="mb-10">
             <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
@@ -171,7 +171,7 @@ export default function AboutPage() {
       </section>
 
       {/* What Matters to Me */}
-      <section className="section-padding bg-stone-100/50">
+      <section className="py-12 md:py-16 lg:py-20 bg-stone-100/50">
         <div className="container-narrow">
           <div className="mb-10">
             <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
@@ -212,7 +212,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA / Invitation */}
-      <section className="section-padding bg-primary-700 text-white">
+      <section className="py-12 md:py-16 lg:py-20 bg-primary-700 text-white">
         <div className="container-narrow text-center">
           <p className="text-sm font-medium text-primary-200 uppercase tracking-wider mb-3">
             An Invitation
