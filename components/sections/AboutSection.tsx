@@ -11,10 +11,10 @@ export default function AboutSection() {
           <div className="lg:col-span-2">
             <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-gradient-to-br from-primary-100 to-stone-100">
               <Image
-                src="/images/portrait-margarita.JPG"
+                src="/images/IMG_5681.JPG"
                 alt="Portrait of Margarita Dautova"
                 fill
-                className="object-cover"
+                className="object-cover object-bottom"
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 priority
               />
