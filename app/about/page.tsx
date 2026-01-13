@@ -100,7 +100,7 @@ export default function AboutPage() {
                   src="/images/IMG_5681.JPG"
                   alt="Portrait of Margarita Dautova"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-bottom"
                   sizes="(min-width: 1024px) 40vw, 100vw"
                   priority
                 />
