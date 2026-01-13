@@ -40,15 +40,22 @@ export default function AboutPage() {
               
               <div className="mt-6 space-y-4 text-stone-600 leading-relaxed">
                 <p>
-                  I work with people who are in transition — not because something is "wrong," 
-                  but because something is changing.
+                I work with professionals who find 
+                  themselves at a crossroads — people who've built successful careers but 
+                  now feel stuck, exhausted, or uncertain about what comes next.
                 </p>
                 <p>
-                  Most of the people I work with have built solid careers. From the outside, things look good.
-                  But inside, there's often uncertainty, fatigue, or a quiet question that won't go away:
+                  Before becoming a coach, I spent years in corporate environments working 
+                  in Talent and Leadership Development. I've designed programs, facilitated 
+                  workshops, and sat across from hundreds of people trying to figure out 
+                  their careers. That experience taught me something important: the real 
+                  breakthroughs don't happen in workshops. They happen in honest, 
+                  one-on-one conversations.
                 </p>
                 <p className="text-stone-800 italic text-lg">
-                  Is this still right for me?
+                That's why I became a coach. I wanted to create space for those conversations 
+                  — the kind where you can actually say what you're thinking, explore what 
+                  you're feeling, and figure out what you actually want.
                 </p>
               </div>
 
@@ -58,47 +65,10 @@ export default function AboutPage() {
                   className="inline-flex items-center justify-center px-6 py-3 font-medium 
                     bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300"
                 >
-                  Book a discovery call
+                  Book Free Discovery Call
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why I Do This Work */}
-      <section className="section-padding bg-white">
-        <div className="container-narrow">
-          <div className="mb-10">
-            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
-              Background
-            </p>
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              Why I Do This Work
-            </h2>
-          </div>
-
-          <div className="space-y-6 text-stone-600 leading-relaxed">
-            <p>
-              Before becoming a coach, I spent years working in corporate environments 
-              in <strong className="text-stone-800">Talent and Leadership Development</strong>.
-            </p>
-            <div className="space-y-2 pl-4 border-l-2 border-primary-200">
-              <p>I designed programs.</p>
-              <p>Facilitated workshops.</p>
-              <p>Worked with leaders and professionals across different stages of their careers.</p>
-            </div>
-            <p>
-              And over time, I noticed something important:
-            </p>
-            <p className="text-stone-800 text-lg">
-              The real breakthroughs rarely happened in group settings or structured frameworks.
-              They happened in honest, one-on-one conversations — when people felt safe enough 
-              to slow down and think out loud.
-            </p>
-            <p className="text-primary-700 font-medium">
-              That's where clarity actually began.
-            </p>
           </div>
         </div>
       </section>
@@ -173,7 +143,7 @@ export default function AboutPage() {
 
           <div className="space-y-6 text-stone-600 leading-relaxed">
             <p>
-              I mostly work with people between <strong className="text-stone-800">25 and 40</strong> who 
+              I mostly work with people between <strong className="text-stone-800">25 and 45</strong> who 
               are navigating personal or professional transitions.
             </p>
             <p className="font-medium text-stone-800">
