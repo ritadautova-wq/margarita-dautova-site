@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | Margarita Dautova',
   },
   description:
-    'Career coach and thinking partner for professionals in transition who seek clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
+    'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
   keywords: [
     'career coaching',
     'transition coaching',

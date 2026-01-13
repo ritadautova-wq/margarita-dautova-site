@@ -41,7 +41,7 @@ export default function Footer() {
                 Margarita Dautova
               </Link>
               <p className="mt-4 text-stone-400 max-w-md leading-relaxed">
-                Career coach and thinking partner for professionals in transition who seek clarity, confidence, 
+                Career and transition coaching for professionals seeking clarity, confidence, 
                 and sustainable change. Based in Munich, working with clients worldwide.
               </p>
 
