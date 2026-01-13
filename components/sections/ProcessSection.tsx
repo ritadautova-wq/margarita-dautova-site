@@ -22,7 +22,7 @@ export default function ProcessSection() {
           {processSection.steps.map((step, index) => (
             <div key={index} className="relative">
               {/* Connector Line (not on last item) */}
-              {index < steps.length - 1 && (
+              {index < processSection.steps.length - 1 && (
                 <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-stone-200 -translate-x-1/2 z-0">
                   <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3 h-3 bg-primary-600 rounded-full"></div>
                 </div>
