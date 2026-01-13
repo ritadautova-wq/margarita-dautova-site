@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: '%s | Margarita Dautova',
   },
   description:
-    'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
+    'Career coach and thinking partner for professionals in transition who seek clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
   keywords: [
     'career coaching',
     'transition coaching',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: 'Margarita Dautova Coaching',
     title: 'Margarita Dautova | Career & Transition Coach',
     description:
-      'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
+      'Career coach and thinking partner for professionals in transition who seek clarity, confidence, and sustainable change.',
     images: [
       {
         url: '/images/og-image.jpg', // TODO: Add actual OG image
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Margarita Dautova | Career & Transition Coach',
     description:
-      'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
+      'Career coach and thinking partner for professionals in transition who seek clarity, confidence, and sustainable change.',
     images: ['/images/og-image.jpg'],
   },
   robots: {
