@@ -1,9 +1,10 @@
 import Container from '@/components/Container'
 import Button from '@/components/Button'
 import Link from 'next/link'
+import { offersSection } from '@/lib/homePageContent'
 
 export default function OffersSection() {
-  const offers = [
+  const offers = offersSection.offers
     {
       title: '90-Day Clarity Sprint',
       subtitle: '3-month intensive program',
@@ -82,13 +83,13 @@ export default function OffersSection() {
       <Container size="default">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
-            Ways to Work Together
+            {offersSection.eyebrow}
           </p>
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance mb-4">
-            Choose the format that fits your situation
+            {offersSection.headline}
           </h2>
           <p className="text-stone-600 text-lg">
-            Different situations call for different approaches. Here's how I typically work with clients.
+            {offersSection.description}
           </p>
         </div>
 
@@ -177,13 +178,13 @@ export default function OffersSection() {
         {/* Not Sure Section */}
         <div className="text-center bg-stone-50 border border-stone-200 rounded-sm p-6 md:p-8">
           <p className="text-stone-600 mb-4">
-            Not sure which format is right for you?
+            {offersSection.notSureText}
           </p>
           <p className="text-sm text-stone-500 mb-6">
-            Book a free discovery call and we'll figure it out together. No pressure, just an honest conversation.
+            {offersSection.notSureDescription}
           </p>
           <Button href="/book" variant="primary" size="lg">
-            Book Your Discovery Call
+            {offersSection.notSureCTALabel}
           </Button>
         </div>
       </Container>

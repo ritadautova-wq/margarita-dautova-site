@@ -1,5 +1,6 @@
 import Container from '@/components/Container'
 import Link from 'next/link'
+import { finalCTASection } from '@/lib/homePageContent'
 
 export default function FinalCTASection() {
   return (
@@ -7,12 +8,10 @@ export default function FinalCTASection() {
       <Container size="narrow">
         <div className="text-center">
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance mb-6">
-            Ready to land your next career move?
+            {finalCTASection.headline}
           </h2>
           <p className="text-primary-100 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
-            The first step is simple: a free 30-minute strategy call where we talk about where you are 
-            and where you want to go. No pressure, no commitment—just an honest conversation that could 
-            change everything.
+            {finalCTASection.description}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -23,7 +22,7 @@ export default function FinalCTASection() {
                 transition-all duration-300 rounded-sm
                 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
             >
-              Book Your Discovery Call
+              {finalCTASection.primaryCTALabel}
             </Link>
             <Link
               href="/free"
@@ -32,15 +31,15 @@ export default function FinalCTASection() {
                 transition-all duration-300 rounded-sm
                 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
             >
-              Get the Free Playbook
+              {finalCTASection.secondaryCTALabel}
             </Link>
           </div>
 
           <p className="text-primary-100 text-sm">
-            <strong className="text-white">Free. 30 minutes.</strong> Leave with your next step.
+            <strong className="text-white">{finalCTASection.microcopy}</strong>
           </p>
           <p className="text-primary-200 text-sm mt-2">
-            Everything we discuss is completely confidential.
+            {finalCTASection.privacyNote}
           </p>
         </div>
       </Container>
