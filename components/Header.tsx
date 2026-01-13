@@ -100,7 +100,7 @@ export default function Header() {
               className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium 
                 bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 rounded-sm"
             >
-              Book Free Discovery Call
+              Discovery Call
             </Link>
           </div>
 
