@@ -73,6 +73,49 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* My Journey */}
+      <section className="py-12 md:py-16 lg:py-20 bg-white">
+        <div className="container-narrow">
+          <div className="mb-10">
+            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+              My Journey
+            </p>
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              I Know What Transition Feels Like
+            </h2>
+          </div>
+
+          <div className="space-y-6 text-stone-600 leading-relaxed">
+            <p className="text-lg">
+              Over the years, I've been in transition myself — more than once.
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 my-8">
+              <div className="bg-stone-50 p-5 border-l-4 border-primary-300">
+                <p className="text-stone-700">I've changed countries twice</p>
+              </div>
+              <div className="bg-stone-50 p-5 border-l-4 border-primary-300">
+                <p className="text-stone-700">I've changed career direction twice</p>
+              </div>
+              <div className="bg-stone-50 p-5 border-l-4 border-primary-300">
+                <p className="text-stone-700">I've become a working parent three times</p>
+              </div>
+              <div className="bg-stone-50 p-5 border-l-4 border-primary-300">
+                <p className="text-stone-700">I've had to rethink who I am and why I do what I do — repeatedly</p>
+              </div>
+            </div>
+            <p>
+              These experiences didn't give me answers.
+            </p>
+            <p className="text-stone-800 italic text-lg border-l-4 border-primary-600 pl-4 py-2">
+              They taught me how to stay present when answers are not yet clear.
+            </p>
+            <p className="text-stone-800 font-medium">
+              That's the quality I bring into my work with clients.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* My Approach */}
       <section className="py-12 md:py-16 lg:py-20 bg-stone-100/50">
         <div className="container-narrow">
@@ -234,7 +277,7 @@ export default function AboutPage() {
               className="inline-flex items-center justify-center px-8 py-4 font-medium 
                 bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300"
             >
-              Book a discovery call
+              Book Free Discovery Call
             </Link>
           </div>
         </div>
