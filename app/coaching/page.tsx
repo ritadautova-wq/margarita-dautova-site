@@ -14,20 +14,11 @@ const coachingFormats = [
     duration: '3 months',
     description:
       'Deep, sustained work for meaningful transformation. Perfect for professional transitions, burnout recovery, or major leadership shifts.',
-    longDescription: `
-      This program is for people who want more than a quick fix. It's for those ready to 
-      invest in themselves — not just to solve an immediate problem, but to fundamentally 
-      shift how they approach their career.
+    longDescription: `This program is for people who want more than a quick fix. It's for those ready to invest in themselves — not just to solve an immediate problem, but to fundamentally shift how they approach their career.
 
-      Over 12 weeks, we work through a structured approach: first clarifying where you are, 
-      then defining where you want to go, and finally moving forward with confidence. 
-      Between sessions, you'll have space to reflect, experiment, and integrate what 
-      you're learning. I'm available by email for support when you need it.
+Over 12 weeks, we work through a structured approach: first clarifying where you are, then defining where you want to go, and finally moving forward with confidence. Between sessions, you'll have space to reflect, experiment, and integrate what you're learning. I'm available by email for support when you need it.
 
-      The work is tailored entirely to you. We start by understanding your values, 
-      strengths, and the real reasons you're feeling stuck. Then we map out potential 
-      paths and identify which direction aligns with who you are now.
-    `,
+The work is tailored entirely to you. We start by understanding your values, strengths, and the real reasons you're feeling stuck. Then we map out potential paths and identify which direction aligns with who you are now.`,
     includes: [
       '6 coaching sessions (60 minutes each)',
       'Session summary & notes after each session',
@@ -57,18 +48,11 @@ const coachingFormats = [
     duration: '60 minutes',
     description:
       'A focused session for when you need clarity on something specific. Come with a question, leave with perspective and next steps.',
-    longDescription: `
-      Not everyone needs a full program. Sometimes you just need a dedicated space to 
-      think through a specific challenge — a decision you're facing, a situation that's 
-      weighing on you, or a problem you can't seem to solve on your own.
+    longDescription: `Not everyone needs a full program. Sometimes you just need a dedicated space to think through a specific challenge — a decision you're facing, a situation that's weighing on you, or a problem you can't seem to solve on your own.
 
-      A single session gives you that space. Before we meet, you'll complete a brief 
-      questionnaire so I understand your situation. During our 60 minutes together, we 
-      dive deep into what's really going on and work toward clarity.
+A single session gives you that space. Before we meet, you'll complete a brief questionnaire so I understand your situation. During our 60 minutes together, we dive deep into what's really going on and work toward clarity.
 
-      This is also a great way to experience coaching if you're curious about what it's 
-      like before committing to a longer engagement.
-    `,
+This is also a great way to experience coaching if you're curious about what it's like before committing to a longer engagement.`,
     includes: [
       'Pre-session questionnaire',
       '60-minute coaching session',
@@ -97,18 +81,11 @@ const coachingFormats = [
     duration: 'Custom',
     description:
       'Coaching and workshop solutions for organizations investing in their people. Tailored programs for teams, leaders, and companies.',
-    longDescription: `
-      Organizations that invest in coaching see real returns — in retention, engagement, 
-      and leadership capability. I work with companies to design programs that fit their 
-      specific needs and culture.
+    longDescription: `Organizations that invest in coaching see real returns — in retention, engagement, and leadership capability. I work with companies to design programs that fit their specific needs and culture.
 
-      This might look like 1:1 coaching for key leaders, group coaching for a leadership 
-      cohort, or facilitated workshops on topics like career development, burnout 
-      prevention, or navigating change.
+This might look like 1:1 coaching for key leaders, group coaching for a leadership cohort, or facilitated workshops on topics like career development, burnout prevention, or navigating change.
 
-      Every engagement starts with understanding your organization's context and goals. 
-      From there, we design something that works for your people and your budget.
-    `,
+Every engagement starts with understanding your organization's context and goals. From there, we design something that works for your people and your budget.`,
     includes: [
       'Discovery conversation with stakeholders',
       'Customized program design',
