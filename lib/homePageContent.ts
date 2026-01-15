@@ -8,7 +8,9 @@ export const hero = {
   trustStrip: [
     { label: 'PCC ICF Certified', icon: 'check' },
     { label: '80+ professionals coached', icon: 'people' },
+    { label: '600+ coaching hours', icon: 'clock' },
     { label: 'Worldwide via video', icon: 'globe' },
+    { label: 'Salesforce, Virgin, BP, Yandex, startups', icon: 'building' },
   ],
   headline: "When life stops making sense, that’s usually where the real work begins.",
   subheadline: "I’m Margarita — a career coach and thinking partner for people in transition. I work with those who want clarity about who they are and where they are going — personally and professionally.",

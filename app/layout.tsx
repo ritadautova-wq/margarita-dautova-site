@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     siteName: 'Margarita Dautova Coaching',
     title: 'Margarita Dautova | Career & Transition Coach',
     description:
-      'Career coach and thinking partner for professionals in transition who seek clarity, confidence, and sustainable change.',
+      'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
     images: [
       {
         url: '/images/og-image.jpg', // TODO: Add actual OG image
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Margarita Dautova | Career & Transition Coach',
     description:
-      'Career coach and thinking partner for professionals in transition who seek clarity, confidence, and sustainable change.',
+      'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
     images: ['/images/og-image.jpg'],
   },
   robots: {

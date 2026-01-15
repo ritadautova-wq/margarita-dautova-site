@@ -44,7 +44,7 @@ export function generateProfessionalServiceSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Margarita Dautova Coaching',
-    description: 'Career coach and thinking partner for professionals in transition who seek clarity, confidence, and sustainable change.',
+    description: 'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
     url: 'https://margaritadautova.com',
     provider: {
       '@type': 'Person',
