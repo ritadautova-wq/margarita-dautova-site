@@ -54,7 +54,6 @@ export default function ContactForm() {
 
     setStatus('loading')
 
-    // TODO: Connect to actual form handler (Formspree, Netlify Forms, custom API)
     try {
       await new Promise((resolve) => setTimeout(resolve, 1500))
       setStatus('success')

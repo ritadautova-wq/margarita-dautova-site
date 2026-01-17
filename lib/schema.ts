@@ -8,11 +8,11 @@ export function generatePersonSchema() {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Margarita Dautova',
-    jobTitle: 'Career & Transition Coach',
-    description: 'PCC ICF certified career and transition coach helping professionals navigate career changes, burnout recovery, and leadership development.',
+    jobTitle: 'Career Coach & Thinking Partner',
+    description: 'ICF PCC-certified coach specializing in career and identity transitions for international professionals navigating change in a non-native environment.',
     url: 'https://margaritadautova.com',
     sameAs: [
-      'https://linkedin.com/in/margaritadautova', // TODO: Update with actual LinkedIn URL
+      'https://linkedin.com/in/margaritadautova',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -44,7 +44,7 @@ export function generateProfessionalServiceSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Margarita Dautova Coaching',
-    description: 'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
+    description: 'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change.',
     url: 'https://margaritadautova.com',
     provider: {
       '@type': 'Person',
@@ -56,21 +56,21 @@ export function generateProfessionalServiceSchema() {
     },
     serviceType: [
       'Career Coaching',
-      'Transition Coaching',
+      'Thinking Partnership',
       'Executive Coaching',
       'Leadership Development',
-      'Burnout Recovery',
+      'Identity Transition',
     ],
     offers: [
       {
         '@type': 'Offer',
-        name: '90-Day Clarity Sprint',
-        description: '3-month intensive coaching program for career transitions and leadership development',
+        name: '90-Day Clarity & Direction Program',
+        description: '3-month thinking partnership for career transitions and identity-level shifts',
       },
       {
         '@type': 'Offer',
-        name: 'Single Strategy Session',
-        description: '90-minute focused coaching session for specific challenges',
+        name: 'Single Deep-Dive Session',
+        description: '60-minute focused session for clarity on a specific decision or challenge',
       },
     ],
   }

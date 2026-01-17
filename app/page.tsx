@@ -3,8 +3,7 @@ import HeroSection from '@/components/sections/HeroSection'
 import ProblemSection from '@/components/sections/ProblemSection'
 import TransformationSection from '@/components/sections/TransformationSection'
 import ProcessSection from '@/components/sections/ProcessSection'
-// TODO: Uncomment when testimonials are ready
-// import TestimonialsSection from '@/components/sections/TestimonialsSection'
+import TestimonialsSection from '@/components/sections/TestimonialsSection'
 import OffersSection from '@/components/sections/OffersSection'
 import LeadMagnetSection from '@/components/sections/LeadMagnetSection'
 import AboutSection from '@/components/sections/AboutSection'
@@ -20,10 +19,9 @@ import {
 import { faqSection } from '@/lib/homePageContent'
 
 export const metadata: Metadata = {
-  title: 'Career & Transition Coaching | Margarita Dautova',
+  title: 'Margarita Dautova | Career Coach & Thinking Partner',
   description:
-    'Land your next career move without burning out or starting over. Career coaching for professionals ready for clarity, confidence, and sustainable change.',
-  // Force deployment update
+    'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
 }
 
 export default function HomePage() {
@@ -51,8 +49,7 @@ export default function HomePage() {
       <ProblemSection />
       <TransformationSection />
       <ProcessSection />
-      {/* TODO: Uncomment when testimonials are ready */}
-      {/* <TestimonialsSection /> */}
+      <TestimonialsSection />
       <OffersSection />
       <LeadMagnetSection />
       <AboutSection />

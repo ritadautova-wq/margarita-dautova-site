@@ -21,34 +21,35 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Margarita Dautova | Career & Transition Coach | PCC ICF',
+    default: 'Margarita Dautova | Career Coach & Thinking Partner | PCC ICF',
     template: '%s | Margarita Dautova',
   },
   description:
-    'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
+    'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
   keywords: [
     'career coaching',
     'transition coaching',
     'executive coaching',
     'career change',
-    'burnout recovery',
-    'leadership coaching',
+    'identity transition',
+    'thinking partner',
     'PCC ICF coach',
     'Munich coach',
     'Margarita Dautova',
+    'international professionals',
   ],
   authors: [{ name: 'Margarita Dautova' }],
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://margaritadautova.com', // TODO: Replace with actual URL
+    url: 'https://margaritadautova.com',
     siteName: 'Margarita Dautova Coaching',
-    title: 'Margarita Dautova | Career & Transition Coach',
+    title: 'Margarita Dautova | Career Coach & Thinking Partner',
     description:
-      'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
+      'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change.',
     images: [
       {
-        url: '/images/og-image.jpg', // TODO: Add actual OG image
+        url: '/images/portrait-margarita.JPG',
         width: 1200,
         height: 630,
         alt: 'Margarita Dautova - Career Coach',
@@ -57,10 +58,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Margarita Dautova | Career & Transition Coach',
+    title: 'Margarita Dautova | Career Coach & Thinking Partner',
     description:
-      'Career and transition coaching for professionals seeking clarity, confidence, and sustainable change.',
-    images: ['/images/og-image.jpg'],
+      'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change.',
+    images: ['/images/portrait-margarita.JPG'],
   },
   robots: {
     index: true,

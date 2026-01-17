@@ -43,7 +43,6 @@ export default function ContactPage() {
                   <h3 className="text-sm font-medium text-stone-500 uppercase tracking-wider mb-2">
                     Email
                   </h3>
-                  {/* TODO: Replace with actual email */}
                   <a
                     href="mailto:hello@margaritadautova.com"
                     className="text-stone-800 hover:text-primary-600 transition-colors"
@@ -57,7 +56,6 @@ export default function ContactPage() {
                   <h3 className="text-sm font-medium text-stone-500 uppercase tracking-wider mb-2">
                     LinkedIn
                   </h3>
-                  {/* TODO: Replace with actual LinkedIn URL */}
                   <a
                     href="https://linkedin.com/in/margaritadautova"
                     target="_blank"

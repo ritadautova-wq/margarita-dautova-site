@@ -46,12 +46,10 @@ export default async function ResourcesPage() {
         <Container size="narrow">
           <div className="text-center">
             <h2 className="font-serif text-heading-sm md:text-heading text-neutral-900">
-              Free Guide: 7 Questions to Ask Yourself Before Changing Careers
+              Free Guide: The Career Pivot Playbook
             </h2>
             <p className="mt-3 text-neutral-600">
-              {/* TODO: Create actual lead magnet PDF and update */}
-              A practical workbook to help you gain clarity on your next career move. 
-              Get it free when you join the newsletter.
+              A practical 8-page guide to help you gain clarity on your next career move and navigate professional transitions with confidence.
             </p>
             <div className="mt-6 max-w-md mx-auto">
               <NewsletterForm variant="inline" />
@@ -66,23 +64,6 @@ export default async function ResourcesPage() {
       {/* Blog Posts */}
       <Section background="white">
         <Container size="wide">
-          {/* Category Filter */}
-          <div className="flex flex-wrap gap-2 mb-12 justify-center">
-            {allCategories.map((category) => (
-              <button
-                key={category}
-                className={`px-4 py-2 text-sm font-medium rounded-full transition-colors duration-200
-                  ${
-                    category === 'All'
-                      ? 'bg-primary-500 text-white'
-                      : 'bg-neutral-100 text-neutral-600 hover:bg-neutral-200'
-                  }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-
           {/* Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (

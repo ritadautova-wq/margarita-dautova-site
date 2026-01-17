@@ -18,17 +18,6 @@ export function trackEvent(name: string, props?: Record<string, unknown>) {
   if (process.env.NODE_ENV === 'development') {
     console.log('[Analytics]', name, props || '')
   }
-
-  // TODO: Connect to Vercel Analytics/GA4/Segment
-  // Example for Vercel Analytics:
-  // if (typeof window !== 'undefined' && window.va) {
-  //   window.va('track', name, props)
-  // }
-
-  // Example for GA4:
-  // if (typeof window !== 'undefined' && window.gtag) {
-  //   window.gtag('event', name, props)
-  // }
 }
 
 /**

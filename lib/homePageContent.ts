@@ -6,20 +6,19 @@
 // Hero Section
 export const hero = {
   trustStrip: [
-    { label: 'PCC ICF Certified', icon: 'check' },
-    { label: '80+ professionals coached', icon: 'people' },
-    { label: '600+ coaching hours', icon: 'clock' },
-    { label: 'Worldwide via video', icon: 'globe' },
-    { label: 'Clients among Salesforce, Virgin, BP, Mytheresa, Yandex, startups', icon: 'building' },
+    { label: 'ICF PCC-certified', icon: 'check' },
+    { label: 'Background in Talent & Leadership Development', icon: 'people' },
+    { label: 'Munich-based, working worldwide', icon: 'globe' },
+    { label: 'Experience with international professionals', icon: 'building' },
   ],
   headline: "When life stops making sense, that’s usually where the real work begins.",
-  subheadline: "I’m Margarita — a career coach and thinking partner for people in transition. I work with those who want clarity about who they are and where they are going — personally and professionally.",
+  subheadline: "Career and transition coaching for thoughtful international professionals—especially those navigating change while living abroad or working in a non-native language.",
   primaryCTA: {
     label: 'Book Free Discovery Call',
     href: '/book',
   },
   secondaryCTA: {
-    label: 'Get Free Career Guide',
+    label: 'Download Free Playbook',
     href: '/free',
   },
   microcopy: 'Free. 30 minutes. Leave with your next step.',
@@ -58,12 +57,12 @@ export const transformationSection = {
   description: "Here's what you'll walk away with after working together:",
   outcomes: [
     {
-      title: "Clear Direction",
-      description: "Know exactly what your next professional move should be—and why it fits",
+      title: "Clear Communication",
+      description: "You have language for your story (especially for interviews or transitions in a non-native language)",
     },
     {
       title: "Confidence in Your Thinking",
-      description: "Move forward without constantly questioning yourself or looking for external validation",
+      description: "You stop looping and start choosing—move forward without constantly questioning yourself",
     },
     {
       title: "Sustainable Boundaries",
@@ -74,12 +73,12 @@ export const transformationSection = {
       description: "Lead in a way that feels natural to you — without copying someone else’s style",
     },
     {
-      title: "Clarity Around Your Strengths",
-      description: "See how what you already know and do well can evolve into your next chapter",
+      title: "Decision Clarity",
+      description: "You know exactly what to say yes and no to—and you understand why",
     },
     {
       title: "Grounded Next Steps",
-      description: "Leave with concrete next steps—not just insights, but a roadmap",
+      description: "You can explain your next step without apologizing, backed by a concrete roadmap",
     },
   ],
 }
@@ -164,8 +163,8 @@ export const offersSection = {
         'A concrete action plan',
       ],
       idealFor: 'Professional transitions, burnout recovery, leadership development',
-      price: '€499',
-      priceNote: 'Payment plans available',
+      price: 'Shared after fit is confirmed',
+      priceNote: 'Limited client intake',
       cta: 'Apply for the Program',
       href: '/contact?type=ongoing',
       featured: true,
@@ -188,7 +187,7 @@ export const offersSection = {
         'Experience of the coaching process',
       ],
       idealFor: 'Specific decisions, exploring fit, getting unstuck',
-      price: '€90',
+      price: 'Shared upon request',
       priceNote: '',
       cta: 'Book a Session',
       href: '/contact?type=single',
@@ -243,7 +242,7 @@ export const finalCTASection = {
   headline: "Ready to land your next career move?",
   description: "The first step is simple: a free 30-minute strategy call where we talk about where you are and where you want to go. No pressure, no commitment—just an honest conversation that could change everything.",
   primaryCTALabel: "Book Free Discovery Call",
-  secondaryCTALabel: "Get the Free Playbook",
+  secondaryCTALabel: "Download Free Playbook",
   microcopy: "Free. 30 minutes. Leave with your next step.",
   privacyNote: "Everything we discuss is completely confidential.",
 }
@@ -265,7 +264,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "How much does coaching cost?",
-    answer: "Investment varies based on the format you choose. The 90-Day Clarity & Direction Program is €499, single sessions are €90 for 60 minutes, and corporate programs are customized. During our discovery call, we'll discuss pricing options that fit your budget.",
+    answer: "Investment is shared after our initial conversation to ensure we are the right fit for each other. I take a limited number of 1:1 clients at a time to ensure high-quality attention for everyone I work with.",
   },
   {
     question: "Will this actually work for me?",

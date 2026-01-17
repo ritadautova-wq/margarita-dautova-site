@@ -1,88 +1,64 @@
 import Container from '@/components/Container'
 import Section from '@/components/Section'
-import { testimonials } from '@/lib/bookPageContent'
+
+const callPatterns = [
+  {
+    before: "I feel stuck for months, looping through the same three career options.",
+    after: "I leave with the real tension identified—and 2-3 concrete steps for the next 7 days.",
+    label: "FROM OVERWHELM TO ACTION",
+  },
+  {
+    before: "I’m not sure how to name my strengths in a way that feels natural in a non-native environment.",
+    after: "I start to see how my story can translate across cultures with calm confidence.",
+    label: "FROM SILENCE TO STORY",
+  },
+  {
+    before: "I’m worried I’ll be pressured into a coaching program I’m not ready for.",
+    after: "I experience a pure thinking partnership—no pitch, no pressure, just an honest recommendation.",
+    label: "FROM SKEPTICISM TO TRUST",
+  },
+]
 
 export default function BookTestimonials() {
-  // Show first 3 testimonials, highlight the first one
-  const displayedTestimonials = testimonials.slice(0, 3)
-
   return (
     <Section background="light">
       <Container size="narrow">
         <div className="text-center mb-12">
+          <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+            What to expect
+          </p>
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 mb-4">
-            What others say about the call
+            The shift starts with a conversation
           </h2>
+          <p className="text-stone-600">
+            Even if we don't end up working together long-term, my goal is for you to walk away from this call with more clarity than you had when you arrived.
+          </p>
         </div>
 
         <div className="space-y-6">
-          {/* Highlighted first testimonial */}
-          {displayedTestimonials[0] && (
-            <div className="bg-white border-2 border-primary-200 rounded-sm p-8 md:p-10 shadow-sm">
-              <p className="text-primary-600 font-medium text-sm mb-3">
-                {displayedTestimonials[0].resultHeadline}
-              </p>
-              <blockquote className="text-lg md:text-xl text-stone-900 leading-relaxed mb-4">
-                "{displayedTestimonials[0].quote}"
-              </blockquote>
-              <div className="flex items-center gap-2 text-sm text-stone-600">
-                <span className="font-medium">
-                  {displayedTestimonials[0].name}
-                </span>
-                {displayedTestimonials[0].role && (
-                  <>
-                    <span>•</span>
-                    <span>{displayedTestimonials[0].role}</span>
-                  </>
-                )}
-                {displayedTestimonials[0].location && (
-                  <>
-                    <span>•</span>
-                    <span>{displayedTestimonials[0].location}</span>
-                  </>
-                )}
+          {callPatterns.map((pattern, index) => (
+            <div key={index} className="bg-white border border-stone-200 rounded-sm p-6 md:p-8 shadow-sm">
+              <span className="text-xs font-bold text-primary-600 uppercase tracking-widest mb-4 block">
+                {pattern.label}
+              </span>
+              <div className="grid md:grid-cols-2 gap-6 md:gap-12">
+                <div>
+                  <p className="text-xs font-medium text-stone-400 uppercase tracking-wider mb-2">Before the call</p>
+                  <p className="text-stone-600 italic leading-relaxed">
+                    "{pattern.before}"
+                  </p>
+                </div>
+                <div className="md:border-l md:pl-12 border-stone-100">
+                  <p className="text-xs font-medium text-primary-600 uppercase tracking-wider mb-2">After 30 minutes</p>
+                  <p className="text-stone-900 font-medium leading-relaxed">
+                    {pattern.after}
+                  </p>
+                </div>
               </div>
             </div>
-          )}
-
-          {/* Other testimonials in grid */}
-          {displayedTestimonials.length > 1 && (
-            <div className="grid md:grid-cols-2 gap-6">
-              {displayedTestimonials.slice(1).map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-stone-200 rounded-sm p-6"
-                >
-                  <p className="text-primary-600 font-medium text-sm mb-2">
-                    {testimonial.resultHeadline}
-                  </p>
-                  <blockquote className="text-stone-700 leading-relaxed mb-3">
-                    "{testimonial.quote}"
-                  </blockquote>
-                  <div className="text-sm text-stone-600">
-                    <span className="font-medium">{testimonial.name}</span>
-                    {testimonial.role && (
-                      <>
-                        {' • '}
-                        <span>{testimonial.role}</span>
-                      </>
-                    )}
-                    {testimonial.location && (
-                      <>
-                        {' • '}
-                        <span>{testimonial.location}</span>
-                      </>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
+          ))}
         </div>
-
-        {/* TODO: Replace with real testimonials */}
       </Container>
     </Section>
   )
 }
-

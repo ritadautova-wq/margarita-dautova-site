@@ -11,8 +11,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '',
     '/about',
     '/coaching',
-    // TODO: Uncomment when testimonials are ready
-    // '/testimonials',
     '/resources',
     '/contact',
     '/book',

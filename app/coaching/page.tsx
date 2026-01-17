@@ -27,20 +27,20 @@ The work is tailored entirely to you. We start by understanding your values, str
       'Mid-point and final reviews',
     ],
     outcomes: [
-      'Knowing your values and strengths',
-      'Clear direction on your next move',
-      'Confidence to take action',
-      'Sustainable boundaries',
-      'A concrete action plan',
+      'Have language for your story (especially for interviews in a non-native language)',
+      'Explain your next step without apologizing',
+      'Know exactly what to say yes and no to—and why',
+      'Stop looping and start choosing',
+      'Sustainable boundaries that support your energy',
     ],
     idealFor: [
-      'Professional transitions and career pivots',
-      'Burnout recovery',
-      'Leadership development',
-      'Finding meaning and purpose at work',
+      'International professionals navigating career pivots',
+      'Those working in a non-native language/culture',
+      'Burnout recovery and identity transitions',
+      'Finding meaning beyond traditional success',
     ],
-    investment: '€499',
-    investmentNote: 'Payment plans available',
+    investment: 'Shared after fit is confirmed',
+    investmentNote: 'Investment is shared after our initial conversation to ensure we are the right fit.',
   },
   {
     id: 'single',
@@ -61,19 +61,19 @@ This is also a great way to experience coaching if you're curious about what it'
       'Optional follow-up session',
     ],
     outcomes: [
-      'Clarity on your specific challenge',
-      'New perspective on your situation',
-      'Concrete next steps',
-      'Experience of the coaching process',
+      'Clarity on the real decision beneath the surface',
+      'New perspective on a specific transition or challenge',
+      'Language to explain your situation to others',
+      'Concrete next steps without the overthinking',
     ],
     idealFor: [
       'Specific decisions or crossroads',
-      'Exploring if coaching is right for you',
+      'Preparing for important conversations in a non-native language',
       'Getting unstuck on a particular issue',
-      'Preparing for important conversations',
+      'Exploring if a thinking partnership is right for you',
     ],
-    investment: '€90',
-    investmentNote: '',
+    investment: 'Shared upon request',
+    investmentNote: 'Contact for details',
   },
   {
     id: 'corporate',
@@ -118,7 +118,7 @@ const faqs = [
   {
     question: "How much does coaching cost?",
     answer:
-      "The 90-Day Clarity & Direction Program is €499 (payment plans available). Single sessions are €90 for 60 minutes. Corporate programs are customized based on your organization's needs.",
+      "Investment is shared after an initial conversation to ensure we are the right fit. I take a limited number of 1:1 clients at a time to ensure deep, thoughtful attention for everyone I work with.",
   },
   {
     question: "How do online sessions work?",
@@ -155,8 +155,7 @@ export default function CoachingPage() {
             Ways we can work together
           </h1>
           <p className="mt-6 text-body-lg text-stone-600 max-w-2xl mx-auto">
-            Different situations call for different approaches. Here's how I typically work 
-            with clients — though everything can be adapted to fit your specific needs.
+            I work as a thinking partner for reflective professionals navigating significant transitions — especially international professionals living abroad or working in a non-native language. Here's how we can work together.
           </p>
         </div>
       </section>
@@ -185,7 +184,6 @@ export default function CoachingPage() {
 
                 <div className="mt-8 p-6 bg-primary-50 border border-primary-100">
                   <p className="text-sm text-stone-500 mb-1">Investment</p>
-                  {/* TODO: Replace with real pricing */}
                   <p className="text-xl font-medium text-stone-900">{format.investment}</p>
                   <p className="text-sm text-stone-500 mt-1">{format.investmentNote}</p>
                 </div>

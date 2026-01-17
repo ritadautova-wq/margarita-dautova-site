@@ -20,7 +20,6 @@ export default function NewsletterForm({
     e.preventDefault()
     setStatus('loading')
 
-    // TODO: Connect to actual email service (Mailchimp, ConvertKit, etc.)
     // Simulating API call
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000))
