@@ -14,28 +14,20 @@ export default function BookFinalCTA() {
             {finalCTA.subheadline}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <div className="flex justify-center mb-8">
             <Link
               href="#book-calendar"
               className="inline-flex items-center justify-center px-8 py-4 font-medium bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300 text-base rounded-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
             >
               {finalCTA.primaryCTA}
             </Link>
-            <Link
-              href="/free"
-              className="inline-flex items-center justify-center px-8 py-4 font-medium border-2 border-white text-white hover:bg-white hover:text-primary-700 transition-all duration-300 text-base rounded-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-700"
-            >
-              {finalCTA.secondaryCTA}
-            </Link>
           </div>
 
-          <p className="text-white text-sm mb-2">
+          <p className="text-white text-sm">
             <strong>{finalCTA.microcopy}</strong>
           </p>
-          <p className="text-primary-300 text-sm">{finalCTA.privacyNote}</p>
         </div>
       </Container>
     </section>
   )
 }
-
