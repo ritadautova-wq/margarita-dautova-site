@@ -55,7 +55,20 @@ export default function ContactForm() {
     setStatus('loading')
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1500))
+      const response = await fetch('https://formspree.io/f/xvzwaegg', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (!response.ok || data.errors) {
+        console.error('Contact form error:', data.errors)
+        setStatus('error')
+        return
+      }
+
       setStatus('success')
       setFormData(initialFormData)
     } catch {
@@ -214,9 +227,9 @@ export default function ContactForm() {
           <option value="" disabled>
             Select an option
           </option>
-          <option value="ongoing">Ongoing coaching program</option>
-          <option value="single">Single session</option>
-          <option value="corporate">Corporate / team coaching</option>
+          <option value="ongoing">90-Day Clarity Through Transition</option>
+          <option value="single">Strategic Session</option>
+          <option value="corporate">Workshops & Coaching for Organisations</option>
           <option value="question">Just a question</option>
           <option value="other">Other</option>
         </select>

@@ -1,30 +1,13 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Container from '@/components/Container'
+import TestimonialsCarousel from '@/components/TestimonialsCarousel'
 
 export const metadata: Metadata = {
   title: 'Client Experience',
   description:
-    'Learn about the experience of working with Margarita. Common shifts, before/after patterns, and what to expect from a thinking partnership.',
+    'Read what clients say about working with Margarita. Real testimonials and what to expect from a thinking partnership.',
 }
-
-const patterns = [
-  {
-    before: "I’m capable and successful on paper, but I feel deeply unclear about my next chapter.",
-    after: "I can name the real decision beneath the surface and move forward with grounded confidence.",
-    label: "CLARITY",
-  },
-  {
-    before: "I’m living abroad and working in a non-native language; I feel like my story doesn’t translate.",
-    after: "I have the language for my professional story—I can explain my path with calm authority.",
-    label: "COMMUNICATION",
-  },
-  {
-    before: "I overthink every option, looping through scenarios but never actually choosing.",
-    after: "I know exactly what to say yes and no to—and I understand the values driving those choices.",
-    label: "DECISION-MAKING",
-  },
-]
 
 export default function TestimonialsPage() {
   return (
@@ -33,46 +16,21 @@ export default function TestimonialsPage() {
       <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gradient-to-b from-stone-100/50 to-stone-50">
         <div className="container-narrow text-center">
           <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
-            The Experience
+            Client Experiences
           </p>
           <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
-            Common shifts my clients notice
+            What clients say
           </h1>
           <p className="mt-6 text-body-lg text-stone-600 max-w-2xl mx-auto">
-            Every coaching journey is individual, but these are the patterns that tend to emerge 
-            when we work together as thinking partners.
+            Every coaching journey is unique. Here's what some clients have shared about their experience working together.
           </p>
         </div>
       </section>
 
-      {/* Experience Patterns */}
+      {/* Testimonials Carousel */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <div className="grid md:grid-cols-3 gap-8">
-            {patterns.map((pattern, index) => (
-              <div key={index} className="bg-stone-50 p-8 border border-stone-200 rounded-sm flex flex-col h-full">
-                <span className="text-xs font-bold text-primary-600 uppercase tracking-widest mb-6">
-                  {pattern.label}
-                </span>
-                
-                <div className="space-y-6 flex-grow">
-                  <div>
-                    <p className="text-xs font-medium text-stone-400 uppercase tracking-wider mb-2">Before</p>
-                    <p className="text-stone-600 italic leading-relaxed">
-                      "{pattern.before}"
-                    </p>
-                  </div>
-                  
-                  <div className="pt-6 border-t border-stone-200">
-                    <p className="text-xs font-medium text-primary-600 uppercase tracking-wider mb-2">After</p>
-                    <p className="text-stone-900 font-medium leading-relaxed">
-                      {pattern.after}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <TestimonialsCarousel variant="dark" />
         </Container>
       </section>
 
@@ -132,7 +90,7 @@ export default function TestimonialsPage() {
             Ready to explore your own transition?
           </h2>
           <p className="mt-4 text-primary-100 text-lg max-w-xl mx-auto">
-            Book a free discovery call and let's identify the real decision beneath the surface.
+            Book a discovery call and let's identify the real decision beneath the surface.
           </p>
           
           <div className="mt-10">
@@ -141,7 +99,7 @@ export default function TestimonialsPage() {
               className="inline-flex items-center justify-center px-8 py-4 font-medium 
                 bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300"
             >
-              Book Free Discovery Call
+              Book a Discovery Call
             </Link>
           </div>
         </div>

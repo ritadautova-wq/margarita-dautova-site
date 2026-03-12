@@ -24,7 +24,7 @@ const variantStyles = {
 export default function CTABanner({
   title = 'Ready to take the next step?',
   description = "Let's discuss how coaching can help you achieve your goals.",
-  primaryCTA = { text: 'Book Free Discovery Call', href: '/book' },
+  primaryCTA = { text: 'Book a Discovery Call', href: '/book' },
   secondaryCTA,
   variant = 'light',
 }: CTABannerProps) {

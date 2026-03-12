@@ -10,7 +10,7 @@ export default function BookLayout({
   return (
     <>
       <MinimalHeader />
-      {children}
+      <main id="main-content">{children}</main>
       <Footer />
     </>
   )

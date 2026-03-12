@@ -102,7 +102,7 @@ export default function FreeResourcePage() {
                   Plus: Invitation to a Free Discovery Call
                 </h3>
                 <p className="text-stone-600 text-sm">
-                  After you download the playbook, you'll get an invitation to book a free 30-minute strategy call 
+                  After you download the playbook, you'll get an invitation to book a 30-minute strategy call 
                   where we can dive deeper into your specific situation.
                 </p>
               </div>
@@ -147,11 +147,11 @@ export default function FreeResourcePage() {
               Ready for deeper support?
             </h2>
             <p className="text-stone-600 mb-6">
-              The playbook is a great start. If you're ready to go deeper, book a free strategy call 
+              The playbook is a great start. If you're ready to go deeper, book a strategy call 
               where we can explore your specific situation and whether coaching could help.
             </p>
             <Button href="/book" variant="primary" size="lg">
-              Book Free Discovery Call
+              Book a Discovery Call
             </Button>
           </div>
         </Container>
@@ -159,4 +159,3 @@ export default function FreeResourcePage() {
     </>
   )
 }
-

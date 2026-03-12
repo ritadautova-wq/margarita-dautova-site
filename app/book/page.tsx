@@ -99,7 +99,7 @@ export default function BookPage() {
         </Container>
       </section>
 
-      {/* FAQ Section (Optional, keeping it clean) */}
+      {/* FAQ Section */}
       <Section background="white">
         <Container size="narrow">
           <h2 className="font-serif text-heading text-stone-900 text-center mb-10">
@@ -130,7 +130,7 @@ export default function BookPage() {
               <a
                 href="#book-calendar"
                 className="inline-flex items-center justify-center px-8 py-4 font-medium 
-                  bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300"
+                  bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300 rounded-sm"
               >
                 {finalCTA.primaryCTA}
               </a>

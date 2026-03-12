@@ -87,10 +87,10 @@ export default function ThankYouPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-stone-900 mb-2">
-                    Book a Free Discovery Call (Optional)
+                    Book a Discovery Call (Optional)
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
-                    If you want to go deeper, book a free 30-minute call where we can explore your specific situation 
+                    If you want to go deeper, book a 30-minute call where we can explore your specific situation 
                     and whether coaching could help.
                   </p>
                 </div>
@@ -103,11 +103,11 @@ export default function ThankYouPage() {
                 Ready to Take the Next Step?
               </h3>
               <p className="text-stone-600 mb-6">
-                Book a free strategy call and let's talk about where you are and where you want to go.
+                Book a strategy call and let's talk about where you are and where you want to go.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button href="/book" variant="primary" size="lg">
-                  Book Free Discovery Call
+                  Book a Discovery Call
                 </Button>
                 <Button href="/" variant="secondary" size="lg">
                   Back to Homepage
@@ -134,4 +134,3 @@ export default function ThankYouPage() {
     </>
   )
 }
-

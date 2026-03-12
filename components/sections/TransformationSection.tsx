@@ -59,6 +59,10 @@ export default function TransformationSection() {
             </div>
           ))}
         </div>
+
+        <p className="text-center text-stone-600 mt-10 max-w-2xl mx-auto">
+          {transformationSection.closingText}
+        </p>
       </Container>
     </section>
   )

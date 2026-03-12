@@ -1,9 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
+import CookieConsent from '@/components/CookieConsent'
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -84,10 +82,8 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <Analytics />
+        {children}
+        <CookieConsent />
       </body>
     </html>
   )

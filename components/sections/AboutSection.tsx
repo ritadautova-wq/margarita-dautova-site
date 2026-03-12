@@ -6,10 +6,10 @@ export default function AboutSection() {
   return (
     <section className="section-padding bg-stone-100/50">
       <Container size="default">
-        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-          {/* Image placeholder */}
-          <div className="lg:col-span-2">
-            <div className="relative aspect-[3/4] overflow-hidden rounded-sm bg-gradient-to-br from-primary-100 to-stone-100">
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-stretch">
+          {/* Image — height matches text column */}
+          <div className="lg:col-span-2 min-h-[280px] lg:min-h-0">
+            <div className="relative h-full min-h-[280px] lg:min-h-0 overflow-hidden rounded-sm bg-gradient-to-br from-primary-100 to-stone-100">
               <Image
                 src="/images/IMG_5681.JPG"
                 alt="Portrait of Margarita Dautova"

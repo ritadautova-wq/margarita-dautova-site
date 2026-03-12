@@ -57,6 +57,7 @@ export const calendarSection = {
     'Easy reschedule or cancel anytime',
   ],
   reassuranceText: 'No pressure. If it’s not a fit, we’ll both know.',
+  limitedSpotsText: 'Limited spots available each week.',
 }
 
 export const bookPageMetadata = {

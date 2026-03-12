@@ -8,8 +8,8 @@ const navigation = {
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Imprint', href: '/imprint' },
+    { name: 'Impressum', href: '/imprint' },
+    { name: 'Datenschutzerklärung', href: '/privacy' },
   ],
   social: [
     {
@@ -91,9 +91,9 @@ export default function Footer() {
               </h3>
               <div className="mt-4 space-y-3">
                 <p className="text-stone-400">
-                  <a href="mailto:hello@margaritadautova.com" 
+                  <a href="mailto:margarita.dautova.coach@gmail.com" 
                     className="hover:text-white transition-colors">
-                    hello@margaritadautova.com
+                    margarita.dautova.coach@gmail.com
                   </a>
                 </p>
                 <p className="text-stone-500 text-sm">
@@ -105,14 +105,14 @@ export default function Footer() {
                     className="inline-block w-full text-center px-4 py-2 bg-primary-600 text-white 
                       hover:bg-primary-700 transition-colors rounded-sm text-sm font-medium"
                   >
-                    Book Free Discovery Call
+                    Book a Discovery Call
                   </Link>
                   <Link
                     href="/free"
                     className="inline-block w-full text-center px-4 py-2 border border-stone-700 text-stone-300 
                       hover:bg-stone-800 transition-colors rounded-sm text-sm font-medium"
                   >
-                    Get Free Playbook
+                    Get Playbook
                   </Link>
                 </div>
               </div>

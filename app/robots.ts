@@ -1,9 +1,9 @@
 import { MetadataRoute } from 'next'
 
 // Dynamically determine base URL based on environment
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
-  process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 
-  'https://margaritadautova.com'
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://margaritadautova.com')
 
 export default function robots(): MetadataRoute.Robots {
   return {

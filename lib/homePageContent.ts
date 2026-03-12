@@ -7,18 +7,18 @@
 export const hero = {
   trustStrip: [
     { label: 'ICF PCC-certified', icon: 'check' },
-    { label: 'Background in Talent & Leadership Development', icon: 'people' },
+    { label: '600+ coaching hours with 80+ professionals', icon: 'people' },
     { label: 'Munich-based, working worldwide', icon: 'globe' },
-    { label: 'Experience with international professionals', icon: 'building' },
+    { label: '10+ years in Talent Development', icon: 'building' },
   ],
-  headline: "When life stops making sense, that’s usually where the real work begins.",
-  subheadline: "Career and transition coaching for thoughtful international professionals—especially those navigating change while living abroad or working in a non-native language.",
+  headline: "When growth becomes non-negotiable.",
+  subheadline: "I’m Margarita — a career coach and thinking partner for people in transition. I work with thoughtful international professionals who want clarity about who they are and where they’re going — especially those navigating change while living abroad or working in a non-native language.",
   primaryCTA: {
-    label: 'Book Free Discovery Call',
+    label: 'Book a Discovery Call',
     href: '/book',
   },
   secondaryCTA: {
-    label: 'Download Free Playbook',
+    label: 'Download a Playbook',
     href: '/free',
   },
   microcopy: 'Free. 30 minutes. Leave with your next step.',
@@ -26,23 +26,22 @@ export const hero = {
 
 // Problem Section
 export const problemSection = {
-  eyebrow: "You're Not Alone",
-  headline: "If you're feeling any of this, you're at a decision point—not broken",
+  eyebrow: " ",
+  headline: "If any of this resonates, you might be at a turning point — whether by challenge or opportunity.",
   painPoints: [
-    "You're successful on paper but feel stuck or unfulfilled",
-    "You know you need a change but don't know what's next",
-    "You're considering a career pivot but fear starting over",
-    "You've lost confidence in your abilities or direction",
-    "You're in a new leadership role and feel like an imposter",
-    "You're torn between security and pursuing something meaningful",
+    "You’ve been promoted — and want to grow into the role, not just perform it",
+    "You’re stepping into leadership and want to lead consciously",
+    "You’ve moved countries or contexts, and what used to work no longer translates",
+    "You know you need a change, but can’t yet articulate what “next” looks like",
+    "Your responsibilities have expanded — and your mindset needs to evolve with them",
+    "You’re torn between security and pursuing something more meaningful",
   ],
   transitionMessage: {
-    bold: "You're not broken.",
-    text: "You're at a crossroads—and that's exactly where meaningful change begins.",
-    description: "The confusion, the exhaustion, the \"what's next?\" feeling? That's your system telling you something needs to shift. Not because you're failing, but because you're ready for what's next.",
+    bold: "Moments like these often appear when you're evolving — whether because something no longer fits, or because you're stepping into something bigger.",
+    description: "Sometimes it feels like uncertainty. Sometimes like expansion. Either way, it's a signal that your current way of thinking may need to grow with you. Having a thinking partner helps you integrate the change — and move forward deliberately.",
   },
-  ctaText: "Here's how we turn this moment into momentum:",
-  ctaLabel: "Book Free Discovery Call",
+  ctaText: "You can start easy:",
+  ctaLabel: "Book a Discovery Call",
 }
 
 // Transformation Section (What You'll Get)
@@ -54,23 +53,24 @@ export interface Outcome {
 export const transformationSection = {
   eyebrow: "What You'll Get",
   headline: "Specific outcomes, not vague promises",
-  description: "Here's what you'll walk away with after working together:",
+  description: "Here's what my clients walk away with after working together:",
+  closingText: "These outcomes aren't about becoming someone else — they're about thinking more clearly and choosing more intentionally.",
   outcomes: [
     {
       title: "Clear Communication",
       description: "You have language for your story (especially for interviews or transitions in a non-native language)",
     },
     {
-      title: "Confidence in Your Thinking",
-      description: "You stop looping and start choosing—move forward without constantly questioning yourself",
+      title: "Trust in Your Thinking",
+      description: "You stop looping and start choosing — moving forward without constantly second-guessing yourself",
     },
     {
-      title: "Sustainable Boundaries",
-      description: "Create work that supports your energy and focus, not work that slowly drains you",
+      title: "Energy-Aware Boundaries",
+      description: "You shape work in a way that supports your energy and focus, instead of slowly draining them",
     },
     {
-      title: "Authentic Leadership",
-      description: "Lead in a way that feels natural to you — without copying someone else’s style",
+      title: "Mental Wellbeing",
+      description: "You reduce mental noise and self-pressure, and make decisions in a calmer, more sustainable way",
     },
     {
       title: "Decision Clarity",
@@ -78,7 +78,7 @@ export const transformationSection = {
     },
     {
       title: "Grounded Next Steps",
-      description: "You can explain your next step without apologizing, backed by a concrete roadmap",
+      description: "You can explain your next step without apologizing, supported by a clear and realistic roadmap",
     },
   ],
 }
@@ -94,7 +94,7 @@ export interface ProcessStep {
 
 export const processSection = {
   eyebrow: "The Method",
-  headline: "The 90-Day Clarity & Direction Program",
+  headline: "90-Day Clarity Through Transition",
   description: "A structured, practical approach to professional transitions that actually works.",
   steps: [
     {
@@ -120,7 +120,7 @@ export const processSection = {
     },
   ],
   ctaText: "Ready to start your clarity program?",
-  primaryCTALabel: "Book Free Discovery Call",
+  primaryCTALabel: "Book a Discovery Call",
   secondaryCTALabel: "Get Free Career Guide",
 }
 
@@ -145,9 +145,9 @@ export const offersSection = {
   description: "Different situations call for different approaches. Here's how I typically work with clients.",
   offers: [
     {
-      title: '90-Day Clarity & Direction Program',
+      title: '90-Day Clarity Through Transition',
       subtitle: '3 months',
-      description: 'Deep, sustained work for meaningful transformation. Perfect for professional transitions, burnout recovery, or major leadership shifts.',
+      description: 'For people in a meaningful transition who want to think clearly, decide intentionally, and move forward in a grounded way.',
       includes: [
         '6 coaching sessions (60 min)',
         'Session summary & notes',
@@ -156,60 +156,66 @@ export const offersSection = {
         'Mid-point and final reviews',
       ],
       outcomes: [
-        'Knowing your values and strengths',
-        'Clear direction on your next move',
-        'Confidence to take action',
-        'Sustainable boundaries',
-        'A concrete action plan',
+        'Making sense of a transition or uncertainty',
+        'Clarifying what matters now',
+        'Rebuilding trust in your thinking',
+        'Grounded, sustainable next steps',
+        'Decisions you can stand behind',
       ],
-      idealFor: 'Professional transitions, burnout recovery, leadership development',
-      price: 'Shared after fit is confirmed',
-      priceNote: 'Limited client intake',
+      idealFor: 'Career or identity transitions, living abroad, internally misaligned',
+      price: '€499',
+      priceNote: 'Limited number of places. Best suited for people ready to engage thoughtfully over time.',
       cta: 'Apply for the Program',
       href: '/contact?type=ongoing',
       featured: true,
     },
     {
-      title: 'Single Session',
-      subtitle: '60-minute deep dive',
-      description: 'A focused session for when you need clarity on something specific. Come with a question, leave with perspective and next steps.',
+      title: 'Strategic Session',
+      subtitle: 'Focused thinking session',
+      description: "For people who need to untangle one specific question, decision, or situation — and leave with clearer thinking.",
+      useFor: [
+        'A career or role decision',
+        'Clarifying "what\'s next" when everything feels blurry',
+        'Preparing for an important conversation or interview',
+        'Making sense of a situation that feels emotionally or mentally loaded',
+      ],
       includes: [
         'Pre-session questionnaire',
-        '60-minute session',
+        '90-minute focused session',
         'Session summary & notes',
-        '7 days email support after session',
         'Optional follow-up session',
       ],
       outcomes: [
-        'Clarity on your specific challenge',
-        'New perspective on your situation',
-        'Concrete next steps',
-        'Experience of the coaching process',
+        'Making sense of a specific situation or decision',
+        'Reducing mental noise',
+        'Identifying grounded next steps',
+        'Finding language that fits your experience',
       ],
-      idealFor: 'Specific decisions, exploring fit, getting unstuck',
-      price: 'Shared upon request',
+      idealFor: 'Career decisions, preparing for conversations, getting unstuck',
+      price: '€150',
       priceNote: '',
       cta: 'Book a Session',
       href: '/contact?type=single',
       featured: false,
     },
     {
-      title: 'Team & Corporate',
+      title: 'Workshops & Coaching for Organisations',
       subtitle: 'Custom programs',
-      description: 'Coaching and workshop solutions for organizations investing in their people. Tailored programs for teams, leaders, and companies.',
+      description: 'Supporting clarity, psychological safety, and sustainable performance in complex professional environments.',
       includes: [
-        'Discovery conversation with stakeholders',
-        'Customized program design',
-        '1:1 coaching, group coaching, or workshops',
-        'Progress reporting (confidentiality maintained)',
-        'Program evaluation and recommendations',
+        'Discovery conversations with key stakeholders',
+        'Interactive workshops (in-person or virtual)',
+        'Group coaching sessions',
+        'Individual coaching for leaders',
+        'Programs tailored to context and growth phase',
       ],
       outcomes: [
-        'Improved retention and engagement',
-        'Better team dynamics',
-        'Culture of development and growth',
+        'Clearer communication and collaboration',
+        'Psychological safety that supports performance',
+        'Practical tools teams can apply immediately',
+        'Sustainable ways of working — without burnout',
       ],
-      idealFor: 'HR leaders, team managers, organizations',
+      idealFor: 'International organisations, growing teams, teams navigating transition',
       price: 'Contact for custom proposal',
       priceNote: 'Flexible engagement structures',
       cta: 'Get in Touch',
@@ -217,9 +223,9 @@ export const offersSection = {
       featured: false,
     },
   ],
-  notSureText: "Not sure which format is right for you?",
-  notSureDescription: "Book a free discovery call and we'll figure it out together. No pressure, just an honest conversation.",
-  notSureCTALabel: "Book Free Discovery Call",
+  notSureText: "Not sure which option fits?",
+  notSureDescription: "If you're at an early stage or have one specific question, a Strategic Session is often enough. If you're navigating a broader transition or need space to integrate change over time, the 90-day program offers deeper support. You're also welcome to start with a conversation and decide from there.",
+  notSureCTALabel: "Book a Discovery Call",
 }
 
 // Lead Magnet Section
@@ -239,10 +245,10 @@ export const leadMagnetSection = {
 
 // Final CTA Section
 export const finalCTASection = {
-  headline: "Ready to land your next career move?",
+  headline: "Ready to shape your next career move?",
   description: "The first step is simple: a free 30-minute strategy call where we talk about where you are and where you want to go. No pressure, no commitment—just an honest conversation that could change everything.",
-  primaryCTALabel: "Book Free Discovery Call",
-  secondaryCTALabel: "Download Free Playbook",
+  primaryCTALabel: "Book a Discovery Call",
+  secondaryCTALabel: "Download Playbook",
   microcopy: "Free. 30 minutes. Leave with your next step.",
   privacyNote: "Everything we discuss is completely confidential.",
 }
@@ -255,8 +261,12 @@ export interface FAQ {
 
 export const faqs: FAQ[] = [
   {
-    question: "How long does the 90-Day Clarity & Direction Program actually take?",
-    answer: "The program is designed to run over 12 weeks (approximately 3 months), with 6 sessions scheduled at your convenience. The timeline can be adjusted based on your specific needs and pace. Some clients complete it faster, others prefer a more extended timeline.",
+    question: "What is coaching?",
+    answer: "The International Coaching Federation defines coaching as a partnership with clients in a thought-provoking, creative process that inspires them to maximize their personal and professional potential — helping them discover inherent solutions, clarify goals, and achieve more in their lives, rather than fixing what's wrong. My definition is simpler: Coaching is about you. About what you want, what matters to you, and the kind of life you're trying to build. It creates space to listen honestly to yourself, reconnect with your values and aspirations, and design a path that's aligned with who you are — not who you think you should be.",
+  },
+  {
+    question: "How long does the 90-Day Clarity Through Transition program take?",
+    answer: "The program is designed to run over 90 days (approximately 3 months), with 6 sessions scheduled at your convenience and space for reflection and integration between them. The timeline can be adjusted based on your specific needs and pace.",
   },
   {
     question: "What if I'm not sure coaching is right for me?",
@@ -264,7 +274,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "How much does coaching cost?",
-    answer: "Investment is shared after our initial conversation to ensure we are the right fit for each other. I take a limited number of 1:1 clients at a time to ensure high-quality attention for everyone I work with.",
+    answer: "We discuss the investment after our initial conversation, once we’ve clarified what you need and made sure we’re the right fit. I work with a small number of 1:1 clients at a time so the work can have the attention it deserves.",
   },
   {
     question: "Will this actually work for me?",
@@ -272,7 +282,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "Is everything I share confidential?",
-    answer: "Absolutely. Everything we discuss—in sessions, emails, or calls—is completely confidential. The only exception is if you're part of a corporate program, where I may provide general progress updates to sponsors (never specific content) and only with your explicit agreement.",
+    answer: "Yes. Everything we discuss — in sessions, emails, or calls — is strictly confidential. If you’re part of a corporate program, I may share general progress updates with sponsors (never specific content), and only with your explicit agreement. If I use AI tools for preparation or summaries, all information is fully anonymised. No names or identifying details are shared. Your privacy and psychological safety are fundamental to this work. ",
   },
   {
     question: "What happens on the free discovery call?",
@@ -280,7 +290,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "Do you work with people outside of Germany?",
-    answer: "Yes! I'm based in Munich but work with clients worldwide via video call. Time zones are flexible—we'll find times that work for both of us.",
+    answer: "Yes. I'm based in Munich but work with clients worldwide via video call. Current and past clients are based in the UAE, the USA, Panama, Sweden, the UK, Spain, Italy, Russia, the Ukraine, and Kazakhstan. Time zones are flexible—we'll find times that work for both of us.",
   },
 ]
 

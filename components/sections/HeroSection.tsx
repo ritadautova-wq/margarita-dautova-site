@@ -46,9 +46,9 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-stone-100/50 to-stone-50" />
       
       <div className="container-default relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content Column */}
-          <div>
+        <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+          {/* Content Column — more space for text */}
+          <div className="lg:col-span-3">
             {/* Trust Strip */}
             <div className="flex flex-wrap items-center gap-6 mb-6 text-sm text-stone-600">
               {hero.trustStrip.map((item, index) => (
@@ -95,16 +95,17 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Image Column */}
-          <div className="relative lg:order-last">
-            <div className="relative aspect-[4/5] rounded-lg overflow-hidden shadow-2xl">
+          {/* Image Column — smaller to match text block */}
+          <div className="relative lg:col-span-2 lg:order-last lg:flex lg:items-center lg:justify-end">
+            <div className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-full rounded-lg overflow-hidden shadow-2xl">
               <Image
                 src="/images/IMG_5842.JPG"
                 alt="Margarita Dautova - Career Coach"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[center_30%] scale-[1.35]"
+                style={{ left: -60, top: 80 }}
                 priority
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
               {/* Decorative gradient overlay for depth */}
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent pointer-events-none" />

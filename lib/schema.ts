@@ -64,13 +64,13 @@ export function generateProfessionalServiceSchema() {
     offers: [
       {
         '@type': 'Offer',
-        name: '90-Day Clarity & Direction Program',
-        description: '3-month thinking partnership for career transitions and identity-level shifts',
+        name: '90-Day Clarity Through Transition',
+        description: '3-month thinking partnership for meaningful transitions — clarity, integration, and grounded next steps',
       },
       {
         '@type': 'Offer',
-        name: 'Single Deep-Dive Session',
-        description: '60-minute focused session for clarity on a specific decision or challenge',
+        name: 'Strategic Session',
+        description: 'Focused thinking session to untangle one specific question, decision, or situation',
       },
     ],
   }
