@@ -47,10 +47,10 @@ export const metadata: Metadata = {
       'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change.',
     images: [
       {
-        url: '/images/portrait-margarita.JPG',
+        url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'Margarita Dautova - Career Coach',
+        alt: 'Margarita Dautova — Career Coach & Thinking Partner',
       },
     ],
   },
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: 'Margarita Dautova | Career Coach & Thinking Partner',
     description:
       'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change.',
-    images: ['/images/portrait-margarita.JPG'],
+    images: ['/opengraph-image'],
   },
   robots: {
     index: true,

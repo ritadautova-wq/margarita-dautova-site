@@ -64,12 +64,12 @@ export async function POST(request: NextRequest) {
     </p>
     
     <p style="font-size: 16px; color: #555;">
-      Thank you for downloading <strong>The Career Pivot Playbook</strong>. Inside, you'll find 5 frameworks that have helped hundreds of professionals navigate their next career move with clarity and confidence.
+      Thank you for downloading <strong>The Career Pivot Playbook</strong>. It's an 8-page guide to help you navigate your next professional move with more clarity and less second-guessing.
     </p>
 
     <div style="background: #f6f7f6; border-radius: 8px; padding: 25px; margin: 25px 0; text-align: center;">
       <p style="font-size: 18px; font-weight: 600; color: #2c332d; margin: 0 0 15px;">
-        📖 Download Your Playbook
+        📖 Open Your Playbook
       </p>
       <a href="${SITE_URL}/downloads/career-pivot-playbook.html"
          style="display: inline-block; background: #5f7260; color: white; padding: 14px 28px; text-decoration: none; border-radius: 4px; font-weight: 600; font-size: 16px;">
@@ -83,28 +83,26 @@ export async function POST(request: NextRequest) {
     <h3 style="font-family: Georgia, serif; font-size: 18px; color: #2c332d; margin: 30px 0 15px;">
       What's inside:
     </h3>
-    
+
     <ul style="font-size: 16px; color: #555; padding-left: 20px;">
-      <li style="margin-bottom: 10px;">The "Stay or Go" Decision Matrix</li>
-      <li style="margin-bottom: 10px;">5 Signs You're Ready for a Career Change</li>
-      <li style="margin-bottom: 10px;">The Career Clarity Framework</li>
-      <li style="margin-bottom: 10px;">How to Pivot Without Starting Over</li>
-      <li style="margin-bottom: 10px;">Your 7-Day Next Steps Action Plan</li>
+      <li style="margin-bottom: 10px;">The 5 signs you're ready for a change</li>
+      <li style="margin-bottom: 10px;">The 3 pivot paths: Shift, Switch, or Start Fresh</li>
+      <li style="margin-bottom: 10px;">The Hidden Transferable Skills Framework</li>
+      <li style="margin-bottom: 10px;">30-Day Clarity Kickstart Action Plan</li>
     </ul>
 
-    <div style="background: #fff8e7; border-left: 4px solid #f59e0b; padding: 20px; margin: 30px 0;">
+    <div style="background: #f6f7f6; border-left: 4px solid #5f7260; padding: 20px; margin: 30px 0;">
       <p style="font-size: 16px; color: #555; margin: 0;">
-        <strong>Ready for personalized guidance?</strong><br>
-        Book a free 30-minute strategy call and let's discuss your specific situation.
+        If something in the playbook resonates and you'd like to think it through with someone — that's exactly what the free discovery call is for.
       </p>
       <a href="${SITE_URL}/book"
          style="display: inline-block; margin-top: 15px; color: #5f7260; font-weight: 600; text-decoration: underline;">
-        Book your free call →
+        Book a free 30-minute call →
       </a>
     </div>
 
     <p style="font-size: 16px; color: #555;">
-      Looking forward to helping you land your next career move,
+      I hope the playbook gives you a clearer sense of where you are and where you want to go.
     </p>
     
     <p style="font-size: 16px; color: #555;">

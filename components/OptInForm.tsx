@@ -36,7 +36,7 @@ export default function OptInForm({
       }
 
       setStatus('success')
-      setMessage('Check your inbox! We just sent you the Career Pivot Playbook.')
+      setMessage('Check your inbox! I just sent you the Career Pivot Playbook.')
       setEmail('')
     } catch {
       setStatus('error')
@@ -53,7 +53,7 @@ export default function OptInForm({
           </svg>
           <div>
             <p className="text-green-800 font-medium">Success! Your playbook is ready.</p>
-            <p className="text-green-700 text-sm mt-1">We've also sent a copy to your inbox.</p>
+            <p className="text-green-700 text-sm mt-1">I've also sent a copy to your inbox.</p>
           </div>
         </div>
         <a
@@ -113,7 +113,7 @@ export default function OptInForm({
       )}
 
       <p className="text-xs text-stone-500">
-        No spam. Unsubscribe anytime. We respect your privacy.
+        No spam. Unsubscribe anytime.
       </p>
     </form>
   )
