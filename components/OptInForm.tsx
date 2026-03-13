@@ -23,17 +23,25 @@ export default function OptInForm({
     setStatus('loading')
 
     try {
+      // Send playbook email
       const response = await fetch('/api/subscribe', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, source }),
       })
 
       if (!response.ok) {
         throw new Error('Subscription failed')
       }
+
+      // Save subscriber to Formspree (fire-and-forget — never blocks the user)
+      fetch('https://formspree.io/f/mnjgvkko', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ email, source }),
+      }).catch(() => {
+        // Silently ignore — subscriber saving is secondary to playbook delivery
+      })
 
       setStatus('success')
       setMessage('Check your inbox! I just sent you the Career Pivot Playbook.')
