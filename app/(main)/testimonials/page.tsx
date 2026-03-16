@@ -34,6 +34,54 @@ export default function TestimonialsPage() {
         </Container>
       </section>
 
+      {/* Workshop Testimonials */}
+      <section className="section-padding bg-stone-50">
+        <Container size="default">
+          <div className="text-center mb-12">
+            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+              Team Workshops
+            </p>
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900">
+              What workshop participants say
+            </h2>
+            <p className="mt-4 text-stone-600 max-w-xl mx-auto">
+              Feedback from team workshops focused on reflection, collaboration, and shared clarity.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                quote: "Moderators did an amazing job facilitating this workshop. Topics were very relevant to the current situation in the team. We covered many topics within one day and it was a great overview of what we need to work on further.",
+                attribution: "Marketing Team, e-commerce company",
+              },
+              {
+                quote: "It was fun and interactive, and at the same time we learned a lot about different working styles and how to improve our work. The day was very well structured and we got the chance to actually work on specific issues that exist in our team.",
+                attribution: "SEO Team, e-commerce company",
+              },
+              {
+                quote: "Moderators did a very good job guiding us through the day. The structure was clear and the overall organisation was great. The whole day was nicely paced and the exercises were engaging and thought-provoking.",
+                attribution: "SEA Team, e-commerce company",
+              },
+              {
+                quote: "The topics we wanted to discuss were perfectly transformed into team tasks. I felt that the workshop was crafted specifically for our needs. It helped us see the existing issues from a different angle and start working on practical solutions.",
+                attribution: "Marketing Team, e-commerce company",
+              },
+            ].map((item, index) => (
+              <div key={index} className="bg-white border border-stone-200 rounded-sm p-8">
+                <div className="text-4xl text-primary-300 font-serif leading-none mb-4">"</div>
+                <blockquote>
+                  <p className="text-stone-600 leading-relaxed italic">{item.quote}</p>
+                </blockquote>
+                <div className="mt-6 pt-4 border-t border-stone-100">
+                  <p className="text-sm font-medium text-stone-500">— {item.attribution}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
       {/* What to Expect */}
       <section className="section-padding bg-stone-50">
         <Container size="narrow">
