@@ -163,7 +163,7 @@ export const offersSection = {
         'Decisions you can stand behind',
       ],
       idealFor: 'Career or identity transitions, living abroad, internally misaligned',
-      price: '€499',
+      price: '€599',
       priceNote: 'Limited number of places. Best suited for people ready to engage thoughtfully over time.',
       cta: 'Apply for the Program',
       href: '/contact?type=ongoing',
