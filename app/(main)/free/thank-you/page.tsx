@@ -125,7 +125,7 @@ export default function ThankYouPage() {
                 <Link href="/contact" className="text-primary-600 hover:text-primary-700 underline">
                   contact me
                 </Link>{' '}
-                and we'll resend it.
+                and I'll resend it.
               </p>
             </div>
           </div>

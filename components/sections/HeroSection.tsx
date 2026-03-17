@@ -102,8 +102,7 @@ export default function HeroSection() {
                 src="/images/IMG_5842.JPG"
                 alt="Margarita Dautova - Career Coach"
                 fill
-                className="object-cover object-[center_30%] scale-[1.35]"
-                style={{ left: -60, top: 80 }}
+                className="object-cover object-[55%_20%]"
                 priority
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />

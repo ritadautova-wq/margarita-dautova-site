@@ -56,13 +56,13 @@ export default function ImprintPage() {
                 </p>
                 <p>
                   <span className="text-stone-500">Website:</span>{' '}
-                  <a 
-                    href="https://margarita-dautova.com" 
-                    target="_blank" 
+                  <a
+                    href="https://margaritadautova.com"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-stone-900 hover:text-primary-600 transition-colors"
                   >
-                    margarita-dautova.com
+                    margaritadautova.com
                   </a>
                 </p>
               </div>
