@@ -1,10 +1,7 @@
 import { Metadata } from 'next'
 import Container from '@/components/Container'
 import Section from '@/components/Section'
-import SectionHeader from '@/components/SectionHeader'
 import BlogCard from '@/components/BlogCard'
-import NewsletterForm from '@/components/NewsletterForm'
-import Button from '@/components/Button'
 import { fetchMediumArticles } from '@/lib/medium'
 
 export const metadata: Metadata = {
@@ -17,9 +14,6 @@ export const metadata: Metadata = {
 export default async function ResourcesPage() {
   // Fetch articles from Medium
   const blogPosts = await fetchMediumArticles('rita.dautova')
-  
-  // Extract unique categories from articles
-  const allCategories = ['All', ...Array.from(new Set(blogPosts.map(post => post.category)))]
   
   return (
     <>
@@ -40,26 +34,6 @@ export default async function ResourcesPage() {
           </div>
         </Container>
       </section>
-
-      {/* Lead Magnet Section */}
-      <Section background="cream" size="sm">
-        <Container size="narrow">
-          <div className="text-center">
-            <h2 className="font-serif text-heading-sm md:text-heading text-neutral-900">
-              Free Guide: The Career Pivot Playbook
-            </h2>
-            <p className="mt-3 text-neutral-600">
-              A practical 8-page guide to help you gain clarity on your next career move and navigate professional transitions with confidence.
-            </p>
-            <div className="mt-6 max-w-md mx-auto">
-              <NewsletterForm variant="inline" />
-            </div>
-            <p className="mt-3 text-xs text-neutral-500">
-              No spam, unsubscribe anytime. Your privacy matters.
-            </p>
-          </div>
-        </Container>
-      </Section>
 
       {/* Blog Posts */}
       <Section background="white">
@@ -91,21 +65,6 @@ export default async function ResourcesPage() {
         </Container>
       </Section>
 
-      {/* Newsletter Section */}
-      <Section background="light">
-        <Container size="narrow">
-          <div className="text-center">
-            <SectionHeader
-              eyebrow="Stay in touch"
-              title="Get insights delivered"
-              description="Join professionals who receive my occasional newsletter — thoughtful insights on leadership, career growth, and navigating your professional journey."
-            />
-            <div className="mt-8 max-w-md mx-auto">
-              <NewsletterForm variant="stacked" />
-            </div>
-          </div>
-        </Container>
-      </Section>
     </>
   )
 }
