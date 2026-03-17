@@ -24,7 +24,7 @@ export default function ThankYouPage() {
               Check Your Inbox!
             </h1>
             <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
-              We just sent you the Career Pivot Playbook. It should arrive in your inbox within the next few minutes.
+              I just sent you the Career Pivot Playbook. It should arrive in your inbox within the next few minutes.
             </p>
           </div>
         </Container>
@@ -123,7 +123,7 @@ export default function ThankYouPage() {
               <p className="text-sm text-stone-600">
                 Check your spam folder, or{' '}
                 <Link href="/contact" className="text-primary-600 hover:text-primary-700 underline">
-                  contact us
+                  contact me
                 </Link>{' '}
                 and we'll resend it.
               </p>

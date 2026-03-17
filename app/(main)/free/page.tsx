@@ -115,26 +115,11 @@ export default function FreeResourcePage() {
                   Download Your Free Guide
                 </h2>
                 <p className="text-stone-600 text-sm mb-6">
-                  Enter your email and we'll send you the Career Pivot Playbook instantly.
+                  Enter your email and I'll send you the Career Pivot Playbook instantly.
                 </p>
                 <OptInForm source="free-page" />
               </div>
             </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Trust Section */}
-      <section className="section-padding-sm bg-stone-100/50">
-        <Container size="narrow">
-          <div className="text-center">
-            <p className="text-stone-600 leading-relaxed max-w-xl mx-auto mb-6">
-              "The playbook gave me exactly what I needed to start thinking differently about my career. 
-              The transferable skills framework alone was worth it—I realized I had way more options than I thought."
-            </p>
-            <p className="text-sm text-stone-500">
-              — Former playbook reader
-            </p>
           </div>
         </Container>
       </section>

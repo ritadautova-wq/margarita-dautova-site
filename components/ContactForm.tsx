@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { useSearchParams } from 'next/navigation'
 
 interface FormData {
   name: string
@@ -11,17 +12,21 @@ interface FormData {
   message: string
 }
 
-const initialFormData: FormData = {
-  name: '',
-  email: '',
-  role: '',
-  company: '',
-  interest: '',
-  message: '',
-}
+const VALID_TYPES = ['ongoing', 'single', 'corporate', 'question', 'other']
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState<FormData>(initialFormData)
+  const searchParams = useSearchParams()
+  const typeParam = searchParams.get('type') ?? ''
+  const initialInterest = VALID_TYPES.includes(typeParam) ? typeParam : ''
+
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    role: '',
+    company: '',
+    interest: initialInterest,
+    message: '',
+  })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errors, setErrors] = useState<Partial<FormData>>({})
 
@@ -70,7 +75,7 @@ export default function ContactForm() {
       }
 
       setStatus('success')
-      setFormData(initialFormData)
+      setFormData({ name: '', email: '', role: '', company: '', interest: '', message: '' })
     } catch {
       setStatus('error')
     }

@@ -145,7 +145,6 @@ export default function AboutPage() {
                 <p className="text-stone-700">I've returned to work after becoming a parent, more than once, and renegotiated ambition, energy, and priorities</p>
               </div>
               <div className="bg-white p-5 border-l-4 border-primary-300">
-                {/* Alternative: "I've navigated periods where external success no longer matched my internal sense of direction" */}
                 <p className="text-stone-700">I've had seasons where I had to rethink not just what I do, but why I do it — and what I want work to support in my life now</p>
               </div>
             </div>

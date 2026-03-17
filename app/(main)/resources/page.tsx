@@ -7,7 +7,7 @@ import { fetchMediumArticles } from '@/lib/medium'
 export const metadata: Metadata = {
   title: 'Resources & Insights',
   description:
-    'Articles, guides, and insights on leadership, career development, and professional growth from executive coach Margarita Dautova.',
+    'Articles, guides, and insights on career transitions, leadership, and professional growth from career coach and thinking partner Margarita Dautova.',
 }
 
 
@@ -57,9 +57,17 @@ export default async function ResourcesPage() {
 
           {blogPosts.length === 0 && (
             <div className="mt-12 text-center">
-              <p className="text-neutral-500 text-sm mb-4">
-                No articles available at the moment. Check back soon!
+              <p className="text-neutral-600 mb-4">
+                Articles are loading from Medium — if they don't appear, you can read them directly.
               </p>
+              <a
+                href="https://medium.com/@rita.dautova"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
+              >
+                Read on Medium →
+              </a>
             </div>
           )}
         </Container>

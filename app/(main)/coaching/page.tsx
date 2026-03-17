@@ -132,7 +132,7 @@ const faqs = [
   {
     question: "How much does coaching cost?",
     answer:
-      "Investment is shared after an initial conversation to ensure we are the right fit. I take a limited number of 1:1 clients at a time to ensure deep, thoughtful attention for everyone I work with.",
+      "The 90-Day Clarity Through Transition program is €499, and a Strategic Session is €150. For organisation workshops and group coaching, pricing depends on the scope — get in touch for a custom proposal. I take a limited number of 1:1 clients at a time to ensure deep, thoughtful attention for everyone I work with.",
   },
   {
     question: "How do online sessions work?",
