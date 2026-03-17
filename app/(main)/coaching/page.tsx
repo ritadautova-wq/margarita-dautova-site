@@ -22,7 +22,6 @@ This is not about fixing yourself or rushing into change. It's about clarity, in
     includes: [
       '6 coaching sessions (60 min)',
       'Session summary & notes',
-      'Personalized development plan',
       'Email support between sessions',
       'Mid-point and final reviews',
     ],
