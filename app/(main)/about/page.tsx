@@ -361,8 +361,7 @@ export default function AboutPage() {
                 supporting professionals from a range of international organisations.
               </p>
               <p className="text-stone-600 mt-3">
-                My work includes 1:1 and group coaching with clients from sectors such as technology, 
-                creative industries, and hospitality — often in complex, fast-moving, and multicultural environments.
+                My work includes 1:1 and group coaching with clients from organisations such as Mytheresa (luxury fashion tech) and Amadeus (global travel tech) — often in complex, fast-moving, and multicultural environments.
               </p>
             </div>
 
