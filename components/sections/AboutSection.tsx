@@ -32,10 +32,11 @@ export default function AboutSection() {
             
             <div className="space-y-4 text-stone-600 leading-relaxed mb-6">
               <p>
-                Before becoming a coach, I spent years in corporate environments—working in 
-                Talent and Leadership Development at companies like Mytheresa and Amadeus. 
-                I've seen firsthand how talented people can lose their spark, get stuck in 
-                roles that don't fit, or burn out trying to meet impossible expectations.
+                Before becoming a coach, I spent years in corporate environments—working in
+                Talent and Leadership Development at industries like global travel tech,
+                luxury fashion tech and consultancy. I've seen firsthand how talented people
+                can lose their spark, get stuck in roles that don't fit, or burn out trying
+                to meet impossible expectations.
               </p>
               <p>
                 That experience shapes how I coach. I understand the pressures you face, the 
