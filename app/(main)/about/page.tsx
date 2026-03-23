@@ -394,8 +394,7 @@ export default function AboutPage() {
                 </li>
               </ul>
               <p className="text-stone-600 mt-4">
-                I use these frameworks thoughtfully and flexibly — not as formulas, but as support 
-                for clarity, integration, and sustainable change.
+                I use these frameworks thoughtfully and flexibly as support for clarity, integration, and sustainable change.
               </p>
               <p className="text-stone-600 mt-3">
                 I regularly engage in supervision and continuing education to support the quality 
