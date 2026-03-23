@@ -53,7 +53,7 @@ export const calendarSection = {
   afterBookingText: 'What happens after you book:',
   afterBookingItems: [
     'Confirmation email with call details',
-    'A short note from me with a Zoom link',
+    'A short note from me with a Google Meet link',
     'Easy reschedule or cancel anytime',
   ],
   reassuranceText: 'No pressure. If it’s not a fit, we’ll both know.',

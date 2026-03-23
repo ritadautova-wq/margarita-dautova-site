@@ -136,7 +136,7 @@ const faqs = [
   {
     question: "How do online sessions work?",
     answer:
-      "We meet via video call (usually Zoom). All you need is a quiet space and a stable internet connection. Online coaching is just as effective as in-person — many clients actually prefer the convenience.",
+      "We meet via video call (usually Google Meet). All you need is a quiet space and a stable internet connection. Online coaching is just as effective as in-person — many clients actually prefer the convenience.",
   },
   {
     question: "Can I switch from one format to another?",
