@@ -36,9 +36,11 @@ export default function TransformationSection() {
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance mb-4">
             {transformationSection.headline}
           </h2>
-          <p className="text-stone-600 text-lg">
-            {transformationSection.description}
-          </p>
+          {transformationSection.description && (
+            <p className="text-stone-600 text-lg">
+              {transformationSection.description}
+            </p>
+          )}
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">

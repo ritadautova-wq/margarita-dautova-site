@@ -52,8 +52,8 @@ export interface Outcome {
 
 export const transformationSection = {
   eyebrow: "What You'll Get",
-  headline: "Specific outcomes, not vague promises",
-  description: "Here's what my clients walk away with after working together:",
+  headline: "Here's what my clients walk away with after working together",
+  description: "",
   closingText: "These outcomes aren't about becoming someone else — they're about thinking more clearly and choosing more intentionally.",
   outcomes: [
     {
