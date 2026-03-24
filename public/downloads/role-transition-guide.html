@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Role Transition Guide | Margarita Dautova</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #fff;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    @media print {
+      .page {
+        padding: 40px;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: #2c332d;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 50px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #5f7260;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin: 30px 0 15px;
+      color: #5f7260;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    ul, ol {
+      margin: 20px 0;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .cover {
+      text-align: center;
+      padding: 100px 40px;
+      background: linear-gradient(135deg, #f6f7f6 0%, #e3e7e3 100%);
+      border-radius: 8px;
+      margin-bottom: 60px;
+    }
+
+    .cover .subtitle {
+      color: #5f7260;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .cover h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .cover .tagline {
+      font-size: 20px;
+      color: #555;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    .cover .author {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .cover .author strong {
+      color: #2c332d;
+    }
+
+    .highlight-box {
+      background: #f6f7f6;
+      border-left: 4px solid #5f7260;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2c332d;
+    }
+
+    .framework-box {
+      background: #fff;
+      border: 2px solid #e3e7e3;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+
+    .framework-box h3 {
+      margin-top: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid-item {
+      background: #f6f7f6;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .grid-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #5f7260;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      color: #5f7260;
+      font-size: 18px;
+    }
+
+    .action-step {
+      background: #fff8e7;
+      border: 1px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .action-step h4 {
+      color: #b45309;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .cta-box {
+      background: #5f7260;
+      color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .cta-box h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-box a {
+      display: inline-block;
+      background: #fff;
+      color: #5f7260;
+      padding: 15px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #e3e7e3;
+      margin-top: 60px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .cover h1 {
+        font-size: 32px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <p class="subtitle">Free Guide</p>
+    <h1>The Role Transition Guide</h1>
+    <p class="tagline">For professionals navigating a new role, a promotion, or a return to work after a significant life change</p>
+    <p class="author">By <strong>Margarita Dautova</strong><br>Career Coach &amp; Thinking Partner</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>1. Why New Roles Feel Harder Than Expected</h2>
+
+  <p>Starting a new role — even one you wanted, even one you prepared for — often feels harder than anticipated. People are surprised by this. They expected excitement and got something more complicated: a mix of excitement and disorientation, competence and doubt, enthusiasm and exhaustion.</p>
+
+  <p>Part of what makes transitions difficult is rarely named directly. When you were hired, you were hired for who you already are — your track record, your skills, your way of working. But the role itself tends to require you to become someone slightly different. A slightly different version of your professional self: someone who operates in this particular culture, with these particular people, within these particular constraints.</p>
+
+  <p>That gap — between who you are and who the role needs you to become — is real. It's not a sign that you're wrong for the job. It's the normal experience of any meaningful transition, and it tends to narrow over time if you navigate it with some awareness.</p>
+
+  <div class="highlight-box">
+    <h4>Worth sitting with</h4>
+    <p>The discomfort of a new role is often proportional to how different the role is from your last one. High discomfort doesn't mean wrong fit. It often means significant growth is happening.</p>
+  </div>
+
+  <!-- SECTION 2 -->
+  <h2 class="page-break">2. The Imposter Reality Check</h2>
+
+  <p>The experience of feeling like a fraud — like you got here by luck, like you know less than people assume, like someone is about to find you out — is extremely common among capable, conscientious professionals. It's particularly common in people who have just levelled up into a more senior or stretching role.</p>
+
+  <p>There's a useful observation here that tends to get overlooked: imposter syndrome clusters in people who are actually competent. People who genuinely lack the skills or awareness for a role rarely doubt themselves in this particular way. The self-awareness required to recognise the gap between where you are and where you think you should be is itself a sign of competence.</p>
+
+  <div class="framework-box">
+    <h3>Reframing the Feeling</h3>
+    <p>When the imposter feeling arrives, one way to work with it rather than against it:</p>
+    <ul>
+      <li><strong>Name it specifically.</strong> "I feel like I don't know enough about X" is more useful than "I feel like a fraud." One is actionable. The other is just anxiety wearing a story.</li>
+      <li><strong>Separate the feeling from the fact.</strong> Feeling out of depth is not the same as being out of depth. What is the actual evidence?</li>
+      <li><strong>Ask what a competent person in this role would do.</strong> Usually the answer is: ask questions, gather information, build relationships, not pretend to know everything.</li>
+      <li><strong>Recognise the timeline.</strong> Most people don't feel fully capable in a new role until 6-12 months in. Feeling uncertain at month 2 is not data about your suitability — it's data about where you are in a normal arc.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2 class="page-break">3. The First 90 Days Mindset Shift</h2>
+
+  <p>The dominant cultural message about starting a new role is: prove yourself quickly. Make an impact. Show what you can do. Get visible results fast.</p>
+
+  <p>This is sometimes useful advice. It can also lead people to act before they understand, to solve problems before they've properly diagnosed them, and to perform confidence they don't yet feel — which tends to produce shallow results and missed context.</p>
+
+  <p>An alternative frame: the first 90 days are primarily for understanding. Proving yourself comes later. The quality of what you build after 90 days will depend almost entirely on how well you understand the situation in the first 90.</p>
+
+  <div class="framework-box">
+    <h3>What "Understand Deeply First" Looks Like in Practice</h3>
+    <div class="grid-2">
+      <div class="grid-item">
+        <h4>Questions to Ask</h4>
+        <p>What does success look like in 12 months? What has been tried before and not worked? Where are the sensitivities? Who are the informal influencers?</p>
+      </div>
+      <div class="grid-item">
+        <h4>Relationships to Build</h4>
+        <p>The people who have been here longest. The people your work will affect most. The peers who are succeeding. One mentor-level person outside your direct line.</p>
+      </div>
+      <div class="grid-item">
+        <h4>Mistakes That Are Okay Now</h4>
+        <p>Asking questions that reveal gaps in your knowledge. Getting something wrong and asking for guidance. Being visibly in a learning phase.</p>
+      </div>
+      <div class="grid-item">
+        <h4>Mistakes to Avoid</h4>
+        <p>Announcing changes before you understand why things are currently as they are. Burning goodwill on early battles. Assuming your old context transfers directly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2 class="page-break">4. Stakeholder Mapping</h2>
+
+  <p>A significant part of succeeding in a new role is understanding the human context around you — not as a political exercise, but as an orientation exercise. Who are the people whose experience of your work will shape your ability to do it well?</p>
+
+  <div class="framework-box">
+    <h3>A Simple Mapping Exercise</h3>
+    <p>Identify 5–7 people whose opinion of your work matters — directly or indirectly — to your effectiveness in this role. For each person, spend some time considering:</p>
+    <ul>
+      <li><strong>What do they need from you?</strong> What would "working well with this person" look like from their perspective?</li>
+      <li><strong>What do they care about?</strong> Not just their job title — what are they actually trying to achieve?</li>
+      <li><strong>What might they be worried about?</strong> Change can feel threatening even to people who intellectually support it.</li>
+      <li><strong>How do they prefer to communicate?</strong> Some people want regular written updates. Others want brief verbal check-ins. Very few want surprises.</li>
+      <li><strong>What would build trust with this person?</strong> Reliability? Visibility? Being asked for their opinion? Giving them credit publicly?</li>
+    </ul>
+  </div>
+
+  <div class="action-step">
+    <h4>One Concrete Step</h4>
+    <p>In your first month, aim to have at least one substantive one-to-one conversation with each person on your stakeholder map — not a formal meeting, but a conversation where you ask them about their work, their priorities, and how they see your role in relation to theirs.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 class="page-break">5. Leading When You Were the Expert</h2>
+
+  <p>One of the more challenging transitions — and one that often arrives without warning — is the shift from being an excellent individual contributor to managing people who do what you used to do.</p>
+
+  <p>What made you good at the previous role often becomes an obstacle in the new one. Technical expertise, speed, precision, knowing exactly how something should be done — all of these can easily tip into micromanagement, impatience, or an inability to let people find their own path to a good outcome.</p>
+
+  <p>The work of this transition isn't technical. It's a shift in what you believe your job is. The job is no longer to be the person with the best answer. It's to create the conditions in which other people can find good answers — and to support them in doing that consistently.</p>
+
+  <div class="highlight-box">
+    <h4>A useful question to carry</h4>
+    <p>In any moment where you feel the urge to step in and solve it: "Is my intervening here genuinely necessary, or is this about my own discomfort with watching someone else do it their way?"</p>
+  </div>
+
+  <p>This transition takes time. Most people find it genuinely difficult before they find it natural. Some find that coaching support during this period shortens the learning curve considerably.</p>
+
+  <!-- SECTION 6 -->
+  <h2 class="page-break">6. The Return After a Career Break</h2>
+
+  <p>Returning to work after a significant break — parental leave, a period of illness, caring for a family member, a sabbatical — involves a particular kind of transition that often gets less attention than it deserves.</p>
+
+  <p>The professional context has usually changed while you were away: team composition, priorities, tools, culture. This is disorienting. But often the more significant change is internal. Time away from work — especially time that involved care, or recovery, or a major life event — tends to shift what matters, how you want to work, and what you're willing to accept.</p>
+
+  <p>Some people return and find that their ambitions have clarified. Others return and find that their previous ambitions feel less relevant than they did. Both are legitimate responses. Neither requires immediate resolution.</p>
+
+  <div class="framework-box">
+    <h3>Questions Worth Sitting With Before You Return</h3>
+    <ul>
+      <li>What has changed in you, not just around you, during this time?</li>
+      <li>What conditions do you now know you need in order to work well?</li>
+      <li>Is there anything about the role you're returning to that you'd want to renegotiate — formally or informally?</li>
+      <li>Who in your workplace is aware of where you actually are, rather than where they assume you are?</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 7 -->
+  <h2 class="page-break">7. Integration vs. Performance</h2>
+
+  <p>There's a difference between performing a new role and actually integrating into it. Both involve the same external behaviours — showing up, doing the work, being present in meetings. But they feel quite different from the inside.</p>
+
+  <p>Performance is effortful in a particular way: you're monitoring yourself, managing the impression you're making, rehearsing what you'll say, filtering your actual thoughts. It's tiring. And it produces a version of you that's slightly flattened — more careful, less full, less useful than you'd actually be if you felt settled.</p>
+
+  <p>Integration is what happens when the role starts to feel like yours. You stop rehearsing and start thinking out loud. You say what you actually observe, not the diplomatically calibrated version. You disagree when you see something differently. You ask questions without worrying what they reveal about your knowledge gaps.</p>
+
+  <div class="highlight-box">
+    <h4>Signs you're still performing rather than integrating</h4>
+    <p>You rehearse what you'll say in meetings before you go in. You don't share your actual opinion when it differs from the room. You feel relief when a difficult moment passes rather than curiosity about what it meant. You're managing others' perceptions more than you're engaging with the work.</p>
+  </div>
+
+  <p>The shift from performance to integration rarely happens through willpower. It tends to happen through accumulated experience of being yourself in the role and surviving — noticing that your actual thoughts are valued, that your uncertainties are acceptable, that the role can hold a full person rather than just a function.</p>
+
+  <!-- SECTION 8 -->
+  <h2 class="page-break">8. When to Ask for Help</h2>
+
+  <p>Role transitions are one of the moments when professional support — a coach, a mentor, a trusted peer — tends to provide the most value relative to effort. This is partly because transitions are time-bound: the learning curve is steepest early, and good thinking at the start compounds through the rest of the role.</p>
+
+  <p>One way to think about the different kinds of support available:</p>
+
+  <div class="framework-box">
+    <h3>Types of Support and What Each Is For</h3>
+    <ul>
+      <li><strong>A mentor</strong> (someone who has done a similar role or transition) is particularly useful for context, pattern recognition, and the kind of hard-won wisdom that comes from having been there. They're less useful for the internal work — the questions about who you want to be in the role, what you're afraid of, what's holding you back.</li>
+      <li><strong>A coach</strong> is particularly useful for the thinking you can't do alone: the loops you're stuck in, the questions you're avoiding, the gap between the professional you are and the professional this role is calling you to become. A coach doesn't need to have done your role. They help you think more clearly about your own situation.</li>
+      <li><strong>A peer</strong> (someone going through a similar transition in a different organisation) is particularly useful for normalisation and reality-testing. The relief of discovering that someone else is also finding it hard is not nothing — it often frees up energy to actually deal with the difficulty rather than being ashamed of it.</li>
+    </ul>
+  </div>
+
+  <p>The question of when to ask for help is simpler than it often seems. If you've been struggling with the same thing for more than a few weeks, if you're not getting any clearer through solo reflection, if the cost of staying stuck is starting to show up in your work or your wellbeing — that's when.</p>
+
+  <div class="cta-box">
+    <h3>A Conversation, Not a Commitment</h3>
+    <p>If any of this resonates and you'd like to think through your specific situation, you're welcome to book a free 30-minute call at margaritadautova.com/book — no commitment, just a conversation.</p>
+    <a href="https://margaritadautova.com/book">Book a Free 30-Minute Call</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>Margarita</strong><br>
+    Career Coach &amp; Thinking Partner<br>
+    margaritadautova.com</p>
+    <p style="margin-top: 20px; font-size: 12px; color: #999;">
+      &copy; 2025 Margarita Dautova. All rights reserved.<br>
+      This guide is for personal use only. Please do not distribute.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

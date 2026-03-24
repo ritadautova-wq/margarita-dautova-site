@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Country Switch Playbook | Margarita Dautova</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #fff;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    @media print {
+      .page {
+        padding: 40px;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: #2c332d;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 50px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #5f7260;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin: 30px 0 15px;
+      color: #5f7260;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    ul, ol {
+      margin: 20px 0;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .cover {
+      text-align: center;
+      padding: 100px 40px;
+      background: linear-gradient(135deg, #f6f7f6 0%, #e3e7e3 100%);
+      border-radius: 8px;
+      margin-bottom: 60px;
+    }
+
+    .cover .subtitle {
+      color: #5f7260;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .cover h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .cover .tagline {
+      font-size: 20px;
+      color: #555;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    .cover .author {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .cover .author strong {
+      color: #2c332d;
+    }
+
+    .highlight-box {
+      background: #f6f7f6;
+      border-left: 4px solid #5f7260;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2c332d;
+    }
+
+    .framework-box {
+      background: #fff;
+      border: 2px solid #e3e7e3;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+
+    .framework-box h3 {
+      margin-top: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid-item {
+      background: #f6f7f6;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .grid-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #5f7260;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      color: #5f7260;
+      font-size: 18px;
+    }
+
+    .action-step {
+      background: #fff8e7;
+      border: 1px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .action-step h4 {
+      color: #b45309;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .cta-box {
+      background: #5f7260;
+      color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .cta-box h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-box a {
+      display: inline-block;
+      background: #fff;
+      color: #5f7260;
+      padding: 15px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #e3e7e3;
+      margin-top: 60px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .cover h1 {
+        font-size: 32px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <p class="subtitle">Free Guide</p>
+    <h1>The Country Switch Playbook</h1>
+    <p class="tagline">For professionals rebuilding their professional identity in a new country, culture, or context</p>
+    <p class="author">By <strong>Margarita Dautova</strong><br>Career Coach &amp; Thinking Partner</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>1. The Invisible Curriculum</h2>
+
+  <p>Every professional environment operates on two levels simultaneously. There is the visible curriculum — the job description, the organisational chart, the stated values, the explicit rules. And then there is the invisible one: the unwritten code that shapes how things actually work, who gets heard, what "good" looks like, and which behaviours are rewarded versus merely tolerated.</p>
+
+  <p>In your home country, you absorbed this invisible curriculum over years — through school, through early work experience, through cultural osmosis. You came to know, without having to think about it, what directness looks like here, what ambition signals, what a reasonable question sounds like versus an aggressive one.</p>
+
+  <p>When you move countries, you lose that. All of it. You're now operating on explicit knowledge only — the things you can look up, read, be told. The implicit layer, the one that lubricates professional life, has to be rebuilt from scratch.</p>
+
+  <div class="highlight-box">
+    <h4>A few examples of how this plays out</h4>
+    <p>In some professional cultures, direct disagreement in a meeting is a sign of engagement and respect. In others, it's considered confrontational. What counts as "being clear" in one culture reads as "being blunt" in another. The pace at which trust is built varies enormously. So does the appropriate moment to mention a problem, or to ask for more responsibility.</p>
+  </div>
+
+  <p>None of this is a character flaw — yours or theirs. It's the inevitable consequence of having professional instincts that were formed elsewhere. The first step is to notice when you're operating without the invisible curriculum, rather than assuming you have it.</p>
+
+  <!-- SECTION 2 -->
+  <h2 class="page-break">2. Professional Identity Under Translation</h2>
+
+  <p>When people move countries, they often focus on the practical elements: the visa, the housing, the logistics of getting settled. What tends to receive less attention — and cause more sustained difficulty — is the professional identity question.</p>
+
+  <p>In your previous context, you were someone. You had a reputation, a track record, a set of relationships that had been built over years. People knew your work. They knew what you were like to work with. When you walked into a room, a certain amount was already known.</p>
+
+  <p>When you move, almost none of that travels with you. The skills travel. The experience travels. The values travel. What doesn't automatically travel is everything that gave those things weight: the proof, the context, the relationships, and the intuitive understanding of how to navigate the environment you're now in.</p>
+
+  <div class="framework-box">
+    <h3>What You're Working With</h3>
+    <div class="grid-2">
+      <div class="grid-item">
+        <h4>What travels</h4>
+        <p>Core skills and expertise. Work ethic and standards. Values. The specific knowledge you've built. Your capacity to learn quickly.</p>
+      </div>
+      <div class="grid-item">
+        <h4>What needs rebuilding</h4>
+        <p>Professional reputation. Network and relationships. Intuitive navigation of the culture. Credibility that comes from being known.</p>
+      </div>
+    </div>
+  </div>
+
+  <p>Recognising this distinction clearly tends to reduce the feeling that you've somehow lost yourself. You haven't. You've moved to a context where less of yourself is yet visible. That's a different problem, and a more solvable one.</p>
+
+  <!-- SECTION 3 -->
+  <h2 class="page-break">3. Building Credibility From Scratch</h2>
+
+  <p>Credibility in a new context has to be built deliberately — which is different from how it usually works. In a long-established professional context, credibility accumulates almost automatically over time through repeated interactions, delivered results, and the gradual social proof of colleagues who vouch for you. When you're new to a country, none of that scaffolding exists yet.</p>
+
+  <p>Some approaches that tend to work, across different contexts and industries:</p>
+
+  <div class="framework-box">
+    <h3>Ways to Establish Professional Presence</h3>
+    <ul>
+      <li><strong>Be visible where the work is visible.</strong> Conferences, professional associations, online communities in your field. Not to network aggressively, but to be consistently present over time. Credibility often comes from familiarity before it comes from proven track record.</li>
+      <li><strong>Find the connectors.</strong> In every professional community, there are people who know everyone and enjoy making introductions. One relationship with a well-connected person in your field is worth ten cold approaches.</li>
+      <li><strong>Let the work speak where it can.</strong> Writing, speaking, sharing thinking publicly — these create portable proof of expertise that doesn't require personal vouching.</li>
+      <li><strong>Be honest about your context.</strong> Saying "I've just moved here and I'm still learning how things work" tends to land better than performing a confidence you don't yet have. Most people respect the honesty, and it opens conversations rather than closing them.</li>
+    </ul>
+  </div>
+
+  <div class="action-step">
+    <h4>One Starting Point</h4>
+    <p>Identify one professional community — an association, a Slack group, a regular event — in your field in your new country. Attend or participate consistently for three months before deciding whether it's useful. Credibility comes from sustained presence, not single encounters.</p>
+  </div>
+
+  <!-- SECTION 4 -->
+  <h2 class="page-break">4. The Third Culture Professional Advantage</h2>
+
+  <p>Something shifts, over time, in professionals who have navigated more than one professional culture. It's subtle at first and then increasingly valuable: the ability to see the system.</p>
+
+  <p>When you've only ever worked in one cultural context, the invisible curriculum is invisible. It's just "how things are." You don't have a vantage point outside it. When you've had to decode a professional culture from the outside — had to learn explicitly what others absorbed implicitly — you start to see the machinery. You understand that the norms aren't natural, they're constructed. And that means you can choose which ones to adopt, which to adapt, and which to observe without internalising.</p>
+
+  <p>This is a genuine leadership advantage, and it tends to take years to fully name. People who have it often undersell it — they frame it as "having worked in different environments" rather than recognising it as a distinct and valuable capability: the ability to work across contexts, to translate between cultures, to see what's culturally contingent and what's genuinely universal.</p>
+
+  <div class="highlight-box">
+    <h4>A thought to carry</h4>
+    <p>The disorientation you're experiencing now — the effort of decoding, the exhaustion of operating without intuitive cultural knowledge — is also what's developing this capability. The skill is inseparable from the difficulty.</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 class="page-break">5. Managing the Cognitive Load</h2>
+
+  <p>Working in a new culture is exhausting in a way that is hard to explain to people who haven't done it. When you're settled, work requires your professional attention. When you're new, work requires your professional attention and the simultaneous decoding of the environment — reading subtext, calibrating your communication, monitoring your own performance against standards you're still learning.</p>
+
+  <p>You are, in effect, doing two jobs at once. Your colleagues are doing one.</p>
+
+  <p>This is worth naming clearly for yourself, even if you don't share it widely, because the alternative is to interpret the tiredness as a sign that something is wrong with you — that you're not coping, or not capable, or not cut out for this. That interpretation tends to compound the difficulty rather than reduce it.</p>
+
+  <div class="framework-box">
+    <h3>Practical Strategies for Managing the Load</h3>
+    <ul>
+      <li><strong>Protect your recovery time.</strong> The cognitive load of cultural navigation is real work, even when it doesn't feel like work. Treat your off-hours as genuinely necessary, not optional.</li>
+      <li><strong>Find at least one context where you don't have to translate.</strong> A community, a friendship, a regular activity where you can be fully yourself without managing cultural performance. This is maintenance, not indulgence.</li>
+      <li><strong>Expect a 6-12 month adjustment period before things start to feel less effortful.</strong> Not because you'll have mastered everything, but because the decoding becomes more automatic over time.</li>
+      <li><strong>Resist the temptation to perform ease.</strong> Pretending you're more settled than you are is exhausting on top of exhausting. Finding safe spaces to acknowledge where you actually are is a practical strategy, not a weakness.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 6 -->
+  <h2 class="page-break">6. What to Accept vs. What to Address</h2>
+
+  <p>Not all friction in a new professional context is meaningful in the same way. Some friction is the normal friction of adaptation — the adjustment cost of learning a new set of norms, which will decrease over time as you learn. Some friction signals a genuine values mismatch: something about the culture that conflicts with what matters to you, and won't stop conflicting just because you've been there longer.</p>
+
+  <p>The distinction matters because the responses are different. Friction from adaptation calls for patience, curiosity, and continued learning. Friction from values mismatch calls for a different kind of attention — understanding whether the mismatch is specific to your organisation or endemic to the context, and deciding what you want to do with that information.</p>
+
+  <div class="framework-box">
+    <h3>Questions to Help Tell the Difference</h3>
+    <ul>
+      <li>Has this gotten better as I've understood the context more — or does it stay the same regardless?</li>
+      <li>Is this about a behaviour or norm I could learn to navigate — or does it conflict with something I'm not willing to compromise?</li>
+      <li>Do people I respect in this culture also find this uncomfortable — or is it just me?</li>
+      <li>If I imagine being settled here for five years, would this still bother me?</li>
+    </ul>
+  </div>
+
+  <p>The goal isn't to decide everything immediately. It's to avoid two failure modes: dismissing genuine mismatch as "just adaptation" (and staying somewhere that genuinely doesn't fit), or treating every friction as a values violation (and never actually settling anywhere).</p>
+
+  <!-- SECTION 7 -->
+  <h2 class="page-break">7. Network from Zero</h2>
+
+  <p>Building a professional network in a new country feels different from building one in familiar territory. The small talk is different. The norms around introductions are different. The acceptable speed of relationship-building is different. And the absence of any shared history — any common people, institutions, or experiences — means you're starting without the usual shortcuts.</p>
+
+  <p>Some things that tend to make it easier:</p>
+
+  <div class="framework-box">
+    <h3>Building Professional Relationships in a New Context</h3>
+    <ul>
+      <li><strong>Prioritise community over networking.</strong> Groups organised around a shared interest — a professional field, a particular topic, a regular event — tend to create more natural relationships than events explicitly designed for networking, which often produce thin exchanges rather than meaningful connections.</li>
+      <li><strong>Be a connector for others.</strong> Introducing people to each other — even people you've just met — is one of the fastest ways to build reciprocal goodwill in a new context.</li>
+      <li><strong>Use online presence thoughtfully.</strong> LinkedIn and similar platforms can extend your visibility beyond the people you happen to meet in person. Writing or sharing thinking in your field is a form of professional presence that works across geographic boundaries.</li>
+      <li><strong>Accept that it will take longer than you'd like.</strong> In most professional cultures, trust builds slowly. The relationships that matter tend to take 12-24 months to become genuinely useful. This isn't failure — it's just the timeline.</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 8 -->
+  <h2 class="page-break">8. The Long Game</h2>
+
+  <p>The most useful thing to know about relocating professionally is that the full adjustment takes longer than most people expect — and the timeline is fairly consistent across contexts.</p>
+
+  <div class="framework-box">
+    <h3>What to Expect, Phase by Phase</h3>
+    <ul>
+      <li><strong>Months 1–3: High effort, high novelty.</strong> Everything is new. The effort is visible and therefore easier to justify to yourself. Some people find this phase energising. Others find it overwhelming. Both are normal.</li>
+      <li><strong>Months 4–9: The trough.</strong> The novelty has worn off. The adjustment hasn't completed. This is often the hardest phase, and the one most likely to make people question whether they made the right decision. The discomfort at month 6 is usually a feature of the timeline, not a signal about the decision.</li>
+      <li><strong>Months 10–18: Starting to find your feet.</strong> Things that required conscious effort start to become more automatic. You know where things are. You have some relationships. The invisible curriculum is becoming less invisible.</li>
+      <li><strong>18–36 months: Genuine integration.</strong> What "home" feels like in a professional context. Not because everything is resolved, but because the context has become yours — you have history here, relationships, a sense of how you fit.</li>
+    </ul>
+  </div>
+
+  <p>Knowing the phases doesn't make them easier to live through. But it does make it easier to interpret what you're experiencing — to recognise when you're in the trough, to know that the trough has an end, and to resist the urge to make major decisions in the middle of it.</p>
+
+  <div class="cta-box">
+    <h3>A Conversation, Not a Commitment</h3>
+    <p>If any of this resonates and you'd like to think through your specific situation, you're welcome to book a free 30-minute call at margaritadautova.com/book — no commitment, just a conversation.</p>
+    <a href="https://margaritadautova.com/book">Book a Free 30-Minute Call</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>Margarita</strong><br>
+    Career Coach &amp; Thinking Partner<br>
+    margaritadautova.com</p>
+    <p style="margin-top: 20px; font-size: 12px; color: #999;">
+      &copy; 2025 Margarita Dautova. All rights reserved.<br>
+      This guide is for personal use only. Please do not distribute.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>

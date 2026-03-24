@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Direction Finder Playbook | Margarita Dautova</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.7;
+      color: #333;
+      background: #fff;
+    }
+
+    .page {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    @media print {
+      .page {
+        padding: 40px;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: #2c332d;
+    }
+
+    h1 {
+      font-size: 42px;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin: 50px 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #5f7260;
+    }
+
+    h3 {
+      font-size: 22px;
+      margin: 30px 0 15px;
+      color: #5f7260;
+    }
+
+    p {
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+
+    ul, ol {
+      margin: 20px 0;
+      padding-left: 25px;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    .cover {
+      text-align: center;
+      padding: 100px 40px;
+      background: linear-gradient(135deg, #f6f7f6 0%, #e3e7e3 100%);
+      border-radius: 8px;
+      margin-bottom: 60px;
+    }
+
+    .cover .subtitle {
+      color: #5f7260;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .cover h1 {
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+
+    .cover .tagline {
+      font-size: 20px;
+      color: #555;
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+
+    .cover .author {
+      font-size: 16px;
+      color: #666;
+    }
+
+    .cover .author strong {
+      color: #2c332d;
+    }
+
+    .highlight-box {
+      background: #f6f7f6;
+      border-left: 4px solid #5f7260;
+      padding: 25px;
+      margin: 30px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #2c332d;
+    }
+
+    .framework-box {
+      background: #fff;
+      border: 2px solid #e3e7e3;
+      border-radius: 8px;
+      padding: 30px;
+      margin: 30px 0;
+    }
+
+    .framework-box h3 {
+      margin-top: 0;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .grid-item {
+      background: #f6f7f6;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .grid-item h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #5f7260;
+    }
+
+    .checklist {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .checklist li {
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .checklist li::before {
+      content: "☐";
+      position: absolute;
+      left: 0;
+      color: #5f7260;
+      font-size: 18px;
+    }
+
+    .action-step {
+      background: #fff8e7;
+      border: 1px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .action-step h4 {
+      color: #b45309;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+    }
+
+    .cta-box {
+      background: #5f7260;
+      color: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .cta-box h3 {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-box a {
+      display: inline-block;
+      background: #fff;
+      color: #5f7260;
+      padding: 15px 30px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 40px;
+      border-top: 1px solid #e3e7e3;
+      margin-top: 60px;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .cover h1 {
+        font-size: 32px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- COVER -->
+  <div class="cover">
+    <p class="subtitle">Free Guide</p>
+    <h1>The Direction Finder Playbook</h1>
+    <p class="tagline">A framework for professionals who know something needs to change — but can't yet name what</p>
+    <p class="author">By <strong>Margarita Dautova</strong><br>Career Coach &amp; Thinking Partner</p>
+  </div>
+
+  <!-- SECTION 1 -->
+  <h2>1. Why Career Fog is Not a Character Flaw</h2>
+
+  <p>There is a particular kind of professional discomfort that is hard to explain to people who haven't experienced it. You're doing well by most external measures. The role is fine. The salary is reasonable. And yet something feels off — a low hum of wrongness that you can't quite locate.</p>
+
+  <p>This is what some people call career fog. And it tends to arrive not during the hardest years of a career, but after a sustained period of doing things well — years of hitting targets, building expertise, being reliable — without ever pausing to ask whether any of it is pointing in the right direction.</p>
+
+  <p>The fog is not a sign of ingratitude. It's not laziness or instability. More often it's a signal: the version of you that made these choices has changed, and your circumstances haven't caught up yet.</p>
+
+  <div class="highlight-box">
+    <h4>Worth noting</h4>
+    <p>Career fog is most common in people who are competent and self-aware. It takes a certain amount of reflection to notice misalignment. People who aren't paying attention rarely feel it.</p>
+  </div>
+
+  <p>The question isn't "what's wrong with me?" The more useful question is: "What is this discomfort pointing at?"</p>
+
+  <!-- SECTION 2 -->
+  <h2 class="page-break">2. The Values Reset</h2>
+
+  <p>Values are not fixed. What matters to someone at 25 — proving themselves, building financial security, gaining recognition — often looks quite different at 35 or 45. This isn't a failure of character; it's what growth looks like.</p>
+
+  <p>One way to map where you currently are is to work backwards from what used to matter, and notice what's changed.</p>
+
+  <div class="framework-box">
+    <h3>The Values Reset Exercise</h3>
+    <p>Set aside 20 quiet minutes. No phone. Work through these steps slowly:</p>
+    <ol>
+      <li>List 10 things that mattered to you professionally at age 25 — or whenever you started your career. Write them without filtering. (Examples: status, financial security, being liked, making a difference, independence, creative work, certainty, adventure, being the best, helping people.)</li>
+      <li>Circle the 3 that still genuinely matter today.</li>
+      <li>Add 3 things that now matter that weren't on your original list.</li>
+      <li>Look at what you've circled and what you've added. That gap — between then and now — is your current map.</li>
+    </ol>
+  </div>
+
+  <p>The exercise rarely produces a neat answer. What it tends to produce is a clearer sense of what you've been optimising for that no longer fits, and what's started to matter that your work doesn't yet reflect.</p>
+
+  <div class="action-step">
+    <h4>A Starting Point</h4>
+    <p>Before moving to the next section, try the exercise above. The rest of this playbook will be more useful once you've done it.</p>
+  </div>
+
+  <!-- SECTION 3 -->
+  <h2 class="page-break">3. Separating "I'm Tired" from "I'm Done"</h2>
+
+  <p>One of the more common mistakes in career transitions is making a major decision while in the middle of burnout. Not because burnout isn't real — it is — but because the cure for burnout and the cure for misalignment are different things, and conflating them leads to moves that don't solve the problem.</p>
+
+  <p>Burnout recovers with rest, reduced load, and recovery time. Misalignment doesn't. Someone who is burned out but well-aligned with their work will usually feel themselves come back after a proper break. Someone who is misaligned will rest, feel better temporarily, and then notice the same heaviness returning within weeks of being back.</p>
+
+  <div class="framework-box">
+    <h3>Diagnostic Questions</h3>
+    <p>Sit with each of these. Answer honestly, not aspirationally:</p>
+    <ul>
+      <li>When you imagine having two months completely off, and then returning to this exact role — how do you feel? (Relieved? Resigned? Dread?)</li>
+      <li>Is there a version of your current work that would feel meaningfully different — or has the category itself become the problem?</li>
+      <li>Think of the last time you felt genuinely engaged at work. How long ago was it? What was different then?</li>
+      <li>If money were the same across all options, would you stay in this field?</li>
+      <li>When you describe your work to someone you respect, do you feel proud, neutral, or slightly apologetic?</li>
+    </ul>
+  </div>
+
+  <p>There are no right answers here. But the pattern across your answers tends to tell you something useful: whether rest would help, or whether something more fundamental needs to shift.</p>
+
+  <!-- SECTION 4 -->
+  <h2 class="page-break">4. The Possibility Map</h2>
+
+  <p>When people feel stuck, the instinct is often to search for the answer — the one correct path forward. In practice, direction emerges from mapping possibilities first, and narrowing later.</p>
+
+  <p>There are roughly three paths available to someone who knows change is needed:</p>
+
+  <div class="grid-2">
+    <div class="grid-item">
+      <h4>Deepen</h4>
+      <p>Same field, more depth. Going further into your area of expertise — more specialised, more senior, more impact within the domain you already know.</p>
+    </div>
+    <div class="grid-item">
+      <h4>Shift</h4>
+      <p>Adjacent move. Transferring your experience into a neighbouring field, function, or sector — close enough to leverage what you've built, different enough to feel genuinely new.</p>
+    </div>
+    <div class="grid-item" style="grid-column: span 2;">
+      <h4>Start Fresh</h4>
+      <p>New direction. Moving into territory that doesn't obviously connect to your current work. The least common option, and often less necessary than it initially seems — most skills travel further than people assume.</p>
+    </div>
+  </div>
+
+  <div class="framework-box">
+    <h3>Questions to Explore Each Path Honestly</h3>
+    <p><strong>For Deepen:</strong> Is there more road ahead in my current field, or have I genuinely reached the ceiling? Am I bored with the work itself, or with this particular environment?</p>
+    <p><strong>For Shift:</strong> What have I built that would transfer? What adjacent fields have I been quietly curious about? Who do I know who has made a similar move?</p>
+    <p><strong>For Start Fresh:</strong> What is drawing me there — genuine pull, or the appeal of escape? Have I explored whether an adjacent shift could give me the same thing?</p>
+  </div>
+
+  <!-- SECTION 5 -->
+  <h2 class="page-break">5. The "Not Knowing" Reframe</h2>
+
+  <p>There is a particular discomfort in not knowing what you want — especially for people who are used to being capable and clear. It can feel like a failure of self-knowledge, or a personality defect, or evidence that something is fundamentally wrong.</p>
+
+  <p>A different way to hold it: not knowing what you want is actually a specific kind of information. It tends to appear at moments of genuine transition — when the person you were, and the choices that person made, no longer quite fit. And when the person you're becoming hasn't yet taken clear enough shape for new choices to feel obvious.</p>
+
+  <p>You are between identities. That's uncomfortable. It's also, in many cases, the necessary condition for real change.</p>
+
+  <div class="highlight-box">
+    <h4>A reframe worth trying</h4>
+    <p>Instead of "I don't know what I want" — try "I haven't yet done enough to find out." The first is a statement about who you are. The second is a statement about what you haven't tried yet. One closes things down. The other opens them.</p>
+  </div>
+
+  <p>Most people stay in not-knowing longer than necessary because they're waiting for clarity to arrive before they act. In practice, clarity tends to come from action and reflection combined — not from thinking alone.</p>
+
+  <!-- SECTION 6 -->
+  <h2 class="page-break">6. The 30-Day Experiment Framework</h2>
+
+  <p>One way to move through uncertainty without making irreversible decisions is to design small experiments — low-stakes, high-information actions that give you real data about a direction before you commit to it.</p>
+
+  <p>The goal of a 30-day experiment is not to find the answer. It's to get enough information to refine the question.</p>
+
+  <div class="framework-box">
+    <h3>What a 30-Day Experiment Looks Like</h3>
+    <ul>
+      <li>One coffee conversation with someone currently working in a field you're curious about. Not to network. To understand what the work actually involves day to day.</li>
+      <li>One afternoon blocked in your calendar to work on a project in the direction you're considering — even if it's small and unpaid.</li>
+      <li>Reading in a new area for 20 minutes a day for a month, and noticing whether your interest compounds or fades.</li>
+      <li>One informational call with someone who made a similar move five years ago, to hear what they know now that they didn't know then.</li>
+    </ul>
+  </div>
+
+  <p>The constraint of 30 days matters. It makes the experiment feel bounded and manageable, rather than open-ended and overwhelming. And it forces a review point: at the end of the month, what did you learn?</p>
+
+  <div class="action-step">
+    <h4>One Concrete Next Step</h4>
+    <p>Identify one direction from your Possibility Map that you're genuinely curious about. Design one small experiment — a single conversation, a single blocked afternoon — that would give you more information about it. Schedule it before the end of this week.</p>
+  </div>
+
+  <!-- SECTION 7 -->
+  <h2 class="page-break">7. A Note on Clarity</h2>
+
+  <p>Clarity is one of those words that gets talked about as if it's a destination — something you either have or don't have, something that arrives fully formed once you've thought hard enough.</p>
+
+  <p>In practice, clarity tends to be more gradual than that. It builds. It comes from a conversation that shifts something, a project that surprises you, a role you observe from the outside and find yourself thinking about for weeks afterwards. It comes from experiments and reflection and the occasional moment of "oh — that's what I actually want."</p>
+
+  <p>What doesn't tend to produce clarity is extended solo analysis. More thinking time rarely breaks the loop. What breaks the loop is usually some form of new input — a conversation, an experiment, an honest conversation with someone who will ask questions you're avoiding.</p>
+
+  <p>The aim isn't perfect clarity before you act. The aim is enough clarity to take a next step — and then to learn from what that step reveals.</p>
+
+  <!-- SECTION 8 -->
+  <h2 class="page-break">8. When to Get a Thinking Partner</h2>
+
+  <p>Solo reflection has a ceiling. Most people can identify that ceiling by recognising these signs:</p>
+
+  <ul>
+    <li>You're having the same thoughts in loops — the same pros and cons, the same fears, the same "but what if" — without arriving anywhere new.</li>
+    <li>You're avoiding the question. You know it's there, but you're finding reasons not to sit with it.</li>
+    <li>You've been in this state of "thinking about it" for six months or more without anything materially shifting.</li>
+    <li>You feel like you need someone to tell you what to do — which is usually a sign you need someone to help you think, not someone to give you an answer.</li>
+    <li>The people in your life are too close to the situation to be useful thinking partners. Their investment in a particular outcome shapes what they say.</li>
+  </ul>
+
+  <p>A good thinking partner — whether a coach, a mentor, or a trusted peer with useful distance — isn't there to tell you what to want. They're there to help you hear yourself more clearly, to ask the questions you've been avoiding, and to reflect back what you're actually saying versus what you think you're saying.</p>
+
+  <div class="cta-box">
+    <h3>A Conversation, Not a Commitment</h3>
+    <p>If any of this resonates and you'd like to think through your specific situation, you're welcome to book a free 30-minute call at margaritadautova.com/book — no commitment, just a conversation.</p>
+    <a href="https://margaritadautova.com/book">Book a Free 30-Minute Call</a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p><strong>Margarita</strong><br>
+    Career Coach &amp; Thinking Partner<br>
+    margaritadautova.com</p>
+    <p style="margin-top: 20px; font-size: 12px; color: #999;">
+      &copy; 2025 Margarita Dautova. All rights reserved.<br>
+      This guide is for personal use only. Please do not distribute.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
