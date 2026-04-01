@@ -108,7 +108,10 @@ export default function OffersSection() {
                 
                 <div className="mb-4">
                   <p className="font-medium text-stone-900">{offer.price}</p>
-                  <p className="text-xs text-stone-500 mt-1">{offer.priceNote}</p>
+                  {offer.priceNote && (
+                    <p className="text-xs text-stone-500 mt-1">{offer.priceNote}</p>
+                  )}
+                  <p className="text-xs text-stone-400 mt-1">No VAT charged — § 19 German VAT Act</p>
                 </div>
                 
                 <Link

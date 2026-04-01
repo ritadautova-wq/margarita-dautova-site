@@ -68,8 +68,10 @@ export default function ImprintPage() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-stone-200">
-                <h3 className="text-sm font-medium text-stone-500 mb-2">USt-IdNr. gemäß §27a UStG</h3>
-                <p className="text-stone-900 font-mono">DE427731234</p>
+                <h3 className="text-sm font-medium text-stone-500 mb-2">Umsatzsteuer</h3>
+                <p className="text-sm text-stone-700 leading-relaxed">
+                  Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet.
+                </p>
               </div>
             </div>
           </div>
