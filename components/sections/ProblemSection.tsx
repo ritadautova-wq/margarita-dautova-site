@@ -37,7 +37,7 @@ export default function ProblemSection() {
                     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
-                <p className="text-stone-700 leading-relaxed">{point}</p>
+                <p className="font-medium text-stone-900">{point}</p>
               </div>
             ))}
           </div>

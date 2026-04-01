@@ -12,7 +12,7 @@ export const hero = {
     { label: '10+ years in Talent Development', icon: 'building' },
   ],
   headline: "When growth becomes non-negotiable.",
-  subheadline: "I’m Margarita — a career coach and thinking partner for people in transition. I work with thoughtful international professionals who want clarity about who they are and where they’re going — especially those navigating change while living abroad or working in a non-native language.",
+  subheadline: "I'm Margarita — a career coach and thinking partner for people in transition. I work with thoughtful international professionals who want clarity about who they are and where they're going — especially those navigating change while living abroad or working in a non-native language.",
   primaryCTA: {
     label: 'Book a Discovery Call',
     href: '/book',
@@ -27,14 +27,14 @@ export const hero = {
 // Problem Section
 export const problemSection = {
   eyebrow: " ",
-  headline: "If any of this resonates, you might be at a turning point — whether by challenge or opportunity.",
+  headline: "You might be at a turning point.",
   painPoints: [
-    "You’ve been promoted — and want to grow into the role, not just perform it",
-    "You’re stepping into leadership and want to lead consciously",
-    "You’ve moved countries or contexts, and what used to work no longer translates",
-    "You know you need a change, but can’t yet articulate what “next” looks like",
-    "Your responsibilities have expanded — and your mindset needs to evolve with them",
-    "You’re torn between security and pursuing something more meaningful",
+    "Promoted — and figuring out who to be now",
+    "Stepping into leadership",
+    "Starting over in a new country",
+    "Ready to change — but unsure what's next",
+    "Growing faster than your role allows",
+    "Torn between safety and meaning",
   ],
   transitionMessage: {
     bold: "Moments like these often appear when you're evolving — whether because something no longer fits, or because you're stepping into something bigger.",
@@ -274,7 +274,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "How much does coaching cost?",
-    answer: "We discuss the investment after our initial conversation, once we’ve clarified what you need and made sure we’re the right fit. I work with a small number of 1:1 clients at a time so the work can have the attention it deserves.",
+    answer: "We discuss the investment after our initial conversation, once we've clarified what you need and made sure we're the right fit. I work with a small number of 1:1 clients at a time so the work can have the attention it deserves.",
   },
   {
     question: "Will this actually work for me?",
@@ -282,7 +282,7 @@ export const faqs: FAQ[] = [
   },
   {
     question: "Is everything I share confidential?",
-    answer: "Yes. Everything we discuss — in sessions, emails, or calls — is strictly confidential. If you’re part of a corporate program, I may share general progress updates with sponsors (never specific content), and only with your explicit agreement. If I use AI tools for preparation or summaries, all information is fully anonymised. No names or identifying details are shared. Your privacy and psychological safety are fundamental to this work. ",
+    answer: "Yes. Everything we discuss — in sessions, emails, or calls — is strictly confidential. If you're part of a corporate program, I may share general progress updates with sponsors (never specific content), and only with your explicit agreement. If I use AI tools for preparation or summaries, all information is fully anonymised. No names or identifying details are shared. Your privacy and psychological safety are fundamental to this work. ",
   },
   {
     question: "What happens on the free discovery call?",
