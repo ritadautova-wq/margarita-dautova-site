@@ -6,6 +6,7 @@ const navigation = {
     { name: 'About', href: '/about' },
     { name: 'Testimonials', href: '/testimonials' },
     { name: 'Resources', href: '/resources' },
+    { name: 'Expats in Germany', href: '/career-coaching-expats-germany' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [

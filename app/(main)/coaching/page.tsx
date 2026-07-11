@@ -169,7 +169,11 @@ export default function CoachingPage() {
             Ways we can work together
           </h1>
           <p className="mt-6 text-body-lg text-stone-600 max-w-2xl mx-auto">
-            I work as a thinking partner for reflective professionals navigating significant transitions — especially international professionals living abroad or working in a non-native language. Here's how we can work together.
+            I work as a thinking partner for reflective professionals navigating significant transitions — especially{' '}
+            <Link href="/career-coaching-expats-germany" className="text-primary-600 hover:text-primary-700 underline">
+              international professionals living abroad
+            </Link>{' '}
+            or working in a non-native language. Here's how we can work together.
           </p>
         </div>
       </section>

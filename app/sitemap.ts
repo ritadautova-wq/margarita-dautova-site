@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     '',
     '/about',
     '/coaching',
+    '/career-coaching-expats-germany',
     '/resources',
     '/contact',
     '/book',
