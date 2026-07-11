@@ -14,24 +14,31 @@ import {
   generatePersonSchema,
   generateProfessionalServiceSchema,
   generateFAQSchema,
+  generateWebSiteSchema,
 } from '@/lib/schema'
 
 import { faqSection } from '@/lib/homePageContent'
 
 export const metadata: Metadata = {
-  title: 'Margarita Dautova | Career Coach & Thinking Partner',
+  title: { absolute: 'English-Speaking Career Coach in Munich | Margarita Dautova' },
   description:
-    'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change. Based in Munich, working with clients worldwide.',
+    'ICF PCC-certified career coach for international professionals in transition. Based in Munich, online worldwide. Book a free 30-minute discovery call.',
+  alternates: { canonical: '/' },
 }
 
 export default function HomePage() {
   const personSchema = generatePersonSchema()
   const serviceSchema = generateProfessionalServiceSchema()
   const faqSchema = generateFAQSchema(faqSection.faqs)
+  const webSiteSchema = generateWebSiteSchema()
 
   return (
     <>
       {/* JSON-LD Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}

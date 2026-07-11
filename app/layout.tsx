@@ -18,6 +18,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.margarita-dautova.com'),
   title: {
     default: 'Margarita Dautova | Career Coach & Thinking Partner | PCC ICF',
     template: '%s | Margarita Dautova',
@@ -37,10 +38,11 @@ export const metadata: Metadata = {
     'international professionals',
   ],
   authors: [{ name: 'Margarita Dautova' }],
+  alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://margaritadautova.com',
+    url: 'https://www.margarita-dautova.com',
     siteName: 'Margarita Dautova Coaching',
     title: 'Margarita Dautova | Career Coach & Thinking Partner',
     description:

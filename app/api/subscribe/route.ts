@@ -4,7 +4,7 @@ import { Resend } from 'resend'
 // Email sender - use your verified domain or Resend's test domain
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
 const FROM_NAME = 'Margarita Dautova'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://margaritadautova.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.margarita-dautova.com'
 
 export async function POST(request: NextRequest) {
   try {
@@ -114,7 +114,7 @@ export async function POST(request: NextRequest) {
   <div style="border-top: 1px solid #e5e5e5; padding-top: 20px; text-align: center;">
     <p style="font-size: 13px; color: #888; margin: 0;">
       Margarita Dautova Coaching | Munich, Germany<br>
-      <a href="${SITE_URL}" style="color: #5f7260;">margaritadautova.com</a>
+      <a href="${SITE_URL}" style="color: #5f7260;">www.margarita-dautova.com</a>
     </p>
     <p style="font-size: 12px; color: #aaa; margin: 10px 0 0;">
       You received this email because you signed up for the Career Pivot Playbook.<br>

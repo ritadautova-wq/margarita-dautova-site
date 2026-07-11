@@ -61,8 +61,8 @@ export const calendarSection = {
 }
 
 export const bookPageMetadata = {
-  title: 'Discovery Call',
-  description: 'A first conversation to get to know each other and see if coaching is a good fit.',
+  title: 'Book a Free 30-Minute Discovery Call',
+  description: 'A free, no-pressure 30-minute conversation to see if coaching is right for your transition. Online, in English.',
 }
 
 export const faqs = [

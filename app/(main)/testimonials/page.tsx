@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Client Experience',
   description:
     'Read what clients say about working with Margarita. Real testimonials and what to expect from a thinking partnership.',
+  alternates: { canonical: '/testimonials' },
 }
 
 export default function TestimonialsPage() {

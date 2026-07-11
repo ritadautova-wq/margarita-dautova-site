@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung',
   description: 'Datenschutzerklärung für Margarita Dautova Coaching.',
+  alternates: { canonical: '/privacy' },
 }
 
 export default function PrivacyPage() {

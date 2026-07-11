@@ -107,7 +107,7 @@ export default function Image() {
               fontFamily: 'sans-serif',
             }}
           >
-            margaritadautova.com
+            www.margarita-dautova.com
           </p>
         </div>
       </div>

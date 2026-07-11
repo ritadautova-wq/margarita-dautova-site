@@ -3,9 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: 'About Margarita Dautova — ICF PCC Career Coach, Munich',
   description:
-    'Learn about Margarita Dautova — an ICF PCC-certified coach and thinking partner for international professionals navigating career transitions, identity shifts, and life abroad.',
+    'ICF PCC coach with 600+ hours and 80+ clients across 18 nationalities. 10+ years in talent & leadership development. Why I coach professionals in transition.',
+  alternates: { canonical: '/about' },
 }
 
 export default function AboutPage() {

@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Impressum',
   description: 'Impressum und rechtliche Informationen für Margarita Dautova Coaching.',
+  alternates: { canonical: '/imprint' },
 }
 
 export default function ImprintPage() {
@@ -57,12 +58,12 @@ export default function ImprintPage() {
                 <p>
                   <span className="text-stone-500">Website:</span>{' '}
                   <a
-                    href="https://margaritadautova.com"
+                    href="https://www.margarita-dautova.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-stone-900 hover:text-primary-600 transition-colors"
                   >
-                    margaritadautova.com
+                    www.margarita-dautova.com
                   </a>
                 </p>
               </div>

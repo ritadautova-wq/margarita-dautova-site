@@ -6,6 +6,8 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Thank You | Career Pivot Playbook',
   description: 'Thank you for downloading the Career Pivot Playbook.',
+  alternates: { canonical: '/free/thank-you' },
+  robots: { index: false, follow: true },
 }
 
 export default function ThankYouPage() {

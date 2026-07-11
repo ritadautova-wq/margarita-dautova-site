@@ -2,9 +2,10 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Coaching Services',
+  title: 'Career Coaching Services & Pricing — from €150',
   description:
-    'Explore coaching formats: 90-Day Clarity Through Transition, Strategic Sessions, and workshops for organisations. Find the right approach for your situation.',
+    '90-Day Clarity Through Transition (€599), 90-minute Strategic Sessions (€150), and workshops for organisations. English-language coaching, online.',
+  alternates: { canonical: '/coaching' },
 }
 
 const coachingFormats = [

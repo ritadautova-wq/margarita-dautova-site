@@ -5,9 +5,10 @@ import BlogCard from '@/components/BlogCard'
 import { fetchMediumArticles } from '@/lib/medium'
 
 export const metadata: Metadata = {
-  title: 'Resources & Insights',
+  title: 'Career Transition Articles & Free Career Pivot Playbook',
   description:
-    'Articles, guides, and insights on career transitions, leadership, and professional growth from career coach and thinking partner Margarita Dautova.',
+    'Practical essays on career change, burnout vs. outgrowing your role, and working abroad — plus a free 8-page Career Pivot Playbook.',
+  alternates: { canonical: '/resources' },
 }
 
 

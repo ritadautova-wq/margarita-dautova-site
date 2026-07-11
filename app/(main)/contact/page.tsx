@@ -4,9 +4,10 @@ import { Suspense } from 'react'
 import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
-  title: 'Contact',
+  title: 'Contact — Ask a Question or Book a Discovery Call',
   description:
-    'Get in touch with Margarita Dautova. Ask questions about coaching, book a session, or simply start a conversation.',
+    'Get in touch about 1:1 coaching or workshops for your organisation. Based in Munich, working online worldwide.',
+  alternates: { canonical: '/contact' },
 }
 
 export default function ContactPage() {
@@ -58,7 +59,7 @@ export default function ContactPage() {
                     LinkedIn
                   </h3>
                   <a
-                    href="https://linkedin.com/in/margaritadautova"
+                    href="https://www.linkedin.com/in/margarita-dautova"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-stone-800 hover:text-primary-600 transition-colors"

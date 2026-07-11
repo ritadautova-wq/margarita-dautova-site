@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: 'Get Your Free Career Pivot Playbook',
   description:
     'Download the Career Pivot Playbook: An 8-page guide to help you navigate your next career move with clarity and confidence.',
+  alternates: { canonical: '/free' },
 }
 
 export default function FreeResourcePage() {

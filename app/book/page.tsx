@@ -17,6 +17,7 @@ import {
 export const metadata: Metadata = {
   title: bookPageMetadata.title,
   description: bookPageMetadata.description,
+  alternates: { canonical: '/book' },
 }
 
 export default function BookPage() {

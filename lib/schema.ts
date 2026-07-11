@@ -10,9 +10,10 @@ export function generatePersonSchema() {
     name: 'Margarita Dautova',
     jobTitle: 'Career Coach & Thinking Partner',
     description: 'ICF PCC-certified coach specializing in career and identity transitions for international professionals navigating change in a non-native environment.',
-    url: 'https://margaritadautova.com',
+    url: 'https://www.margarita-dautova.com',
     sameAs: [
-      'https://linkedin.com/in/margaritadautova',
+      'https://www.linkedin.com/in/margarita-dautova',
+      'https://www.instagram.com/dautova.margarita',
     ],
     address: {
       '@type': 'PostalAddress',
@@ -45,11 +46,17 @@ export function generateProfessionalServiceSchema() {
     '@type': 'ProfessionalService',
     name: 'Margarita Dautova Coaching',
     description: 'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change.',
-    url: 'https://margaritadautova.com',
+    url: 'https://www.margarita-dautova.com',
     provider: {
       '@type': 'Person',
       name: 'Margarita Dautova',
     },
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Munich',
+      addressCountry: 'DE',
+    },
+    priceRange: '€150–€599',
     areaServed: {
       '@type': 'Place',
       name: 'Worldwide',
@@ -88,6 +95,15 @@ export function generateFAQSchema(faqs: Array<{ question: string; answer: string
         text: faq.answer,
       },
     })),
+  }
+}
+
+export function generateWebSiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Margarita Dautova Coaching',
+    url: 'https://www.margarita-dautova.com',
   }
 }
 
