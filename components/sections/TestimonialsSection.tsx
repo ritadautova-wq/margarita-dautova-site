@@ -5,32 +5,32 @@ import Container from '@/components/Container'
 
 const testimonials = [
   {
-    quote: "Thank you very much for a professional and productive coaching sessions. I really liked how you guided me in accordance with my topic, doing it in a gentle but confident manner. It stimulated me to openness and sincerity, giving the opportunity to open my potential and resolve my own issues. As a result, we managed to build the most productive plan of action to achieve the goal, which I am now following and already seeing results, which I am very happy about!",
-    attribution: "E.B., Russia",
-  },
-  {
-    quote: "Margarita, thank you for 2.5 months of joint work. It was exciting, interesting, but most importantly productive! At the moment, \"the puzzle is solved\", and this has given me more self-confidence to act in achieving my professional goal. Thank you for the pleasant energy that comes from you, as well as for the respectful attitude.",
-    attribution: "K.K., Belgium",
-  },
-  {
-    quote: "Margarita, thank you so much for your thoughtful and sensitive support throughout my exploration process. I felt safe the whole time and knew I could show up in different ways while still being myself in our conversations. I now feel much greater clarity, and at the same time I sense a deeper inner call to connect more closely with my true motivations and sources of energy. I'm really glad that I took these important steps at the beginning of the year together with you.",
-    attribution: "A.T., Russia",
-  },
-  {
-    quote: "In just three sessions, we managed to work through such complex topics and questions, process a lot of emotions, and outline clear actions. It's an amazing result — with real moments of insight along the way. Thank you for your support, understanding, and your caring, gentle approach — while still going deep. And for the questions that immediately brought focus and depth.",
-    attribution: "M.B., Spain",
-  },
-  {
-    quote: "Working with you has been extremely impactful for my development. Every session feels like a valuable use of my time, and I consistently leave with deeper insights about myself. Coaching helps me overcome obstacles, make meaningful progress toward my goals, and be more effective at work. I'm beginning to understand the importance of state and how to apply the methods we've discussed — and that shift alone has been life-changing. I feel more equipped to make the changes that matter to me, both personally and professionally.",
-    attribution: "L.S., Sweden",
+    quote: "This coaching changed my perspective on work — what actually needs to be done and how to move toward my goals. It helped me appreciate what I already have while getting clear on what to improve. Most importantly, it helped me pinpoint the right area to work in, instead of forcing myself into a role that never truly fit. The sessions brought real clarity to my goals and helped me refine the balance between my day-to-day work and life.",
+    attribution: "V.K., Engineer, Semiconductor industry, Germany",
   },
   {
     quote: "Working together brought real clarity to my short-term goals and helped me improve my focus. I discovered strengths I didn't fully recognize before and learned how to apply them — bringing more order into my life. Rather than being told what to do, the process was highly interactive: it helped me find my own answers and create a real path toward my goals.",
     attribution: "F.M., Software engineer, UAE",
   },
   {
-    quote: "This coaching changed my perspective on work — what actually needs to be done and how to move toward my goals. It helped me appreciate what I already have while getting clear on what to improve. Most importantly, it helped me pinpoint the right area to work in, instead of forcing myself into a role that never truly fit. The sessions brought real clarity to my goals and helped me refine the balance between my day-to-day work and life.",
-    attribution: "V.K., Engineer, Semiconductor industry, Germany",
+    quote: "Working with you has been extremely impactful for my development. Every session feels like a valuable use of my time, and I consistently leave with deeper insights about myself. Coaching helps me overcome obstacles, make meaningful progress toward my goals, and be more effective at work. I'm beginning to understand the importance of state and how to apply the methods we've discussed — and that shift alone has been life-changing. I feel more equipped to make the changes that matter to me, both personally and professionally.",
+    attribution: "L.S., Sweden",
+  },
+  {
+    quote: "In just three sessions, we managed to work through such complex topics and questions, process a lot of emotions, and outline clear actions. It's an amazing result — with real moments of insight along the way. Thank you for your support, understanding, and your caring, gentle approach — while still going deep. And for the questions that immediately brought focus and depth.",
+    attribution: "M.B., Spain",
+  },
+  {
+    quote: "Margarita, thank you so much for your thoughtful and sensitive support throughout my exploration process. I felt safe the whole time and knew I could show up in different ways while still being myself in our conversations. I now feel much greater clarity, and at the same time I sense a deeper inner call to connect more closely with my true motivations and sources of energy. I'm really glad that I took these important steps at the beginning of the year together with you.",
+    attribution: "A.T., Russia",
+  },
+  {
+    quote: "Margarita, thank you for 2.5 months of joint work. It was exciting, interesting, but most importantly productive! At the moment, \"the puzzle is solved\", and this has given me more self-confidence to act in achieving my professional goal. Thank you for the pleasant energy that comes from you, as well as for the respectful attitude.",
+    attribution: "K.K., Belgium",
+  },
+  {
+    quote: "Thank you very much for a professional and productive coaching sessions. I really liked how you guided me in accordance with my topic, doing it in a gentle but confident manner. It stimulated me to openness and sincerity, giving the opportunity to open my potential and resolve my own issues. As a result, we managed to build the most productive plan of action to achieve the goal, which I am now following and already seeing results, which I am very happy about!",
+    attribution: "E.B., Russia",
   },
 ]
 
