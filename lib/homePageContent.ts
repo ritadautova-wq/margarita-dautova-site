@@ -29,12 +29,12 @@ export const problemSection = {
   eyebrow: " ",
   headline: "Do you find yourself at a turning point?",
   painPoints: [
-    "Position restructured — what to do, how to prepare?",
-    "Needing a new direction",
-    "Ready to change — but unsure what's next",
-    "New role — and figuring out who to be now",
-    "Stepping into leadership",
-    "Growing faster than your role allows",
+    "Position restructured — rethinking your next step",
+    "Missing a clear sense of direction",
+    "Ready for change, but don't know where to begin",
+    "New role — redefining who you are now",
+    "Stepping into leadership for the first time",
+    "Outgrowing your current role",
   ],
   transitionMessage: {
     bold: "Moments like these often appear when you're evolving — whether because something no longer fits, or because you're stepping into something bigger.",
