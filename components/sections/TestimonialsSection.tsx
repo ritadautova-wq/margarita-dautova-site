@@ -24,6 +24,14 @@ const testimonials = [
     quote: "Working with you has been extremely impactful for my development. Every session feels like a valuable use of my time, and I consistently leave with deeper insights about myself. Coaching helps me overcome obstacles, make meaningful progress toward my goals, and be more effective at work. I'm beginning to understand the importance of state and how to apply the methods we've discussed — and that shift alone has been life-changing. I feel more equipped to make the changes that matter to me, both personally and professionally.",
     attribution: "L.S., Sweden",
   },
+  {
+    quote: "Working together brought real clarity to my short-term goals and helped me improve my focus. I discovered strengths I didn't fully recognize before and learned how to apply them — bringing more order into my life. Rather than being told what to do, the process was highly interactive: it helped me find my own answers and create a real path toward my goals.",
+    attribution: "F.M., Software engineer, UAE",
+  },
+  {
+    quote: "This coaching changed my perspective on work — what actually needs to be done and how to move toward my goals. It helped me appreciate what I already have while getting clear on what to improve. Most importantly, it helped me pinpoint the right area to work in, instead of forcing myself into a role that never truly fit. The sessions brought real clarity to my goals and helped me refine the balance between my day-to-day work and life.",
+    attribution: "V.K., Engineer, Semiconductor industry, Germany",
+  },
 ]
 
 export default function TestimonialsSection() {
