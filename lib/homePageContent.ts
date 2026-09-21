@@ -57,28 +57,28 @@ export const transformationSection = {
   closingText: "These outcomes aren't about becoming someone else — they're about thinking more clearly and choosing more intentionally.",
   outcomes: [
     {
-      title: "Clear Communication",
-      description: "You have language for your story (especially for interviews or transitions in a non-native language)",
+      title: "Clarity on Your Strengths",
+      description: "You see your skills and strengths clearly — and start accepting your professional story exactly as it is, not as you think it should look",
     },
     {
-      title: "Trust in Your Thinking",
-      description: "You stop looping and start choosing — moving forward without constantly second-guessing yourself",
+      title: "Confidence in Who You Are",
+      description: "You build real confidence — not from external validation, but from knowing yourself and trusting your own thinking",
     },
     {
-      title: "Energy-Aware Boundaries",
-      description: "You shape work in a way that supports your energy and focus, instead of slowly draining them",
+      title: "Clarity on What You Want",
+      description: "You get honest clarity on what you actually want and where you're headed next — instead of chasing someone else's definition of success",
     },
     {
-      title: "Mental Wellbeing",
-      description: "You reduce mental noise and self-pressure, and make decisions in a calmer, more sustainable way",
+      title: "A Path You Can Follow",
+      description: "You leave with concrete, grounded next steps — a realistic roadmap you can actually act on, not just insight that stays in the room",
     },
     {
-      title: "Decision Clarity",
-      description: "You know exactly what to say yes and no to—and you understand why",
+      title: "Feeling Truly Understood",
+      description: "You feel heard, understood, and accepted exactly as you are — creating the safety to think and speak honestly, without performing",
     },
     {
-      title: "Grounded Next Steps",
-      description: "You can explain your next step without apologizing, supported by a clear and realistic roadmap",
+      title: "Language for Your Story",
+      description: "You find the words to explain your path with confidence — especially useful in interviews, performance conversations, or explaining a non-linear career to others",
     },
   ],
 }
