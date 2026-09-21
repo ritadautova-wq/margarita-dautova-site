@@ -27,14 +27,14 @@ export const hero = {
 // Problem Section
 export const problemSection = {
   eyebrow: " ",
-  headline: "You might be at a turning point.",
+  headline: "Do you find yourself at a turning point?",
   painPoints: [
-    "Promoted — and figuring out who to be now",
-    "Stepping into leadership",
-    "Starting over in a new country",
+    "Position restructured — what to do, how to prepare?",
+    "Needing a new direction",
     "Ready to change — but unsure what's next",
+    "New role — and figuring out who to be now",
+    "Stepping into leadership",
     "Growing faster than your role allows",
-    "Torn between safety and meaning",
   ],
   transitionMessage: {
     bold: "Moments like these often appear when you're evolving — whether because something no longer fits, or because you're stepping into something bigger.",
