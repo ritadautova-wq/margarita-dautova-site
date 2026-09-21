@@ -4,7 +4,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Career Coaching Services & Pricing — from €150',
   description:
-    '90-Day Clarity Through Transition (€599), 90-minute Strategic Sessions (€150), and workshops for organisations. English-language coaching, online.',
+    '90-Day Clarity Through Transition (€700), 90-minute Strategic Sessions (€150), and workshops for organisations. English-language coaching, online.',
   alternates: { canonical: '/coaching' },
 }
 
@@ -39,7 +39,7 @@ This is not about fixing yourself or rushing into change. It's about clarity, in
       'Successful on paper but internally misaligned',
       'Ready for depth, not quick answers',
     ],
-    investment: '€599',
+    investment: '€700',
     investmentNote: 'Limited number of places. Best suited for people ready to engage thoughtfully over time.',
   },
   {
@@ -132,7 +132,7 @@ const faqs = [
   {
     question: "How much does coaching cost?",
     answer:
-      "The 90-Day Clarity Through Transition program is €599, and a Strategic Session is €150. For organisation workshops and group coaching, pricing depends on the scope — get in touch for a custom proposal. I take a limited number of 1:1 clients at a time to ensure deep, thoughtful attention for everyone I work with.",
+      "The 90-Day Clarity Through Transition program is €700, and a Strategic Session is €150. For organisation workshops and group coaching, pricing depends on the scope — get in touch for a custom proposal. I take a limited number of 1:1 clients at a time to ensure deep, thoughtful attention for everyone I work with.",
   },
   {
     question: "How do online sessions work?",
