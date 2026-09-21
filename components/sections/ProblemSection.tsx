@@ -42,6 +42,16 @@ export default function ProblemSection() {
             ))}
           </div>
 
+          {/* Transition Message */}
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <p className="text-stone-900 font-medium leading-relaxed mb-3">
+              {problemSection.transitionMessage.bold}
+            </p>
+            <p className="text-stone-600 leading-relaxed">
+              {problemSection.transitionMessage.description}
+            </p>
+          </div>
+
           {/* CTA */}
           <div className="text-center">
             <p className="text-stone-600 mb-6">
