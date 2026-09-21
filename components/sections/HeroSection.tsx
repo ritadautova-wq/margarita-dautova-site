@@ -97,14 +97,12 @@ export default function HeroSection() {
             {hero.headline}
           </h1>
 
-          {/* Subheadline — short, punchy version for mobile */}
+          {/* Subheadline — shared copy, same as desktop */}
           <p
             className="text-[1.05rem] leading-relaxed text-stone-600 mb-8 animate-fade-in-up"
             style={{ animationDelay: '0.34s', opacity: 0, animationFillMode: 'forwards' }}
           >
-            I work with thoughtful international professionals who want clarity about who they
-            are and where they&apos;re going — especially those navigating change while living
-            abroad or working in a non-native language.
+            {hero.subheadline}
           </p>
 
           {/* CTAs — full-width, tap-friendly */}
