@@ -4,7 +4,7 @@ import { problemSection } from '@/lib/homePageContent'
 
 export default function ProblemSection() {
   return (
-    <section className="section-padding bg-white">
+    <section className="pt-20 md:pt-28 lg:pt-36 pb-12 md:pb-16 lg:pb-20 bg-white">
       <Container size="default">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
