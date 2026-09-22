@@ -27,24 +27,24 @@ export default function AboutSection() {
               About Me
             </p>
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance mb-6">
-              A coach who understands the corporate world
+              Where coaching meets real organizational experience
             </h2>
-            
+
             <div className="space-y-4 text-stone-600 leading-relaxed mb-6">
               <p>
-                Before becoming a coach, I spent years in corporate environments—working in
-                Talent and Leadership Development at industries like global travel tech,
-                luxury fashion tech and consultancy. I've seen firsthand how talented people
-                can lose their spark, get stuck in roles that don't fit, or burn out trying
-                to meet impossible expectations.
+                Before becoming a coach, I spent 10+ years in Talent and Leadership Development
+                at Mytheresa, Amadeus and other organizations. I've seen firsthand how talented
+                people can lose their spark, get stuck in roles that don't fit, or burn out
+                trying to meet impossible expectations.
               </p>
               <p>
-                That experience shapes how I coach. I understand the pressures you face, the 
-                politics you navigate, and the real stakes involved in career decisions. 
-                I'm not just coaching from theory—I've lived the corporate reality.
+                I know what professional change looks like from both sides: as an employee
+                navigating my own transitions, and from inside organizations supporting people,
+                talent and teams. Today, I bring those perspectives together through individual
+                coaching, team facilitation and customized transition programs.
               </p>
               <p>
-                I'm based in Munich, Germany, and work with clients worldwide. Sessions 
+                I'm based in Munich, Germany, and work with clients worldwide. Sessions
                 happen online, which means we can meet wherever you are.
               </p>
             </div>

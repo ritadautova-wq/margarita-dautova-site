@@ -1,8 +1,10 @@
 import { Metadata } from 'next'
 import HeroSection from '@/components/sections/HeroSection'
+import PathwaysSection from '@/components/sections/PathwaysSection'
 import ProblemSection from '@/components/sections/ProblemSection'
 import TransformationSection from '@/components/sections/TransformationSection'
 import ProcessSection from '@/components/sections/ProcessSection'
+import CaseStudySection from '@/components/sections/CaseStudySection'
 import TestimonialsSection from '@/components/sections/TestimonialsSection'
 import OffersSection from '@/components/sections/OffersSection'
 import LeadMagnetSection from '@/components/sections/LeadMagnetSection'
@@ -53,9 +55,11 @@ export default function HomePage() {
       />
 
       <HeroSection />
+      <PathwaysSection />
       <ProblemSection />
       <TransformationSection />
       <ProcessSection />
+      <CaseStudySection />
       <TestimonialsSection />
       <OffersSection />
       <LeadMagnetSection />
