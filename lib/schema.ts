@@ -45,7 +45,7 @@ export function generateProfessionalServiceSchema() {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
     name: 'Margarita Dautova Coaching',
-    description: 'Thinking partnership for international professionals in transition seeking clarity, confidence, and sustainable change.',
+    description: 'Coaching and facilitation for professionals and teams navigating change — individual thinking partnership and customized team transition programs.',
     url: 'https://www.margarita-dautova.com',
     provider: {
       '@type': 'Person',
@@ -78,6 +78,11 @@ export function generateProfessionalServiceSchema() {
         '@type': 'Offer',
         name: 'Strategic Session',
         description: 'Focused thinking session to untangle one specific question, decision, or situation',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Workshops & Coaching for Organisations',
+        description: 'Customized team facilitation and transition programs for organizations navigating restructuring, change, or growth',
       },
     ],
   }

@@ -17,27 +17,36 @@ export default function ProblemSection() {
             </h2>
           </div>
 
-          {/* Pain Points Grid */}
-          <div className="grid md:grid-cols-2 gap-4 mb-12">
-            {problemSection.painPoints.map((point, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-3 p-4 bg-stone-50 border border-stone-200 rounded-sm"
-              >
-                <svg
-                  className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                <p className="font-medium text-stone-900">{point}</p>
+          {/* Pain Points — two columns */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            {problemSection.painPointColumns.map((column, colIndex) => (
+              <div key={colIndex}>
+                <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-4">
+                  {column.label}
+                </p>
+                <div className="space-y-4">
+                  {column.points.map((point, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-3 p-4 bg-stone-50 border border-stone-200 rounded-sm"
+                    >
+                      <svg
+                        className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      <p className="font-medium text-stone-900">{point}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             ))}
           </div>

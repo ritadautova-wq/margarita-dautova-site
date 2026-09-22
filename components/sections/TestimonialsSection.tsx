@@ -5,6 +5,10 @@ import Container from '@/components/Container'
 
 const testimonials = [
   {
+    quote: "The topics we wanted to discuss were perfectly transformed into team tasks. I felt that the workshop was crafted specifically for our needs. It helped us see the existing issues from a different angle and start working on practical solutions.",
+    attribution: "Marketing Team, e-commerce company (Team Workshop)",
+  },
+  {
     quote: "This coaching changed my perspective on work — what actually needs to be done and how to move toward my goals. It helped me appreciate what I already have while getting clear on what to improve. Most importantly, it helped me pinpoint the right area to work in, instead of forcing myself into a role that never truly fit. The sessions brought real clarity to my goals and helped me refine the balance between my day-to-day work and life.",
     attribution: "V.K., Engineer, Semiconductor industry, Germany",
   },

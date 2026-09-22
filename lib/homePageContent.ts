@@ -11,8 +11,8 @@ export const hero = {
     { label: 'Munich-based, working worldwide', icon: 'globe' },
     { label: '10+ years in Talent Development', icon: 'building' },
   ],
-  headline: "When growth becomes non-negotiable.",
-  subheadline: "I'm Margarita — a career coach and thinking partner for people in transition. I work with thoughtful international professionals who want clarity about who they are and where they're going — especially those navigating change while living abroad or working in a non-native language.",
+  headline: "Career & Team Coaching for Times of Change.",
+  subheadline: "I'm Margarita — a coach and facilitator helping professionals and teams find clarity, direction and a way forward when work is changing. I work 1:1 with thoughtful international professionals in transition, and with organizations navigating restructuring, new roles and team change.",
   primaryCTA: {
     label: 'Book a Discovery Call',
     href: '/book',
@@ -24,17 +24,63 @@ export const hero = {
   microcopy: 'Free. 30 minutes. Leave with your next step.',
 }
 
+// Pathways Section
+export interface Pathway {
+  label: string
+  title: string
+  description: string
+  cta: string
+  href: string
+}
+
+export const pathwaysSection = {
+  eyebrow: "How I Can Help",
+  headline: "Change looks different for everyone.",
+  description: "Whether you're navigating a career transition yourself or supporting a team through organizational change, I create structured spaces to pause, reflect and move forward with clarity.",
+  pathways: [
+    {
+      label: "For Individuals",
+      title: "Career & Transition Coaching",
+      description: "For people navigating career changes, new roles, restructuring, relocation, or the feeling that their current path no longer fits.",
+      cta: "Explore 1:1 Coaching",
+      href: "/coaching",
+    },
+    {
+      label: "For Organizations & Teams",
+      title: "Team Facilitation & Transition Programs",
+      description: "For teams experiencing restructuring, changing roles, internal mobility, new leadership, or a significant shift in how they work together.",
+      cta: "Explore Team & Organizational Work",
+      href: "/coaching#corporate",
+    },
+  ],
+}
+
 // Problem Section
 export const problemSection = {
   eyebrow: " ",
   headline: "Do you find yourself at a turning point?",
-  painPoints: [
-    "Position restructured — rethinking your next step",
-    "Missing a clear sense of direction",
-    "Ready for change, but don't know where to begin",
-    "New role — redefining who you are now",
-    "Stepping into leadership for the first time",
-    "Outgrowing your current role",
+  painPointColumns: [
+    {
+      label: "As an Individual",
+      points: [
+        "Position restructured — rethinking your next step",
+        "Missing a clear sense of direction",
+        "Ready for change, but don't know where to begin",
+        "New role — redefining who you are now",
+        "Stepping into leadership for the first time",
+        "Outgrowing your current role",
+      ],
+    },
+    {
+      label: "As a Team or Organization",
+      points: [
+        "Restructuring or changing roles",
+        "A team that needs to reconnect",
+        "Internal mobility or redeployment",
+        "Supporting employees through uncertainty",
+        "Helping people identify strengths and transferable skills",
+      ],
+    },
   ],
   transitionMessage: {
     bold: "Moments like these often appear when you're evolving — whether because something no longer fits, or because you're stepping into something bigger.",
@@ -42,6 +88,26 @@ export const problemSection = {
   },
   ctaText: "You can start easy:",
   ctaLabel: "Book a Discovery Call",
+}
+
+// Case Study Section
+export const caseStudySection = {
+  eyebrow: "Case Study",
+  headline: "A customized transition program for a team navigating restructuring",
+  challengeLabel: "The Challenge",
+  challenge: "A team was navigating organizational change and uncertainty around future roles.",
+  approachLabel: "The Approach",
+  approach: [
+    "Team workshop: understanding strengths, preferences and professional identity",
+    "Career workshop: translating experience into CV & LinkedIn positioning",
+    "Individual coaching: space for each person to reflect on their situation and next steps",
+  ],
+  resultLabel: "The Result",
+  result: "The program created space for both reflection and practical preparation — helping participants understand their strengths, articulate their experience, and think constructively about what could come next.",
+  quote: "It was fun and interactive, and at the same time we learned a lot about different working styles and how to improve our work. The day was very well structured and we got the chance to actually work on specific issues that exist in our team.",
+  quoteAttribution: "SEO Team, e-commerce company",
+  cta: "Explore Team & Organizational Work",
+  href: "/coaching#corporate",
 }
 
 // Transformation Section (What You'll Get)
