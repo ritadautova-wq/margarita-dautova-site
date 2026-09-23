@@ -108,12 +108,13 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Featured image */}
       {post.imageUrl && (
         <Container size="narrow" className="mb-4">
-          <div className="aspect-video bg-neutral-100 rounded-sm overflow-hidden relative">
+          <div className="bg-neutral-100 rounded-sm overflow-hidden">
             <Image
               src={post.imageUrl}
               alt={post.title}
-              fill
-              className="object-cover object-center"
+              width={1200}
+              height={675}
+              className="w-full h-auto"
               sizes="(max-width: 768px) 100vw, 768px"
               unoptimized
               priority
