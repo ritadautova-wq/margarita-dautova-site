@@ -107,6 +107,34 @@ export function generateWebSiteSchema() {
   }
 }
 
+export function generateArticleSchema(article: {
+  title: string
+  excerpt: string
+  imageUrl?: string
+  date: string
+  author: string
+  slug: string
+}) {
+  const url = `https://www.margarita-dautova.com/resources/${article.slug}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.excerpt,
+    ...(article.imageUrl && { image: article.imageUrl }),
+    datePublished: article.date,
+    author: {
+      '@type': 'Person',
+      name: article.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Margarita Dautova Coaching',
+    },
+    mainEntityOfPage: url,
+  }
+}
+
 export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
   return {
     '@context': 'https://schema.org',

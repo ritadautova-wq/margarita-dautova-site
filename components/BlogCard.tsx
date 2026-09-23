@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface BlogCardProps {
   slug: string
@@ -19,11 +20,10 @@ export default function BlogCard({
   readingTime,
   date,
   imageUrl,
-  link,
 }: BlogCardProps) {
   return (
     <article className="group">
-      <a href={link} target="_blank" rel="noopener noreferrer" className="block">
+      <Link href={`/resources/${slug}`} className="block">
         {/* Article Image */}
         <div className="aspect-video bg-neutral-100 rounded-sm overflow-hidden mb-5 relative">
           {imageUrl ? (
@@ -31,7 +31,7 @@ export default function BlogCard({
               src={imageUrl}
               alt={title}
               fill
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-300"
+              className="object-contain object-center group-hover:scale-105 transition-transform duration-300"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               unoptimized
             />
@@ -76,7 +76,7 @@ export default function BlogCard({
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </span>
-      </a>
+      </Link>
     </article>
   )
 }
