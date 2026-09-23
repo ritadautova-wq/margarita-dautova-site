@@ -281,7 +281,7 @@ export default function CareerCoachingPage() {
               </div>
             ))}
           </div>
-          <p className="mt-12 text-center text-pretty text-stone-700 text-lg max-w-2xl mx-auto">
+          <p className="mt-12 text-center text-stone-700 text-lg max-w-3xl mx-auto">
             You don&apos;t need to have it figured out before you come. That&apos;s what the coaching is for.
           </p>
         </Container>
