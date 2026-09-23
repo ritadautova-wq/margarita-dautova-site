@@ -158,6 +158,11 @@ export default async function BlogPostPage({ params }: Props) {
                 strong: ({ children }) => (
                   <strong className="text-stone-900 font-semibold">{children}</strong>
                 ),
+                blockquote: ({ children }) => (
+                  <blockquote className="border-l-4 border-primary-200 pl-6 italic text-stone-700">
+                    {children}
+                  </blockquote>
+                ),
                 img: ({ src, alt }) =>
                   typeof src === 'string' ? (
                     <span className="block my-6 rounded-sm overflow-hidden">

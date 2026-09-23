@@ -122,6 +122,14 @@ function parseContent(html: string): { content: string; images: string[] } {
   content = content
     .replace(/<figcaption[^>]*>(.*?)<\/figcaption>/gi, '*$1*\n\n')
     .replace(/<\/?figure[^>]*>/gi, '')
+    .replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (match, inner) => {
+      const quoted = inner
+        .trim()
+        .split('\n')
+        .map((line: string) => `> ${line.trim()}`)
+        .join('\n')
+      return `\n\n${quoted}\n\n`
+    })
     .replace(/<h1[^>]*>(.*?)<\/h1>/gi, '## $1\n\n')
     .replace(/<h2[^>]*>(.*?)<\/h2>/gi, '## $1\n\n')
     .replace(/<h3[^>]*>(.*?)<\/h3>/gi, '### $1\n\n')
