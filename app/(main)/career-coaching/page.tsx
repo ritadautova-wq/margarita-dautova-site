@@ -136,12 +136,12 @@ const testimonials = [
   {
     quote:
       "Working together brought real clarity to my short-term goals and helped me improve my focus. I discovered strengths I didn't fully recognize before and learned how to apply them — bringing more order into my life. Rather than being told what to do, the process was highly interactive: it helped me find my own answers and create a real path toward my goals.",
-    attribution: 'F.M., Software engineer, UAE',
+    attribution: 'F.M., Software Engineer, Freelancer, UAE',
   },
   {
     quote:
       "Working with you has been extremely impactful for my development. Every session feels like a valuable use of my time, and I consistently leave with deeper insights about myself. Coaching helps me overcome obstacles, make meaningful progress toward my goals, and be more effective at work. I'm beginning to understand the importance of state and how to apply the methods we've discussed — and that shift alone has been life-changing. I feel more equipped to make the changes that matter to me, both personally and professionally.",
-    attribution: 'L.S., Sweden',
+    attribution: 'L.S., Solution Engineer, SaaS, Sweden',
   },
   {
     quote:
@@ -156,7 +156,7 @@ const testimonials = [
   {
     quote:
       'Margarita, thank you for 2.5 months of joint work. It was exciting, interesting, but most importantly productive! At the moment, "the puzzle is solved", and this has given me more self-confidence to act in achieving my professional goal. Thank you for the pleasant energy that comes from you, as well as for the respectful attitude.',
-    attribution: 'K.K., Belgium',
+    attribution: 'K.K., Marketing Strategist, Belgium',
   },
   {
     quote:
