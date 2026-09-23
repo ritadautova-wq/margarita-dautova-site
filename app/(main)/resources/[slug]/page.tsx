@@ -44,6 +44,15 @@ function formatDate(dateString: string): string {
   })
 }
 
+// The featured image is already shown as the page hero — drop its first
+// occurrence from the body so it isn't rendered a second time inline.
+function stripDuplicateFeaturedImage(content: string, imageUrl?: string): string {
+  if (!imageUrl) return content
+  const escaped = imageUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const regex = new RegExp(`!\\[[^\\]]*\\]\\(${escaped}\\)\\n*`)
+  return content.replace(regex, '')
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const post = await getMediumArticleBySlug(params.slug)
 
@@ -164,7 +173,7 @@ export default async function BlogPostPage({ params }: Props) {
                   ) : null,
               }}
             >
-              {post.content}
+              {stripDuplicateFeaturedImage(post.content, post.imageUrl)}
             </ReactMarkdown>
           </div>
 

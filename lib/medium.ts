@@ -118,14 +118,10 @@ function parseContent(html: string): { content: string; images: string[] } {
     return `\n\n![${alt || 'Image'}](${src})\n\n`
   })
 
-  // Replace figure tags (which often contain images)
-  content = content.replace(/<figure[^>]*>[\s\S]*?<img[^>]*src=["']([^"']*)["'][^>]*(?:alt=["']([^"']*)["'])?[^>]*>[\s\S]*?<\/figure>/gi, (match, src, alt) => {
-    if (isTrackingPixel(content, src)) return ''
-    return `\n\n![${alt || 'Image'}](${src})\n\n`
-  })
-  
   // Convert common HTML to markdown-like format
   content = content
+    .replace(/<figcaption[^>]*>(.*?)<\/figcaption>/gi, '*$1*\n\n')
+    .replace(/<\/?figure[^>]*>/gi, '')
     .replace(/<h1[^>]*>(.*?)<\/h1>/gi, '## $1\n\n')
     .replace(/<h2[^>]*>(.*?)<\/h2>/gi, '## $1\n\n')
     .replace(/<h3[^>]*>(.*?)<\/h3>/gi, '### $1\n\n')
