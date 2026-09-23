@@ -53,6 +53,19 @@ function stripDuplicateFeaturedImage(content: string, imageUrl?: string): string
   return content.replace(regex, '')
 }
 
+// Medium articles often repeat the title as the first heading in the body —
+// the title is already shown in the page hero, so drop that leading heading.
+function stripDuplicateTitle(content: string, title: string): string {
+  // Medium sometimes uses non-breaking spaces inside headings while the RSS
+  // <title> uses regular spaces — collapse whitespace runs to \s+ so the two
+  // still match.
+  const escaped = title
+    .replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    .replace(/ +/g, '\\s+')
+  const regex = new RegExp(`^#{1,6}\\s*${escaped}\\s*\\n+`, 'i')
+  return content.replace(regex, '')
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const post = await getMediumArticleBySlug(params.slug)
 
@@ -179,7 +192,10 @@ export default async function BlogPostPage({ params }: Props) {
                   ) : null,
               }}
             >
-              {stripDuplicateFeaturedImage(post.content, post.imageUrl)}
+              {stripDuplicateFeaturedImage(
+                stripDuplicateTitle(post.content, post.title),
+                post.imageUrl
+              )}
             </ReactMarkdown>
           </div>
 

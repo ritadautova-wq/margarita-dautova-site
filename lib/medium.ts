@@ -77,6 +77,18 @@ function isTrackingPixel(html: string, imgUrl: string): boolean {
   return false
 }
 
+// Wrap inner HTML in markdown emphasis markers, keeping any leading/trailing
+// whitespace outside the markers so CommonMark still recognizes them as
+// valid emphasis (e.g. "<strong>Word </strong>" must become "**Word** "
+// rather than "**Word **", which markdown parsers won't treat as bold).
+function wrapEmphasis(inner: string, marker: string): string {
+  const trimmed = inner.trim()
+  if (!trimmed) return inner
+  const leading = inner.match(/^\s*/)?.[0] ?? ''
+  const trailing = inner.match(/\s*$/)?.[0] ?? ''
+  return `${leading}${marker}${trimmed}${marker}${trailing}`
+}
+
 // Extract all images from HTML content
 function extractImages(html: string): string[] {
   const images: string[] = []
@@ -120,7 +132,7 @@ function parseContent(html: string): { content: string; images: string[] } {
 
   // Convert common HTML to markdown-like format
   content = content
-    .replace(/<figcaption[^>]*>(.*?)<\/figcaption>/gi, '*$1*\n\n')
+    .replace(/<figcaption[^>]*>([\s\S]*?)<\/figcaption>/gi, (match, inner) => `${wrapEmphasis(inner, '*')}\n\n`)
     .replace(/<\/?figure[^>]*>/gi, '')
     .replace(/<blockquote[^>]*>([\s\S]*?)<\/blockquote>/gi, (match, inner) => {
       const quoted = inner
@@ -134,16 +146,23 @@ function parseContent(html: string): { content: string; images: string[] } {
     .replace(/<h2[^>]*>(.*?)<\/h2>/gi, '## $1\n\n')
     .replace(/<h3[^>]*>(.*?)<\/h3>/gi, '### $1\n\n')
     .replace(/<h4[^>]*>(.*?)<\/h4>/gi, '### $1\n\n')
-    .replace(/<strong[^>]*>(.*?)<\/strong>/gi, '**$1**')
-    .replace(/<b[^>]*>(.*?)<\/b>/gi, '**$1**')
-    .replace(/<em[^>]*>(.*?)<\/em>/gi, '*$1*')
-    .replace(/<i[^>]*>(.*?)<\/i>/gi, '*$1*')
+    .replace(/<strong[^>]*>([\s\S]*?)<\/strong>/gi, (match, inner) => wrapEmphasis(inner, '**'))
+    .replace(/<b[^>]*>([\s\S]*?)<\/b>/gi, (match, inner) => wrapEmphasis(inner, '**'))
+    .replace(/<em[^>]*>([\s\S]*?)<\/em>/gi, (match, inner) => wrapEmphasis(inner, '*'))
+    .replace(/<i[^>]*>([\s\S]*?)<\/i>/gi, (match, inner) => wrapEmphasis(inner, '*'))
     .replace(/<p[^>]*>(.*?)<\/p>/gi, '$1\n\n')
+    // Ordered lists need numbered markers; handle before the generic <li> rule below.
+    .replace(/<ol[^>]*>([\s\S]*?)<\/ol>/gi, (match, inner) => {
+      let i = 0
+      const items = inner.replace(/<li[^>]*>([\s\S]*?)<\/li>/gi, (li: string, item: string) => {
+        i++
+        return `${i}. ${item.trim()}\n`
+      })
+      return `\n${items}\n`
+    })
     .replace(/<li[^>]*>(.*?)<\/li>/gi, '- $1\n')
     .replace(/<ul[^>]*>/gi, '')
     .replace(/<\/ul>/gi, '\n')
-    .replace(/<ol[^>]*>/gi, '')
-    .replace(/<\/ol>/gi, '\n')
     .replace(/<a[^>]*href="([^"]*)"[^>]*>(.*?)<\/a>/gi, '[$2]($1)')
     .replace(/<br\s*\/?>/gi, '\n')
     .replace(/&nbsp;/g, ' ')
