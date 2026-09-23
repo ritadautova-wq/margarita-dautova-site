@@ -34,12 +34,17 @@ function estimateReadingTime(content: string): string {
 
 // Extract excerpt from content
 function extractExcerpt(content: string, maxLength: number = 200): string {
-  // Remove HTML tags and get plain text
+  // Remove HTML tags and get plain text. Block-level tags need to leave a
+  // space behind so sentences from separate elements (e.g. the subtitle and
+  // the first paragraph) don't get glued together with no space between them.
   const text = content
+    .replace(/<\/(p|div|h[1-6]|li|blockquote|figure|figcaption)>/gi, ' ')
+    .replace(/<br\s*\/?>/gi, ' ')
     .replace(/<[^>]*>/g, '')
     .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
     .trim()
-  
+
   if (text.length <= maxLength) return text
   return text.substring(0, maxLength).replace(/\s+\S*$/, '') + '...'
 }
