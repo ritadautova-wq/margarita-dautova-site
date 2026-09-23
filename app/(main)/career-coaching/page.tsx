@@ -224,7 +224,7 @@ export default function CareerCoachingPage() {
               <h1 className="font-serif text-[2.4rem] leading-[1.15] tracking-[-0.02em] md:text-[44px] text-stone-900 text-balance">
                 Career coaching for the moments when you don&apos;t quite know what&apos;s next.
               </h1>
-              <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0">
+              <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
                 <p>Change doesn&apos;t always arrive with a clear reason.</p>
                 <p>
                   A role that no longer fits. A move to a new country. A new chapter you didn&apos;t quite expect.
@@ -281,7 +281,7 @@ export default function CareerCoachingPage() {
               </div>
             ))}
           </div>
-          <p className="mt-12 text-center text-stone-700 text-lg max-w-2xl mx-auto">
+          <p className="mt-12 text-center text-pretty text-stone-700 text-lg max-w-2xl mx-auto">
             You don&apos;t need to have it figured out before you come. That&apos;s what the coaching is for.
           </p>
         </Container>
@@ -294,7 +294,7 @@ export default function CareerCoachingPage() {
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               A space to think without having to perform.
             </h2>
-            <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-left md:text-center max-w-2xl mx-auto">
+            <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-left md:text-center max-w-2xl mx-auto text-pretty">
               <p>
                 Most of my clients don&apos;t need another problem-solver. They need somewhere they can say
                 what they&apos;re actually thinking — without managing how it sounds, without needing to have
@@ -306,7 +306,7 @@ export default function CareerCoachingPage() {
                 answer.
               </p>
             </div>
-            <p className="mt-8 inline-block text-stone-900 font-serif text-xl italic border-t border-b border-stone-300 py-4 px-2">
+            <p className="mt-8 inline-block text-stone-900 font-serif text-xl italic border-t border-b border-stone-300 py-4 px-2 text-pretty">
               Warmth, depth and structure — without rushing the process.
             </p>
           </div>
@@ -342,7 +342,7 @@ export default function CareerCoachingPage() {
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               From figuring out what you want to communicating it clearly.
             </h2>
-            <p className="mt-4 text-stone-600 text-lg">
+            <p className="mt-4 text-stone-600 text-lg text-pretty">
               As clarity develops, it often needs to be put into words — a CV, a LinkedIn profile, an
               interview. This isn&apos;t a separate service. It&apos;s a natural extension of the same work.
             </p>
@@ -355,7 +355,7 @@ export default function CareerCoachingPage() {
               </div>
             ))}
           </div>
-          <p className="mt-12 text-center text-stone-700 text-lg max-w-2xl mx-auto">
+          <p className="mt-12 text-center text-pretty text-stone-700 text-lg max-w-2xl mx-auto">
             The goal isn&apos;t to make you sound impressive. It&apos;s to make it easier for the right people
             to see what you bring.
           </p>
@@ -381,7 +381,7 @@ export default function CareerCoachingPage() {
               />
             ))}
           </div>
-          <p className="mt-16 text-center text-stone-900 font-serif text-xl italic">
+          <p className="mt-16 text-center text-pretty text-stone-900 font-serif text-xl italic">
             The process has structure. The direction comes from you.
           </p>
         </Container>
@@ -393,7 +393,7 @@ export default function CareerCoachingPage() {
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
             When your career is changing — and you&apos;re building a life in another country.
           </h2>
-          <p className="mt-6 text-stone-600 text-lg leading-relaxed text-center max-w-2xl mx-auto">
+          <p className="mt-6 text-stone-600 text-lg leading-relaxed text-center text-pretty max-w-2xl mx-auto">
             Being an international professional adds its own layer to any transition. It&apos;s not just what&apos;s
             next — it&apos;s also who you are here, in a place that isn&apos;t where you started.
           </p>
@@ -519,7 +519,7 @@ export default function CareerCoachingPage() {
               ctaHref="/coaching#single"
             />
           </div>
-          <p className="mt-10 text-center text-stone-500 text-sm">
+          <p className="mt-10 text-center text-pretty text-stone-500 text-sm">
             Not sure which is right for you? A free discovery call can help you decide.
           </p>
         </Container>
@@ -559,7 +559,7 @@ export default function CareerCoachingPage() {
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
             You don&apos;t have to know the answer yet.
           </h2>
-          <p className="mt-6 text-primary-100 text-lg max-w-xl mx-auto">
+          <p className="mt-6 text-primary-100 text-lg text-pretty max-w-xl mx-auto">
             You just have to be willing to start looking.
           </p>
           <div className="mt-10">
