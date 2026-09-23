@@ -219,10 +219,14 @@ export default function CareerCoachingPage() {
       {/* 1. Hero */}
       <section className="pt-32 pb-16 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
         <Container size="default">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-3 text-center lg:text-left">
-              <h1 className="font-serif text-[2.4rem] leading-[1.15] md:text-display-lg text-stone-900 text-balance">
-                Career coaching for moments when you don&apos;t quite know what&apos;s next.
+              <h1 className="font-serif text-[2.4rem] leading-[1.15] md:text-display-lg text-stone-900">
+                Career coaching for moments
+                <br />
+                when you don&apos;t quite know
+                <br />
+                what&apos;s next.
               </h1>
               <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0">
                 <p>Change doesn&apos;t always arrive with a clear reason.</p>
