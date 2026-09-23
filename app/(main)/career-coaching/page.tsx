@@ -218,28 +218,46 @@ export default function CareerCoachingPage() {
 
       {/* 1. Hero */}
       <section className="pt-32 pb-16 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
-        <Container size="narrow" className="text-center">
-          <h1 className="font-serif text-[2.4rem] leading-[1.15] md:text-display-lg text-stone-900 text-balance">
-            Career coaching for the moments when you don&apos;t quite know what&apos;s next.
-          </h1>
-          <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto">
-            <p>
-              Change doesn&apos;t always arrive with a clear reason. A role that no longer fits. A move to a
-              new country. A quiet sense that something needs to shift, even if you can&apos;t yet say what.
-            </p>
-            <p>
-              You don&apos;t need to arrive with a plan, or a clear answer already in hand. You just need a
-              space to think clearly about what&apos;s actually happening — and what you want to do about it.
-            </p>
+        <Container size="default">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-3 text-center lg:text-left">
+              <h1 className="font-serif text-[2.4rem] leading-[1.15] md:text-display-lg text-stone-900 text-balance">
+                Career coaching for the moments when you don&apos;t quite know what&apos;s next.
+              </h1>
+              <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0">
+                <p>
+                  Change doesn&apos;t always arrive with a clear reason. A role that no longer fits. A move to a
+                  new country. A quiet sense that something needs to shift, even if you can&apos;t yet say what.
+                </p>
+                <p>
+                  You don&apos;t need to arrive with a plan, or a clear answer already in hand. You just need a
+                  space to think clearly about what&apos;s actually happening — and what you want to do about it.
+                </p>
+              </div>
+              <div className="mt-10">
+                <Button href="/book" variant="primary" size="lg">
+                  Book a free discovery call
+                </Button>
+              </div>
+              <p className="mt-5 text-sm text-stone-500">
+                ICF PCC-certified · 1:1 coaching · Munich + worldwide
+              </p>
+            </div>
+
+            <div className="relative lg:col-span-2 lg:flex lg:justify-end">
+              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/IMG_5836.JPG"
+                  alt="Margarita Dautova, Career Coach"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(min-width: 1024px) 30vw, 60vw"
+                />
+              </div>
+              <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
+            </div>
           </div>
-          <div className="mt-10">
-            <Button href="/book" variant="primary" size="lg">
-              Book a free discovery call
-            </Button>
-          </div>
-          <p className="mt-5 text-sm text-stone-500">
-            ICF PCC-certified · 1:1 coaching · Munich + worldwide
-          </p>
         </Container>
       </section>
 
