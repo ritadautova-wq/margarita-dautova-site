@@ -131,12 +131,12 @@ const testimonials = [
   {
     quote:
       "Margarita, thank you so much for your thoughtful and sensitive support throughout my exploration process. I felt safe the whole time and knew I could show up in different ways while still being myself in our conversations. I now feel much greater clarity, and at the same time I sense a deeper inner call to connect more closely with my true motivations and sources of energy. I'm really glad that I took these important steps at the beginning of the year together with you.",
-    attribution: 'A.T., Russia',
+    attribution: 'A.T., Product Manager, EdTech, Russia',
   },
   {
     quote:
       "In just three sessions, we managed to work through such complex topics and questions, process a lot of emotions, and outline clear actions. It's an amazing result — with real moments of insight along the way. Thank you for your support, understanding, and your caring, gentle approach — while still going deep. And for the questions that immediately brought focus and depth.",
-    attribution: 'M.B., Spain',
+    attribution: 'M.B., Product Manager, EdTech, Spain',
   },
   {
     quote:
@@ -146,7 +146,7 @@ const testimonials = [
   {
     quote:
       "Thank you very much for a professional and productive coaching sessions. I really liked how you guided me in accordance with my topic, doing it in a gentle but confident manner. It stimulated me to openness and sincerity, giving the opportunity to open my potential and resolve my own issues. As a result, we managed to build the most productive plan of action to achieve the goal, which I am now following and already seeing results, which I am very happy about!",
-    attribution: 'E.B., Russia',
+    attribution: 'E.B., Regression Therapist, Russia',
   },
 ]
 
