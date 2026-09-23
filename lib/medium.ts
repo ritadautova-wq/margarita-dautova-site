@@ -65,29 +65,41 @@ function categorizeArticle(title: string, content: string): string {
   return 'Professional Growth'
 }
 
+// Check if an image URL is Medium's tracking pixel (not a real content image)
+function isTrackingPixel(html: string, imgUrl: string): boolean {
+  if (imgUrl.includes('medium.com/_/stat')) return true
+  // Match the specific <img> tag for this src and check for 1x1 tracking dimensions
+  const tagRegex = new RegExp(`<img[^>]*src=["']${imgUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}["'][^>]*>`, 'i')
+  const tagMatch = html.match(tagRegex)
+  if (tagMatch && /width=["']1["']/.test(tagMatch[0]) && /height=["']1["']/.test(tagMatch[0])) {
+    return true
+  }
+  return false
+}
+
 // Extract all images from HTML content
 function extractImages(html: string): string[] {
   const images: string[] = []
   const imgRegex = /<img[^>]*src=["']([^"']*)["'][^>]*>/gi
   let match
-  
+
   while ((match = imgRegex.exec(html)) !== null) {
     const imgUrl = match[1]
-    // Filter out data URIs and very small images (likely icons)
-    if (imgUrl && !imgUrl.startsWith('data:') && !imgUrl.includes('icon') && imgUrl.length > 10) {
+    // Filter out data URIs, tracking pixels, and very small images (likely icons)
+    if (imgUrl && !imgUrl.startsWith('data:') && !imgUrl.includes('icon') && imgUrl.length > 10 && !isTrackingPixel(html, imgUrl)) {
       images.push(imgUrl)
     }
   }
-  
+
   // Also check for figure tags with images
   const figureRegex = /<figure[^>]*>[\s\S]*?<img[^>]*src=["']([^"']*)["'][^>]*>[\s\S]*?<\/figure>/gi
   while ((match = figureRegex.exec(html)) !== null) {
     const imgUrl = match[1]
-    if (imgUrl && !imgUrl.startsWith('data:') && !imgUrl.includes('icon') && imgUrl.length > 10) {
+    if (imgUrl && !imgUrl.startsWith('data:') && !imgUrl.includes('icon') && imgUrl.length > 10 && !isTrackingPixel(html, imgUrl)) {
       images.push(imgUrl)
     }
   }
-  
+
   return Array.from(new Set(images)) // Remove duplicates
 }
 
@@ -96,17 +108,19 @@ function parseContent(html: string): { content: string; images: string[] } {
   // Remove script and style tags
   let content = html.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
   content = content.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
-  
+
   // Extract images first
   const images = extractImages(content)
-  
-  // Replace images with markdown-style image tags
+
+  // Replace images with markdown-style image tags (skip tracking pixels)
   content = content.replace(/<img[^>]*src=["']([^"']*)["'][^>]*(?:alt=["']([^"']*)["'])?[^>]*>/gi, (match, src, alt) => {
+    if (isTrackingPixel(content, src)) return ''
     return `\n\n![${alt || 'Image'}](${src})\n\n`
   })
-  
+
   // Replace figure tags (which often contain images)
   content = content.replace(/<figure[^>]*>[\s\S]*?<img[^>]*src=["']([^"']*)["'][^>]*(?:alt=["']([^"']*)["'])?[^>]*>[\s\S]*?<\/figure>/gi, (match, src, alt) => {
+    if (isTrackingPixel(content, src)) return ''
     return `\n\n![${alt || 'Image'}](${src})\n\n`
   })
   
