@@ -2,10 +2,11 @@ import Link from 'next/link'
 
 const navigation = {
   main: [
-    { name: 'Services', href: '/coaching' },
+    { name: 'Home', href: '/' },
+    { name: 'Career Coaching', href: '/career-coaching' },
+    { name: 'Team Workshops', href: '/team-workshops' },
     { name: 'About', href: '/about' },
-    { name: 'Testimonials', href: '/testimonials' },
-    { name: 'Resources', href: '/resources' },
+    { name: 'Articles', href: '/resources' },
     { name: 'Expats in Germany', href: '/career-coaching-expats-germany' },
     { name: 'Contact', href: '/contact' },
   ],
@@ -107,7 +108,7 @@ export default function Footer() {
                     className="inline-block w-full text-center px-4 py-2 bg-primary-600 text-white 
                       hover:bg-primary-700 transition-colors rounded-sm text-sm font-medium"
                   >
-                    Book a Discovery Call
+                    Book a free discovery call
                   </Link>
                   <Link
                     href="/free"

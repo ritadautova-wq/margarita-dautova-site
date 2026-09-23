@@ -6,11 +6,11 @@ import { usePathname } from 'next/navigation'
 
 // Navigation
 const navigation = [
-  { name: 'Services', href: '/coaching' },
+  { name: 'Home', href: '/' },
+  { name: 'Career Coaching', href: '/career-coaching' },
+  { name: 'Team Workshops', href: '/team-workshops' },
   { name: 'About', href: '/about' },
-  { name: 'Testimonials', href: '/testimonials' },
-  { name: 'Resources', href: '/resources' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Articles', href: '/resources' },
 ]
 
 export default function Header() {
@@ -89,17 +89,11 @@ export default function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Link
-              href="/free"
-              className="text-sm font-medium text-stone-600 hover:text-stone-900 transition-colors"
-            >
-              Free Guide
-            </Link>
-            <Link
               href="/book"
-              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium 
+              className="inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium
                 bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 rounded-sm"
             >
-              Discovery Call
+              Book a free discovery call
             </Link>
           </div>
 
@@ -146,10 +140,10 @@ export default function Header() {
             <div className="mt-10 pt-8 border-t border-stone-200 space-y-3">
               <Link
                 href="/book"
-                className="block w-full text-center px-6 py-3.5 font-medium 
+                className="block w-full text-center px-6 py-3.5 font-medium
                   bg-primary-600 text-white hover:bg-primary-700 transition-all duration-300 rounded-sm"
               >
-                Discovery Call
+                Book a free discovery call
               </Link>
               <Link
                 href="/free"
