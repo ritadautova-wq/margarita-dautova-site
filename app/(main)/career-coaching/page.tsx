@@ -461,7 +461,7 @@ export default function CareerCoachingPage() {
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              What it feels like to be coached here
+              What it feels like to work together
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
