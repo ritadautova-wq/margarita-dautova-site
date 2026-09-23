@@ -219,14 +219,10 @@ export default function CareerCoachingPage() {
       {/* 1. Hero */}
       <section className="pt-32 pb-16 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
         <Container size="default">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-3 text-center lg:text-left">
-              <h1 className="font-serif text-[2.4rem] leading-[1.15] md:text-display-lg text-stone-900">
-                Career coaching for moments
-                <br />
-                when you don&apos;t quite know
-                <br />
-                what&apos;s next.
+              <h1 className="font-serif text-[2.4rem] leading-[1.15] tracking-[-0.02em] md:text-[44px] text-stone-900 text-balance">
+                Career coaching for the moments when you don&apos;t quite know what&apos;s next.
               </h1>
               <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0">
                 <p>Change doesn&apos;t always arrive with a clear reason.</p>
@@ -249,18 +245,18 @@ export default function CareerCoachingPage() {
               </p>
             </div>
 
-            <div className="relative lg:col-span-2 lg:flex lg:justify-end">
-              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-2xl">
+            <div className="relative lg:col-span-2 lg:order-last lg:flex lg:items-center lg:justify-end">
+              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl">
                 <Image
                   src="/images/IMG_5836.JPG"
                   alt="Margarita Dautova, Career Coach"
                   fill
                   className="object-cover"
                   priority
-                  sizes="(min-width: 1024px) 30vw, 60vw"
+                  sizes="33vw"
                 />
               </div>
-              <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
             </div>
           </div>
         </Container>
