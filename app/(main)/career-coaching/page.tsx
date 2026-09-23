@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/Container'
 import Button from '@/components/Button'
@@ -375,33 +376,48 @@ export default function CareerCoachingPage() {
 
       {/* 8. Why Work With Me */}
       <section className="section-padding bg-white">
-        <Container size="narrow">
+        <Container size="default">
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
             A coach who understands both the person and the workplace.
           </h2>
-          <div className="mt-8 space-y-4 text-stone-600 text-lg leading-relaxed">
-            <p>
-              Before becoming a coach, I spent 10+ years in Talent &amp; Leadership Development inside
-              organisations like Mytheresa and Amadeus — designing programs, sitting in on restructurings,
-              and supporting people through role changes, relocations and career transitions from the
-              inside.
-            </p>
-            <p>
-              That&apos;s given me something I bring into every session: I understand not just how change
-              feels, but how organisations actually work — what&apos;s negotiable, what isn&apos;t, and what it
-              really takes to move forward in a real workplace, not just in theory.
-            </p>
-            <p>
-              I&apos;m ICF PCC-certified, and I work in English with professionals across many industries and
-              countries.
-            </p>
-          </div>
-          <div className="mt-10 pt-8 border-t border-stone-200 flex flex-wrap justify-center gap-x-8 gap-y-2">
-            {stats.map((stat) => (
-              <span key={stat} className="text-sm text-stone-500">
-                {stat}
-              </span>
-            ))}
+          <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-2 lg:order-last">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+                <Image
+                  src="/images/portrait-margarita.JPG"
+                  alt="Portrait of Margarita Dautova"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 30vw, 60vw"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-3">
+              <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
+                <p>
+                  Before becoming a coach, I spent 10+ years in Talent &amp; Leadership Development inside
+                  organisations like Mytheresa and Amadeus — designing programs, sitting in on restructurings,
+                  and supporting people through role changes, relocations and career transitions from the
+                  inside.
+                </p>
+                <p>
+                  That&apos;s given me something I bring into every session: I understand not just how change
+                  feels, but how organisations actually work — what&apos;s negotiable, what isn&apos;t, and what it
+                  really takes to move forward in a real workplace, not just in theory.
+                </p>
+                <p>
+                  I&apos;m ICF PCC-certified, and I work in English with professionals across many industries and
+                  countries.
+                </p>
+              </div>
+              <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-x-8 gap-y-2">
+                {stats.map((stat) => (
+                  <span key={stat} className="text-sm text-stone-500">
+                    {stat}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </Container>
       </section>
