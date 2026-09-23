@@ -66,6 +66,26 @@ function stripDuplicateTitle(content: string, title: string): string {
   return content.replace(regex, '')
 }
 
+// Medium doesn't link between posts in the same series, so the "part one" /
+// "part two" mentions in these two articles are plain text. Turn them into
+// internal links so readers can actually navigate between the two parts.
+const SERIES_CROSS_LINKS: Record<string, { find: RegExp; slug: string }> = {
+  'burnout-or-outgrowing-the-question-that-could-save-you-years': {
+    find: /Part one/,
+    slug: 'when-its-not-you-and-its-not-them-its-the-interaction',
+  },
+  'when-its-not-you-and-its-not-them-its-the-interaction': {
+    find: /a series of posts exploring person-system mismatch/,
+    slug: 'burnout-or-outgrowing-the-question-that-could-save-you-years',
+  },
+}
+
+function addSeriesCrossLink(content: string, slug: string): string {
+  const link = SERIES_CROSS_LINKS[slug]
+  if (!link) return content
+  return content.replace(link.find, (match) => `[${match}](/resources/${link.slug})`)
+}
+
 export default async function BlogPostPage({ params }: Props) {
   const post = await getMediumArticleBySlug(params.slug)
 
@@ -155,16 +175,18 @@ export default async function BlogPostPage({ params }: Props) {
                 p: ({ children }) => (
                   <p className="text-stone-600 leading-relaxed">{children}</p>
                 ),
-                a: ({ href, children }) => (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 underline underline-offset-2"
-                  >
-                    {children}
-                  </a>
-                ),
+                a: ({ href, children }) => {
+                  const isInternal = href?.startsWith('/')
+                  return (
+                    <a
+                      href={href}
+                      {...(!isInternal && { target: '_blank', rel: 'noopener noreferrer' })}
+                      className="text-primary-600 hover:text-primary-700 underline underline-offset-2"
+                    >
+                      {children}
+                    </a>
+                  )
+                },
                 ul: ({ children }) => (
                   <ul className="list-disc pl-6 space-y-2">{children}</ul>
                 ),
@@ -192,9 +214,12 @@ export default async function BlogPostPage({ params }: Props) {
                   ) : null,
               }}
             >
-              {stripDuplicateFeaturedImage(
-                stripDuplicateTitle(post.content, post.title),
-                post.imageUrl
+              {addSeriesCrossLink(
+                stripDuplicateFeaturedImage(
+                  stripDuplicateTitle(post.content, post.title),
+                  post.imageUrl
+                ),
+                post.slug
               )}
             </ReactMarkdown>
           </div>
