@@ -395,13 +395,25 @@ export default function CareerCoachingPage() {
                 'Email support between sessions',
               ]}
               price="€700"
-              ctaText="Explore the 90-Day journey"
+              priceNote="€120 per session individually"
+              ctaText="Let's start with a conversation"
               ctaHref="/coaching#ongoing"
+              footnote="After talking through your situation, we'll decide if we can work together and define a plan for the next sessions. Afterwards, I'll send you an invoice and we'll book your first session."
               featured
             />
             <ServiceCard
               title="Strategic Session"
               description="A single, focused 90-minute conversation to untangle one specific question, decision, or situation."
+              useCases={{
+                heading: 'You might use it to:',
+                items: [
+                  'Make sense of a career decision or choose between two directions',
+                  'Prepare for an upcoming interview or important professional conversation',
+                  'Get focused feedback on your CV, LinkedIn profile or professional story',
+                  'Understand how to position your experience for a new role, industry or job market',
+                  "Work through a difficult situation at work that you can't quite see clearly on your own",
+                ],
+              }}
               features={[
                 '90-minute focused session',
                 'Pre-session questionnaire',
