@@ -377,28 +377,44 @@ export default function CareerCoachingPage() {
               Choose the kind of support that fits where you are.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <ServiceCard
               title="90-Day Clarity Through Transition"
-              description="Six 60-minute sessions over about three months — space to make sense of a transition and move forward in a grounded way."
+              subtitle="3 months"
+              description="For people in a meaningful transition who want to think clearly, decide intentionally, and move forward in a grounded way."
+              featuresHeading="What's included"
               features={[
                 '6 coaching sessions (60 min)',
-                'Roughly 3 months',
                 'Session summary & notes',
+                'Personalized development plan',
                 'Email support between sessions',
+                'Mid-point and final reviews',
               ]}
+              walkAway={{
+                heading: "What you'll walk away with",
+                items: [
+                  'Making sense of a transition or uncertainty',
+                  'Clarifying what matters now',
+                  'Rebuilding trust in your thinking',
+                  'Grounded, sustainable next steps',
+                  'Decisions you can stand behind',
+                ],
+              }}
+              idealFor="Career or identity transitions, living abroad, feeling internally misaligned"
               price="€700"
               priceNote="€120 per session individually"
+              vatNote="No VAT charged — § 19 German VAT Act"
               ctaText="Let's start with a conversation"
-              ctaHref="/coaching#ongoing"
-              footnote="After talking through your situation, we'll decide if we can work together and define a plan for the next sessions. Afterwards, I'll send you an invoice and we'll book your first session."
+              ctaHref="/book"
+              footnote="A free discovery call comes first. After talking through your situation, we'll decide if we can work together and define a plan for the next sessions. Afterwards, I'll send you an invoice and we'll book your first session."
               featured
             />
             <ServiceCard
               title="Strategic Session"
-              description="A single, focused 90-minute conversation to untangle one specific question, decision, or situation."
+              subtitle="Focused thinking session"
+              description="For people who need to untangle one specific question, decision, or situation — and leave with clearer thinking."
               useCases={{
-                heading: 'You might use it to:',
+                heading: 'What you can use this for',
                 items: [
                   'Make sense of a career decision or choose between two directions',
                   'Prepare for an upcoming interview or important professional conversation',
@@ -407,13 +423,25 @@ export default function CareerCoachingPage() {
                   "Work through a difficult situation at work that you can't quite see clearly on your own",
                 ],
               }}
+              featuresHeading="What's included"
               features={[
-                '90-minute focused session',
                 'Pre-session questionnaire',
+                '90-minute focused session',
                 'Session summary & notes',
                 'Optional follow-up session',
               ]}
+              walkAway={{
+                heading: "What you'll walk away with",
+                items: [
+                  'Making sense of a specific situation or decision',
+                  'Reducing mental noise',
+                  'Identifying grounded next steps',
+                  'Finding language that fits your experience',
+                ],
+              }}
+              idealFor="Career decisions, preparing for conversations, getting unstuck"
               price="€150"
+              vatNote="No VAT charged — § 19 German VAT Act"
               ctaText="Book a Strategic Session"
               ctaHref="/coaching#single"
             />
