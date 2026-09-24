@@ -7,14 +7,14 @@
 export const hero = {
   trustStrip: [
     { label: 'ICF PCC-certified', icon: 'check' },
-    { label: '650+ coaching hours with 110+ professionals', icon: 'people' },
+    { label: '600+ coaching hours with 80+ professionals', icon: 'people' },
     { label: 'Munich-based, working worldwide', icon: 'globe' },
     { label: '10+ years in Talent Development', icon: 'building' },
   ],
   headline: "When growth becomes non-negotiable.",
   subheadline: "I'm Margarita — a career coach and thinking partner for people in transition. I work with thoughtful international professionals who want clarity about who they are and where they're going — especially those navigating change while living abroad or working in a non-native language.",
   primaryCTA: {
-    label: 'Book a free discovery call',
+    label: 'Book a Discovery Call',
     href: '/book',
   },
   secondaryCTA: {
@@ -41,7 +41,7 @@ export const problemSection = {
     description: "Sometimes it feels like uncertainty. Sometimes like expansion. Either way, it's a signal that your current way of thinking may need to grow with you. Having a thinking partner helps you integrate the change — and move forward deliberately.",
   },
   ctaText: "You can start easy:",
-  ctaLabel: "Book a free discovery call",
+  ctaLabel: "Book a Discovery Call",
 }
 
 // Transformation Section (What You'll Get)
@@ -120,7 +120,7 @@ export const processSection = {
     },
   ],
   ctaText: "Ready to start your clarity program?",
-  primaryCTALabel: "Book a free discovery call",
+  primaryCTALabel: "Book a Discovery Call",
   secondaryCTALabel: "Get Free Career Guide",
 }
 
@@ -225,7 +225,7 @@ export const offersSection = {
   ],
   notSureText: "Not sure which option fits?",
   notSureDescription: "If you're at an early stage or have one specific question, a Strategic Session is often enough. If you're navigating a broader transition or need space to integrate change over time, the 90-day program offers deeper support. You're also welcome to start with a conversation and decide from there.",
-  notSureCTALabel: "Book a free discovery call",
+  notSureCTALabel: "Book a Discovery Call",
 }
 
 // Lead Magnet Section
@@ -247,7 +247,7 @@ export const leadMagnetSection = {
 export const finalCTASection = {
   headline: "Ready to shape your next career move?",
   description: "The first step is simple: a free 30-minute strategy call where we talk about where you are and where you want to go. No pressure, no commitment—just an honest conversation that could change everything.",
-  primaryCTALabel: "Book a free discovery call",
+  primaryCTALabel: "Book a Discovery Call",
   secondaryCTALabel: "Download Playbook",
   microcopy: "Free. 30 minutes. Leave with your next step.",
   privacyNote: "Everything we discuss is completely confidential.",
