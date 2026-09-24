@@ -188,7 +188,7 @@ const faqs = [
   {
     question: 'Do you work with people outside Germany?',
     answer:
-      "Yes. I work with clients worldwide, online, in English. Many of my clients are international professionals living outside their home country.",
+      "Yes. I work with clients worldwide, online, in English and Russian. Many of my clients are international professionals living outside their home country.",
   },
   {
     question: 'What happens during the discovery call?',
