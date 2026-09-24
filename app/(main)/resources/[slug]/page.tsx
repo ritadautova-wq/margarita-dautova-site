@@ -9,17 +9,18 @@ import { getMediumArticleBySlug, getAllMediumArticleSlugs } from '@/lib/medium'
 import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
 interface Props {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = await getMediumArticleBySlug(params.slug)
+  const { slug } = await params
+  const post = await getMediumArticleBySlug(slug)
   if (!post) return {}
 
   return {
     title: post.title,
     description: post.excerpt,
-    alternates: { canonical: `/resources/${params.slug}` },
+    alternates: { canonical: `/resources/${slug}` },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -87,7 +88,8 @@ function addSeriesCrossLink(content: string, slug: string): string {
 }
 
 export default async function BlogPostPage({ params }: Props) {
-  const post = await getMediumArticleBySlug(params.slug)
+  const { slug } = await params
+  const post = await getMediumArticleBySlug(slug)
 
   if (!post) {
     notFound()
