@@ -53,20 +53,6 @@ export default function ServiceCard({
       {subtitle && <p className="mt-1 text-sm font-medium text-primary-600">{subtitle}</p>}
       <p className="mt-3 text-neutral-600">{description}</p>
 
-      {useCases && (
-        <div className="mt-6">
-          <p className="text-xs font-medium tracking-wide uppercase text-neutral-500">{useCases.heading}</p>
-          <ul className="mt-3 space-y-2">
-            {useCases.items.map((item, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-400 flex-shrink-0" />
-                <span className="text-neutral-600">{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
       <div className="mt-6">
         {featuresHeading && (
           <p className="text-xs font-medium tracking-wide uppercase text-neutral-500">{featuresHeading}</p>
@@ -92,6 +78,20 @@ export default function ServiceCard({
           ))}
         </ul>
       </div>
+
+      {useCases && (
+        <div className="mt-6">
+          <p className="text-xs font-medium tracking-wide uppercase text-neutral-500">{useCases.heading}</p>
+          <ul className="mt-3 space-y-2">
+            {useCases.items.map((item, index) => (
+              <li key={index} className="flex items-start gap-3">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-400 flex-shrink-0" />
+                <span className="text-neutral-600">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {walkAway && (
         <div className="mt-6">
