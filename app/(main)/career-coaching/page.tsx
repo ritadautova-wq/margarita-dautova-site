@@ -405,7 +405,7 @@ export default function CareerCoachingPage() {
               priceNote="€120 per session individually"
               vatNote="No VAT charged — § 19 German VAT Act"
               ctaText="Let's start with a conversation"
-              ctaHref="/book"
+              ctaHref="https://cal.com/margarita-dautova-odapxj/30min"
               footnote="A free discovery call comes first. After talking through your situation, we'll decide if we can work together and define a plan for the next sessions. Afterwards, I'll send you an invoice and we'll book your first session."
               featured
             />
