@@ -556,9 +556,10 @@ export default function CareerCoachingPage() {
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
             You don&apos;t have to know the answer yet.
           </h2>
-          <p className="mt-6 text-primary-100 text-lg text-pretty max-w-xl mx-auto">
-            You just have to be willing to start looking.
-          </p>
+          <div className="mt-6 space-y-4 text-primary-100 text-lg text-pretty max-w-xl mx-auto">
+            <p>Bring the question. Bring the uncertainty. Bring the part of you that doesn&apos;t quite know yet.</p>
+            <p>We&apos;ll start there.</p>
+          </div>
           <div className="mt-10">
             <Link
               href="/book"
