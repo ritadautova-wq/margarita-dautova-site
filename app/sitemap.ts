@@ -9,6 +9,7 @@ const baseUrl =
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const routes = [
     '',
+    '/career-coaching',
     '/about',
     '/coaching',
     '/career-coaching-expats-germany',

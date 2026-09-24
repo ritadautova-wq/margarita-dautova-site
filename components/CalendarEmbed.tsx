@@ -44,9 +44,9 @@ export default function CalendarEmbed({
   const [hasError, setHasError] = useState(false)
 
   // Build the Cal.com embed URL
-  // Format: https://app.cal.eu/username/event-type?embed=true
+  // Format: https://cal.com/username/event-type?embed=true
   // Note: If eventType is provided, it will be used. Otherwise, shows all event types.
-  const baseUrl = `https://app.cal.eu/${calLink}`
+  const baseUrl = `https://cal.com/${calLink}`
   const embedUrl = eventType 
     ? `${baseUrl}/${eventType}?embed=true`
     : `${baseUrl}?embed=true`
@@ -131,7 +131,7 @@ export default function CalendarEmbed({
               Please try opening the scheduling page directly.
             </p>
             <a
-              href={`https://app.cal.eu/${calLink}${eventType ? `/${eventType}` : ''}`}
+              href={`https://cal.com/${calLink}${eventType ? `/${eventType}` : ''}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-primary-600 text-white rounded-sm hover:bg-primary-700 transition-colors"

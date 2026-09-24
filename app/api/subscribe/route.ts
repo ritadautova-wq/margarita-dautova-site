@@ -6,10 +6,49 @@ const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev'
 const FROM_NAME = 'Margarita Dautova'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.margarita-dautova.com'
 
+// Basic in-memory rate limit to blunt scripted abuse (email bombing) of this
+// endpoint. Resets per serverless instance / cold start, so it is a
+// best-effort deterrent, not a hard guarantee — a proper fix is a shared
+// store (e.g. Vercel KV / Upstash) if abuse is observed in practice.
+const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000
+const RATE_LIMIT_MAX_REQUESTS = 5
+const requestLog = new Map<string, number[]>()
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now()
+  const timestamps = (requestLog.get(ip) || []).filter(
+    (t) => now - t < RATE_LIMIT_WINDOW_MS
+  )
+  timestamps.push(now)
+  requestLog.set(ip, timestamps)
+  return timestamps.length > RATE_LIMIT_MAX_REQUESTS
+}
+
 export async function POST(request: NextRequest) {
   try {
+    const ip =
+      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
+      request.headers.get('x-real-ip') ||
+      'unknown'
+
+    if (isRateLimited(ip)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429 }
+      )
+    }
+
     const body = await request.json()
-    const { email, source = 'unknown' } = body
+    const { email, source = 'unknown', honeypot } = body
+
+    // Honeypot: a hidden field real visitors never fill in. If it has a
+    // value, silently pretend to succeed without sending anything.
+    if (honeypot) {
+      return NextResponse.json(
+        { success: true, message: 'Thank you! Check your inbox for the playbook.' },
+        { status: 200 }
+      )
+    }
 
     // Validate email
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {

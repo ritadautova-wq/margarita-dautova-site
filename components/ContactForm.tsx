@@ -29,6 +29,7 @@ export default function ContactForm() {
   })
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errors, setErrors] = useState<Partial<FormData>>({})
+  const [honeypot, setHoneypot] = useState('')
 
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {}
@@ -57,13 +58,21 @@ export default function ContactForm() {
 
     if (!validateForm()) return
 
+    // Honeypot: bots fill every field, real visitors never see this one.
+    // Pretend to succeed without actually submitting.
+    if (honeypot) {
+      setStatus('success')
+      setFormData({ name: '', email: '', role: '', company: '', interest: '', message: '' })
+      return
+    }
+
     setStatus('loading')
 
     try {
       const response = await fetch('https://formspree.io/f/xvzwaegg', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, _gotcha: '' }),
       })
 
       const data = await response.json()
@@ -124,6 +133,18 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6" noValidate>
+      {/* Honeypot — hidden from real visitors, bots tend to fill every field */}
+      <input
+        type="text"
+        name="_gotcha"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] w-px h-px overflow-hidden"
+      />
+
       {/* Name */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-stone-700 mb-2">

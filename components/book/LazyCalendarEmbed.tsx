@@ -17,19 +17,36 @@ export default function LazyCalendarEmbed({
   eventType,
   height = '700px',
 }: LazyCalendarEmbedProps) {
-  // Load immediately on mount - lazy-loading can be enabled later if needed
-  const [shouldLoad, setShouldLoad] = useState(true)
+  // Only load the third-party iframe once the visitor has consented (globally,
+  // via the cookie banner) or explicitly asked for it below.
+  const [shouldLoad, setShouldLoad] = useState(false)
+  const [consentChecked, setConsentChecked] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
   const [showFallback, setShowFallback] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
   const fallbackTimerRef = useRef<NodeJS.Timeout | null>(null)
 
-  const baseUrl = `https://app.cal.eu/${calLink}`
+  const baseUrl = `https://cal.com/${calLink}`
   const embedUrl = eventType
     ? `${baseUrl}/${eventType}?embed=true`
     : `${baseUrl}?embed=true`
   const directUrl = eventType ? `${baseUrl}/${eventType}` : baseUrl
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem('cookie-consent') === 'accepted') {
+        setShouldLoad(true)
+      }
+    } catch {
+      // localStorage unavailable — fall through to the manual consent prompt
+    }
+    setConsentChecked(true)
+  }, [])
+
+  const handleLoadCalendar = () => {
+    setShouldLoad(true)
+  }
 
   // Track when calendar section is viewed (for analytics)
   useEffect(() => {
@@ -94,6 +111,34 @@ export default function LazyCalendarEmbed({
             className="bg-stone-50 border border-stone-200 rounded-sm overflow-hidden"
             style={{ minHeight: height }}
           >
+
+            {/* Consent gate - shown until the visitor accepts loading the third-party calendar */}
+            {consentChecked && !shouldLoad && (
+              <div className="p-8 md:p-12 text-center">
+                <p className="text-stone-600 mb-2">
+                  This calendar is provided by Cal.com. Loading it will set third-party cookies.
+                </p>
+                <button
+                  type="button"
+                  onClick={handleLoadCalendar}
+                  className="mt-4 inline-block px-6 py-3 bg-primary-600 text-white rounded-sm hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+                >
+                  Load the booking calendar
+                </button>
+                <p className="mt-4 text-sm text-stone-500">
+                  Or{' '}
+                  <a
+                    href={directUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 underline"
+                  >
+                    open the booking page directly
+                  </a>{' '}
+                  in a new tab instead.
+                </p>
+              </div>
+            )}
 
             {/* Fallback link shown during loading */}
             {shouldLoad && isLoading && !hasError && showFallback && (
