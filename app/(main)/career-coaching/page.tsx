@@ -438,9 +438,6 @@ export default function CareerCoachingPage() {
               footnote="If we haven't yet worked together, I recommend having a free discovery call first. If we've worked together before, feel free to book the Strategic Session directly. I'll send you the preparation questionnaire shortly after."
             />
           </div>
-          <p className="mt-10 text-center text-pretty text-stone-500 text-sm">
-            Not sure which is right for you? A free discovery call can help you decide.
-          </p>
         </Container>
       </section>
 
