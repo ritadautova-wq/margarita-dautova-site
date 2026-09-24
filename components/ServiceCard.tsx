@@ -107,33 +107,35 @@ export default function ServiceCard({
         </div>
       )}
 
-      {idealFor && (
-        <div className="mt-6 pt-6 border-t border-neutral-200">
-          <p className="text-sm text-neutral-500">Ideal for</p>
-          <p className="mt-1 text-neutral-800">{idealFor}</p>
-        </div>
-      )}
+      <div className="flex flex-col flex-1 justify-end">
+        {idealFor && (
+          <div className="mt-6 pt-6 border-t border-neutral-200">
+            <p className="text-sm text-neutral-500">Ideal for</p>
+            <p className="mt-1 text-neutral-800">{idealFor}</p>
+          </div>
+        )}
 
-      {price && (
-        <div className="mt-6 py-4 border-y border-neutral-200">
-          <p className="text-sm text-neutral-500">Investment</p>
-          <p className="mt-1 font-serif text-2xl text-neutral-900">
-            {price}
-            {priceNote && <span className="ml-2 text-sm font-sans text-neutral-500">({priceNote})</span>}
-          </p>
-          {vatNote && <p className="mt-2 text-xs text-neutral-400">{vatNote}</p>}
-        </div>
-      )}
+        {price && (
+          <div className="mt-6 py-4 border-y border-neutral-200">
+            <p className="text-sm text-neutral-500">Investment</p>
+            <p className="mt-1 font-serif text-2xl text-neutral-900">
+              {price}
+              {priceNote && <span className="ml-2 text-sm font-sans text-neutral-500">({priceNote})</span>}
+            </p>
+            {vatNote && <p className="mt-2 text-xs text-neutral-400">{vatNote}</p>}
+          </div>
+        )}
 
-      <div className="mt-8 flex flex-col flex-1 justify-end">
-        <Button
-          href={ctaHref}
-          variant={featured ? 'primary' : 'secondary'}
-          className="w-full"
-        >
-          {ctaText}
-        </Button>
-        {footnote && <p className="mt-4 text-sm text-neutral-500 leading-relaxed">{footnote}</p>}
+        <div className="mt-8">
+          <Button
+            href={ctaHref}
+            variant={featured ? 'primary' : 'secondary'}
+            className="w-full"
+          >
+            {ctaText}
+          </Button>
+          {footnote && <p className="mt-4 text-sm text-neutral-500 leading-relaxed">{footnote}</p>}
+        </div>
       </div>
     </div>
   )
