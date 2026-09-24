@@ -420,7 +420,6 @@ export default function CareerCoachingPage() {
                   'Prepare for an upcoming interview or important professional conversation',
                   'Get focused feedback on your CV, LinkedIn profile or professional story',
                   'Understand how to position your experience for a new role, industry or job market',
-                  "Work through a difficult situation at work that you can't quite see clearly on your own",
                 ],
               }}
               featuresHeading="What's included"
