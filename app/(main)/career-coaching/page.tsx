@@ -473,14 +473,7 @@ export default function CareerCoachingPage() {
                   your situation and what you want to make possible from here.
                 </p>
               </div>
-              <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-x-8 gap-y-2">
-                {stats.map((stat) => (
-                  <span key={stat} className="text-sm text-stone-500">
-                    {stat}
-                  </span>
-                ))}
-              </div>
-              <div className="mt-8">
+              <div className="mt-6">
                 <Link
                   href="/about"
                   className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center gap-2"
@@ -490,6 +483,13 @@ export default function CareerCoachingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
+              </div>
+              <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-x-8 gap-y-2">
+                {stats.map((stat) => (
+                  <span key={stat} className="text-sm text-stone-500">
+                    {stat}
+                  </span>
+                ))}
               </div>
             </div>
           </div>
