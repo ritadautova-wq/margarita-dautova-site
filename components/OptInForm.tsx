@@ -17,9 +17,20 @@ export default function OptInForm({
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
+  const [honeypot, setHoneypot] = useState('')
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+
+    // Honeypot: bots fill every field, real visitors never see this one.
+    // Pretend to succeed without actually sending anything.
+    if (honeypot) {
+      setStatus('success')
+      setMessage('Check your inbox! I just sent you the Career Pivot Playbook.')
+      setEmail('')
+      return
+    }
+
     setStatus('loading')
 
     try {
@@ -27,7 +38,7 @@ export default function OptInForm({
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, source }),
+        body: JSON.stringify({ email, source, honeypot }),
       })
 
       if (!response.ok) {
@@ -38,7 +49,7 @@ export default function OptInForm({
       fetch('https://formspree.io/f/mnjgvkko', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ email, source }),
+        body: JSON.stringify({ email, source, _gotcha: '' }),
       }).catch(() => {
         // Silently ignore — subscriber saving is secondary to playbook delivery
       })
@@ -86,6 +97,18 @@ export default function OptInForm({
         variant === 'inline' ? 'flex flex-col sm:flex-row gap-3' : 'space-y-4'
       } ${className}`}
     >
+      {/* Honeypot — hidden from real visitors, bots tend to fill every field */}
+      <input
+        type="text"
+        name="company_website"
+        value={honeypot}
+        onChange={(e) => setHoneypot(e.target.value)}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] w-px h-px overflow-hidden"
+      />
+
       <div className={variant === 'inline' ? 'flex-1' : ''}>
         <label htmlFor="email" className="sr-only">
           Email address

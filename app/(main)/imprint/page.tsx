@@ -29,11 +29,11 @@ export default function ImprintPage() {
             {/* Provider Info */}
             <div className="bg-stone-50 border border-stone-200 rounded-sm p-6 md:p-8">
               <h2 className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-4">
-                Angaben gemäß § 5 TMG
+                Angaben gemäß § 5 DDG
               </h2>
               <div className="text-stone-700 leading-relaxed">
                 <p className="font-medium text-stone-900">Margarita Dautova</p>
-                <p>Freiberufliche Coach</p>
+                <p>Freiberufliche Coachin</p>
                 <p className="mt-3">Taubensteinweg 2</p>
                 <p>85551 Kirchheim bei München</p>
                 <p>Deutschland</p>
@@ -80,7 +80,7 @@ export default function ImprintPage() {
           {/* Responsible for Content */}
           <div className="bg-white border border-stone-200 rounded-sm p-6 md:p-8 mb-12">
             <h2 className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-4">
-              Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+              Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
             </h2>
             <div className="text-stone-700 leading-relaxed">
               <p className="font-medium text-stone-900">Margarita Dautova</p>
@@ -91,23 +91,12 @@ export default function ImprintPage() {
 
           {/* Legal Sections */}
           <div className="space-y-8">
-            {/* EU Dispute Resolution */}
+            {/* Consumer Dispute Resolution */}
             <div className="border-b border-stone-200 pb-8">
-              <h2 className="font-medium text-stone-900 mb-3">EU-Streitschlichtung</h2>
+              <h2 className="font-medium text-stone-900 mb-3">Verbraucherstreitbeilegung</h2>
               <div className="text-stone-600 leading-relaxed space-y-3">
                 <p>
-                  Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:{' '}
-                  <a 
-                    href="https://ec.europa.eu/consumers/odr/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 transition-colors break-all"
-                  >
-                    https://ec.europa.eu/consumers/odr/
-                  </a>
-                </p>
-                <p>
-                  Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer 
+                  Ich bin nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer
                   Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
               </div>
@@ -117,10 +106,10 @@ export default function ImprintPage() {
             <div className="border-b border-stone-200 pb-8">
               <h2 className="font-medium text-stone-900 mb-3">Haftung für Inhalte</h2>
               <p className="text-stone-600 leading-relaxed">
-                Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten 
-                nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG bin ich als 
-                Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde 
-                Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige 
+                Als Diensteanbieter bin ich gemäß § 7 Abs.1 DDG für eigene Inhalte auf diesen Seiten
+                nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als
+                Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde
+                Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige
                 Tätigkeit hinweisen.
               </p>
             </div>

@@ -42,8 +42,9 @@ export default function CookieConsent() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-5">
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
               <p className="text-sm text-stone-300 leading-relaxed max-w-2xl">
-                This website uses privacy-friendly analytics (Vercel Analytics) to understand
-                how visitors use the site. No personal data or cookies are used for tracking.{' '}
+                This website uses privacy-friendly analytics (Vercel Analytics) only if you accept
+                below. Some pages also embed third-party content (e.g. the Cal.com booking calendar
+                and Medium article images) that can set their own cookies.{' '}
                 <Link
                   href="/privacy"
                   className="underline text-white hover:text-stone-300 transition-colors"
