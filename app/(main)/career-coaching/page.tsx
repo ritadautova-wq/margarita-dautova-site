@@ -113,11 +113,10 @@ const processSteps = [
 ]
 
 const internationalQuestions = [
-  'Who am I in this country, in this language, in this career?',
-  "How do I talk about my experience when the context doesn't translate directly?",
-  'Why does something that used to feel easy suddenly take more effort?',
+  'Who am I professionally in this new environment?',
+  'How do I explain my experience in a different market?',
+  'What do I actually want now?',
   "How do I build confidence in a system I didn't grow up in?",
-  "How do I stay grounded while so much around me is still new?",
 ]
 
 const stats = [
@@ -394,8 +393,8 @@ export default function CareerCoachingPage() {
             When your career is changing — and you&apos;re building a life in another country.
           </h2>
           <p className="mt-6 text-stone-600 text-lg leading-relaxed text-center text-pretty max-w-2xl mx-auto">
-            Being an international professional adds its own layer to any transition. It&apos;s not just what&apos;s
-            next — it&apos;s also who you are here, in a place that isn&apos;t where you started.
+            Moving countries can change more than your location. It can affect your professional identity,
+            confidence, network, language and sense of belonging. You may find yourself asking:
           </p>
           <ul className="mt-10 space-y-4 max-w-xl mx-auto">
             {internationalQuestions.map((question) => (
@@ -405,6 +404,9 @@ export default function CareerCoachingPage() {
               </li>
             ))}
           </ul>
+          <p className="mt-10 text-stone-600 text-lg leading-relaxed text-center text-pretty max-w-2xl mx-auto">
+            I work with international professionals navigating these questions — in Germany and beyond.
+          </p>
         </Container>
       </section>
 
