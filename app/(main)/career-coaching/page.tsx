@@ -371,7 +371,50 @@ export default function CareerCoachingPage() {
         </Container>
       </section>
 
-      {/* 7. International Professionals */}
+      {/* 7. Ways to Work Together */}
+      <section className="section-padding bg-white">
+        <Container size="default">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              Choose the kind of support that fits where you are.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <ServiceCard
+              title="90-Day Clarity Through Transition"
+              description="Six 60-minute sessions over about three months — space to make sense of a transition and move forward in a grounded way."
+              features={[
+                '6 coaching sessions (60 min)',
+                'Roughly 3 months',
+                'Session summary & notes',
+                'Email support between sessions',
+              ]}
+              price="€700"
+              ctaText="Explore the 90-Day journey"
+              ctaHref="/coaching#ongoing"
+              featured
+            />
+            <ServiceCard
+              title="Strategic Session"
+              description="A single, focused 90-minute conversation to untangle one specific question, decision, or situation."
+              features={[
+                '90-minute focused session',
+                'Pre-session questionnaire',
+                'Session summary & notes',
+                'Optional follow-up session',
+              ]}
+              price="€150"
+              ctaText="Book a Strategic Session"
+              ctaHref="/coaching#single"
+            />
+          </div>
+          <p className="mt-10 text-center text-pretty text-stone-500 text-sm">
+            Not sure which is right for you? A free discovery call can help you decide.
+          </p>
+        </Container>
+      </section>
+
+      {/* 8. International Professionals */}
       <section className="section-padding bg-stone-50">
         <Container size="narrow">
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
@@ -395,7 +438,7 @@ export default function CareerCoachingPage() {
         </Container>
       </section>
 
-      {/* 8. Why Work With Me */}
+      {/* 9. Why Work With Me */}
       <section className="section-padding bg-white">
         <Container size="default">
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
@@ -446,7 +489,7 @@ export default function CareerCoachingPage() {
         </Container>
       </section>
 
-      {/* 9. Testimonials */}
+      {/* 10. Testimonials */}
       <section className="section-padding bg-stone-50">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -469,49 +512,6 @@ export default function CareerCoachingPage() {
               </div>
             ))}
           </div>
-        </Container>
-      </section>
-
-      {/* 10. Ways to Work Together */}
-      <section className="section-padding bg-white">
-        <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              Choose the kind of support that fits where you are.
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-            <ServiceCard
-              title="90-Day Clarity Through Transition"
-              description="Six 60-minute sessions over about three months — space to make sense of a transition and move forward in a grounded way."
-              features={[
-                '6 coaching sessions (60 min)',
-                'Roughly 3 months',
-                'Session summary & notes',
-                'Email support between sessions',
-              ]}
-              price="€700"
-              ctaText="Explore the 90-Day journey"
-              ctaHref="/coaching#ongoing"
-              featured
-            />
-            <ServiceCard
-              title="Strategic Session"
-              description="A single, focused 90-minute conversation to untangle one specific question, decision, or situation."
-              features={[
-                '90-minute focused session',
-                'Pre-session questionnaire',
-                'Session summary & notes',
-                'Optional follow-up session',
-              ]}
-              price="€150"
-              ctaText="Book a Strategic Session"
-              ctaHref="/coaching#single"
-            />
-          </div>
-          <p className="mt-10 text-center text-pretty text-stone-500 text-sm">
-            Not sure which is right for you? A free discovery call can help you decide.
-          </p>
         </Container>
       </section>
 
