@@ -429,15 +429,18 @@ export default function CareerCoachingPage() {
             <div className="lg:col-span-3">
               <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
                 <p>
-                  Before becoming a coach, I spent 10+ years in Talent &amp; Leadership Development inside
-                  organisations like Mytheresa and Amadeus — designing programs, sitting in on restructurings,
-                  and supporting people through role changes, relocations and career transitions from the
-                  inside.
+                  Before becoming a coach, I spent 10+ years in Talent &amp; Leadership Development at
+                  international organisations (luxury fashion tech and global travel tech) — working with
+                  people and teams through development, role changes, career decisions and organisational
+                  change.
                 </p>
                 <p>
-                  That&apos;s given me something I bring into every session: I understand not just how change
-                  feels, but how organisations actually work — what&apos;s negotiable, what isn&apos;t, and what it
-                  really takes to move forward in a real workplace, not just in theory.
+                  That experience gave me a practical understanding of both sides of a transition: what
+                  change feels like for the person experiencing it, and how organisations actually work.
+                </p>
+                <p>
+                  I bring that perspective into coaching, while keeping the focus where it belongs: on you,
+                  your situation and what you want to make possible from here.
                 </p>
                 <p>
                   I&apos;m ICF PCC-certified, and I work in English with professionals across many industries and
