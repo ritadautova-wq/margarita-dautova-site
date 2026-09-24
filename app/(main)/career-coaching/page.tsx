@@ -434,7 +434,16 @@ export default function CareerCoachingPage() {
               vatNote="No VAT charged — § 19 German VAT Act"
               ctaText="Book a Strategic Session"
               ctaHref="https://cal.com/margarita-dautova-odapxj/strategic-session"
-              footnote="If we haven't yet worked together, I recommend having a free discovery call first. If we've worked together before, feel free to book the Strategic Session directly. I'll send you the preparation questionnaire shortly after."
+              footnote={
+                <>
+                  If we haven&apos;t yet worked together, I recommend having a free{' '}
+                  <Link href="/book" className="text-primary-600 underline hover:text-primary-700">
+                    discovery call
+                  </Link>{' '}
+                  first. If we&apos;ve worked together before, feel free to book the Strategic Session
+                  directly. I&apos;ll send you the preparation questionnaire shortly after.
+                </>
+              }
             />
           </div>
         </Container>

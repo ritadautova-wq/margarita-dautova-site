@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import Button from './Button'
 
 interface ServiceCardProps {
@@ -14,7 +15,7 @@ interface ServiceCardProps {
   vatNote?: string
   ctaText: string
   ctaHref: string
-  footnote?: string
+  footnote?: ReactNode
   featured?: boolean
 }
 
