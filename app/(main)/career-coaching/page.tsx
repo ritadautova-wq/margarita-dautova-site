@@ -218,7 +218,7 @@ export default function CareerCoachingPage() {
                 </p>
               </div>
               <div className="mt-10">
-                <Button href="/book" variant="primary" size="lg">
+                <Button href="https://cal.com/margarita-dautova-odapxj/30min" variant="primary" size="lg">
                   Book a free discovery call
                 </Button>
               </div>
@@ -436,7 +436,10 @@ export default function CareerCoachingPage() {
               footnote={
                 <>
                   If we haven&apos;t yet worked together, I recommend having a free{' '}
-                  <Link href="/book" className="text-primary-600 underline hover:text-primary-700">
+                  <Link
+                    href="https://cal.com/margarita-dautova-odapxj/30min"
+                    className="text-primary-600 underline hover:text-primary-700"
+                  >
                     discovery call
                   </Link>{' '}
                   first. If we&apos;ve worked together before, feel free to book the Strategic Session
@@ -572,7 +575,7 @@ export default function CareerCoachingPage() {
           </div>
           <div className="mt-10">
             <Link
-              href="/book"
+              href="https://cal.com/margarita-dautova-odapxj/30min"
               className="inline-flex items-center justify-center px-8 py-4 font-medium
                 bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300"
             >
