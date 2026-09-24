@@ -11,6 +11,7 @@ const navigation = [
   { name: 'Team Workshops', href: '/team-workshops' },
   { name: 'About', href: '/about' },
   { name: 'Articles', href: '/resources' },
+  { name: 'Contact', href: '/contact' },
 ]
 
 export default function Header() {
