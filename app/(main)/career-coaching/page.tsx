@@ -173,7 +173,7 @@ const faqs = [
   {
     question: 'Do you work with people outside Germany?',
     answer:
-      "Yes. I work with clients worldwide, online, in English and Russian. Many of my clients are international professionals living outside their home country.",
+      "Yes. I work with clients worldwide, online, in English and Russian. I've coached people across Europe (France, Sweden, the UK, Italy, Spain, Belgium, Poland) as well as Kazakhstan, the UAE, India, South Korea, Malaysia, Singapore, Russia, Panama and the US. Many of my clients are international professionals living outside their home country.",
   },
   {
     question: 'What happens during the discovery call?',
