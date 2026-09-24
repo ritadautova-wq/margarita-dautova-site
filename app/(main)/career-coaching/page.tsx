@@ -176,6 +176,11 @@ const faqs = [
       "Yes. I work with clients worldwide, online, in English and Russian. I've coached people across Europe (France, Sweden, the UK, Italy, Spain, Belgium, Poland) as well as Kazakhstan, the UAE, India, South Korea, Malaysia, Singapore, Russia, Panama and the US. Many of my clients are international professionals living outside their home country.",
   },
   {
+    question: 'Do you work with people from my profession?',
+    answer:
+      "Coaching is less about knowing the technical details of your job and more about understanding you, your situation, and the questions you're navigating. The coaching process can work across fields because the underlying questions — about direction, strengths, confidence, change, leadership or what comes next — are often highly transferable. That said, if industry experience matters to you, I've worked with professionals across a wide range of sectors and professions, including SaaS, IT, sales, consultancy, HR, oil & gas, marketing, e-commerce, EdTech, education, hospitality, travel, pharma, and health & wellbeing. I don't need to be an expert in your specific field to coach you effectively. But I bring familiarity with different professional environments, which helps me understand the context you're working within.",
+  },
+  {
     question: 'What happens during the discovery call?',
     answer:
       "It's a free, 30-minute conversation to talk about what's bringing you to coaching, answer your questions, and see whether working together feels like a good fit — no pressure, no obligation.",
