@@ -430,15 +430,6 @@ export default function CareerCoachingPage() {
                 'Session summary & notes',
                 'Optional follow-up session',
               ]}
-              walkAway={{
-                heading: "What you'll walk away with",
-                items: [
-                  'Making sense of a specific situation or decision',
-                  'Reducing mental noise',
-                  'Identifying grounded next steps',
-                  'Finding language that fits your experience',
-                ],
-              }}
               idealFor="Career decisions, preparing for conversations, getting unstuck"
               price="€150"
               vatNote="No VAT charged — § 19 German VAT Act"
