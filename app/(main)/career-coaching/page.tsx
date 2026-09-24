@@ -443,7 +443,7 @@ export default function CareerCoachingPage() {
               price="€150"
               vatNote="No VAT charged — § 19 German VAT Act"
               ctaText="Book a Strategic Session"
-              ctaHref="/coaching#single"
+              ctaHref="https://cal.com/margarita-dautova-odapxj/strategic-session"
             />
           </div>
           <p className="mt-10 text-center text-pretty text-stone-500 text-sm">
