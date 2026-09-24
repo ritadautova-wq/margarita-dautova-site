@@ -427,7 +427,6 @@ export default function CareerCoachingPage() {
                 'Pre-session questionnaire',
                 '90-minute focused session',
                 'Session summary & notes',
-                'Optional follow-up session',
               ]}
               idealFor="Career decisions, preparing for conversations, getting unstuck"
               price="€150"
