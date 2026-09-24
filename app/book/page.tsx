@@ -90,7 +90,7 @@ export default function BookPage() {
             <p className="text-stone-600">{calendarSection.subheadline}</p>
           </div>
           
-          <LazyCalendarEmbed calLink="margarita-dautova" eventType="discovery-call" />
+          <LazyCalendarEmbed calLink="margarita-dautova-odapxj" eventType="30min" />
           
           <div className="mt-12 text-center">
             <p className="text-sm text-stone-500 italic">

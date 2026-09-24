@@ -25,7 +25,7 @@ export default function LazyCalendarEmbed({
   const containerRef = useRef<HTMLDivElement>(null)
   const fallbackTimerRef = useRef<NodeJS.Timeout | null>(null)
 
-  const baseUrl = `https://app.cal.eu/${calLink}`
+  const baseUrl = `https://cal.com/${calLink}`
   const embedUrl = eventType
     ? `${baseUrl}/${eventType}?embed=true`
     : `${baseUrl}?embed=true`
