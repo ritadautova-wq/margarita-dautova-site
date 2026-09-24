@@ -472,10 +472,6 @@ export default function CareerCoachingPage() {
                   I bring that perspective into coaching, while keeping the focus where it belongs: on you,
                   your situation and what you want to make possible from here.
                 </p>
-                <p>
-                  I&apos;m ICF PCC-certified, and I work in English with professionals across many industries and
-                  countries.
-                </p>
               </div>
               <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-x-8 gap-y-2">
                 {stats.map((stat) => (
@@ -483,6 +479,17 @@ export default function CareerCoachingPage() {
                     {stat}
                   </span>
                 ))}
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="/about"
+                  className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center gap-2"
+                >
+                  Read my full story
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>
