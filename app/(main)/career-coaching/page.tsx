@@ -112,13 +112,6 @@ const processSteps = [
   },
 ]
 
-const internationalQuestions = [
-  'Who am I professionally in this new environment?',
-  'How do I explain my experience in a different market?',
-  'What do I actually want now?',
-  "How do I build confidence in a system I didn't grow up in?",
-]
-
 const stats = [
   '110+ professionals coached',
   '19 nationalities',
@@ -431,31 +424,7 @@ export default function CareerCoachingPage() {
         </Container>
       </section>
 
-      {/* 8. International Professionals */}
-      <section className="section-padding bg-stone-50">
-        <Container size="narrow">
-          <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
-            When your career is changing — and you&apos;re building a life in another country.
-          </h2>
-          <p className="mt-6 text-stone-600 text-lg leading-relaxed text-center text-pretty max-w-2xl mx-auto">
-            Moving countries can change more than your location. It can affect your professional identity,
-            confidence, network, language and sense of belonging. You may find yourself asking:
-          </p>
-          <ul className="mt-10 space-y-4 max-w-xl mx-auto">
-            {internationalQuestions.map((question) => (
-              <li key={question} className="flex items-start gap-3 text-stone-700">
-                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0" />
-                <span className="leading-relaxed">{question}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-10 text-stone-600 text-lg leading-relaxed text-center text-pretty max-w-2xl mx-auto">
-            I work with international professionals navigating these questions — in Germany and beyond.
-          </p>
-        </Container>
-      </section>
-
-      {/* 9. Why Work With Me */}
+      {/* 8. Why Work With Me */}
       <section className="section-padding bg-white">
         <Container size="default">
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
@@ -513,7 +482,7 @@ export default function CareerCoachingPage() {
         </Container>
       </section>
 
-      {/* 10. Testimonials */}
+      {/* 9. Testimonials */}
       <section className="section-padding bg-stone-50">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -539,7 +508,7 @@ export default function CareerCoachingPage() {
         </Container>
       </section>
 
-      {/* 11. FAQ */}
+      {/* 10. FAQ */}
       <section className="section-padding bg-stone-50">
         <Container size="narrow">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -567,7 +536,7 @@ export default function CareerCoachingPage() {
         </Container>
       </section>
 
-      {/* 12. Final CTA */}
+      {/* 11. Final CTA */}
       <section className="section-padding bg-primary-700 text-white">
         <Container size="narrow" className="text-center">
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
