@@ -103,7 +103,7 @@ export async function POST(request: NextRequest) {
     </p>
     
     <p style="font-size: 16px; color: #555;">
-      Thank you for downloading <strong>The Career Pivot Playbook</strong>. It's an 8-page guide to help you navigate your next professional move with more clarity and less second-guessing.
+      Thank you for downloading <strong>The Career Pivot Playbook</strong>. It's a practical guide with 5 frameworks to help you navigate your next professional move with more clarity and less second-guessing.
     </p>
 
     <div style="background: #f6f7f6; border-radius: 8px; padding: 25px; margin: 25px 0; text-align: center;">
@@ -124,10 +124,11 @@ export async function POST(request: NextRequest) {
     </h3>
 
     <ul style="font-size: 16px; color: #555; padding-left: 20px;">
+      <li style="margin-bottom: 10px;">The "Stay or Go" Decision Matrix</li>
       <li style="margin-bottom: 10px;">The 5 signs you're ready for a change</li>
-      <li style="margin-bottom: 10px;">The 3 pivot paths: Shift, Switch, or Start Fresh</li>
-      <li style="margin-bottom: 10px;">The Hidden Transferable Skills Framework</li>
-      <li style="margin-bottom: 10px;">30-Day Clarity Kickstart Action Plan</li>
+      <li style="margin-bottom: 10px;">The Career Clarity Framework</li>
+      <li style="margin-bottom: 10px;">The Pivot Ladder &amp; the 70% Rule</li>
+      <li style="margin-bottom: 10px;">Your 7-Day Next Steps Action Plan</li>
     </ul>
 
     <div style="background: #f6f7f6; border-left: 4px solid #5f7260; padding: 20px; margin: 30px 0;">
