@@ -322,7 +322,7 @@ export default function CareerCoachingPage() {
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-6">
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              From figuring out what you want to communicating it clearly.
+              From figuring out what you want — to communicating it clearly.
             </h2>
             <p className="mt-4 text-stone-600 text-lg text-pretty">
               As clarity develops, it often needs to be put into words — a CV, a LinkedIn profile, an
@@ -380,7 +380,7 @@ export default function CareerCoachingPage() {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <ServiceCard
               title="90-Day Clarity Through Transition"
-              subtitle="3 months"
+              subtitle="6 × 60-minute sessions · approximately 3 months"
               description="For people in a meaningful transition who want to think clearly, decide intentionally, and move forward in a grounded way."
               featuresHeading="What's included"
               features={[
@@ -401,8 +401,7 @@ export default function CareerCoachingPage() {
                 ],
               }}
               idealFor="Career or identity transitions, living abroad, feeling internally misaligned"
-              price="€700"
-              priceNote="€120 per session individually"
+              price="€720"
               vatNote="No VAT charged — § 19 German VAT Act"
               ctaText="Let's start with a conversation"
               ctaHref="https://cal.com/margarita-dautova-odapxj/30min"

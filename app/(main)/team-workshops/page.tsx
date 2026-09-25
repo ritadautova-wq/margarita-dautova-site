@@ -120,21 +120,6 @@ const flowSteps = [
   },
 ]
 
-const caseStudyComponents = [
-  {
-    title: 'Personality Map workshop',
-    description: 'Exploring strengths, preferences, motivations and professional identity.',
-  },
-  {
-    title: 'CV & LinkedIn workshop',
-    description: 'Translating experience and transferable skills into a clear professional story.',
-  },
-  {
-    title: 'Individual coaching',
-    description: 'Giving each participant dedicated space to explore their own situation and next steps.',
-  },
-]
-
 const stats = [
   '110+ professionals coached',
   '20+ countries',
@@ -328,6 +313,17 @@ export default function TeamWorkshopsPage() {
               </div>
             ))}
           </div>
+
+          <div className="mt-12 max-w-2xl mx-auto text-center">
+            <p className="text-stone-900 font-serif text-xl italic text-pretty">
+              Supporting people through change also supports the transition itself.
+            </p>
+            <p className="mt-4 text-stone-600 leading-relaxed">
+              When people have space to understand what is changing, recognize what they bring
+              and consider their next steps, they are better able to engage with what comes next
+              — for themselves and within the organization.
+            </p>
+          </div>
         </Container>
       </section>
 
@@ -460,11 +456,33 @@ export default function TeamWorkshopsPage() {
             </h2>
           </div>
           <div className="max-w-3xl mx-auto bg-white border border-stone-200 rounded-sm p-6 md:p-10">
-            <p className="text-stone-600 leading-relaxed">
-              A team going through restructuring needed support with both the human and practical
-              sides of career transition. Rather than creating a single workshop, we designed a
-              combination of shared reflection and individual support.
-            </p>
+            <div className="grid sm:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                  The Situation
+                </h3>
+                <p className="mt-2 text-stone-600 leading-relaxed">
+                  Team going through restructuring
+                </p>
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                  The Challenge
+                </h3>
+                <p className="mt-2 text-stone-600 leading-relaxed">
+                  People needed both career-transition support and practical tools.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-stone-200">
+              <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                The Approach
+              </h3>
+              <p className="mt-2 text-stone-600 leading-relaxed">
+                Personality Map workshop → CV &amp; LinkedIn workshop → Individual coaching
+              </p>
+            </div>
 
             <div className="mt-8">
               <figure>
@@ -483,26 +501,12 @@ export default function TeamWorkshopsPage() {
               </figure>
             </div>
 
-            <h3 className="mt-10 text-sm font-medium text-primary-600 uppercase tracking-wider">
-              The program included
-            </h3>
-            <div className="mt-5 grid sm:grid-cols-3 gap-6">
-              {caseStudyComponents.map((item) => (
-                <div key={item.title}>
-                  <h4 className="font-serif text-lg text-stone-900">{item.title}</h4>
-                  <p className="mt-2 text-stone-600 leading-relaxed text-sm">{item.description}</p>
-                </div>
-              ))}
-            </div>
-
             <div className="mt-8 pt-6 border-t border-stone-200">
               <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
-                The intention
+                The Result
               </h3>
-              <p className="mt-3 text-stone-600 leading-relaxed">
-                To create a process where people could first pause and understand themselves, then
-                work on practical ways to communicate what they bring and consider where they could
-                go next. A combination of shared reflection, practical tools and individual support.
+              <p className="mt-2 text-stone-600 leading-relaxed">
+                A combination of shared reflection, practical preparation and individual space.
               </p>
             </div>
           </div>
