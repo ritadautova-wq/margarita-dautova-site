@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/Container'
@@ -15,44 +16,30 @@ export const metadata: Metadata = {
 
 const CONTACT_HREF = '/contact?type=corporate'
 
-const businessOutcomes = [
-  'Smoother transitions and clearer roles',
-  'Stronger internal mobility and redeployment',
-  'Teams reconnecting after organizational change',
-  'Clearer communication of strengths and transferable skills',
-  'Maintained engagement during uncertainty',
-]
-
-const recognitionCards = [
+const progressionStages = [
   {
-    title: 'The structure has changed',
-    description:
-      'Roles, responsibilities or reporting lines have shifted — but people are still figuring out what the change means for them.',
+    number: '01',
+    name: 'Change',
+    question: 'What is happening?',
+    items: 'Restructuring · New roles · Internal mobility · Team changes',
   },
   {
-    title: 'People are moving into new roles',
-    description:
-      'A new role can require more than new responsibilities. People may need to reconnect with their strengths, confidence and professional identity.',
+    number: '02',
+    name: 'People',
+    question: 'What does the change mean for them?',
+    items: 'Reflection · Strengths · Professional identity · Conversation',
   },
   {
-    title: "You're supporting internal mobility",
-    description:
-      'People need to understand what they bring, where their experience could transfer, and how to communicate their value for what comes next.',
+    number: '03',
+    name: 'Clarity',
+    question: 'What becomes clearer?',
+    items: 'Roles · Transferable skills · Direction · Possibilities',
   },
   {
-    title: 'Your team has changed',
-    description:
-      'New people, new responsibilities or organizational change have altered how the team works together.',
-  },
-  {
-    title: 'People need space to process change',
-    description:
-      "The practical decisions may already be made. But the human side of the transition is still unfolding.",
-  },
-  {
-    title: 'You want to support people beyond the announcement',
-    description:
-      'You are looking for something more meaningful than a one-off communication or information session.',
+    number: '04',
+    name: 'Movement',
+    question: 'What can happen next?',
+    items: 'Practical next steps · Internal mobility · Reconnection · Engagement',
   },
 ]
 
@@ -282,48 +269,48 @@ export default function TeamWorkshopsPage() {
       {/* 2. Recognition */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               Where this can help.
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recognitionCards.map((card) => (
-              <div
-                key={card.title}
-                className="p-6 md:p-7 bg-stone-50 border border-stone-200 rounded-sm"
-              >
-                <h3 className="font-serif text-lg text-stone-900">{card.title}</h3>
-                <p className="mt-3 text-stone-600 leading-relaxed text-sm">{card.description}</p>
-              </div>
+
+          <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-0">
+            {progressionStages.map((stage, index) => (
+              <Fragment key={stage.number}>
+                <div className="lg:flex-1 text-center px-2">
+                  <p className="text-xs font-medium tracking-[0.2em] text-stone-400">
+                    {stage.number}
+                  </p>
+                  <h3 className="mt-4 font-serif text-3xl md:text-4xl text-stone-900">
+                    {stage.name}
+                  </h3>
+                  <p className="mt-3 text-stone-500 italic text-sm md:text-base">
+                    {stage.question}
+                  </p>
+                  <p className="mt-4 text-stone-600 text-sm leading-relaxed max-w-[220px] mx-auto text-pretty">
+                    {stage.items}
+                  </p>
+                </div>
+                {index < progressionStages.length - 1 && (
+                  <div className="flex items-center justify-center py-2 lg:py-0 lg:px-4">
+                    <div className="hidden lg:flex items-center w-12 xl:w-16">
+                      <span className="h-px flex-1 bg-stone-300" />
+                      <span className="ml-1 text-stone-300">&rarr;</span>
+                    </div>
+                    <div className="lg:hidden flex flex-col items-center h-10">
+                      <span className="w-px flex-1 bg-stone-300" />
+                      <span className="text-stone-300 mt-1">&darr;</span>
+                    </div>
+                  </div>
+                )}
+              </Fragment>
             ))}
           </div>
 
-          <p className="mt-14 text-center text-stone-700 max-w-2xl mx-auto">
-            Across these situations, the work is designed to support outcomes that matter for
-            the organization too:
+          <p className="mt-16 md:mt-20 text-center text-stone-800 font-serif text-xl italic max-w-2xl mx-auto text-pretty">
+            The work connects the organizational reality with the human experience of change.
           </p>
-          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {businessOutcomes.map((item) => (
-              <div
-                key={item}
-                className="p-6 md:p-7 bg-stone-50 border border-stone-200 rounded-sm"
-              >
-                <p className="font-serif text-lg text-stone-900">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 max-w-2xl mx-auto text-center">
-            <p className="text-stone-900 font-serif text-xl italic text-pretty">
-              Supporting people through change also supports the transition itself.
-            </p>
-            <p className="mt-4 text-stone-600 leading-relaxed">
-              When people have space to understand what is changing, recognize what they bring
-              and consider their next steps, they are better able to engage with what comes next
-              — for themselves and within the organization.
-            </p>
-          </div>
         </Container>
       </section>
 
