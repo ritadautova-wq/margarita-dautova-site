@@ -593,7 +593,7 @@ export default function TeamWorkshopsPage() {
             <div className="lg:col-span-3">
               <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
                 <p>
-                  I spent more than 10 years in Talent &amp; Leadership Development at international
+                  I spent 10 years in Talent &amp; Leadership Development at international
                   organizations including Mytheresa and Amadeus, working with people and teams
                   through development, career decisions, role changes and organizational change.
                 </p>
