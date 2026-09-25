@@ -240,53 +240,49 @@ export default function TeamWorkshopsPage() {
       {/* 1. Hero */}
       <section className="pt-32 pb-16 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
         <Container size="default">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
-            <div className="lg:col-span-3 text-center lg:text-left">
-              <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
-                Team Workshops &amp; Transition Programs
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+              Team Workshops &amp; Transition Programs
+            </p>
+            <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
+              When organizations change, people experience it personally.
+            </h1>
+            <div className="mt-6 space-y-4 text-body-lg text-stone-600 text-pretty">
+              <p>
+                Restructuring. New roles. Shifting responsibilities. Internal mobility. A team
+                coming together after significant change.
               </p>
-              <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
-                When organizations change, people experience it personally.
-              </h1>
-              <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
-                <p>
-                  Restructuring. New roles. Shifting responsibilities. Internal mobility. A team
-                  coming together after significant change.
-                </p>
-                <p>
-                  From an organizational perspective, these may be business decisions. For the
-                  people experiencing them, they can mean uncertainty, loss, opportunity, questions
-                  about identity, and a need to rethink what comes next.
-                </p>
-                <p>
-                  I design tailored workshops, facilitation sessions and coaching programs that
-                  help people make sense of change, reconnect with their strengths, and find
-                  practical ways forward.
-                </p>
-              </div>
-              <div className="mt-10">
-                <Button href={CONTACT_HREF} variant="primary" size="lg">
-                  Let&apos;s talk about your situation
-                </Button>
-              </div>
-              <p className="mt-5 text-sm text-stone-500">
-                Workshops · Team facilitation · Individual coaching · Customized programs
+              <p>
+                From an organizational perspective, these may be business decisions. For the
+                people experiencing them, they can mean uncertainty, loss, opportunity, questions
+                about identity, and a need to rethink what comes next.
+              </p>
+              <p>
+                I design tailored workshops, facilitation sessions and coaching programs that
+                help people make sense of change, reconnect with their strengths, and find
+                practical ways forward.
               </p>
             </div>
+            <div className="mt-10">
+              <Button href={CONTACT_HREF} variant="primary" size="lg">
+                Let&apos;s talk about your situation
+              </Button>
+            </div>
+            <p className="mt-5 text-sm text-stone-500">
+              Workshops · Team facilitation · Individual coaching · Customized programs
+            </p>
+          </div>
 
-            <div className="relative lg:col-span-2 lg:order-last lg:flex lg:items-center lg:justify-end">
-              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/workshop-facilitation-portrait.jpg"
-                  alt="Margarita Dautova facilitating a team workshop"
-                  fill
-                  className="object-cover"
-                  priority
-                  sizes="(min-width: 1024px) 33vw, 90vw"
-                />
-              </div>
-              <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
-            </div>
+          <div className="relative mt-16 aspect-[4/5] w-full max-w-sm mx-auto rounded-lg overflow-hidden shadow-2xl">
+            <Image
+              src="/images/workshop-facilitation-portrait.jpg"
+              alt="Margarita Dautova facilitating a team workshop"
+              fill
+              className="object-cover"
+              priority
+              sizes="(min-width: 1024px) 24rem, 90vw"
+            />
+            <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
           </div>
         </Container>
       </section>
