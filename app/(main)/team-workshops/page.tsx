@@ -412,7 +412,7 @@ export default function TeamWorkshopsPage() {
               combination of shared reflection and individual support.
             </p>
 
-            <div className="mt-8 max-w-md">
+            <div className="mt-8">
               <figure>
                 <div className="relative aspect-video rounded-sm overflow-hidden bg-stone-100">
                   <Image
@@ -420,7 +420,7 @@ export default function TeamWorkshopsPage() {
                     alt="A live online workshop session on career positioning and visibility, facilitated by Margarita Dautova"
                     fill
                     className="object-cover"
-                    sizes="(min-width: 640px) 45vw, 90vw"
+                    sizes="(min-width: 768px) 700px, 90vw"
                   />
                 </div>
                 <figcaption className="mt-2 text-xs text-stone-500">
