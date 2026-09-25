@@ -239,14 +239,14 @@ export default function TeamWorkshopsPage() {
             </div>
 
             <div className="relative lg:col-span-2 lg:order-last lg:flex lg:items-center lg:justify-end">
-              <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-2xl">
+              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/workshop-facilitation.jpg"
+                  src="/images/workshop-facilitation-portrait.jpg"
                   alt="Margarita Dautova facilitating a team workshop"
                   fill
                   className="object-cover"
                   priority
-                  sizes="(min-width: 1024px) 40vw, 90vw"
+                  sizes="(min-width: 1024px) 33vw, 90vw"
                 />
               </div>
               <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
