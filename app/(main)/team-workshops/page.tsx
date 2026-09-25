@@ -514,20 +514,37 @@ export default function TeamWorkshopsPage() {
               What teams say afterward.
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-6">
-            {workshopTestimonials.map((testimonial) => (
-              <div
-                key={testimonial.attribution}
-                className="bg-white p-6 md:p-8 border border-stone-200 rounded-sm flex flex-col"
-              >
-                <p className="text-stone-600 leading-relaxed italic flex-grow">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <p className="mt-6 pt-4 border-t border-stone-100 text-sm font-medium text-stone-500">
-                  — {testimonial.attribution}
-                </p>
-              </div>
-            ))}
+          <div className="grid md:grid-cols-2 gap-6 items-start">
+            <div className="flex flex-col gap-6">
+              {workshopTestimonials.slice(0, 3).map((testimonial) => (
+                <div
+                  key={testimonial.attribution}
+                  className="bg-white p-6 md:p-8 border border-stone-200 rounded-sm"
+                >
+                  <p className="text-stone-600 leading-relaxed italic">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <p className="mt-6 pt-4 border-t border-stone-100 text-sm font-medium text-stone-500">
+                    — {testimonial.attribution}
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col gap-6">
+              {workshopTestimonials.slice(3).map((testimonial) => (
+                <div
+                  key={testimonial.attribution}
+                  className="bg-white p-6 md:p-8 border border-stone-200 rounded-sm"
+                >
+                  <p className="text-stone-600 leading-relaxed italic">
+                    &ldquo;{testimonial.quote}&rdquo;
+                  </p>
+                  <p className="mt-6 pt-4 border-t border-stone-100 text-sm font-medium text-stone-500">
+                    — {testimonial.attribution}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
