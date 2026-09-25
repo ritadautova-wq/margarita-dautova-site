@@ -56,7 +56,7 @@ export function generateProfessionalServiceSchema() {
       addressLocality: 'Munich',
       addressCountry: 'DE',
     },
-    priceRange: '€150–€700',
+    priceRange: '€150–€720',
     areaServed: {
       '@type': 'Place',
       name: 'Worldwide',

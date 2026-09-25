@@ -402,6 +402,7 @@ export default function CareerCoachingPage() {
               }}
               idealFor="Career or identity transitions, living abroad, feeling internally misaligned"
               price="€720"
+              priceNote="€120 per session individually"
               vatNote="No VAT charged — § 19 German VAT Act"
               ctaText="Let's start with a conversation"
               ctaHref="https://cal.com/margarita-dautova-odapxj/30min"
