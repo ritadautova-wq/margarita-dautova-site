@@ -412,21 +412,7 @@ export default function TeamWorkshopsPage() {
               combination of shared reflection and individual support.
             </p>
 
-            <div className="mt-8 grid sm:grid-cols-2 gap-6 items-start">
-              <figure>
-                <div className="relative aspect-[3/4] rounded-sm overflow-hidden bg-stone-100">
-                  <Image
-                    src="/images/workshop-graphic-recording.jpg"
-                    alt="Hand-drawn graphic recording from a team workshop session"
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 640px) 45vw, 90vw"
-                  />
-                </div>
-                <figcaption className="mt-2 text-xs text-stone-500">
-                  Graphic recording from a team workshop
-                </figcaption>
-              </figure>
+            <div className="mt-8 max-w-md">
               <figure>
                 <div className="relative aspect-video rounded-sm overflow-hidden bg-stone-100">
                   <Image
