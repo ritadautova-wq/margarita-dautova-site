@@ -240,7 +240,7 @@ export default function TeamWorkshopsPage() {
       {/* 1. Hero */}
       <section className="pt-32 pb-16 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
         <Container size="default">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-3 text-center lg:text-left">
               <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
                 Team Workshops &amp; Transition Programs
