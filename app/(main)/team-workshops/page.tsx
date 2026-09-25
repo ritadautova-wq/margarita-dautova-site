@@ -314,19 +314,19 @@ export default function TeamWorkshopsPage() {
             ))}
           </div>
 
-          <div className="mt-10 max-w-3xl mx-auto bg-stone-50 border border-stone-200 rounded-sm p-6 md:p-8">
-            <p className="text-stone-700">
-              Across these situations, the work is designed to support outcomes that matter for
-              the organization too:
-            </p>
-            <ul className="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-3">
-              {businessOutcomes.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-stone-700 text-sm">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
+          <p className="mt-14 text-center text-stone-700 max-w-2xl mx-auto">
+            Across these situations, the work is designed to support outcomes that matter for
+            the organization too:
+          </p>
+          <div className="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {businessOutcomes.map((item) => (
+              <div
+                key={item}
+                className="p-6 md:p-7 bg-stone-50 border border-stone-200 rounded-sm"
+              >
+                <p className="font-serif text-lg text-stone-900">{item}</p>
+              </div>
+            ))}
           </div>
         </Container>
       </section>
