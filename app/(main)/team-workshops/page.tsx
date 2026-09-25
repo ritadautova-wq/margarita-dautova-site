@@ -240,15 +240,18 @@ export default function TeamWorkshopsPage() {
       {/* 1. Hero */}
       <section className="pt-32 pb-16 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
         <Container size="default">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+          <div className="text-center max-w-3xl mx-auto">
+            <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+              Team Workshops &amp; Transition Programs
+            </p>
+            <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
+              When organizations change, people experience it personally.
+            </h1>
+          </div>
+
+          <div className="mt-12 grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
             <div className="lg:col-span-3 text-center lg:text-left">
-              <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
-                Team Workshops &amp; Transition Programs
-              </p>
-              <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
-                When organizations change, people experience it personally.
-              </h1>
-              <div className="mt-6 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
+              <div className="space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
                 <p>
                   Restructuring. New roles. Shifting responsibilities. Internal mobility. A team
                   coming together after significant change.
@@ -593,7 +596,7 @@ export default function TeamWorkshopsPage() {
             <div className="lg:col-span-3">
               <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
                 <p>
-                  I spent more than 10 years in Talent &amp; Leadership Development at international
+                  I spent 10 years in Talent &amp; Leadership Development at international
                   organizations including Mytheresa and Amadeus, working with people and teams
                   through development, career decisions, role changes and organizational change.
                 </p>
