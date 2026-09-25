@@ -15,6 +15,14 @@ export const metadata: Metadata = {
 
 const CONTACT_HREF = '/contact?type=corporate'
 
+const businessOutcomes = [
+  'Smoother transitions and clearer roles',
+  'Stronger internal mobility and redeployment',
+  'Teams reconnecting after organizational change',
+  'Clearer communication of strengths and transferable skills',
+  'Maintained engagement during uncertainty',
+]
+
 const recognitionCards = [
   {
     title: 'The structure has changed',
@@ -132,6 +140,24 @@ const stats = [
   '19 nationalities',
   '650+ coaching hours',
   '10+ years in Talent & Leadership Development',
+]
+
+const workshopTestimonials = [
+  {
+    quote:
+      "It was fun and interactive, and at the same time we learned a lot about different working styles and how to improve our work. The day was very well structured and we got the chance to actually work on specific issues that exist in our team.",
+    attribution: 'SEO Team, e-commerce company',
+  },
+  {
+    quote:
+      'Moderators did a very good job guiding us through the day. The structure was clear and the overall organisation was great. The whole day was nicely paced and the exercises were engaging and thought-provoking.',
+    attribution: 'SEA Team, e-commerce company',
+  },
+  {
+    quote:
+      'The topics we wanted to discuss were perfectly transformed into team tasks. I felt that the workshop was crafted specifically for our needs. It helped us see the existing issues from a different angle and start working on practical solutions.',
+    attribution: 'Marketing Team, e-commerce company',
+  },
 ]
 
 const audienceCards = [
@@ -260,7 +286,7 @@ export default function TeamWorkshopsPage() {
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-14">
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              Maybe your team is somewhere in between.
+              Where this can help.
             </h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -273,6 +299,21 @@ export default function TeamWorkshopsPage() {
                 <p className="mt-3 text-stone-600 leading-relaxed text-sm">{card.description}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-10 max-w-3xl mx-auto bg-stone-50 border border-stone-200 rounded-sm p-6 md:p-8">
+            <p className="text-stone-700">
+              Across these situations, the work is designed to support outcomes that matter for
+              the organization too:
+            </p>
+            <ul className="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-3">
+              {businessOutcomes.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-stone-700 text-sm">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0" />
+                  <span className="leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </Container>
       </section>
@@ -455,7 +496,33 @@ export default function TeamWorkshopsPage() {
         </Container>
       </section>
 
-      {/* 8. Philosophy */}
+      {/* 8. Testimonials */}
+      <section className="section-padding bg-stone-50">
+        <Container size="default">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              What teams say afterward.
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6">
+            {workshopTestimonials.map((testimonial) => (
+              <div
+                key={testimonial.attribution}
+                className="bg-white p-6 md:p-8 border border-stone-200 rounded-sm flex flex-col"
+              >
+                <p className="text-stone-600 leading-relaxed italic flex-grow">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
+                <p className="mt-6 pt-4 border-t border-stone-100 text-sm font-medium text-stone-500">
+                  — {testimonial.attribution}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 9. Philosophy */}
       <section className="section-padding bg-white">
         <Container size="narrow">
           <div className="text-center">
@@ -478,7 +545,7 @@ export default function TeamWorkshopsPage() {
         </Container>
       </section>
 
-      {/* 9. Bio */}
+      {/* 10. Bio */}
       <section className="section-padding bg-white">
         <Container size="default">
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
@@ -535,7 +602,7 @@ export default function TeamWorkshopsPage() {
         </Container>
       </section>
 
-      {/* 10. Who I Work With */}
+      {/* 11. Who I Work With */}
       <section className="section-padding bg-stone-50">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -557,7 +624,7 @@ export default function TeamWorkshopsPage() {
         </Container>
       </section>
 
-      {/* 11. FAQ */}
+      {/* 12. FAQ */}
       <section className="section-padding bg-white">
         <Container size="narrow">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -585,7 +652,7 @@ export default function TeamWorkshopsPage() {
         </Container>
       </section>
 
-      {/* 12. Final CTA */}
+      {/* 13. Final CTA */}
       <section className="section-padding bg-primary-700 text-white">
         <Container size="narrow" className="text-center">
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
@@ -594,8 +661,8 @@ export default function TeamWorkshopsPage() {
           <div className="mt-6 space-y-4 text-primary-100 text-lg text-pretty max-w-xl mx-auto">
             <p>You don&apos;t need to have the program figured out before we talk.</p>
             <p>
-              Tell me what&apos;s happening, what your people are experiencing, and what you&apos;d
-              like to support. We&apos;ll start there.
+              Tell me what&apos;s happening in your organization or team, what your people are
+              experiencing, and what you&apos;d like to support. We&apos;ll start there.
             </p>
           </div>
           <div className="mt-10">
@@ -608,7 +675,7 @@ export default function TeamWorkshopsPage() {
             </Link>
           </div>
           <p className="mt-5 text-sm text-primary-200">
-            30 minutes · Online · No preparation required
+            30 minutes · Online · No obligation · No preparation required
           </p>
         </Container>
       </section>
