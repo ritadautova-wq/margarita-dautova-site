@@ -5,7 +5,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'About Margarita Dautova — ICF PCC Career Coach, Munich',
   description:
-    'ICF PCC coach with 600+ hours and 80+ clients across 18 nationalities. 10+ years in talent & leadership development. Why I coach professionals in transition.',
+    'ICF PCC coach with 700+ hours and 110+ clients across 20+ countries. 10 years in talent & leadership development. Why I coach professionals in transition.',
   alternates: { canonical: '/about' },
 }
 
@@ -300,7 +300,7 @@ export default function AboutPage() {
               
               <div className="bg-stone-50 p-6 border border-stone-200">
                 <h3 className="font-medium text-stone-900 mb-4">Coaching Hours</h3>
-                <p className="text-stone-700">600+ hours with 80+ clients</p>
+                <p className="text-stone-700">700+ hours with 110+ clients</p>
                 <p className="text-sm text-stone-500 mt-1">Individual and group coaching</p>
               </div>
             </div>
@@ -350,7 +350,7 @@ export default function AboutPage() {
             <div className="mt-8">
               <h3 className="font-medium text-stone-900 mb-4">Professional Background</h3>
               <p className="text-stone-600">
-                10+ years in Talent and Leadership Development, working with professionals 
+                10 years in Talent and Leadership Development, working with professionals
                 across industries and career stages. Based in Munich, working with clients worldwide.
               </p>
             </div>

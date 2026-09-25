@@ -70,7 +70,7 @@ export default function HeroSection() {
 
           {/* ── Social proof card — bottom-right ── */}
           <div className="absolute bottom-10 right-4 bg-white/95 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-lg text-right">
-            <p className="text-[1.75rem] font-serif font-bold text-stone-900 leading-none">80+</p>
+            <p className="text-[1.75rem] font-serif font-bold text-stone-900 leading-none">110+</p>
             <p className="text-[11px] text-stone-500 mt-0.5 leading-tight">professionals<br />coached</p>
           </div>
         </div>

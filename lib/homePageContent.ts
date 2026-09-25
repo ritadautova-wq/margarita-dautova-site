@@ -7,9 +7,9 @@
 export const hero = {
   trustStrip: [
     { label: 'ICF PCC-certified', icon: 'check' },
-    { label: '600+ coaching hours with 80+ professionals', icon: 'people' },
+    { label: '700+ coaching hours with 110+ professionals', icon: 'people' },
     { label: 'Munich-based, working worldwide', icon: 'globe' },
-    { label: '10+ years in Talent Development', icon: 'building' },
+    { label: '10 years in Talent Development', icon: 'building' },
   ],
   headline: "When growth becomes non-negotiable.",
   subheadline: "I'm Margarita — a career coach and thinking partner for people in transition. I work with thoughtful international professionals who want clarity about who they are and where they're going — especially those navigating change while living abroad or working in a non-native language.",

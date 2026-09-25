@@ -114,9 +114,9 @@ const processSteps = [
 
 const stats = [
   '110+ professionals coached',
-  '19 nationalities',
-  '650+ coaching hours',
-  '10+ years in Talent & Leadership Development',
+  '20+ countries',
+  '700+ coaching hours',
+  '10 years in Talent & Leadership Development',
 ]
 
 const testimonials = [
@@ -472,7 +472,7 @@ export default function CareerCoachingPage() {
             <div className="lg:col-span-3">
               <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
                 <p>
-                  Before becoming a coach, I spent 10+ years in Talent &amp; Leadership Development at
+                  Before becoming a coach, I spent 10 years in Talent &amp; Leadership Development at
                   international organisations (luxury fashion tech and global travel tech) — working with
                   people and teams through development, role changes, career decisions and organisational
                   change.
