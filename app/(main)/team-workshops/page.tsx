@@ -146,27 +146,27 @@ const workshopTestimonials = [
   {
     quote:
       "It was fun and interactive, and at the same time we learned a lot about different working styles and how to improve our work. The day was very well structured and we got the chance to actually work on specific issues that exist in our team.",
-    attribution: 'SEO Manager, e-commerce company',
+    attribution: 'Manager, SEO Team, E-commerce',
   },
   {
     quote:
       'Moderators did a very good job guiding us through the day. The structure was clear and the overall organisation was great. The whole day was nicely paced and the exercises were engaging and thought-provoking.',
-    attribution: 'Senior SEA Manager, e-commerce company',
+    attribution: 'Senior Manager, SEA Team, E-commerce',
   },
   {
     quote:
       'The topics we wanted to discuss were perfectly transformed into team tasks. I felt that the workshop was crafted specifically for our needs. It helped us see the existing issues from a different angle and start working on practical solutions.',
-    attribution: 'Senior Marketing Manager, e-commerce company',
+    attribution: 'Senior Manager, Marketing Team, E-commerce',
   },
   {
     quote:
       "I had the opportunity to join a two-day workshop with my team focused on exploring our next career steps with Margarita. For me, the experience with her was truly eye-opening. She took the time to understand where our team — and I personally — stand, and she tailored her guidance accordingly. I walked away with deeper self-awareness (in a more positive way 😊), a clearer understanding of how to position my profile, and practical insights on building an ATS-ready CV. It was exactly what I needed as I navigate my next career move.",
-    attribution: 'Erika, Communication Manager, pharma industry',
+    attribution: 'Erika, Communication Manager, Pharma',
   },
   {
     quote:
       "Margarita's workshop was one of the most practical career development sessions I've attended. She has a deep understanding of how recruiters, Applicant Tracking Systems (ATS), and LinkedIn algorithms work, and translates that knowledge into clear, actionable advice. Her feedback helped me reframe my CV and LinkedIn profile to better showcase my achievements and leadership experience rather than simply listing responsibilities. I left the session with a much stronger personal brand and greater confidence that my profile will reach the right opportunities. I would highly recommend her to any professional looking to strengthen their market positioning.",
-    attribution: 'V.S., Head of Department, pharma industry',
+    attribution: 'V.S., Head of Department, Pharma',
   },
 ]
 
