@@ -160,12 +160,12 @@ const workshopTestimonials = [
   },
   {
     quote:
-      "I had the opportunity to join a two-day workshop with my team focused on exploring our next career steps with Margarita. For me, the experience with her was truly eye-opening. She took the time to understand where our team — and I personally — stand, and she tailored her guidance accordingly. I walked away with deeper self-awareness (in a more positive way 😊), a clearer understanding of how to position my profile, and practical insights on building an ATS-ready CV. It was exactly what I needed as I navigate my next career move.",
+      "I had the opportunity to join a two-day workshop with my team focused on exploring our next career steps with Margarita. For me, the experience was truly eye-opening. She took the time to understand where our team — and I personally — stand, and tailored her guidance accordingly. I walked away with deeper self-awareness, a clearer understanding of how to position my profile, and practical insights on building an ATS-ready CV. It was exactly what I needed as I navigate my next career move.",
     attribution: 'Erika, Communication Manager, Pharma',
   },
   {
     quote:
-      "Margarita's workshop was one of the most practical career development sessions I've attended. She has a deep understanding of how recruiters, Applicant Tracking Systems (ATS), and LinkedIn algorithms work, and translates that knowledge into clear, actionable advice. Her feedback helped me reframe my CV and LinkedIn profile to better showcase my achievements and leadership experience rather than simply listing responsibilities. I left the session with a much stronger personal brand and greater confidence that my profile will reach the right opportunities. I would highly recommend her to any professional looking to strengthen their market positioning.",
+      "Margarita's workshop was one of the most practical career development sessions I've attended. She understands how recruiters, ATS and LinkedIn algorithms work, and turns that into clear, actionable advice. Her feedback helped me reframe my CV and LinkedIn profile around achievements and leadership rather than just responsibilities. I left with a much stronger personal brand and real confidence my profile will reach the right opportunities. I'd highly recommend her to anyone looking to strengthen their market positioning.",
     attribution: 'V.S., Head of Department, Pharma',
   },
 ]
