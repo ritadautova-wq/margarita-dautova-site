@@ -114,8 +114,8 @@ const processSteps = [
 
 const stats = [
   '110+ professionals coached',
-  '19 nationalities',
-  '650+ coaching hours',
+  '20+ countries',
+  '700+ coaching hours',
   '10+ years in Talent & Leadership Development',
 ]
 

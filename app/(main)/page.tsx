@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import HeroSection from '@/components/sections/HeroSection'
+import StatsBarSection from '@/components/sections/StatsBarSection'
 import ProblemSection from '@/components/sections/ProblemSection'
 import TransformationSection from '@/components/sections/TransformationSection'
 import ProcessSection from '@/components/sections/ProcessSection'
@@ -53,6 +54,7 @@ export default function HomePage() {
       />
 
       <HeroSection />
+      <StatsBarSection />
       <ProblemSection />
       <TransformationSection />
       <ProcessSection />

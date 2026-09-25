@@ -7,7 +7,7 @@
 export const hero = {
   trustStrip: [
     { label: 'ICF PCC-certified', icon: 'check' },
-    { label: '600+ coaching hours with 80+ professionals', icon: 'people' },
+    { label: '700+ coaching hours with 110+ professionals', icon: 'people' },
     { label: 'Munich-based, working worldwide', icon: 'globe' },
     { label: '10+ years in Talent Development', icon: 'building' },
   ],
