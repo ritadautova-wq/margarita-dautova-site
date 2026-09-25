@@ -2,7 +2,7 @@ const stats = [
   { value: '700+', label: 'Hours of 1:1 Coaching' },
   { value: '110+', label: 'Professionals Coached' },
   { value: '20+', label: 'Countries' },
-  { value: '10+', label: 'Years in Talent Development' },
+  { value: '10', label: 'Years in Talent Development' },
 ]
 
 export default function StatsBarSection() {
