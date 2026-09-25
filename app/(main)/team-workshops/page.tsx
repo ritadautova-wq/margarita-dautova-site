@@ -139,7 +139,7 @@ const stats = [
   '110+ professionals coached',
   '20+ countries',
   '700+ coaching hours',
-  '10+ years in Talent & Leadership Development',
+  '10 years in Talent & Leadership Development',
 ]
 
 const workshopTestimonials = [
