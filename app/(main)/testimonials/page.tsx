@@ -54,19 +54,19 @@ export default function TestimonialsPage() {
             {[
               {
                 quote: "Moderators did an amazing job facilitating this workshop. Topics were very relevant to the current situation in the team. We covered many topics within one day and it was a great overview of what we need to work on further.",
-                attribution: "Marketing Team, e-commerce company",
+                attribution: "Senior Marketing Manager, e-commerce company",
               },
               {
                 quote: "It was fun and interactive, and at the same time we learned a lot about different working styles and how to improve our work. The day was very well structured and we got the chance to actually work on specific issues that exist in our team.",
-                attribution: "SEO Team, e-commerce company",
+                attribution: "SEO Manager, e-commerce company",
               },
               {
                 quote: "Moderators did a very good job guiding us through the day. The structure was clear and the overall organisation was great. The whole day was nicely paced and the exercises were engaging and thought-provoking.",
-                attribution: "SEA Team, e-commerce company",
+                attribution: "Senior SEA Manager, e-commerce company",
               },
               {
                 quote: "The topics we wanted to discuss were perfectly transformed into team tasks. I felt that the workshop was crafted specifically for our needs. It helped us see the existing issues from a different angle and start working on practical solutions.",
-                attribution: "Marketing Team, e-commerce company",
+                attribution: "Senior Marketing Manager, e-commerce company",
               },
             ].map((item, index) => (
               <div key={index} className="bg-white border border-stone-200 rounded-sm p-8">

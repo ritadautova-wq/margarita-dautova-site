@@ -146,17 +146,17 @@ const workshopTestimonials = [
   {
     quote:
       "It was fun and interactive, and at the same time we learned a lot about different working styles and how to improve our work. The day was very well structured and we got the chance to actually work on specific issues that exist in our team.",
-    attribution: 'SEO Team, e-commerce company',
+    attribution: 'SEO Manager, e-commerce company',
   },
   {
     quote:
       'Moderators did a very good job guiding us through the day. The structure was clear and the overall organisation was great. The whole day was nicely paced and the exercises were engaging and thought-provoking.',
-    attribution: 'SEA Team, e-commerce company',
+    attribution: 'Senior SEA Manager, e-commerce company',
   },
   {
     quote:
       'The topics we wanted to discuss were perfectly transformed into team tasks. I felt that the workshop was crafted specifically for our needs. It helped us see the existing issues from a different angle and start working on practical solutions.',
-    attribution: 'Marketing Team, e-commerce company',
+    attribution: 'Senior Marketing Manager, e-commerce company',
   },
   {
     quote:
