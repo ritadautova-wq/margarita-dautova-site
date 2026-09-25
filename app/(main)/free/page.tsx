@@ -6,7 +6,7 @@ import Button from '@/components/Button'
 export const metadata: Metadata = {
   title: 'Get Your Free Career Pivot Playbook',
   description:
-    'Download the Career Pivot Playbook: An 8-page guide to help you navigate your next career move with clarity and confidence.',
+    'Download the Career Pivot Playbook: 5 practical frameworks to help you navigate your next career move with clarity and confidence.',
   alternates: { canonical: '/free' },
 }
 
@@ -24,7 +24,7 @@ export default function FreeResourcePage() {
               Get Your Career Pivot Playbook
             </h1>
             <p className="text-lg md:text-xl text-stone-600 leading-relaxed max-w-2xl mx-auto">
-              An 8-page guide to help you navigate your next career move with clarity and confidence—without burning out or starting over.
+              5 practical frameworks to help you navigate your next career move with clarity and confidence—without burning out or starting over.
             </p>
           </div>
         </Container>
@@ -47,10 +47,10 @@ export default function FreeResourcePage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-stone-900 mb-2">
-                      The 5 Signs You're Ready for a Change
+                      The &quot;Stay or Go&quot; Decision Matrix
                     </h3>
                     <p className="text-stone-600 text-sm leading-relaxed">
-                      A self-assessment to help you recognize when it's time to pivot—and when you might just need a break.
+                      Score your current role across four areas to see clearly whether it's time to move on.
                     </p>
                   </div>
                 </div>
@@ -61,10 +61,10 @@ export default function FreeResourcePage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-stone-900 mb-2">
-                      The 3 Pivot Paths: Shift, Switch, or Start Fresh
+                      The 5 Signs You're Ready for a Change
                     </h3>
                     <p className="text-stone-600 text-sm leading-relaxed">
-                      Understand your options: staying in your field but changing roles, switching industries, or building something new.
+                      A self-assessment to help you recognize when it's time to pivot—and when you might just need a break.
                     </p>
                   </div>
                 </div>
@@ -75,10 +75,10 @@ export default function FreeResourcePage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-stone-900 mb-2">
-                      The Hidden Transferable Skills Framework
+                      The Career Clarity Framework
                     </h3>
                     <p className="text-stone-600 text-sm leading-relaxed">
-                      Discover skills you already have that translate to new roles—you're not starting from zero.
+                      Four pillars—strengths, values, interests, and environment—to find what actually fits, instead of chasing a vague "passion."
                     </p>
                   </div>
                 </div>
@@ -89,7 +89,21 @@ export default function FreeResourcePage() {
                   </div>
                   <div>
                     <h3 className="font-medium text-stone-900 mb-2">
-                      30-Day Clarity Kickstart Action Plan
+                      The Pivot Ladder &amp; the 70% Rule
+                    </h3>
+                    <p className="text-stone-600 text-sm leading-relaxed">
+                      Five ways to change your career without starting from scratch—and how much of what you've built you can carry with you.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 font-bold">
+                    5
+                  </div>
+                  <div>
+                    <h3 className="font-medium text-stone-900 mb-2">
+                      Your 7-Day Next Steps Action Plan
                     </h3>
                     <p className="text-stone-600 text-sm leading-relaxed">
                       Concrete steps you can take right now to start moving toward clarity—no waiting required.

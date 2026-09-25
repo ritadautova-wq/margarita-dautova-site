@@ -232,12 +232,13 @@ export const offersSection = {
 export const leadMagnetSection = {
   eyebrow: "Free Resource",
   headline: "Get the Career Pivot Playbook",
-  description: "An 8-page guide to help you navigate your next professional move with clarity and confidence.",
+  description: "A practical guide with 5 frameworks to help you navigate your next professional move with clarity and confidence.",
   features: [
-    "The 5 signs you're ready for a change",
-    "The 3 pivot paths: Shift, Switch, or Start Fresh",
-    "The Hidden Transferable Skills Framework",
-    "30-Day Clarity Kickstart Action Plan",
+    "The \"Stay or Go\" Decision Matrix",
+    "The 5 Signs You're Ready for a Change",
+    "The Career Clarity Framework",
+    "The Pivot Ladder & the 70% Rule",
+    "Your 7-Day Next Steps Action Plan",
   ],
   formTitle: "Download Your Free Guide",
   formDescription: "Enter your email and we'll send you the Career Pivot Playbook instantly.",

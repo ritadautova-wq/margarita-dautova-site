@@ -50,7 +50,7 @@ export default function ThankYouPage() {
                     Download and Read the Playbook
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
-                    Open the email we just sent and download your PDF. Take your time reading through it—there's no rush.
+                    Open the email we just sent and open your playbook. Take your time reading through it—there's no rush.
                   </p>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export default function ThankYouPage() {
                 </div>
                 <div>
                   <h3 className="font-medium text-stone-900 mb-2">
-                    Try the 30-Day Action Plan
+                    Try the 7-Day Action Plan
                   </h3>
                   <p className="text-stone-600 text-sm leading-relaxed">
                     Pick one or two actions from the plan and commit to them this week. Small steps lead to big changes.
