@@ -9,8 +9,8 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Career Coaching', href: '/career-coaching' },
   { name: 'Team Workshops', href: '/team-workshops' },
+  { name: 'Mentoring', href: '/mentoring' },
   { name: 'About', href: '/about' },
-  { name: 'Articles', href: '/resources' },
   { name: 'Contact', href: '/contact' },
 ]
 

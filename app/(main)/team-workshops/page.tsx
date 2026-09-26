@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/Container'
@@ -15,44 +16,30 @@ export const metadata: Metadata = {
 
 const CONTACT_HREF = '/contact?type=corporate'
 
-const businessOutcomes = [
-  'Smoother transitions and clearer roles',
-  'Stronger internal mobility and redeployment',
-  'Teams reconnecting after organizational change',
-  'Clearer communication of strengths and transferable skills',
-  'Maintained engagement during uncertainty',
-]
-
-const recognitionCards = [
+const progressionStages = [
   {
-    title: 'The structure has changed',
-    description:
-      'Roles, responsibilities or reporting lines have shifted — but people are still figuring out what the change means for them.',
+    number: '01',
+    name: 'Change',
+    question: 'What is happening?',
+    items: 'Restructuring · New roles · Internal mobility · Team changes',
   },
   {
-    title: 'People are moving into new roles',
-    description:
-      'A new role can require more than new responsibilities. People may need to reconnect with their strengths, confidence and professional identity.',
+    number: '02',
+    name: 'People',
+    question: 'What does the change mean for them?',
+    items: 'Reflection · Strengths · Professional identity · Conversation',
   },
   {
-    title: "You're supporting internal mobility",
-    description:
-      'People need to understand what they bring, where their experience could transfer, and how to communicate their value for what comes next.',
+    number: '03',
+    name: 'Clarity',
+    question: 'What becomes clearer?',
+    items: 'Roles · Transferable skills · Direction · Possibilities',
   },
   {
-    title: 'Your team has changed',
-    description:
-      'New people, new responsibilities or organizational change have altered how the team works together.',
-  },
-  {
-    title: 'People need space to process change',
-    description:
-      "The practical decisions may already be made. But the human side of the transition is still unfolding.",
-  },
-  {
-    title: 'You want to support people beyond the announcement',
-    description:
-      'You are looking for something more meaningful than a one-off communication or information session.',
+    number: '04',
+    name: 'Movement',
+    question: 'What can happen next?',
+    items: 'Practical next steps · Internal mobility · Reconnection · Engagement',
   },
 ]
 
@@ -117,21 +104,6 @@ const flowSteps = [
     title: 'Practical next steps',
     description:
       "Turning reflection into something people can actually use — whether that's an internal move, a new professional direction, or a clearer way of communicating their experience.",
-  },
-]
-
-const caseStudyComponents = [
-  {
-    title: 'Personality Map workshop',
-    description: 'Exploring strengths, preferences, motivations and professional identity.',
-  },
-  {
-    title: 'CV & LinkedIn workshop',
-    description: 'Translating experience and transferable skills into a clear professional story.',
-  },
-  {
-    title: 'Individual coaching',
-    description: 'Giving each participant dedicated space to explore their own situation and next steps.',
   },
 ]
 
@@ -297,37 +269,48 @@ export default function TeamWorkshopsPage() {
       {/* 2. Recognition */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               Where this can help.
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {recognitionCards.map((card) => (
-              <div
-                key={card.title}
-                className="p-6 md:p-7 bg-stone-50 border border-stone-200 rounded-sm"
-              >
-                <h3 className="font-serif text-lg text-stone-900">{card.title}</h3>
-                <p className="mt-3 text-stone-600 leading-relaxed text-sm">{card.description}</p>
-              </div>
+
+          <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-0">
+            {progressionStages.map((stage, index) => (
+              <Fragment key={stage.number}>
+                <div className="lg:flex-1 text-center px-2">
+                  <p className="text-xs font-medium tracking-[0.2em] text-stone-400">
+                    {stage.number}
+                  </p>
+                  <h3 className="mt-4 font-serif text-3xl md:text-4xl text-stone-900">
+                    {stage.name}
+                  </h3>
+                  <p className="mt-3 text-stone-500 italic text-sm md:text-base">
+                    {stage.question}
+                  </p>
+                  <p className="mt-4 text-stone-600 text-sm leading-relaxed max-w-[220px] mx-auto text-pretty">
+                    {stage.items}
+                  </p>
+                </div>
+                {index < progressionStages.length - 1 && (
+                  <div className="flex items-center justify-center py-2 lg:py-0 lg:px-4">
+                    <div className="hidden lg:flex items-center w-12 xl:w-16">
+                      <span className="h-px flex-1 bg-stone-300" />
+                      <span className="ml-1 text-stone-300">&rarr;</span>
+                    </div>
+                    <div className="lg:hidden flex flex-col items-center h-10">
+                      <span className="w-px flex-1 bg-stone-300" />
+                      <span className="text-stone-300 mt-1">&darr;</span>
+                    </div>
+                  </div>
+                )}
+              </Fragment>
             ))}
           </div>
 
-          <div className="mt-10 max-w-3xl mx-auto bg-stone-50 border border-stone-200 rounded-sm p-6 md:p-8">
-            <p className="text-stone-700">
-              Across these situations, the work is designed to support outcomes that matter for
-              the organization too:
-            </p>
-            <ul className="mt-5 grid sm:grid-cols-2 gap-x-8 gap-y-3">
-              {businessOutcomes.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-stone-700 text-sm">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-primary-500 flex-shrink-0" />
-                  <span className="leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <p className="mt-16 md:mt-20 text-center text-stone-800 font-serif text-xl italic max-w-2xl mx-auto text-pretty">
+            The work connects the organizational reality with the human experience of change.
+          </p>
         </Container>
       </section>
 
@@ -460,11 +443,33 @@ export default function TeamWorkshopsPage() {
             </h2>
           </div>
           <div className="max-w-3xl mx-auto bg-white border border-stone-200 rounded-sm p-6 md:p-10">
-            <p className="text-stone-600 leading-relaxed">
-              A team going through restructuring needed support with both the human and practical
-              sides of career transition. Rather than creating a single workshop, we designed a
-              combination of shared reflection and individual support.
-            </p>
+            <div className="grid sm:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                  The Situation
+                </h3>
+                <p className="mt-2 text-stone-600 leading-relaxed">
+                  Team going through restructuring
+                </p>
+              </div>
+              <div>
+                <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                  The Challenge
+                </h3>
+                <p className="mt-2 text-stone-600 leading-relaxed">
+                  People needed both career-transition support and practical tools.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 pt-8 border-t border-stone-200">
+              <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                The Approach
+              </h3>
+              <p className="mt-2 text-stone-600 leading-relaxed">
+                Personality Map workshop → CV &amp; LinkedIn workshop → Individual coaching
+              </p>
+            </div>
 
             <div className="mt-8">
               <figure>
@@ -483,26 +488,12 @@ export default function TeamWorkshopsPage() {
               </figure>
             </div>
 
-            <h3 className="mt-10 text-sm font-medium text-primary-600 uppercase tracking-wider">
-              The program included
-            </h3>
-            <div className="mt-5 grid sm:grid-cols-3 gap-6">
-              {caseStudyComponents.map((item) => (
-                <div key={item.title}>
-                  <h4 className="font-serif text-lg text-stone-900">{item.title}</h4>
-                  <p className="mt-2 text-stone-600 leading-relaxed text-sm">{item.description}</p>
-                </div>
-              ))}
-            </div>
-
             <div className="mt-8 pt-6 border-t border-stone-200">
               <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
-                The intention
+                The Result
               </h3>
-              <p className="mt-3 text-stone-600 leading-relaxed">
-                To create a process where people could first pause and understand themselves, then
-                work on practical ways to communicate what they bring and consider where they could
-                go next. A combination of shared reflection, practical tools and individual support.
+              <p className="mt-2 text-stone-600 leading-relaxed">
+                A combination of shared reflection, practical preparation and individual space.
               </p>
             </div>
           </div>
