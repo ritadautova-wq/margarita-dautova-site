@@ -101,9 +101,9 @@ export default function MentoringPage() {
       />
 
       {/* 1. Hero */}
-      <section className="pt-32 pb-16 md:pt-44 md:pb-24 bg-gradient-to-b from-stone-100/50 to-stone-50">
-        <Container size="narrow">
-          <div className="text-center">
+      <section className="pt-32 pb-16 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
+        <Container size="default">
+          <div className="text-center max-w-3xl mx-auto">
             <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
               Mentoring
             </p>
@@ -112,22 +112,40 @@ export default function MentoringPage() {
             </h1>
           </div>
 
-          <div className="mt-10 max-w-xl mx-auto text-center text-body-lg text-stone-600 text-pretty">
-            <p>Sometimes, we get lucky with a manager.</p>
-            <div className="mt-4 space-y-1">
-              <p>Someone who sees our potential.</p>
-              <p>Who gives us honest, constructive feedback.</p>
-              <p>Who challenges us when we&apos;re playing too small.</p>
-              <p>Who cares about us as a person, not only as an employee.</p>
+          <div className="mt-12 grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-3 text-center lg:text-left">
+              <div className="text-body-lg text-stone-600 max-w-xl mx-auto lg:mx-0 text-pretty">
+                <p>Sometimes, we get lucky with a manager.</p>
+                <div className="mt-4 space-y-1">
+                  <p>Someone who sees our potential.</p>
+                  <p>Who gives us honest, constructive feedback.</p>
+                  <p>Who challenges us when we&apos;re playing too small.</p>
+                  <p>Who cares about us as a person, not only as an employee.</p>
+                </div>
+                <p className="mt-6">But often, that&apos;s not the reality.</p>
+                <p className="mt-4">
+                  And if you&apos;re a business owner, freelancer or self-employed professional,
+                  the role of a manager is vacant by default.
+                </p>
+                <p className="mt-6 font-serif text-xl text-stone-900 italic">
+                  So how do you keep growing?
+                </p>
+              </div>
             </div>
-            <p className="mt-6">But often, that&apos;s not the reality.</p>
-            <p className="mt-4">
-              And if you&apos;re a business owner, freelancer or self-employed professional, the
-              role of a manager is vacant by default.
-            </p>
-            <p className="mt-6 font-serif text-xl text-stone-900 italic">
-              So how do you keep growing?
-            </p>
+
+            <div className="relative lg:col-span-2 lg:order-last lg:flex lg:items-center lg:justify-end">
+              <div className="relative aspect-[4/3] w-full max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/mentoring-hero-event.jpg"
+                  alt="Margarita Dautova presenting at a Thrive with Mentoring Structured Networking Event, with the quote &ldquo;We don&apos;t have to do all of it alone. We were never meant to.&rdquo;"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(min-width: 1024px) 33vw, 90vw"
+                />
+              </div>
+              <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
+            </div>
           </div>
         </Container>
       </section>
