@@ -112,7 +112,7 @@ export default function MentoringPage() {
             </h1>
           </div>
 
-          <div className="mt-12 grid lg:grid-cols-2 gap-12 lg:gap-16 lg:items-stretch">
+          <div className="mt-12 grid lg:grid-cols-2 gap-12 lg:gap-16 lg:items-center">
             <div className="text-center lg:text-left">
               <div className="text-body-lg text-stone-600 max-w-xl mx-auto lg:mx-0 text-pretty">
                 <p>Sometimes, we get lucky with a manager.</p>
@@ -133,13 +133,13 @@ export default function MentoringPage() {
               </div>
             </div>
 
-            <div className="relative lg:order-last lg:flex lg:h-full lg:items-center lg:justify-center">
+            <div className="relative lg:order-last lg:flex lg:items-center lg:justify-center">
               <Image
                 src="/images/mentoring-hero-event.jpg"
                 alt="Margarita Dautova presenting at a Thrive with Mentoring Structured Networking Event, with the quote &ldquo;We don&apos;t have to do all of it alone. We were never meant to.&rdquo;"
                 width={1800}
                 height={1708}
-                className="w-full h-auto lg:h-full lg:w-auto rounded-lg shadow-2xl"
+                className="w-full h-auto lg:w-auto lg:max-h-[366px] rounded-lg shadow-2xl"
                 priority
                 sizes="(min-width: 1024px) 45vw, 90vw"
               />
