@@ -454,15 +454,15 @@ export default function CareerCoachingPage() {
       {/* 8. Why Work With Me */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-2 lg:order-last">
-              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+          <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-stretch">
+            <div className="lg:col-span-2 min-h-[280px] lg:min-h-0">
+              <div className="relative h-full min-h-[280px] lg:min-h-0 overflow-hidden rounded-sm bg-stone-100">
                 <Image
-                  src="/images/portrait-margarita.JPG"
+                  src="/images/IMG_5681.JPG"
                   alt="Portrait of Margarita Dautova"
                   fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 30vw, 60vw"
+                  className="object-cover object-bottom"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
                 />
               </div>
             </div>
