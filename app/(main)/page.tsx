@@ -337,23 +337,12 @@ export default function HomePage() {
       {/* 6. Why Me */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
-            Someone who understands change from more than one perspective.
-          </h2>
-          <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-2 lg:order-last">
-              <div className="relative aspect-square max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
-                <Image
-                  src="/images/portrait-margarita.JPG"
-                  alt="Portrait of Margarita Dautova"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 30vw, 60vw"
-                />
-              </div>
-            </div>
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-3">
-              <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
+              <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+                Someone who understands change from more than one perspective.
+              </h2>
+              <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed">
                 <p>
                   Before becoming a coach, I spent years in corporate environments —
                   working in Talent and Leadership Development at international
@@ -369,7 +358,7 @@ export default function HomePage() {
                   organization — and what it means for the person experiencing it.
                 </p>
               </div>
-              <div className="mt-8">
+              <div className="mt-6">
                 <Link
                   href="/about"
                   className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center gap-2"
@@ -379,6 +368,17 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
+              </div>
+            </div>
+            <div className="lg:col-span-2">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+                <Image
+                  src="/images/portrait-margarita.JPG"
+                  alt="Portrait of Margarita Dautova"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 30vw, 60vw"
+                />
               </div>
             </div>
           </div>
@@ -405,6 +405,57 @@ export default function HomePage() {
               The process has structure. The direction comes from you.
             </p>
           </div>
+
+          <div className="mt-20 max-w-2xl mx-auto">
+            <h3 className="font-serif text-heading text-stone-900 text-balance text-center">
+              What is a thinking partnership?
+            </h3>
+            <div className="mt-6 space-y-4 text-stone-600 leading-relaxed text-pretty">
+              <p>
+                Many of my clients are thoughtful international professionals who
+                don&apos;t need someone to tell them what to do. They need a space where
+                they can think out loud, without having to perform, impress or already
+                know the answer.
+              </p>
+              <p>
+                We work as partners — bringing together your perspective and my
+                questions, reflections and experience — to make sense of where you are,
+                clarify what matters and move towards the goals that are meaningful to
+                you.
+              </p>
+              <p>
+                Sometimes that means looking beneath the immediate career question: at
+                identity, values, confidence, relationships or the complexity of
+                building a career across cultures and languages.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 max-w-2xl mx-auto bg-white border border-stone-200 rounded-sm p-6 md:p-10">
+            <div className="grid sm:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                  I bring
+                </h4>
+                <p className="mt-2 text-stone-600 leading-relaxed">
+                  The structure, the questions and the perspective.
+                </p>
+              </div>
+              <div>
+                <h4 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
+                  You bring
+                </h4>
+                <p className="mt-2 text-stone-600 leading-relaxed">
+                  The experience, the context and the direction.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-10 text-center text-stone-900 font-serif text-xl italic max-w-2xl mx-auto text-pretty">
+            Together, we make things clearer — and find a way forward that feels like
+            your own.
+          </p>
         </Container>
       </section>
 
