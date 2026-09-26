@@ -210,10 +210,10 @@ export default function MentoringPage() {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <div className="relative aspect-[3/2] overflow-hidden bg-stone-100 rounded-sm">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
                 <Image
-                  src="/images/mentoring-presenting.jpg"
-                  alt="Margarita Dautova presenting at a Thrive with Mentoring structured networking event in Munich"
+                  src="/images/mentoring-word-chocolates.jpg"
+                  alt="A box of chocolates each labeled with a word like Confidence, Clarity, Courage and Growth, with a note reading 'Pick the word (chocolate) you need most right now'"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 30vw, 60vw"
