@@ -454,9 +454,6 @@ export default function CareerCoachingPage() {
       {/* 8. Why Work With Me */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
-            A coach who understands both the person and the workplace.
-          </h2>
           <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2 lg:order-last">
               <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
@@ -470,20 +467,28 @@ export default function CareerCoachingPage() {
               </div>
             </div>
             <div className="lg:col-span-3">
-              <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
+              <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+                About Me
+              </p>
+              <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+                A coach who understands the corporate world
+              </h2>
+              <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed">
                 <p>
-                  Before becoming a coach, I spent 10 years in Talent &amp; Leadership Development at
-                  international organisations (luxury fashion tech and global travel tech) — working with
-                  people and teams through development, role changes, career decisions and organisational
-                  change.
+                  Before becoming a coach, I spent years in corporate environments — working in
+                  Talent and Leadership Development at industries like global travel tech,
+                  luxury fashion tech and consultancy. I&apos;ve seen firsthand how talented
+                  people can lose their spark, get stuck in roles that don&apos;t fit, or burn
+                  out trying to meet impossible expectations.
                 </p>
                 <p>
-                  That experience gave me a practical understanding of both sides of a transition: what
-                  change feels like for the person experiencing it, and how organisations actually work.
+                  That experience shapes how I coach. I understand the pressures you face, the
+                  politics you navigate, and the real stakes involved in career decisions.
+                  I&apos;m not just coaching from theory — I&apos;ve lived the corporate reality.
                 </p>
                 <p>
-                  I bring that perspective into coaching, while keeping the focus where it belongs: on you,
-                  your situation and what you want to make possible from here.
+                  I&apos;m based in Munich, Germany, and work with clients worldwide. Sessions
+                  happen online, which means we can meet wherever you are.
                 </p>
               </div>
               <div className="mt-6">
