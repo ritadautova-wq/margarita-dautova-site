@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   alternates: { canonical: '/' },
 }
 
+const stats = [
+  { value: '700+', label: 'Hours of 1:1 Coaching' },
+  { value: '110+', label: 'Professionals Coached' },
+  { value: '20+', label: 'Countries' },
+  { value: '10', label: 'Years in Talent Development' },
+]
+
 const progressionStages = [
   {
     number: '01',
@@ -202,7 +209,27 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 2. The Common Thread */}
+      {/* 2. Stats Bar */}
+      <section className="bg-stone-950 py-14 md:py-16">
+        <Container size="default">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0 md:divide-x md:divide-stone-700/50">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center px-4">
+                <p className="font-serif text-4xl md:text-5xl text-stone-50">{stat.value}</p>
+                <p className="mt-2 text-xs md:text-sm uppercase tracking-wider text-stone-400">
+                  {stat.label}
+                </p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-10 text-center text-sm text-stone-400 max-w-xl mx-auto">
+            Supporting clients across 3 continents — from individual contributors to
+            C-suite leaders.
+          </p>
+        </Container>
+      </section>
+
+      {/* 3. The Common Thread */}
       <section className="section-padding bg-white">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
@@ -255,7 +282,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 3. Three Ways I Work */}
+      {/* 4. Three Ways I Work */}
       <section className="section-padding bg-stone-50">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -289,7 +316,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 4. A Strong Visual Statement */}
+      {/* 5. A Strong Visual Statement */}
       <section className="section-padding bg-primary-700 text-white">
         <Container size="narrow" className="text-center">
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
@@ -307,7 +334,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 5. Why Me */}
+      {/* 6. Why Me */}
       <section className="section-padding bg-white">
         <Container size="default">
           <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
@@ -363,7 +390,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 6. Personal Philosophy */}
+      {/* 7. Personal Philosophy */}
       <section className="section-padding bg-stone-50">
         <Container size="narrow">
           <div className="text-center">
@@ -386,7 +413,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 7. Testimonials */}
+      {/* 8. Testimonials */}
       <section className="section-padding bg-white">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -420,7 +447,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 8. Where I Work */}
+      {/* 9. Where I Work */}
       <section className="section-padding-sm bg-stone-50">
         <Container size="narrow" className="text-center">
           <h2 className="font-serif text-heading text-stone-900">
@@ -437,7 +464,7 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 9. Final CTA */}
+      {/* 10. Final CTA */}
       <section className="section-padding bg-primary-700 text-white">
         <Container size="narrow" className="text-center">
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
