@@ -112,13 +112,6 @@ const processSteps = [
   },
 ]
 
-const stats = [
-  '110+ professionals coached',
-  '20+ countries',
-  '700+ coaching hours',
-  '10 years in Talent & Leadership Development',
-]
-
 const testimonials = [
   {
     quote:
@@ -454,15 +447,16 @@ export default function CareerCoachingPage() {
       {/* 8. Why Work With Me */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-2 lg:order-last">
-              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+          <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+            <div className="lg:col-span-2">
+              <div className="relative overflow-hidden rounded-sm">
                 <Image
-                  src="/images/portrait-margarita.JPG"
+                  src="/images/IMG_5681.JPG"
                   alt="Portrait of Margarita Dautova"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 30vw, 60vw"
+                  width={900}
+                  height={1350}
+                  className="w-full h-auto"
+                  sizes="(min-width: 1024px) 40vw, 100vw"
                 />
               </div>
             </div>
@@ -470,10 +464,10 @@ export default function CareerCoachingPage() {
               <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
                 About Me
               </p>
-              <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              <h2 className="font-serif text-heading-lg text-stone-900 text-balance">
                 A coach who understands the corporate world
               </h2>
-              <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed">
+              <div className="mt-6 space-y-4 text-stone-600 text-[17px] leading-relaxed">
                 <p>
                   Before becoming a coach, I spent years in corporate environments — working in
                   Talent and Leadership Development at industries like global travel tech,
@@ -501,13 +495,6 @@ export default function CareerCoachingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
-              </div>
-              <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-x-8 gap-y-2">
-                {stats.map((stat) => (
-                  <span key={stat} className="text-sm text-stone-500">
-                    {stat}
-                  </span>
-                ))}
               </div>
             </div>
           </div>

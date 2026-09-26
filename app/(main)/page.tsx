@@ -175,8 +175,8 @@ export default function HomePage() {
               <div className="mt-8 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
                 <p>
                   I&apos;m Margarita — a Career &amp; Transition Coach and Team Facilitator
-                  committed to helping people make sense of change, find clarity and move
-                  forward in a way that feels like their own.
+                  committed to helping international professionals make sense of change,
+                  find clarity and move forward in a way that feels like their own.
                 </p>
                 <p>
                   From individual career transitions to organizational change, my work
@@ -229,7 +229,41 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 3. The Common Thread */}
+      {/* 3. Three Ways I Work */}
+      <section className="section-padding bg-stone-50">
+        <Container size="default">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              Three ways I work
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-10 md:gap-8">
+            {pillars.map((pillar) => (
+              <div key={pillar.label} className="pt-6 border-t-2 border-primary-600">
+                <p className="text-xs font-semibold tracking-[0.2em] text-primary-600 uppercase">
+                  {pillar.label}
+                </p>
+                <h3 className="mt-3 font-serif text-2xl text-stone-900">{pillar.title}</h3>
+                <p className="mt-3 text-stone-600 leading-relaxed text-sm">
+                  {pillar.description}
+                </p>
+                <p className="mt-4 text-xs text-stone-400">{pillar.tags}</p>
+                <Link
+                  href={pillar.ctaHref}
+                  className="mt-5 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                >
+                  {pillar.ctaText}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 4. The Common Thread */}
       <section className="section-padding bg-white">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
@@ -282,40 +316,6 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 4. Three Ways I Work */}
-      <section className="section-padding bg-stone-50">
-        <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              Three ways I work
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-8">
-            {pillars.map((pillar) => (
-              <div key={pillar.label} className="pt-6 border-t-2 border-primary-600">
-                <p className="text-xs font-semibold tracking-[0.2em] text-primary-600 uppercase">
-                  {pillar.label}
-                </p>
-                <h3 className="mt-3 font-serif text-2xl text-stone-900">{pillar.title}</h3>
-                <p className="mt-3 text-stone-600 leading-relaxed text-sm">
-                  {pillar.description}
-                </p>
-                <p className="mt-4 text-xs text-stone-400">{pillar.tags}</p>
-                <Link
-                  href={pillar.ctaHref}
-                  className="mt-5 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                >
-                  {pillar.ctaText}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
-
       {/* 5. A Strong Visual Statement */}
       <section className="section-padding bg-primary-700 text-white">
         <Container size="narrow" className="text-center">
@@ -337,28 +337,17 @@ export default function HomePage() {
       {/* 6. Why Me */}
       <section className="section-padding bg-white">
         <Container size="default">
-          <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance text-center">
-            Someone who understands change from more than one perspective.
-          </h2>
-          <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-2 lg:order-last">
-              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
-                <Image
-                  src="/images/portrait-margarita.JPG"
-                  alt="Portrait of Margarita Dautova"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 30vw, 60vw"
-                />
-              </div>
-            </div>
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-3">
-              <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
+              <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+                Someone who understands change from more than one perspective.
+              </h2>
+              <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed">
                 <p>
-                  Before becoming a coach, I spent 10 years in Talent &amp; Leadership
-                  Development at international organizations including Mytheresa and
-                  Amadeus, working with people and teams through development, career
-                  decisions, role changes and organizational change.
+                  Before becoming a coach, I spent years in corporate environments —
+                  working in Talent and Leadership Development at international
+                  organizations from global travel tech, luxury fashion tech and
+                  consultancy.
                 </p>
                 <p>
                   Today, I combine that organizational perspective with my work as an ICF
@@ -380,10 +369,16 @@ export default function HomePage() {
                   </svg>
                 </Link>
               </div>
-              <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-x-8 gap-y-2">
-                <span className="text-sm text-stone-500">110+ professionals</span>
-                <span className="text-sm text-stone-500">20+ countries</span>
-                <span className="text-sm text-stone-500">700+ coaching hours</span>
+            </div>
+            <div className="lg:col-span-2">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+                <Image
+                  src="/images/portrait-margarita.JPG"
+                  alt="Portrait of Margarita Dautova"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 30vw, 60vw"
+                />
               </div>
             </div>
           </div>
