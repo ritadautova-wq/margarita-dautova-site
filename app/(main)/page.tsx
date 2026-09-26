@@ -405,57 +405,6 @@ export default function HomePage() {
               The process has structure. The direction comes from you.
             </p>
           </div>
-
-          <div className="mt-20 max-w-2xl mx-auto">
-            <h3 className="font-serif text-heading text-stone-900 text-balance text-center">
-              What is a thinking partnership?
-            </h3>
-            <div className="mt-6 space-y-4 text-stone-600 leading-relaxed text-pretty">
-              <p>
-                Many of my clients are thoughtful international professionals who
-                don&apos;t need someone to tell them what to do. They need a space where
-                they can think out loud, without having to perform, impress or already
-                know the answer.
-              </p>
-              <p>
-                We work as partners — bringing together your perspective and my
-                questions, reflections and experience — to make sense of where you are,
-                clarify what matters and move towards the goals that are meaningful to
-                you.
-              </p>
-              <p>
-                Sometimes that means looking beneath the immediate career question: at
-                identity, values, confidence, relationships or the complexity of
-                building a career across cultures and languages.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-10 max-w-2xl mx-auto bg-white border border-stone-200 rounded-sm p-6 md:p-10">
-            <div className="grid sm:grid-cols-2 gap-8">
-              <div>
-                <h4 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
-                  I bring
-                </h4>
-                <p className="mt-2 text-stone-600 leading-relaxed">
-                  The structure, the questions and the perspective.
-                </p>
-              </div>
-              <div>
-                <h4 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
-                  You bring
-                </h4>
-                <p className="mt-2 text-stone-600 leading-relaxed">
-                  The experience, the context and the direction.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <p className="mt-10 text-center text-stone-900 font-serif text-xl italic max-w-2xl mx-auto text-pretty">
-            Together, we make things clearer — and find a way forward that feels like
-            your own.
-          </p>
         </Container>
       </section>
 
