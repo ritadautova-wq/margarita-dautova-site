@@ -464,10 +464,10 @@ export default function CareerCoachingPage() {
               <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
                 About Me
               </p>
-              <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              <h2 className="font-serif text-heading-lg text-stone-900 text-balance">
                 A coach who understands the corporate world
               </h2>
-              <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed">
+              <div className="mt-6 space-y-4 text-stone-600 text-[17px] leading-relaxed">
                 <p>
                   Before becoming a coach, I spent years in corporate environments — working in
                   Talent and Leadership Development at industries like global travel tech,
