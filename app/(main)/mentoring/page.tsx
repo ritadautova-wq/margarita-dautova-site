@@ -192,10 +192,10 @@ export default function MentoringPage() {
               </div>
             </div>
             <div className="lg:col-span-2">
-              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+              <div className="relative aspect-[3/2] overflow-hidden bg-stone-100 rounded-sm">
                 <Image
-                  src="/images/mentoring-portrait-badge.jpg"
-                  alt="Margarita Dautova wearing a Cohort Lead / Mentee name badge at a Thrive with Mentoring event"
+                  src="/images/mentoring-presenting.jpg"
+                  alt="Margarita Dautova presenting at a Thrive with Mentoring structured networking event in Munich"
                   fill
                   className="object-cover"
                   sizes="(min-width: 1024px) 30vw, 60vw"
@@ -313,13 +313,13 @@ export default function MentoringPage() {
         <Container size="default">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2">
-              <div className="relative aspect-[3/2] overflow-hidden bg-stone-100 rounded-sm">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
                 <Image
-                  src="/images/mentoring-presenting.jpg"
-                  alt="Margarita Dautova presenting at a Thrive with Mentoring structured networking event in Munich"
+                  src="/images/mentoring-portrait-badge.jpg"
+                  alt="Margarita Dautova wearing a Cohort Lead / Mentee name badge at a Thrive with Mentoring event"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 40vw, 90vw"
+                  sizes="(min-width: 1024px) 30vw, 60vw"
                 />
               </div>
             </div>
