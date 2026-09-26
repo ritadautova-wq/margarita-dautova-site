@@ -68,7 +68,6 @@ const involvementOptions = [
     ctaText: 'Join the pre-registration list',
     ctaHref:
       'https://docs.google.com/forms/d/e/1FAIpQLScebtR84oEEeAQ90QpKluftO-vzlwYsL0K3SHOmlPqzEScNNg/viewform',
-    external: true,
   },
   {
     label: 'Lead',
@@ -77,7 +76,6 @@ const involvementOptions = [
       "As the Munich community grows, we're looking for an additional person to join the Cohort Leadership Team and help us shape the next launch — a chance to build community, develop your leadership through practice, and work with a global organization.",
     ctaText: 'Learn more about the role',
     ctaHref: 'https://www.thrivewithmentoring.com/cohort-leader',
-    external: true,
   },
   {
     label: 'Create',
@@ -85,8 +83,7 @@ const involvementOptions = [
     description:
       "We're also looking for a photographer who would enjoy collaborating with us and being part of our in-person events in Munich — someone who likes capturing people, connection and real moments.",
     ctaText: 'Get in touch',
-    ctaHref: 'mailto:margarita.dautova.coach@gmail.com',
-    external: true,
+    ctaHref: '/contact',
   },
 ]
 
