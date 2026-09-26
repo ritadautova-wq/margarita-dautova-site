@@ -342,7 +342,7 @@ export default function HomePage() {
           </h2>
           <div className="mt-12 grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2 lg:order-last">
-              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+              <div className="relative aspect-square max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
                 <Image
                   src="/images/portrait-margarita.JPG"
                   alt="Portrait of Margarita Dautova"
@@ -353,12 +353,12 @@ export default function HomePage() {
               </div>
             </div>
             <div className="lg:col-span-3">
-              <div className="space-y-4 text-stone-600 text-lg leading-relaxed">
+              <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
                 <p>
-                  Before becoming a coach, I spent 10 years in Talent &amp; Leadership
-                  Development at international organizations including Mytheresa and
-                  Amadeus, working with people and teams through development, career
-                  decisions, role changes and organizational change.
+                  Before becoming a coach, I spent years in corporate environments —
+                  working in Talent and Leadership Development at international
+                  organizations from global travel tech, luxury fashion tech and
+                  consultancy.
                 </p>
                 <p>
                   Today, I combine that organizational perspective with my work as an ICF
@@ -369,7 +369,7 @@ export default function HomePage() {
                   organization — and what it means for the person experiencing it.
                 </p>
               </div>
-              <div className="mt-6">
+              <div className="mt-8">
                 <Link
                   href="/about"
                   className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center gap-2"
@@ -379,11 +379,6 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </Link>
-              </div>
-              <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap gap-x-8 gap-y-2">
-                <span className="text-sm text-stone-500">110+ professionals</span>
-                <span className="text-sm text-stone-500">20+ countries</span>
-                <span className="text-sm text-stone-500">700+ coaching hours</span>
               </div>
             </div>
           </div>
