@@ -146,13 +146,6 @@ export default function Header() {
               >
                 Book a free discovery call
               </Link>
-              <Link
-                href="/free"
-                className="block w-full text-center px-6 py-3.5 font-medium 
-                  border border-stone-300 text-stone-700 hover:bg-stone-100 transition-all duration-300 rounded-sm"
-              >
-                Get Free Guide
-              </Link>
             </div>
           </div>
         </div>
