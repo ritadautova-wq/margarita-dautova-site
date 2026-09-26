@@ -175,8 +175,8 @@ export default function HomePage() {
               <div className="mt-8 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
                 <p>
                   I&apos;m Margarita — a Career &amp; Transition Coach and Team Facilitator
-                  committed to helping people make sense of change, find clarity and move
-                  forward in a way that feels like their own.
+                  committed to helping international professionals make sense of change,
+                  find clarity and move forward in a way that feels like their own.
                 </p>
                 <p>
                   From individual career transitions to organizational change, my work
@@ -229,7 +229,41 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* 3. The Common Thread */}
+      {/* 3. Three Ways I Work */}
+      <section className="section-padding bg-stone-50">
+        <Container size="default">
+          <div className="text-center max-w-3xl mx-auto mb-14">
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+              Three ways I work
+            </h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-10 md:gap-8">
+            {pillars.map((pillar) => (
+              <div key={pillar.label} className="pt-6 border-t-2 border-primary-600">
+                <p className="text-xs font-semibold tracking-[0.2em] text-primary-600 uppercase">
+                  {pillar.label}
+                </p>
+                <h3 className="mt-3 font-serif text-2xl text-stone-900">{pillar.title}</h3>
+                <p className="mt-3 text-stone-600 leading-relaxed text-sm">
+                  {pillar.description}
+                </p>
+                <p className="mt-4 text-xs text-stone-400">{pillar.tags}</p>
+                <Link
+                  href={pillar.ctaHref}
+                  className="mt-5 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                >
+                  {pillar.ctaText}
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* 4. The Common Thread */}
       <section className="section-padding bg-white">
         <Container size="default">
           <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
@@ -279,40 +313,6 @@ export default function HomePage() {
             Space to pause. Perspective to see things differently. Clarity about what
             matters. And a way to move forward.
           </p>
-        </Container>
-      </section>
-
-      {/* 4. Three Ways I Work */}
-      <section className="section-padding bg-stone-50">
-        <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              Three ways I work
-            </h2>
-          </div>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-8">
-            {pillars.map((pillar) => (
-              <div key={pillar.label} className="pt-6 border-t-2 border-primary-600">
-                <p className="text-xs font-semibold tracking-[0.2em] text-primary-600 uppercase">
-                  {pillar.label}
-                </p>
-                <h3 className="mt-3 font-serif text-2xl text-stone-900">{pillar.title}</h3>
-                <p className="mt-3 text-stone-600 leading-relaxed text-sm">
-                  {pillar.description}
-                </p>
-                <p className="mt-4 text-xs text-stone-400">{pillar.tags}</p>
-                <Link
-                  href={pillar.ctaHref}
-                  className="mt-5 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                >
-                  {pillar.ctaText}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
         </Container>
       </section>
 
