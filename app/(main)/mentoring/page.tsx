@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import Link from 'next/link'
 import Container from '@/components/Container'
 import { generateBreadcrumbSchema } from '@/lib/schema'
 
@@ -10,8 +9,6 @@ export const metadata: Metadata = {
     "Why mentoring matters to Margarita Dautova, and her volunteer work as a Cohort Leader for Thrive with Mentoring's Munich community.",
   alternates: { canonical: '/mentoring' },
 }
-
-const CONTACT_HREF = '/contact'
 
 const differentiators = [
   {
@@ -69,7 +66,9 @@ const involvementOptions = [
       "We're preparing for the next Munich cohort. Registration will open soon — join the pre-registration list and we'll contact you in November 2026 with the next steps.",
     microcopy: 'No commitment — just an early place in the conversation.',
     ctaText: 'Join the pre-registration list',
-    ctaHref: `${CONTACT_HREF}?type=mentoring-join`,
+    ctaHref:
+      'https://docs.google.com/forms/d/e/1FAIpQLScebtR84oEEeAQ90QpKluftO-vzlwYsL0K3SHOmlPqzEScNNg/viewform',
+    external: true,
   },
   {
     label: 'Lead',
@@ -77,7 +76,8 @@ const involvementOptions = [
     description:
       "As the Munich community grows, we're looking for an additional person to join the Cohort Leadership Team and help us shape the next launch — a chance to build community, develop your leadership through practice, and work with a global organization.",
     ctaText: 'Learn more about the role',
-    ctaHref: `${CONTACT_HREF}?type=mentoring-lead`,
+    ctaHref: 'https://www.thrivewithmentoring.com/cohort-leader',
+    external: true,
   },
   {
     label: 'Create',
@@ -85,7 +85,8 @@ const involvementOptions = [
     description:
       "We're also looking for a photographer who would enjoy collaborating with us and being part of our in-person events in Munich — someone who likes capturing people, connection and real moments.",
     ctaText: 'Get in touch',
-    ctaHref: `${CONTACT_HREF}?type=mentoring-photographer`,
+    ctaHref: 'mailto:margarita.dautova.coach@gmail.com',
+    external: true,
   },
 ]
 
@@ -373,15 +374,18 @@ export default function MentoringPage() {
                 {option.microcopy && (
                   <p className="mt-3 text-xs text-stone-400 italic">{option.microcopy}</p>
                 )}
-                <Link
+                <a
                   href={option.ctaHref}
+                  {...(option.ctaHref.startsWith('http')
+                    ? { target: '_blank', rel: 'noopener noreferrer' }
+                    : {})}
                   className="mt-5 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
                 >
                   {option.ctaText}
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </Link>
+                </a>
               </div>
             ))}
           </div>

@@ -12,16 +12,7 @@ interface FormData {
   message: string
 }
 
-const VALID_TYPES = [
-  'ongoing',
-  'single',
-  'corporate',
-  'mentoring-join',
-  'mentoring-lead',
-  'mentoring-photographer',
-  'question',
-  'other',
-]
+const VALID_TYPES = ['ongoing', 'single', 'corporate', 'question', 'other']
 
 export default function ContactForm() {
   const searchParams = useSearchParams()
@@ -265,9 +256,6 @@ export default function ContactForm() {
           <option value="ongoing">90-Day Clarity Through Transition</option>
           <option value="single">Strategic Session</option>
           <option value="corporate">Workshops & Coaching for Organisations</option>
-          <option value="mentoring-join">Thrive Mentoring — Join the 2027 cohort</option>
-          <option value="mentoring-lead">Thrive Mentoring — Become a Cohort Leader</option>
-          <option value="mentoring-photographer">Thrive Mentoring — Photographer collaboration</option>
           <option value="question">Just a question</option>
           <option value="other">Other</option>
         </select>
