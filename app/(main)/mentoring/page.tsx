@@ -170,26 +170,39 @@ export default function MentoringPage() {
 
       {/* 3. Why I built mentoring into my work */}
       <section className="section-padding bg-stone-50">
-        <Container size="narrow">
-          <div className="text-center">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              This is why I&apos;ve always built mentoring into my work.
-            </h2>
-            <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-left md:text-center max-w-2xl mx-auto text-pretty">
-              <p>
-                Earlier in my career, I was fortunate to design and build internal mentoring
-                programmes in the organizations where I worked.
-              </p>
-              <p>
-                I loved creating the conditions for people to find the right person to learn from
-                — and then watching those relationships develop.
-              </p>
-              <p>Mentoring has always felt to me like one of the most human ways of supporting growth.</p>
-              <p>
-                So when I became self-employed, I didn&apos;t want to leave that part of my
-                professional life behind.
-              </p>
-              <p className="text-stone-900 font-medium">I wanted to continue building it.</p>
+        <Container size="default">
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-3 lg:order-last">
+              <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+                This is why I&apos;ve always built mentoring into my work.
+              </h2>
+              <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-pretty">
+                <p>
+                  Earlier in my career, I was fortunate to design and build internal mentoring
+                  programmes in the organizations where I worked.
+                </p>
+                <p>
+                  I loved creating the conditions for people to find the right person to learn
+                  from — and then watching those relationships develop.
+                </p>
+                <p>Mentoring has always felt to me like one of the most human ways of supporting growth.</p>
+                <p>
+                  So when I became self-employed, I didn&apos;t want to leave that part of my
+                  professional life behind.
+                </p>
+                <p className="text-stone-900 font-medium">I wanted to continue building it.</p>
+              </div>
+            </div>
+            <div className="lg:col-span-2">
+              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+                <Image
+                  src="/images/mentoring-portrait-badge.jpg"
+                  alt="Margarita Dautova wearing a Cohort Lead / Mentee name badge at a Thrive with Mentoring event"
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 30vw, 60vw"
+                />
+              </div>
             </div>
           </div>
         </Container>
@@ -209,6 +222,16 @@ export default function MentoringPage() {
               <p>In 2025, I joined Thrive with Mentoring as a volunteer Cohort Leader in Munich.</p>
               <p>In 2026, we launched our first Munich cohort.</p>
             </div>
+          </div>
+
+          <div className="mt-14 relative aspect-[4/3] md:aspect-[21/9] max-w-4xl mx-auto overflow-hidden rounded-sm">
+            <Image
+              src="/images/mentoring-cohort-room.jpg"
+              alt="Women from the Thrive with Mentoring Munich cohort gathered together at a networking event"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 900px, 90vw"
+            />
           </div>
 
           <div className="mt-14 text-center">
@@ -292,13 +315,13 @@ export default function MentoringPage() {
         <Container size="default">
           <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-2">
-              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
+              <div className="relative aspect-[3/2] overflow-hidden bg-stone-100 rounded-sm">
                 <Image
-                  src="/images/portrait-margarita.JPG"
-                  alt="Portrait of Margarita Dautova"
+                  src="/images/mentoring-presenting.jpg"
+                  alt="Margarita Dautova presenting at a Thrive with Mentoring structured networking event in Munich"
                   fill
                   className="object-cover"
-                  sizes="(min-width: 1024px) 30vw, 60vw"
+                  sizes="(min-width: 1024px) 40vw, 90vw"
                 />
               </div>
             </div>
