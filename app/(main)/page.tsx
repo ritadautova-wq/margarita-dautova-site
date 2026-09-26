@@ -93,6 +93,41 @@ const testimonials = [
   },
 ]
 
+const trustStrip = [
+  {
+    label: 'ICF PCC-certified',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    label: '700+ coaching hours with 110+ professionals',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Munich-based, working worldwide',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+      </svg>
+    ),
+  },
+  {
+    label: '10 years in Talent Development',
+    icon: (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
+  },
+]
+
 export default function HomePage() {
   const personSchema = generatePersonSchema()
   const serviceSchema = generateProfessionalServiceSchema()
@@ -114,32 +149,56 @@ export default function HomePage() {
       />
 
       {/* 1. Hero */}
-      <section className="pt-32 pb-20 md:pt-48 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
-        <Container size="narrow" className="text-center">
-          <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
-            When things change, it helps to have space to think.
-          </h1>
-          <div className="mt-8 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto text-pretty">
-            <p>
-              I&apos;m Margarita — a Career &amp; Transition Coach and Team Facilitator
-              committed to helping people make sense of change, find clarity and move
-              forward in a way that feels like their own.
-            </p>
-            <p>
-              From individual career transitions to organizational change, my work starts
-              with the same belief: people don&apos;t always need someone to tell them what
-              to do. They need the space, perspective and support to find their way
-              forward.
-            </p>
+      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
+        <Container size="wide">
+          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+            <div className="lg:col-span-3 text-center lg:text-left">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 mb-6 text-sm text-stone-600">
+                {trustStrip.map((item) => (
+                  <div key={item.label} className="flex items-center gap-2">
+                    {item.icon}
+                    <span>{item.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
+                When things change, it helps to have space to think.
+              </h1>
+              <div className="mt-8 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
+                <p>
+                  I&apos;m Margarita — a Career &amp; Transition Coach and Team Facilitator
+                  committed to helping people make sense of change, find clarity and move
+                  forward in a way that feels like their own.
+                </p>
+                <p>
+                  From individual career transitions to organizational change, my work
+                  starts with the same belief: people don&apos;t always need someone to
+                  tell them what to do. They need the space, perspective and support to
+                  find their way forward.
+                </p>
+              </div>
+              <div className="mt-10">
+                <Button href="/book" variant="primary" size="lg">
+                  Book a free discovery call
+                </Button>
+              </div>
+            </div>
+
+            <div className="relative lg:col-span-2 lg:order-last lg:flex lg:items-center lg:justify-end">
+              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl">
+                <Image
+                  src="/images/IMG_5842.JPG"
+                  alt="Portrait of Margarita Dautova"
+                  fill
+                  className="object-cover object-[55%_20%]"
+                  priority
+                  sizes="(min-width: 1024px) 33vw, 90vw"
+                />
+              </div>
+              <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
+            </div>
           </div>
-          <div className="mt-10">
-            <Button href="/book" variant="primary" size="lg">
-              Book a free discovery call
-            </Button>
-          </div>
-          <p className="mt-5 text-sm text-stone-500">
-            ICF PCC · Career &amp; Transition Coach · Team Facilitator · Munich + worldwide
-          </p>
         </Container>
       </section>
 
