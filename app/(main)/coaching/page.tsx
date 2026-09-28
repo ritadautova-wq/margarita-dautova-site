@@ -85,7 +85,7 @@ This is not a "trial" session. It's a focused thinking intervention.`,
     duration: 'Custom programs',
     description:
       'Supporting clarity, psychological safety, and sustainable performance in complex professional environments.',
-    longDescription: `With over 10 years in HR and Talent Development, I have facilitated internal workshops and learning sessions for international teams and leaders — both in-person and in interactive virtual formats.
+    longDescription: `With 10 years in Talent & Leadership Development, I have facilitated internal workshops and learning sessions for international teams and leaders — both in-person and in interactive virtual formats.
 
 My facilitation style is structured, calm, and highly collaborative. I create psychological safety quickly, engage participants through reflection and dialogue, and guide groups toward practical, actionable outcomes.
 
