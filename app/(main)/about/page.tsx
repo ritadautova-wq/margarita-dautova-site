@@ -241,104 +241,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 5. Thinking Partnership */}
-      <section className="section-padding bg-stone-50">
-        <Container size="narrow">
-          <div className="text-center">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              What is a thinking partnership?
-            </h2>
-            <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-left md:text-center max-w-2xl mx-auto text-pretty">
-              <p>
-                Many of my clients don&apos;t need advice. They need a space to think
-                out loud — without performing, impressing or already knowing the
-                answer.
-              </p>
-              <p>
-                I bring a calm presence, precise questions, reflection, structure and
-                perspective. You bring the experience, the context and the direction.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-10 max-w-2xl mx-auto bg-white border border-stone-200 rounded-sm p-6 md:p-10">
-            <div className="grid sm:grid-cols-2 gap-8">
-              <div>
-                <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
-                  I bring
-                </h3>
-                <p className="mt-2 text-stone-600 leading-relaxed">
-                  The structure, the questions and the perspective.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-sm font-medium text-primary-600 uppercase tracking-wider">
-                  You bring
-                </h3>
-                <p className="mt-2 text-stone-600 leading-relaxed">
-                  The experience, the context and the direction.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 max-w-2xl mx-auto text-center space-y-4 text-stone-600 leading-relaxed text-pretty">
-            <p>
-              We work as partners to make sense of what&apos;s happening, clarify what
-              matters and move towards the goals that are meaningful to you.
-            </p>
-            <p>
-              Sometimes that means looking beyond the immediate career question — at
-              identity, values, confidence, relationships, professional identity, or
-              what it means to build a life and career across cultures and languages.
-            </p>
-          </div>
-
-          <p className="mt-10 text-center inline-block w-full text-stone-900 font-serif text-xl italic text-pretty">
-            The process has structure. The direction comes from you.
-          </p>
-        </Container>
-      </section>
-
-      {/* 6. The Organizational Side */}
-      <section className="section-padding bg-white">
-        <Container size="narrow">
-          <div className="text-center">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              I also understand change from the organizational side.
-            </h2>
-            <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-left md:text-center max-w-2xl mx-auto text-pretty">
-              <p>
-                My Talent &amp; Leadership Development background also means I
-                understand change from the organizational side.
-              </p>
-              <p>
-                I&apos;ve seen restructurings, changing roles, internal mobility and
-                development initiatives from inside organizations — and today I bring
-                that perspective into my work with teams and organizations.
-              </p>
-              <p>
-                When change happens, the business reality matters. So does what that
-                change means to the people experiencing it. I work at that
-                intersection.
-              </p>
-            </div>
-            <div className="mt-6">
-              <Link
-                href="/team-workshops"
-                className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center gap-2"
-              >
-                Explore Team Workshops
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 7. A Little More About Me */}
+      {/* 5. A Little More About Me */}
       <section className="section-padding bg-stone-50">
         <Container size="narrow">
           <div className="text-center max-w-2xl mx-auto mb-14">
@@ -357,7 +260,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 8. Coaching Education & Credentials */}
+      {/* 6. Coaching Education & Credentials */}
       <section className="section-padding bg-white">
         <Container size="narrow">
           <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
@@ -450,46 +353,7 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 9. Mentoring / Thrive */}
-      <section className="section-padding bg-stone-50">
-        <Container size="narrow">
-          <div className="text-center">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              I believe people grow through people.
-            </h2>
-            <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-left md:text-center max-w-2xl mx-auto text-pretty">
-              <p>
-                I&apos;ve always been drawn to mentoring — to the idea of having
-                someone a few steps ahead whose shoulders you can stand on to see a
-                little further.
-              </p>
-              <p>
-                That&apos;s one of the reasons I joined Thrive with Mentoring as a
-                volunteer Cohort Leader for the Munich community.
-              </p>
-              <p>
-                I&apos;m not a mentor in the program. My role is to help build the
-                local cohort: bringing women together, creating the conditions for
-                meaningful mentor relationships, and building a community around the
-                idea of radical generosity.
-              </p>
-            </div>
-            <div className="mt-6">
-              <Link
-                href="/mentoring"
-                className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center gap-2"
-              >
-                Explore Mentoring in Munich
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* 10. Final CTA */}
+      {/* 7. Final CTA */}
       <section className="section-padding bg-primary-700 text-white">
         <Container size="narrow" className="text-center">
           <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
