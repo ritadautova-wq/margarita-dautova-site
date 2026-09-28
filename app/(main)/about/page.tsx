@@ -12,14 +12,48 @@ export const metadata: Metadata = {
   alternates: { canonical: '/about' },
 }
 
-const stats = [
-  'PCC, International Coaching Federation',
-  '10 years in Talent & Leadership Development',
-  '110+ professionals coached',
-  '700+ coaching hours',
-  '20+ countries',
-  'English & Russian',
-  'Munich + worldwide',
+const credentialCards = [
+  {
+    title: 'ICF Credential',
+    value: 'Professional Certified Coach (PCC)',
+    note: 'International Coaching Federation',
+  },
+  {
+    title: 'Coaching Hours',
+    value: '700+ coaching hours with 110+ professionals',
+    note: 'Individual and group coaching',
+  },
+  {
+    title: 'Reach',
+    value: '20+ countries',
+    note: 'Clients across 3 continents',
+  },
+]
+
+const trainings = [
+  {
+    title: 'ICF Level 2 Training Program "Coaching in Organization and Business"',
+    note: 'International Coaching Academy — 2024',
+  },
+  {
+    title: 'Team Coach (ICF Continuing Coaching Education)',
+    note: 'Academy of Coaching Professions "Human Capital" — 2023',
+  },
+  {
+    title: 'The 5 Prism Method in Coaching',
+    note: 'Academy of Professional Coaching "5 Prism" — 2021',
+  },
+  {
+    title: 'Erickson Professional Coach',
+    note: 'Erickson Coaching International — 2021',
+  },
+]
+
+const approaches = [
+  'Adult development and learning theory',
+  'Reflective and systemic coaching',
+  'Decision-making and sense-making in times of transition',
+  'Narrative and strengths-based practices',
 ]
 
 const glimpses = [
@@ -323,24 +357,95 @@ export default function AboutPage() {
         </Container>
       </section>
 
-      {/* 8. What I Bring Into the Room */}
+      {/* 8. Coaching Education & Credentials */}
       <section className="section-padding bg-white">
         <Container size="narrow">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
-              What I bring into the room
-            </h2>
-            <p className="mt-4 text-stone-600 leading-relaxed">
-              I&apos;m committed to professional standards and continued growth in my
-              coaching practice.
-            </p>
-            <div className="mt-8 pt-6 border-t border-stone-200 flex flex-wrap justify-center gap-x-8 gap-y-2">
-              {stats.map((stat) => (
-                <span key={stat} className="text-sm text-stone-500">
-                  {stat}
-                </span>
+          <p className="text-sm font-medium text-primary-600 uppercase tracking-wider mb-3">
+            Background
+          </p>
+          <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+            Coaching Education &amp; Credentials
+          </h2>
+          <p className="mt-4 text-stone-600 leading-relaxed">
+            I&apos;m committed to professional standards and ongoing development in my
+            coaching practice.
+          </p>
+
+          <div className="mt-8 grid sm:grid-cols-3 gap-6">
+            {credentialCards.map((card) => (
+              <div key={card.title} className="bg-stone-50 p-6 border border-stone-200 rounded-sm">
+                <h3 className="font-medium text-stone-900 mb-3">{card.title}</h3>
+                <p className="text-stone-700">{card.value}</p>
+                <p className="text-sm text-stone-500 mt-1">{card.note}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <h3 className="font-medium text-stone-900 mb-4">Training &amp; Certifications</h3>
+            <ul className="space-y-3">
+              {trainings.map((training) => (
+                <li key={training.title} className="flex items-start gap-3">
+                  <svg className="w-4 h-4 text-primary-500 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <div className="text-stone-600">
+                    <span className="text-stone-800">{training.title}</span>
+                    <span className="block text-sm text-stone-500">{training.note}</span>
+                  </div>
+                </li>
               ))}
-            </div>
+            </ul>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="font-medium text-stone-900 mb-4">Professional Background</h3>
+            <p className="text-stone-600">
+              10 years in Talent &amp; Leadership Development, working with
+              professionals across industries and career stages. Based in Munich,
+              working with clients worldwide.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="font-medium text-stone-900 mb-4">Current Professional Practice</h3>
+            <p className="text-stone-600">
+              I work as a career and transition coach and thinking partner, supporting
+              thoughtful international professionals navigating change.
+            </p>
+            <p className="text-stone-600 mt-3">
+              My work includes 1:1 and group coaching with clients from sectors such as
+              technology, creative industries, and hospitality — often in complex,
+              fast-moving, and multicultural environments.
+            </p>
+          </div>
+
+          <div className="mt-10">
+            <h3 className="font-medium text-stone-900 mb-4">
+              Professional Standards &amp; Evidence-Based Practice
+            </h3>
+            <p className="text-stone-600">
+              My work is grounded in evidence-based coaching practices and aligned with
+              the ethical standards and core competencies of the International Coaching
+              Federation (ICF).
+            </p>
+            <p className="text-stone-600 mt-3">I draw on approaches from:</p>
+            <ul className="mt-2 space-y-2">
+              {approaches.map((approach) => (
+                <li key={approach} className="flex items-start gap-3">
+                  <span className="text-primary-600 font-serif text-lg">•</span>
+                  <span className="text-stone-600">{approach}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-stone-600 mt-4">
+              I use these frameworks thoughtfully and flexibly as support for clarity,
+              integration, and sustainable change.
+            </p>
+            <p className="text-stone-600 mt-3">
+              I regularly engage in supervision and continuing education to support the
+              quality and integrity of my work.
+            </p>
           </div>
         </Container>
       </section>
