@@ -192,7 +192,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative lg:col-span-2 lg:order-last lg:flex lg:items-center lg:justify-end">
+            <div className="relative order-first lg:order-last lg:col-span-2 lg:flex lg:items-center lg:justify-end">
               <div className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl">
                 <Image
                   src="/images/IMG_5842.JPG"
