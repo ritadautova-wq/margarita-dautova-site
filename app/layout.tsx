@@ -1,21 +1,28 @@
 import type { Metadata } from 'next'
-import { Playfair_Display, DM_Sans } from 'next/font/google'
+import { Shippori_Mincho, Zen_Kaku_Gothic_New } from 'next/font/google'
 import CookieConsent from '@/components/CookieConsent'
+import RevealObserver from '@/components/zen/RevealObserver'
 import './globals.css'
 
-const playfair = Playfair_Display({
+// Mincho serif for headings: calm, brush-like contrast. Zen Kaku Gothic for
+// body: open, quiet, highly legible.
+const mincho = Shippori_Mincho({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  variable: '--font-playfair',
+  weight: ['400', '500', '600'],
+  variable: '--font-mincho',
   display: 'swap',
 })
 
-const dmSans = DM_Sans({
+const zenSans = Zen_Kaku_Gothic_New({
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  variable: '--font-dm-sans',
+  weight: ['300', '400', '500'],
+  variable: '--font-zen-sans',
   display: 'swap',
 })
+
+// Runs before paint: enables reveal animations only when JS is alive, and
+// falls back to fully visible content if the app never hydrates.
+const zenBootScript = `(function(){var d=document.documentElement;d.classList.add('js');try{if(sessionStorage.getItem('zen-seen'))d.classList.add('zen-seen');sessionStorage.setItem('zen-seen','1')}catch(e){}setTimeout(function(){if(!d.classList.contains('zen-ready'))d.classList.remove('js')},4000)})();`
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.margarita-dautova.com'),
@@ -75,16 +82,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${mincho.variable} ${zenSans.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: zenBootScript }} />
+      </head>
       <body className="font-sans">
         {/* Skip to main content link for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary-600 focus:text-white focus:rounded-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-stone-900 focus:text-stone-50 focus:outline-none"
         >
           Skip to main content
         </a>
         {children}
+        <RevealObserver />
         <CookieConsent />
       </body>
     </html>

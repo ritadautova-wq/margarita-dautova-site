@@ -1,10 +1,11 @@
 import { Metadata } from 'next'
-import { Fragment } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Container from '@/components/Container'
-import Button from '@/components/Button'
 import StickyMobileCTA from '@/components/StickyMobileCTA'
+import Enso from '@/components/zen/Enso'
+import InkDivider from '@/components/zen/InkDivider'
+import { rd, sd } from '@/components/zen/motion'
 import {
   generatePersonSchema,
   generateProfessionalServiceSchema,
@@ -101,39 +102,21 @@ const testimonials = [
 ]
 
 const trustStrip = [
-  {
-    label: 'ICF PCC-certified',
-    icon: (
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-      </svg>
-    ),
-  },
-  {
-    label: '700+ coaching hours with 110+ professionals',
-    icon: (
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-      </svg>
-    ),
-  },
-  {
-    label: 'Munich-based, working worldwide',
-    icon: (
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-      </svg>
-    ),
-  },
-  {
-    label: '10 years in Talent & Leadership Development',
-    icon: (
-      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
-  },
+  'ICF PCC-certified',
+  '700+ coaching hours with 110+ professionals',
+  'Munich-based, working worldwide',
+  '10 years in Talent & Leadership Development',
 ]
+
+// Stepping stones: each stage sits at its own height, like stones across water.
+const stoneOffsets = ['lg:mt-0', 'lg:mt-16', 'lg:mt-6', 'lg:mt-20'] // 0 / 64 / 24 / 80px, matched by the path above
+const quoteOffsets = ['md:mt-0', 'md:mt-20', 'md:mt-8']
+
+const Arrow = () => (
+  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.2} d="M5 12h14m-5-5 5 5-5 5" />
+  </svg>
+)
 
 export default function HomePage() {
   const personSchema = generatePersonSchema()
@@ -155,194 +138,250 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
-      {/* 1. Hero */}
-      <section className="pt-32 pb-20 md:pt-44 md:pb-28 bg-gradient-to-b from-stone-100/50 to-stone-50">
-        <Container size="wide">
-          <div className="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-3 text-center lg:text-left">
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 mb-6 text-sm text-stone-600">
-                {trustStrip.map((item) => (
-                  <div key={item.label} className="flex items-center gap-2">
-                    {item.icon}
-                    <span>{item.label}</span>
-                  </div>
-                ))}
+      {/* 1. Hero: the gate. The ensō draws, then the words surface. */}
+      <section className="relative pt-24 pb-24 md:pt-40 md:pb-32 lg:pt-36 lg:pb-28 lg:min-h-[100svh] lg:flex lg:items-center">
+        <Container size="wide" className="w-full">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
+            <div className="relative order-first lg:order-last lg:col-span-5 lg:col-start-8">
+              <Enso
+                id="hero-enso"
+                delay={250}
+                className="absolute left-[4%] -top-[10%] w-[74%] sm:-left-[10%] sm:w-[84%] lg:-left-[18%] lg:-top-[14%] lg:w-[92%] text-stone-900/80 pointer-events-none"
+              />
+              <div
+                className="zen-surface relative aspect-[4/5] w-[62%] sm:w-[70%] lg:w-[82%] max-w-sm ml-auto lg:max-w-none overflow-hidden bg-stone-200 zen-frame"
+                style={sd(500)}
+              >
+                <Image
+                  src="/images/IMG_5842.JPG"
+                  alt="Portrait of Margarita Dautova"
+                  fill
+                  className="zen-photo object-cover object-[55%_20%]"
+                  priority
+                  sizes="(min-width: 1024px) 33vw, 80vw"
+                />
               </div>
+            </div>
 
-              <h1 className="font-serif text-display md:text-display-lg text-stone-900 text-balance">
+            <div className="lg:col-span-6 lg:col-start-1">
+              <p className="zen-surface zen-label !tracking-[0.2em] md:!tracking-zen flex items-center gap-3" style={sd(900)}>
+                <span className="zen-seal" aria-hidden="true" />
+                Career &amp; Transition Coach · Team Facilitator
+              </p>
+              <h1
+                className="zen-surface mt-7 font-serif text-[2.35rem] leading-[1.3] md:text-display-lg lg:text-[3.5rem] lg:leading-[1.28] text-stone-900 text-balance"
+                style={sd(1100)}
+              >
                 When things change, it helps to have space to think.
               </h1>
-              <div className="mt-8 space-y-4 text-body-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 text-pretty">
-                <p>
+              <div className="mt-9 space-y-5 text-[1.05rem] leading-[1.9] text-stone-600 max-w-xl text-pretty">
+                <p className="zen-surface" style={sd(1500)}>
                   I&apos;m Margarita — a Career &amp; Transition Coach and Team Facilitator
                   committed to helping international professionals make sense of change,
                   find clarity and move forward in a way that feels like their own.
                 </p>
-                <p>
+                <p className="zen-surface" style={sd(1700)}>
                   From individual career transitions to organizational change, my work
                   starts with the same belief: people don&apos;t always need someone to
                   tell them what to do. They need the space, perspective and support to
                   find their way forward.
                 </p>
               </div>
-              <div className="mt-10">
-                <Button href="/book" variant="primary" size="lg">
+              <div className="zen-surface mt-11" style={sd(1950)}>
+                <Link href="/book" className="btn-primary px-9 py-4">
+                  <span className="zen-seal" aria-hidden="true" />
                   Book a free discovery call
-                </Button>
+                </Link>
               </div>
-            </div>
-
-            <div className="relative order-first lg:order-last lg:col-span-2 lg:flex lg:items-center lg:justify-end">
-              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto lg:max-w-none rounded-lg overflow-hidden shadow-2xl">
-                <Image
-                  src="/images/IMG_5842.JPG"
-                  alt="Portrait of Margarita Dautova"
-                  fill
-                  className="object-cover object-[55%_20%]"
-                  priority
-                  sizes="(min-width: 1024px) 33vw, 90vw"
-                />
-              </div>
-              <div className="hidden lg:block absolute -bottom-4 -right-4 w-32 h-32 bg-primary-100/30 rounded-full blur-3xl -z-10" />
+              <ul className="zen-surface mt-12 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-500 max-w-xl" style={sd(2200)}>
+                {trustStrip.map((label) => (
+                  <li key={label} className="flex items-baseline gap-3">
+                    <span className="block w-3 h-px bg-stone-400 translate-y-[-3px]" aria-hidden="true" />
+                    <span>{label}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </Container>
+
+        {/* A slow invitation to continue down the path */}
+        <div className="hidden lg:flex absolute bottom-10 left-1/2 -translate-x-1/2 zen-surface" style={sd(2800)} aria-hidden="true">
+          <span className="block w-px h-14 bg-gradient-to-b from-transparent via-stone-400 to-transparent animate-[zen-drift_4s_ease-in-out_infinite]" />
+        </div>
       </section>
 
-      {/* 2. Stats Bar */}
-      <section className="bg-stone-950 py-14 md:py-16">
+      {/* 2. Stats: quiet numerals, no box */}
+      <section className="py-20 md:py-28 border-y border-stone-300/50">
         <Container size="default">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10 md:gap-y-0 md:divide-x md:divide-stone-700/50">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center px-4">
-                <p className="font-serif text-4xl md:text-5xl text-stone-50">{stat.value}</p>
-                <p className="mt-2 text-xs md:text-sm uppercase tracking-wider text-stone-400">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-y-14 md:divide-x md:divide-stone-300/60">
+            {stats.map((stat, i) => (
+              <div key={stat.label} className="text-center px-4" data-reveal style={rd(i * 140)}>
+                <p className="font-serif text-[2.6rem] md:text-5xl text-stone-900 leading-none">{stat.value}</p>
+                <p className="mt-5 zen-label leading-relaxed max-w-[12rem] mx-auto">
                   {stat.label}
                 </p>
               </div>
             ))}
           </div>
-          <p className="mt-10 text-center text-sm text-stone-400 max-w-xl mx-auto">
+          <p className="mt-16 text-center text-stone-500 max-w-xl mx-auto text-pretty" data-reveal style={rd(560)}>
             Supporting clients across 3 continents — from individual contributors to
-            C-suite leaders.
+            C&#8209;suite leaders.
           </p>
         </Container>
       </section>
 
-      {/* 3. Three Ways I Work */}
-      <section className="section-padding bg-stone-50">
+      {/* 3. Three Ways I Work: three paths through the garden */}
+      <section className="section-padding">
         <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+          <div className="max-w-2xl mb-16 md:mb-24" data-reveal>
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               Three ways I work
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-8">
-            {pillars.map((pillar) => (
-              <div key={pillar.label} className="pt-6 border-t-2 border-primary-600">
-                <p className="text-xs font-semibold tracking-[0.2em] text-primary-600 uppercase">
-                  {pillar.label}
-                </p>
-                <h3 className="mt-3 font-serif text-2xl text-stone-900">{pillar.title}</h3>
-                <p className="mt-3 text-stone-600 leading-relaxed text-sm">
-                  {pillar.description}
-                </p>
-                <p className="mt-4 text-xs text-stone-400">{pillar.tags}</p>
-                <Link
-                  href={pillar.ctaHref}
-                  className="mt-5 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                >
-                  {pillar.ctaText}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+          <div>
+            {pillars.map((pillar, i) => (
+              <div
+                key={pillar.label}
+                className="grid md:grid-cols-12 gap-6 md:gap-10 py-14 md:py-16 border-t border-stone-300/70 last:border-b"
+                data-reveal
+                style={rd(i * 120)}
+              >
+                <div className="md:col-span-5">
+                  <p className="zen-label flex items-center gap-3">
+                    <span className="font-serif text-stone-400 tracking-normal text-sm normal-case" aria-hidden="true">
+                      {`0${i + 1}`}
+                    </span>
+                    {pillar.label}
+                  </p>
+                  <h3 className="mt-5 font-serif text-[1.6rem] md:text-[1.85rem] leading-[1.4] text-stone-900 text-balance">
+                    {pillar.title}
+                  </h3>
+                </div>
+                <div className="md:col-span-6 md:col-start-7 md:pt-9">
+                  <p className="text-stone-600 leading-[1.95] text-pretty">
+                    {pillar.description}
+                  </p>
+                  <p className="mt-5 text-sm text-stone-500">{pillar.tags}</p>
+                  <Link href={pillar.ctaHref} className="zen-link mt-8">
+                    {pillar.ctaText}
+                    <Arrow />
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* 4. The Common Thread */}
-      <section className="section-padding bg-white">
+      {/* 4. The Common Thread: stepping stones */}
+      <section className="section-padding zen-mist">
         <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+          <div className="text-center max-w-3xl mx-auto mb-20 md:mb-28" data-reveal>
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               Change looks different. The need underneath it is often similar.
             </h2>
-            <p className="mt-4 text-stone-600 text-lg text-pretty">
+            <p className="mt-8 text-stone-600 text-lg text-pretty max-w-2xl mx-auto">
               A new role. A career crossroads. A restructuring. A team that has changed. A
               desire to grow. A question about what comes next.
             </p>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-start gap-12 lg:gap-0">
-            {progressionStages.map((stage, index) => (
-              <Fragment key={stage.number}>
-                <div className="lg:flex-1 text-center px-2">
-                  <p className="text-xs font-medium tracking-[0.2em] text-stone-400">
-                    {stage.number}
-                  </p>
-                  <h3 className="mt-4 font-serif text-3xl md:text-4xl text-stone-900">
+          <div className="relative">
+            {/* The water line the stones sit across */}
+            <svg
+              className="hidden lg:block absolute left-0 top-0 w-full h-24 text-stone-300 overflow-visible"
+              viewBox="0 0 1000 96"
+              preserveAspectRatio="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M125 8 C 230 8, 270 72, 375 72 S 520 32, 625 32 S 770 88, 875 88"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeDasharray="2 5"
+                vectorEffect="non-scaling-stroke"
+              />
+            </svg>
+            <span className="lg:hidden absolute left-[0.45rem] top-2 bottom-2 w-px bg-gradient-to-b from-transparent via-stone-300 to-transparent" aria-hidden="true" />
+            <ol className="relative grid lg:grid-cols-4 gap-14 lg:gap-0">
+              {progressionStages.map((stage, i) => (
+                <li
+                  key={stage.number}
+                  className={`relative pl-10 lg:px-5 lg:text-center ${stoneOffsets[i]}`}
+                  data-reveal
+                  style={rd(i * 260)}
+                >
+                  <span
+                    className="absolute left-0 top-[0.35rem] lg:static lg:mx-auto lg:mb-6 block w-[0.95rem] h-[0.95rem] lg:w-4 lg:h-4 rounded-full border border-stone-500 bg-stone-50"
+                    aria-hidden="true"
+                  />
+                  <p className="text-xs tracking-zen text-stone-500">{stage.number}</p>
+                  <h3 className="mt-3 font-serif text-3xl md:text-[2.4rem] text-stone-900">
                     {stage.name}
                   </h3>
-                  <p className="mt-3 text-stone-500 italic text-sm md:text-base">
-                    {stage.question}
-                  </p>
-                  <p className="mt-4 text-stone-600 text-sm leading-relaxed max-w-[220px] mx-auto text-pretty">
+                  <p className="mt-3 font-serif italic text-stone-600">{stage.question}</p>
+                  <p className="mt-4 text-stone-500 text-sm leading-[1.9] lg:max-w-[220px] lg:mx-auto text-pretty">
                     {stage.items}
                   </p>
-                </div>
-                {index < progressionStages.length - 1 && (
-                  <div className="flex items-center justify-center py-2 lg:py-0 lg:px-4">
-                    <div className="hidden lg:flex items-center w-12 xl:w-16">
-                      <span className="h-px flex-1 bg-stone-300" />
-                      <span className="ml-1 text-stone-300">&rarr;</span>
-                    </div>
-                    <div className="lg:hidden flex flex-col items-center h-10">
-                      <span className="w-px flex-1 bg-stone-300" />
-                      <span className="text-stone-300 mt-1">&darr;</span>
-                    </div>
-                  </div>
-                )}
-              </Fragment>
-            ))}
+                </li>
+              ))}
+            </ol>
           </div>
 
-          <p className="mt-16 md:mt-20 text-center text-stone-800 font-serif text-xl italic max-w-2xl mx-auto text-pretty">
+          <p className="mt-24 md:mt-32 text-center text-stone-800 font-serif text-xl md:text-2xl leading-[1.7] max-w-2xl mx-auto text-pretty" data-reveal>
             Space to pause. Perspective to see things differently. Clarity about what
             matters. And a way to move forward.
           </p>
         </Container>
       </section>
 
-      {/* 5. A Strong Visual Statement */}
-      <section className="section-padding bg-primary-700 text-white">
-        <Container size="narrow" className="text-center">
-          <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
-            You don&apos;t have to know the answer yet.
-          </h2>
-          <div className="mt-6 space-y-2 text-primary-100 text-lg text-pretty max-w-xl mx-auto">
-            <p>
-              Bring the question. Bring the uncertainty. Bring the part of you that
-              doesn&apos;t quite know yet.
+      {/* 5. A Strong Visual Statement: the inner hall, with a single ensō */}
+      <section className="relative overflow-hidden py-36 md:py-52">
+        <div className="relative" data-reveal="fade">
+          <Enso
+            id="statement-enso"
+            delay={300}
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[34rem] md:w-[44rem] text-stone-900/[0.07] pointer-events-none"
+          />
+          <Container size="narrow" className="relative text-center">
+            <h2 className="font-serif text-[2.1rem] leading-[1.35] md:text-display-lg text-stone-900 text-balance">
+              You don&apos;t have to know the answer yet.
+            </h2>
+            <div className="mt-10 text-stone-600 text-lg text-pretty max-w-xl mx-auto">
+              <p>
+                Bring the question. Bring the uncertainty. Bring the part of you that
+                doesn&apos;t quite know yet.
+              </p>
+            </div>
+            <p className="mt-12 inline-block font-serif text-xl italic text-stone-800 text-pretty">
+              Warmth, depth and structure — without rushing the process.
             </p>
-          </div>
-          <p className="mt-8 inline-block font-serif text-xl italic border-t border-b border-primary-400/50 py-4 px-2 text-pretty">
-            Warmth, depth and structure — without rushing the process.
-          </p>
-        </Container>
+          </Container>
+        </div>
       </section>
 
       {/* 6. Why Me */}
-      <section className="section-padding bg-white">
+      <section className="section-padding zen-mist">
         <Container size="default">
-          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
-            <div className="lg:col-span-3">
+          <div className="grid lg:grid-cols-12 gap-14 lg:gap-10 items-center">
+            <div className="lg:col-span-5" data-reveal>
+              <div className="relative aspect-[3/4] max-w-sm mx-auto lg:mx-0 overflow-hidden bg-stone-200 zen-frame">
+                <Image
+                  src="/images/portrait-margarita.JPG"
+                  alt="Portrait of Margarita Dautova"
+                  fill
+                  className="zen-photo zen-breathe object-cover"
+                  sizes="(min-width: 1024px) 30vw, 70vw"
+                />
+              </div>
+            </div>
+            <div className="lg:col-span-6 lg:col-start-7" data-reveal style={rd(200)}>
               <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
                 Someone who understands change from more than one perspective.
               </h2>
-              <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed">
+              <div className="mt-10 space-y-6 text-stone-600 text-lg leading-[1.95]">
                 <p>
                   Before becoming a coach, I spent years in corporate environments —
                   working in Talent and Leadership Development at international
@@ -358,84 +397,69 @@ export default function HomePage() {
                   organization — and what it means for the person experiencing it.
                 </p>
               </div>
-              <div className="mt-6">
-                <Link
-                  href="/about"
-                  className="text-primary-600 font-medium hover:text-primary-700 transition-colors inline-flex items-center gap-2"
-                >
+              <div className="mt-10">
+                <Link href="/about" className="zen-link">
                   More about me
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  <Arrow />
                 </Link>
-              </div>
-            </div>
-            <div className="lg:col-span-2">
-              <div className="relative aspect-[3/4] max-w-sm mx-auto overflow-hidden bg-stone-100 rounded-sm">
-                <Image
-                  src="/images/portrait-margarita.JPG"
-                  alt="Portrait of Margarita Dautova"
-                  fill
-                  className="object-cover"
-                  sizes="(min-width: 1024px) 30vw, 60vw"
-                />
               </div>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* 7. Personal Philosophy */}
-      <section className="section-padding bg-stone-50">
+      {/* 7. Personal Philosophy: one line at a time, with room to breathe */}
+      <section className="section-padding">
         <Container size="narrow">
           <div className="text-center">
-            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
+            <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance" data-reveal>
               I don&apos;t believe in pushing people toward an answer.
             </h2>
-            <div className="mt-6 space-y-4 text-stone-600 text-lg leading-relaxed text-left md:text-center max-w-2xl mx-auto text-pretty">
-              <p>Good coaching isn&apos;t about having the right answer ready.</p>
-              <p>Good facilitation isn&apos;t about filling every silence.</p>
-              <p>And good mentoring isn&apos;t about telling someone what to do.</p>
-              <p>
+            <InkDivider className="my-14" />
+            <div className="space-y-7 font-serif text-stone-700 text-xl md:text-[1.4rem] leading-[1.7] max-w-2xl mx-auto text-pretty">
+              <p data-reveal>Good coaching isn&apos;t about having the right answer ready.</p>
+              <p data-reveal style={rd(220)}>Good facilitation isn&apos;t about filling every silence.</p>
+              <p data-reveal style={rd(440)}>And good mentoring isn&apos;t about telling someone what to do.</p>
+              <p data-reveal style={rd(660)} className="pt-6 font-sans text-lg leading-[1.9] text-stone-600">
                 My role is to create enough structure for something to move — and enough
                 space for people to think.
               </p>
             </div>
-            <p className="mt-8 inline-block text-stone-900 font-serif text-xl italic border-t border-b border-stone-300 py-4 px-2 text-pretty">
+            <p className="mt-16 inline-block text-stone-900 font-serif text-xl md:text-2xl italic border-t border-b border-stone-300 py-6 px-4 text-pretty" data-reveal style={rd(200)}>
               The process has structure. The direction comes from you.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* 8. Testimonials */}
-      <section className="section-padding bg-white">
-        <Container size="default">
-          <div className="text-center max-w-3xl mx-auto mb-14">
+      {/* 8. Testimonials: voices, set like stones at different heights */}
+      <section className="section-padding zen-mist">
+        <Container size="wide">
+          <div className="text-center max-w-3xl mx-auto mb-20" data-reveal>
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               What people say afterward.
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 items-start">
-            {testimonials.map((testimonial) => (
-              <div
+          <div className="grid md:grid-cols-3 gap-16 md:gap-12 items-start">
+            {testimonials.map((testimonial, i) => (
+              <figure
                 key={testimonial.attribution}
-                className="bg-stone-50 p-6 md:p-8 border border-stone-200 rounded-sm"
+                className={`relative pt-10 border-t border-stone-300/80 ${quoteOffsets[i]}`}
+                data-reveal
+                style={rd(i * 220)}
               >
-                <p className="text-stone-600 leading-relaxed italic text-sm">
+                <span className="absolute -top-[0.3rem] left-0 zen-seal" aria-hidden="true" />
+                <blockquote className="font-serif text-stone-700 leading-[1.95] text-[1.05rem]">
                   &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <p className="mt-6 pt-4 border-t border-stone-200 text-sm font-medium text-stone-500">
+                </blockquote>
+                <figcaption className="mt-8 text-xs tracking-[0.12em] uppercase text-stone-500 leading-relaxed">
                   — {testimonial.attribution}
-                </p>
-              </div>
+                </figcaption>
+              </figure>
             ))}
           </div>
-          <div className="mt-10 text-center">
-            <Link
-              href="/testimonials"
-              className="text-primary-600 font-medium hover:text-primary-700 transition-colors"
-            >
+          <div className="mt-20 text-center" data-reveal>
+            <Link href="/testimonials" className="zen-link">
               Read more client experiences →
             </Link>
           </div>
@@ -443,45 +467,55 @@ export default function HomePage() {
       </section>
 
       {/* 9. Where I Work */}
-      <section className="section-padding-sm bg-stone-50">
+      <section className="section-padding-sm">
         <Container size="narrow" className="text-center">
-          <h2 className="font-serif text-heading text-stone-900">
-            From Munich, across borders.
-          </h2>
-          <p className="mt-4 text-stone-600 text-lg text-pretty max-w-xl mx-auto">
-            I work with international professionals and organizations across countries and
-            cultures — online, and for selected engagements, in person.
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-stone-500">
-            <span>English · Russian</span>
-            <span>Munich · Worldwide</span>
+          <div data-reveal>
+            <h2 className="font-serif text-heading md:text-heading-lg text-stone-900">
+              From Munich, across borders.
+            </h2>
+            <p className="mt-6 text-stone-600 text-lg text-pretty max-w-xl mx-auto">
+              I work with international professionals and organizations across countries and
+              cultures — online, and for selected engagements, in person.
+            </p>
+            <div className="mt-10 flex flex-wrap justify-center gap-x-10 gap-y-3 zen-label">
+              <span>English · Russian</span>
+              <span>Munich · Worldwide</span>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* 10. Final CTA */}
-      <section className="section-padding bg-primary-700 text-white">
-        <Container size="narrow" className="text-center">
-          <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
-            What&apos;s changing?
-          </h2>
-          <div className="mt-6 space-y-2 text-primary-100 text-lg text-pretty max-w-xl mx-auto">
-            <p>Maybe it&apos;s your career. Maybe it&apos;s your team. Maybe it&apos;s simply your sense of where you want to go next.</p>
-            <p>You don&apos;t need to have the whole thing figured out before we talk.</p>
-          </div>
-          <div className="mt-10">
-            <Link
-              href="/book"
-              className="inline-flex items-center justify-center px-8 py-4 font-medium
-                bg-white text-primary-700 hover:bg-stone-100 transition-all duration-300"
-            >
-              Book a free discovery call
-            </Link>
-          </div>
-          <p className="mt-5 text-sm text-primary-200">
-            30 minutes · Online · No preparation required
-          </p>
-        </Container>
+      {/* 10. Final CTA: dusk. The path ends in a quiet, open door. */}
+      <section className="relative overflow-hidden bg-stone-900 text-stone-100 py-36 md:py-48">
+        <div data-reveal="fade">
+          <Enso
+            id="closing-enso"
+            delay={200}
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[30rem] md:w-[38rem] text-stone-50/[0.06] pointer-events-none"
+          />
+          <Container size="narrow" className="relative text-center">
+            <h2 className="font-serif text-[2.2rem] md:text-display-lg text-stone-50 text-balance">
+              What&apos;s changing?
+            </h2>
+            <div className="mt-10 space-y-3 text-stone-300 text-lg text-pretty max-w-xl mx-auto">
+              <p>Maybe it&apos;s your career. Maybe it&apos;s your team. Maybe it&apos;s simply your sense of where you want to go next.</p>
+              <p>You don&apos;t need to have the whole thing figured out before we talk.</p>
+            </div>
+            <div className="mt-14">
+              <Link
+                href="/book"
+                className="inline-flex items-center justify-center gap-3 px-9 py-4 tracking-wide
+                  bg-stone-50 text-stone-900 hover:bg-primary-100 transition-colors duration-900 ease-zen"
+              >
+                <span className="zen-seal" aria-hidden="true" />
+                Book a free discovery call
+              </Link>
+            </div>
+            <p className="mt-7 text-xs tracking-[0.18em] uppercase text-stone-400">
+              30 minutes · Online · No preparation required
+            </p>
+          </Container>
+        </div>
       </section>
 
       <StickyMobileCTA />
