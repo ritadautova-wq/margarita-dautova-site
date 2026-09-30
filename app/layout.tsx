@@ -1,23 +1,32 @@
 import type { Metadata } from 'next'
-import { Shippori_Mincho, Zen_Kaku_Gothic_New } from 'next/font/google'
+import localFont from 'next/font/local'
 import CookieConsent from '@/components/CookieConsent'
 import RevealObserver from '@/components/zen/RevealObserver'
 import './globals.css'
 
 // Mincho serif for headings: calm, brush-like contrast. Zen Kaku Gothic for
-// body: open, quiet, highly legible.
-const mincho = Shippori_Mincho({
-  subsets: ['latin'],
-  weight: ['400', '500', '600'],
+// body: open, quiet, highly legible. Self-hosted Latin-only cuts (OFL, from
+// Google Fonts' text= subsetting): the Google-hosted versions ship ~120
+// Japanese unicode-range chunks, and em dashes and quotes pulled several of
+// them in late, so punctuation blinked in after the words.
+const mincho = localFont({
+  src: [
+    { path: './fonts/ShipporiMincho-400.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/ShipporiMincho-500.woff2', weight: '500', style: 'normal' },
+  ],
   variable: '--font-mincho',
   display: 'swap',
+  fallback: ['Georgia', 'serif'],
 })
 
-const zenSans = Zen_Kaku_Gothic_New({
-  subsets: ['latin'],
-  weight: ['300', '400', '500'],
+const zenSans = localFont({
+  src: [
+    { path: './fonts/ZenKakuGothicNew-400.woff2', weight: '400', style: 'normal' },
+    { path: './fonts/ZenKakuGothicNew-500.woff2', weight: '500', style: 'normal' },
+  ],
   variable: '--font-zen-sans',
   display: 'swap',
+  fallback: ['system-ui', 'sans-serif'],
 })
 
 // Runs before paint: enables reveal animations only when JS is alive, and
@@ -82,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${mincho.variable} ${zenSans.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${mincho.variable} ${zenSans.variable}`} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: zenBootScript }} />
       </head>

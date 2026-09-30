@@ -138,65 +138,61 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
 
-      {/* 1. Hero: the gate. The ensō draws, then the words surface. */}
-      <section className="relative pt-24 pb-24 md:pt-40 md:pb-32 lg:pt-36 lg:pb-28 lg:min-h-[100svh] lg:flex lg:items-center">
+      {/* 1. Hero: the gate. A round temple window (marumado) with the ensō
+          brushed around it; the words surface once the brush has passed. */}
+      <section className="relative pt-[5.5rem] pb-20 md:pt-32 lg:pt-28 lg:pb-16 lg:min-h-[100svh] lg:flex lg:items-center">
         <Container size="wide" className="w-full">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-10 items-center">
-            <div className="relative order-first lg:order-last lg:col-span-5 lg:col-start-8">
-              <Enso
-                id="hero-enso"
-                delay={250}
-                className="absolute left-[4%] -top-[10%] w-[74%] sm:-left-[10%] sm:w-[84%] lg:-left-[18%] lg:-top-[14%] lg:w-[92%] text-stone-900/80 pointer-events-none"
-              />
-              <div
-                className="zen-surface relative aspect-[4/5] w-[62%] sm:w-[70%] lg:w-[82%] max-w-sm ml-auto lg:max-w-none overflow-hidden bg-stone-200 zen-frame"
-                style={sd(500)}
-              >
-                <Image
-                  src="/images/IMG_5842.JPG"
-                  alt="Portrait of Margarita Dautova"
-                  fill
-                  className="zen-photo object-cover object-[55%_20%]"
-                  priority
-                  sizes="(min-width: 1024px) 33vw, 80vw"
+          <div className="grid lg:grid-cols-12 gap-11 lg:gap-8 items-center">
+            <div className="relative order-first lg:order-last lg:col-span-5 lg:col-start-8 flex justify-center lg:justify-end">
+              <div className="relative w-[60vw] max-w-[17rem] sm:max-w-[22rem] lg:w-[min(27rem,30vw)] lg:max-w-none aspect-square lg:mr-[4%]">
+                <Enso
+                  id="hero-enso"
+                  delay={250}
+                  className="absolute -inset-[17%] -translate-x-[3%] -translate-y-[2%] w-[134%] h-[134%] text-stone-900/75 pointer-events-none"
                 />
+                <div
+                  className="zen-surface relative w-full h-full rounded-full overflow-hidden bg-stone-200"
+                  style={sd(700)}
+                >
+                  <Image
+                    src="/images/IMG_5842.JPG"
+                    alt="Portrait of Margarita Dautova"
+                    fill
+                    className="zen-photo object-cover object-[68%_22%]"
+                    priority
+                    sizes="(min-width: 1024px) 30vw, 66vw"
+                  />
+                  <span className="absolute inset-[10px] rounded-full border border-stone-50/50 pointer-events-none" aria-hidden="true" />
+                </div>
               </div>
             </div>
 
-            <div className="lg:col-span-6 lg:col-start-1">
-              <p className="zen-surface zen-label !tracking-[0.2em] md:!tracking-zen flex items-center gap-3" style={sd(900)}>
+            <div className="lg:col-span-7 lg:col-start-1 lg:pr-8">
+              <p className="zen-surface zen-label hidden sm:flex items-center gap-3" style={sd(900)}>
                 <span className="zen-seal" aria-hidden="true" />
                 Career &amp; Transition Coach · Team Facilitator
               </p>
               <h1
-                className="zen-surface mt-7 font-serif text-[2.35rem] leading-[1.3] md:text-display-lg lg:text-[3.5rem] lg:leading-[1.28] text-stone-900 text-balance"
+                className="zen-surface sm:mt-7 font-serif text-[2.2rem] leading-[1.3] md:text-display-lg lg:text-[3.6rem] lg:leading-[1.26] text-stone-900 text-balance max-w-[19ch]"
                 style={sd(1100)}
               >
                 When things change, it helps to have space to think.
               </h1>
-              <div className="mt-9 space-y-5 text-[1.05rem] leading-[1.9] text-stone-600 max-w-xl text-pretty">
-                <p className="zen-surface" style={sd(1500)}>
-                  I&apos;m Margarita — a Career &amp; Transition Coach and Team Facilitator
-                  committed to helping international professionals make sense of change,
-                  find clarity and move forward in a way that feels like their own.
-                </p>
-                <p className="zen-surface" style={sd(1700)}>
-                  From individual career transitions to organizational change, my work
-                  starts with the same belief: people don&apos;t always need someone to
-                  tell them what to do. They need the space, perspective and support to
-                  find their way forward.
-                </p>
-              </div>
-              <div className="zen-surface mt-11" style={sd(1950)}>
+              <p className="zen-surface mt-8 text-[1.05rem] md:text-[1.1rem] leading-[1.9] text-stone-600 max-w-xl text-pretty" style={sd(1500)}>
+                I&apos;m Margarita — a Career &amp; Transition Coach and Team Facilitator
+                committed to helping international professionals make sense of change,
+                find clarity and move forward in a way that feels like their own.
+              </p>
+              <div className="zen-surface mt-10" style={sd(1800)}>
                 <Link href="/book" className="btn-primary px-9 py-4">
                   <span className="zen-seal" aria-hidden="true" />
                   Book a free discovery call
                 </Link>
               </div>
-              <ul className="zen-surface mt-12 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-sm text-stone-500 max-w-xl" style={sd(2200)}>
+              <ul className="zen-surface mt-10 flex flex-wrap gap-x-7 gap-y-2.5 text-[0.85rem] text-stone-500 max-w-2xl" style={sd(2100)}>
                 {trustStrip.map((label) => (
-                  <li key={label} className="flex items-baseline gap-3">
-                    <span className="block w-3 h-px bg-stone-400 translate-y-[-3px]" aria-hidden="true" />
+                  <li key={label} className="flex items-center gap-2.5">
+                    <span className="block w-1 h-1 rounded-full bg-stone-400" aria-hidden="true" />
                     <span>{label}</span>
                   </li>
                 ))}
@@ -206,9 +202,24 @@ export default function HomePage() {
         </Container>
 
         {/* A slow invitation to continue down the path */}
-        <div className="hidden lg:flex absolute bottom-10 left-1/2 -translate-x-1/2 zen-surface" style={sd(2800)} aria-hidden="true">
-          <span className="block w-px h-14 bg-gradient-to-b from-transparent via-stone-400 to-transparent animate-[zen-drift_4s_ease-in-out_infinite]" />
+        <div className="hidden lg:flex absolute bottom-8 left-1/2 -translate-x-1/2 zen-surface" style={sd(2800)} aria-hidden="true">
+          <span className="block w-px h-12 bg-gradient-to-b from-transparent via-stone-400 to-transparent animate-[zen-drift_4s_ease-in-out_infinite]" />
         </div>
+      </section>
+
+      {/* 1b. The belief: the second breath of the introduction, given its own room */}
+      <section className="py-24 md:py-36">
+        <Container size="narrow" className="text-center">
+          <p
+            className="font-serif text-[1.4rem] leading-[1.75] md:text-[1.75rem] md:leading-[1.75] text-stone-800 text-pretty max-w-[34ch] md:max-w-[40ch] mx-auto"
+            data-reveal
+          >
+            From individual career transitions to organizational change, my work
+            starts with the same belief: people don&apos;t always need someone to
+            tell them what to do. They need the space, perspective and support to
+            find their way forward.
+          </p>
+        </Container>
       </section>
 
       {/* 2. Stats: quiet numerals, no box */}
@@ -225,8 +236,8 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-16 text-center text-stone-500 max-w-xl mx-auto text-pretty" data-reveal style={rd(560)}>
-            Supporting clients across 3 continents — from individual contributors to
-            C&#8209;suite leaders.
+            Supporting clients across 3 continents — from individual contributors to{' '}
+            <span className="whitespace-nowrap">C-suite</span> leaders.
           </p>
         </Container>
       </section>
@@ -311,7 +322,7 @@ export default function HomePage() {
                   key={stage.number}
                   className={`relative pl-10 lg:px-5 lg:text-center ${stoneOffsets[i]}`}
                   data-reveal
-                  style={rd(i * 260)}
+                  style={rd(i * 180)}
                 >
                   <span
                     className="absolute left-0 top-[0.35rem] lg:static lg:mx-auto lg:mb-6 block w-[0.95rem] h-[0.95rem] lg:w-4 lg:h-4 rounded-full border border-stone-500 bg-stone-50"
@@ -486,7 +497,13 @@ export default function HomePage() {
       </section>
 
       {/* 10. Final CTA: dusk. The path ends in a quiet, open door. */}
-      <section className="relative overflow-hidden bg-stone-900 text-stone-100 py-36 md:py-48">
+      <section className="relative overflow-hidden bg-stone-900 text-stone-100 pt-52 pb-36 md:pt-64 md:pb-48">
+        {/* Evening falls: paper dissolves into ink instead of meeting it at a line */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-x-0 top-0 h-44 md:h-56"
+          style={{ background: 'linear-gradient(to bottom, rgb(247 244 238) 0%, rgb(247 244 238 / 0.82) 16%, rgb(160 154 144 / 0.55) 46%, rgb(47 44 40 / 0.35) 74%, rgb(47 44 40 / 0) 100%)' }}
+        />
         <div data-reveal="fade">
           <Enso
             id="closing-enso"

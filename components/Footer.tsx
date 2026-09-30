@@ -37,7 +37,7 @@ export default function Footer() {
       <Enso
         id="footer-enso"
         animate={false}
-        className="pointer-events-none absolute -right-40 -top-24 w-[34rem] h-[34rem] text-stone-50/[0.035]"
+        className="pointer-events-none absolute -right-64 -bottom-40 w-[34rem] h-[34rem] text-stone-50/[0.03]"
       />
       <div className="container-wide relative">
         {/* Main footer content */}

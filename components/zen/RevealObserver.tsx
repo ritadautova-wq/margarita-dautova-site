@@ -27,7 +27,9 @@ export default function RevealObserver() {
           }
         }
       },
-      { threshold: 0.12, rootMargin: '0px 0px -6% 0px' }
+      // Begin just before an element enters, so the fade is already under way
+      // when it arrives and the screen never looks empty mid-scroll.
+      { threshold: 0, rootMargin: '0px 0px 8% 0px' }
     )
 
     const scan = () => {

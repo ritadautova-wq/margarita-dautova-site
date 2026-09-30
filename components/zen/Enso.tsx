@@ -7,7 +7,7 @@ const R = 96
 const START = -104 // degrees, just left of the top
 const SWEEP = 322 // leaves the circle open, as a real ensō does
 const MAX_W = 15
-const STEPS = 140
+const STEPS = 64
 
 const smooth = (a: number, b: number, x: number) => {
   const t = Math.min(1, Math.max(0, (x - a) / (b - a)))
@@ -34,9 +34,9 @@ function buildRing() {
     // Ink sits slightly outside the centreline, as a loaded brush does.
     const ro = r + w * 0.58
     const ri = r - w * 0.42
-    outer.push(`${(CX + ro * cos).toFixed(2)} ${(CY + ro * sin).toFixed(2)}`)
-    inner.push(`${(CX + ri * cos).toFixed(2)} ${(CY + ri * sin).toFixed(2)}`)
-    centre.push(`${(CX + r * cos).toFixed(2)} ${(CY + r * sin).toFixed(2)}`)
+    outer.push(`${(CX + ro * cos).toFixed(1)} ${(CY + ro * sin).toFixed(1)}`)
+    inner.push(`${(CX + ri * cos).toFixed(1)} ${(CY + ri * sin).toFixed(1)}`)
+    centre.push(`${(CX + r * cos).toFixed(1)} ${(CY + r * sin).toFixed(1)}`)
   }
   const shape = `M${outer.join(' L')} L${inner.reverse().join(' L')} Z`
   const path = `M${centre.join(' L')}`
@@ -60,6 +60,20 @@ export default function Enso({
   delay = 200,
   title,
 }: EnsoProps) {
+  if (!animate) {
+    return (
+      <svg
+        viewBox="0 0 240 240"
+        className={className}
+        role={title ? 'img' : undefined}
+        aria-hidden={title ? undefined : true}
+        aria-label={title}
+      >
+        <path d={shape} fill="currentColor" />
+      </svg>
+    )
+  }
+
   return (
     <svg
       viewBox="0 0 240 240"
@@ -82,12 +96,8 @@ export default function Enso({
             strokeWidth={MAX_W * 2.4}
             strokeLinecap="round"
             pathLength={1}
-            className={animate ? 'enso-stroke' : undefined}
-            style={
-              animate
-                ? ({ '--enso-length': 1, '--enso-delay': `${delay}ms` } as React.CSSProperties)
-                : undefined
-            }
+            className="enso-stroke"
+            style={{ '--enso-length': 1, '--enso-delay': `${delay}ms` } as React.CSSProperties}
           />
         </mask>
       </defs>
