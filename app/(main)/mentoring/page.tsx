@@ -58,32 +58,62 @@ const fitPoints = [
   },
 ]
 
-const involvementOptions = [
+const PRE_REGISTRATION_URL =
+  'https://docs.google.com/forms/d/e/1FAIpQLScebtR84oEEeAQ90QpKluftO-vzlwYsL0K3SHOmlPqzEScNNg/viewform'
+
+const programmeRoles = [
   {
-    label: 'Join',
-    title: '2027 Munich cohort',
+    label: 'Grow',
+    title: 'Join as a mentee',
     description:
-      "We're preparing for the next Munich cohort. Registration will open soon — join the pre-registration list and we'll contact you in November 2026 with the next steps.",
-    microcopy: 'No commitment — just an early place in the conversation.',
-    ctaText: 'Join the pre-registration list',
-    ctaHref:
-      'https://docs.google.com/forms/d/e/1FAIpQLScebtR84oEEeAQ90QpKluftO-vzlwYsL0K3SHOmlPqzEScNNg/viewform',
+      "For women who are ready to grow with intention — whether you're stepping into a bigger role, changing direction or building something of your own. You'll be matched with an experienced mentor and set the agenda for your own growth.",
+    details: [
+      { term: 'Who', value: 'Women with typically 5+ years of professional experience' },
+      { term: 'Commitment', value: 'Six months, one session a month (at least an hour)' },
+      { term: 'Includes', value: 'Your mentor match, launch and community events, Thrive certificate' },
+      {
+        term: 'Your circle',
+        value: 'Generous, smart, lively women from many fields — right here in Munich',
+      },
+    ],
+    ctaText: 'Pre-register as a mentee',
+    ctaHref: PRE_REGISTRATION_URL,
+    secondaryText: 'About the programme on Thrive',
+    secondaryHref: 'https://www.thrivewithmentoring.com/join-thrive',
   },
   {
-    label: 'Lead',
-    title: 'Become a Cohort Leader',
+    label: 'Give',
+    title: 'Join as a mentor',
     description:
-      "As the Munich community grows, we're looking for an additional person to join the Cohort Leadership Team and help us shape the next launch — a chance to build community, develop your leadership through practice, and work with a global organization.",
-    ctaText: 'Learn more about the role',
-    ctaHref: 'https://www.thrivewithmentoring.com/cohort-leader',
+      "For experienced professionals who want to give back with depth. Share what you've learned, ask the questions that open new doors — and, as many mentors tell us, come away with fresh perspective and renewed purpose yourself.",
+    details: [
+      { term: 'Who', value: 'Women with typically 15+ years of experience; senior leaders welcome' },
+      { term: 'Commitment', value: 'Six months, one session a month (at least an hour)' },
+      { term: 'You gain', value: 'Deeper listening, coaching and relational leadership skills' },
+      {
+        term: 'Your circle',
+        value: 'A local network of women from many fields who truly show up for each other',
+      },
+    ],
+    ctaText: 'Pre-register as a mentor',
+    ctaHref: PRE_REGISTRATION_URL,
+    secondaryText: 'About the mentor role on Thrive',
+    secondaryHref: 'https://www.thrivewithmentoring.com/join-thrive',
+  },
+]
+
+const sponsorTypes = [
+  {
+    title: 'Small businesses',
+    description:
+      'Add a special touch to one of our events — something to taste, smell, sip or take home.',
+    examples: ['Desserts', 'Chocolates', 'Flowers', 'Tea & coffee', 'Small gifts'],
   },
   {
-    label: 'Create',
-    title: 'Photographer collaboration',
+    title: 'Venues',
     description:
-      "We're also looking for a photographer who would enjoy collaborating with us and being part of our in-person events in Munich — someone who likes capturing people, connection and real moments.",
-    ctaText: 'Get in touch',
-    ctaHref: '/contact',
+      'Host one of our gatherings in your space and let the Munich community get to know it.',
+    examples: ['Co-working spaces', 'Conference halls', 'Event spaces'],
   },
 ]
 
@@ -376,32 +406,125 @@ export default function MentoringPage() {
             <h2 className="font-serif text-heading-lg md:text-display text-stone-900 text-balance">
               Three ways to be part of this.
             </h2>
+            <p className="mt-5 text-stone-600 text-lg leading-relaxed text-pretty">
+              We&apos;re preparing the 2027 Munich cohort. Join the pre-registration list and
+              we&apos;ll contact you in November 2026 with the next steps.
+            </p>
+            <p className="mt-2 text-sm text-stone-400 italic">
+              No commitment — just an early place in the conversation.
+            </p>
+            <p className="mt-6 font-serif text-xl text-stone-900 italic text-pretty">
+              Whichever side you join, you also gain a circle: women from many fields, in your
+              own city, who believe in supporting each other.
+            </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-10 md:gap-8">
-            {involvementOptions.map((option) => (
-              <div key={option.label} className="pt-6 border-t-2 border-primary-600">
+
+          {/* Mentee & mentor */}
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+            {programmeRoles.map((role) => (
+              <div
+                key={role.label}
+                className="flex flex-col bg-stone-50 rounded-sm p-8 md:p-10 border-t-2 border-primary-600"
+              >
                 <p className="text-xs font-semibold tracking-[0.2em] text-primary-600 uppercase">
-                  {option.label}
+                  {role.label}
                 </p>
-                <h3 className="mt-3 font-serif text-2xl text-stone-900">{option.title}</h3>
-                <p className="mt-3 text-stone-600 leading-relaxed text-sm">{option.description}</p>
-                {option.microcopy && (
-                  <p className="mt-3 text-xs text-stone-400 italic">{option.microcopy}</p>
-                )}
-                <a
-                  href={option.ctaHref}
-                  {...(option.ctaHref.startsWith('http')
-                    ? { target: '_blank', rel: 'noopener noreferrer' }
-                    : {})}
-                  className="mt-5 inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
-                >
-                  {option.ctaText}
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <h3 className="mt-3 font-serif text-2xl md:text-heading text-stone-900">
+                  {role.title}
+                </h3>
+                <p className="mt-4 text-stone-600 leading-relaxed text-pretty">{role.description}</p>
+
+                <dl className="mt-6 divide-y divide-stone-200 border-y border-stone-200">
+                  {role.details.map((detail) => (
+                    <div key={detail.term} className="py-3 sm:grid sm:grid-cols-[7rem_1fr] sm:gap-4">
+                      <dt className="text-xs font-semibold tracking-wider text-stone-500 uppercase sm:pt-0.5">
+                        {detail.term}
+                      </dt>
+                      <dd className="mt-1 sm:mt-0 text-sm text-stone-700 leading-relaxed">
+                        {detail.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+
+                <div className="mt-auto pt-8 flex flex-wrap items-center gap-x-6 gap-y-4">
+                  <a
+                    href={role.ctaHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 whitespace-nowrap bg-primary-600 text-white px-5 py-3 rounded-sm font-medium hover:bg-primary-700 transition-colors"
+                  >
+                    {role.ctaText}
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a
+                    href={role.secondaryHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary-600 font-medium hover:text-primary-700 transition-colors"
+                  >
+                    {role.secondaryText} →
+                  </a>
+                </div>
               </div>
             ))}
+          </div>
+
+          {/* Local business & venue sponsorship */}
+          <div className="mt-6 md:mt-8 bg-primary-50 rounded-sm p-8 md:p-12 border-t-2 border-primary-600">
+            <div className="max-w-3xl">
+              <p className="text-xs font-semibold tracking-[0.2em] text-primary-600 uppercase">
+                Support
+              </p>
+              <h3 className="mt-3 font-serif text-2xl md:text-heading text-stone-900">
+                Partner with us on our Munich events
+              </h3>
+              <p className="mt-4 text-stone-600 leading-relaxed text-pretty">
+                Our in-person gatherings are where the Munich community truly comes to life — and
+                the small touches are what people remember. If you run a business in Munich and
+                would like more people to discover it, let&apos;s collaborate.
+              </p>
+              <p className="mt-4 text-stone-600 leading-relaxed text-pretty">
+                In return, your business is introduced to a room of ambitious, well-connected
+                women who love supporting local businesses. We&apos;ll shape the details together.
+              </p>
+            </div>
+
+            <div className="mt-10 grid sm:grid-cols-2 gap-6">
+              {sponsorTypes.map((type) => (
+                <div key={type.title} className="bg-white rounded-sm p-6 md:p-8">
+                  <h4 className="font-serif text-xl text-stone-900">{type.title}</h4>
+                  <p className="mt-2 text-sm text-stone-600 leading-relaxed text-pretty">
+                    {type.description}
+                  </p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {type.examples.map((example) => (
+                      <li
+                        key={example}
+                        className="px-3.5 py-1.5 bg-primary-50 text-stone-700 text-sm rounded-full border border-primary-200"
+                      >
+                        {example}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <a
+                href="/contact"
+                className="inline-flex items-center gap-2 text-primary-600 font-medium hover:text-primary-700 transition-colors"
+              >
+                Let&apos;s talk about a collaboration
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <span className="text-sm text-stone-500 italic">Have a different idea? We&apos;d love to hear it.</span>
+            </div>
           </div>
         </Container>
       </section>
