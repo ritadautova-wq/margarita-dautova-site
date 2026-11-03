@@ -17,17 +17,36 @@ export const metadata: Metadata = {
 const AIM_WORKSHOP_URL = 'https://mokuteki.io/workshops/aim/862486'
 
 const aimWorkshopFacts = [
-  { term: 'When', value: 'Wednesday, 11 November · 12:00–13:30 (CET)' },
-  { term: 'Where', value: 'Online, live on Google Meet' },
-  { term: 'Group', value: 'Small group, max. 16 people · in English' },
-  { term: 'Cost', value: 'Free pilot session' },
+  'Wed, 11 November · 12:00–13:30 CET',
+  'Online · interactive · max. 12 participants',
+  'Free pilot session',
 ]
 
-const aimWorkshopTakeaways = [
-  'Clarity on your strengths, values, interests and the work environment that suits you',
-  'A clear set of criteria for your next role — must have, nice to have, not for me',
-  'A primary career direction and a second option, in your own words',
-  'One small step to test your direction within a week',
+const aimWorkshopStages = [
+  {
+    number: '01',
+    name: 'Explore',
+    focus: 'Your career possibilities',
+    description: "Get the directions you're considering out of your head and onto paper.",
+  },
+  {
+    number: '02',
+    name: 'Evaluate',
+    focus: 'Your personal criteria',
+    description: 'Define what matters to you — strengths, interests, values, lifestyle and practicalities.',
+  },
+  {
+    number: '03',
+    name: 'Focus',
+    focus: 'One direction to explore',
+    description: 'Compare your options and choose the one that makes sense for you right now.',
+  },
+  {
+    number: '04',
+    name: 'Experiment',
+    focus: 'Your next practical step',
+    description: 'Design a small, real-world test to learn whether this is the right path.',
+  },
 ]
 
 const recognitionCards = [
@@ -254,82 +273,76 @@ export default function CareerCoachingPage() {
       </section>
 
       {/* Upcoming open workshop — deliberately set apart from the page */}
-      <section className="py-16 md:py-24 bg-primary-700 text-white">
+      <section className="py-14 md:py-20 bg-primary-700 text-white">
         <Container size="default">
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-primary-200 opacity-75 animate-ping" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-100" />
-            </span>
-            <span className="text-xs font-semibold tracking-[0.2em] text-primary-50 uppercase">
-              Upcoming online workshop
-            </span>
-          </div>
-
-          <div className="mt-8 grid lg:grid-cols-5 gap-10 lg:gap-14">
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 lg:items-end">
             <div className="lg:col-span-3">
-              <h2 className="font-serif text-heading-lg md:text-display text-white text-balance">
-                Find your next career direction.
-              </h2>
-              <div className="mt-6 space-y-4 text-primary-100 text-lg leading-relaxed text-pretty">
-                <p>
-                  Not sure what comes next in your career? Maybe your role is changing, you&apos;ve
-                  lost your job, or you&apos;re torn between staying on your track and trying
-                  something new.
-                </p>
-                <p>
-                  This live online workshop is for people who want to find focus and understand
-                  what they really want. In 90 minutes, we&apos;ll bring together what you can do,
-                  what you enjoy and what you need — and turn it into a direction you can act on.
-                </p>
-                <p className="text-white font-medium">
-                  We won&apos;t just talk about it. We&apos;ll do it together.
-                </p>
+              <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 border border-white/20">
+                <span className="relative flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full rounded-full bg-primary-200 opacity-75 animate-ping" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-100" />
+                </span>
+                <span className="text-xs font-semibold tracking-[0.2em] text-primary-50 uppercase">
+                  Upcoming online workshop
+                </span>
               </div>
-
-              <h3 className="mt-8 font-sans text-xs font-semibold tracking-wider text-primary-300 uppercase">
-                You&apos;ll leave with
-              </h3>
-              <ul className="mt-4 space-y-3">
-                {aimWorkshopTakeaways.map((item) => (
-                  <li key={item} className="flex gap-3 text-primary-50 leading-relaxed">
-                    <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-primary-300" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <h2 className="mt-6 font-serif text-heading-lg md:text-display text-white text-balance">
+                Find your next direction.
+              </h2>
+              <p className="mt-2 font-serif text-xl md:text-2xl text-primary-100 italic text-pretty">
+                From career confusion to your next meaningful step.
+              </p>
+              <p className="mt-5 text-primary-100 text-lg leading-relaxed text-pretty">
+                Several ideas for your next career chapter, but not sure which to pursue? I
+                won&apos;t hand you an answer — I&apos;ll give you the space and structure to find
+                your own. You don&apos;t need to know what you want yet.
+              </p>
             </div>
 
             <div className="lg:col-span-2">
-              <div className="bg-white/[0.07] border border-white/15 rounded-sm p-6 md:p-8">
-                <dl className="divide-y divide-white/15">
-                  {aimWorkshopFacts.map((fact) => (
-                    <div key={fact.term} className="py-3 first:pt-0">
-                      <dt className="text-xs font-semibold tracking-wider text-primary-300 uppercase">
-                        {fact.term}
-                      </dt>
-                      <dd className="mt-1 text-white">{fact.value}</dd>
-                    </div>
-                  ))}
-                </dl>
-                <a
-                  href={AIM_WORKSHOP_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 flex w-full items-center justify-center gap-2 bg-white text-primary-700 px-5 py-3.5 rounded-sm font-medium hover:bg-stone-100 transition-colors"
-                >
-                  Register for the workshop
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-                <p className="mt-3 text-xs text-primary-200 text-center text-pretty">
-                  Places are limited — apply via the link and you&apos;ll receive a confirmation
-                  by email.
-                </p>
-              </div>
+              <ul className="space-y-2 text-primary-50">
+                {aimWorkshopFacts.map((fact) => (
+                  <li key={fact} className="flex gap-3">
+                    <span className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-primary-300" />
+                    <span>{fact}</span>
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={AIM_WORKSHOP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 flex w-full items-center justify-center gap-2 bg-white text-primary-700 px-5 py-3.5 rounded-sm font-medium hover:bg-stone-100 transition-colors"
+              >
+                For more details and registration
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
             </div>
           </div>
+
+          {/* The four stages — centrepiece */}
+          <div className="mt-14">
+            <h3 className="font-sans text-xs font-semibold tracking-[0.2em] text-primary-300 uppercase">
+              What we&apos;ll do in 90 minutes
+            </h3>
+            <ol className="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/15 border border-white/15 rounded-sm overflow-hidden">
+              {aimWorkshopStages.map((stage) => (
+                <li key={stage.number} className="bg-primary-700 p-6 md:p-7">
+                  <p className="text-xs font-medium tracking-[0.2em] text-primary-300">
+                    {stage.number}
+                  </p>
+                  <p className="mt-3 font-serif text-2xl md:text-3xl text-white">{stage.name}</p>
+                  <p className="mt-1 text-sm font-medium text-primary-100">{stage.focus}</p>
+                  <p className="mt-3 text-sm text-primary-200 leading-relaxed text-pretty">
+                    {stage.description}
+                  </p>
+                </li>
+              ))}
+            </ol>
+          </div>
+
         </Container>
       </section>
 
