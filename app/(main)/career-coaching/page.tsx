@@ -290,7 +290,7 @@ export default function CareerCoachingPage() {
                 Find your next direction.
               </h2>
               <p className="mt-2 font-serif text-xl md:text-2xl text-primary-100 italic text-pretty">
-                From career confusion to your next meaningful step.
+                From career crossroads to your next meaningful step.
               </p>
               <p className="mt-5 text-primary-100 text-lg leading-relaxed text-pretty">
                 Several ideas for your next career chapter, but not sure which to pursue? I
