@@ -293,9 +293,10 @@ export default function CareerCoachingPage() {
                 From career crossroads to your next meaningful step.
               </p>
               <p className="mt-5 text-primary-100 text-lg leading-relaxed text-pretty">
-                Several ideas for your next career chapter, but not sure which to pursue? I
-                won&apos;t hand you an answer — I&apos;ll give you the space and structure to find
-                your own. You don&apos;t need to know what you want yet.
+                Several ideas for your next career chapter, but not sure which to pursue? In 90
+                minutes, move from multiple possibilities to one direction worth exploring.
+                Understand why it makes sense for you and design a small experiment to test it in
+                real life.
               </p>
             </div>
 
