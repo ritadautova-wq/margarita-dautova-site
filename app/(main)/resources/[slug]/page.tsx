@@ -8,6 +8,8 @@ import LeadMagnetSection from '@/components/sections/LeadMagnetSection'
 import { getMediumArticleBySlug, getAllMediumArticleSlugs } from '@/lib/medium'
 import { generateArticleSchema, generateBreadcrumbSchema } from '@/lib/schema'
 
+export const revalidate = 600
+
 interface Props {
   params: Promise<{ slug: string }>
 }
